@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html><head><meta charset="UTF-8"/>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+</head>
+<body>
+<h2>QR Decoder</h2>
+<div id="out">Loading...</div>
+<canvas id="c" style="display:none"></canvas>
+<script>
+const img = new Image();
+img.crossOrigin = "anonymous";
+img.onload = function() {
+  const c = document.getElementById('c');
+  // The image is 1270x720 approx with 4 QR codes
+  // QR code positions (approximate x,y,w,h)
+  const regions = [
+    {label:'QR1 - Testimonies', x:50, y:20, w:270, h:270},
+    {label:'QR2 - Danielyn', x:355, y:20, w:270, h:270},
+    {label:'QR3 - Heaven Broadcast', x:660, y:20, w:270, h:270},
+    {label:'QR4 - Billionaire', x:965, y:20, w:270, h:270}
+  ];
+  const results = [];
+  regions.forEach(r => {
+    c.width = r.w; c.height = r.h;
+    const ctx = c.getContext('2d');
+    ctx.fillStyle='white'; ctx.fillRect(0,0,r.w,r.h);
+    ctx.drawImage(img, r.x, r.y, r.w, r.h, 0, 0, r.w, r.h);
+    const data = ctx.getImageData(0,0,r.w,r.h);
+    const code = jsQR(data.data, data.width, data.height, {inversionAttempts:'dontInvert'});
+    results.push({label:r.label, url: code ? code.data : 'NOT DECODED'});
+  });
+  document.getElementById('out').innerHTML = '<pre>'+JSON.stringify(results,null,2)+'</pre>';
+};
+img.src = 'images/qr_img_0.jpg';
+</script>
+</body></html>

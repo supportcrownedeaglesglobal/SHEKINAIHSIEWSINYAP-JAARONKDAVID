@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Exquisite International Magazine Cover Story — Shekinaih Siew Sin Yap & J Aaron K David, Crowned Eagles Global. Faith activated by action."/>
+  <title>Magazine Cover Story | Shekinaih & J Aaron K David · Exquisite International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --ink:#08091A;
+      --ink2:#12152B;
+      --gold:#C8923A;
+      --gold2:#E8B86D;
+      --white:#FFFFFF;
+      --muted:#8A8EA8;
+      --border:rgba(255,255,255,0.08);
+      --text-body:rgba(255,255,255,.75);
+      --text-muted:rgba(255,255,255,.48);
+      --col-max:720px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'DM Sans',sans-serif;
+      background:var(--ink);color:var(--white);
+      overflow-x:hidden;-webkit-font-smoothing:antialiased;
+      line-height:1;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+
+    /* ── TOP BAR ── */
+    .topbar{
+      position:fixed;top:0;left:0;right:0;z-index:99;
+      height:60px;
+      background:rgba(8,9,26,.9);backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 clamp(20px,5vw,60px);
+    }
+    .topbar-back{
+      display:flex;align-items:center;gap:10px;
+      font-family:'Cinzel',serif;font-size:10px;font-weight:500;
+      letter-spacing:2.5px;text-transform:uppercase;
+      color:rgba(255,255,255,.5);
+      transition:color .2s;
+    }
+    .topbar-back:hover{color:var(--gold)}
+    .topbar-back svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .topbar-brand{
+      font-family:'Cinzel',serif;font-size:11px;font-weight:600;
+      letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3);
+    }
+    .topbar-pdf{
+      font-family:'Cinzel',serif;font-size:9px;font-weight:600;
+      letter-spacing:2px;text-transform:uppercase;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:var(--ink);padding:9px 18px;border-radius:100px;
+      transition:opacity .2s,transform .2s;
+    }
+    .topbar-pdf:hover{opacity:.88;transform:translateY(-1px)}
+
+    /* ── HERO MASTHEAD ── */
+    .masthead{
+      min-height:80svh;
+      display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      text-align:center;
+      padding:100px clamp(20px,5vw,60px) 72px;
+      position:relative;
+      overflow:hidden;
+    }
+    .masthead::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(200,146,58,.12) 0%,transparent 70%);
+      pointer-events:none;
+    }
+    .masthead-line{
+      width:40px;height:1px;background:var(--gold);margin:0 auto 28px;
+    }
+    .masthead-pub{
+      font-family:'Cinzel',serif;font-size:10px;font-weight:500;
+      letter-spacing:5px;text-transform:uppercase;
+      color:var(--gold);margin-bottom:24px;
+    }
+    .masthead-eyebrow{
+      font-family:'Cinzel',serif;font-size:9.5px;font-weight:500;
+      letter-spacing:4px;text-transform:uppercase;
+      color:rgba(255,255,255,.3);margin-bottom:32px;
+    }
+    .masthead-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(48px,8vw,110px);
+      font-weight:600;line-height:.95;
+      letter-spacing:-1px;
+      margin-bottom:8px;
+    }
+    .masthead-title .gold-name{
+      background:linear-gradient(135deg,#E8C96A 0%,#C8923A 28%,#FFE08A 55%,#D4790A 75%,#F0C060 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;display:block;
+    }
+    .masthead-title .silver-name{
+      background:linear-gradient(135deg,#C8C8C8 0%,#EFEFEF 30%,#929292 55%,#D8D8D8 78%,#ABABAB 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;display:block;font-weight:500;
+    }
+    .masthead-amp{
+      font-family:'Cinzel',serif;font-size:.35em;
+      letter-spacing:6px;color:rgba(255,255,255,.18);
+      display:block;margin:.5em 0 .4em;font-weight:400;
+    }
+    .masthead-sub{
+      font-family:'Cormorant Garamond',serif;font-style:italic;
+      font-size:clamp(18px,2.5vw,26px);font-weight:300;
+      color:rgba(255,255,255,.4);margin-bottom:48px;
+      letter-spacing:.5px;
+    }
+    .masthead-divider{
+      width:1px;height:60px;
+      background:linear-gradient(to bottom,transparent,var(--gold),transparent);
+      margin:0 auto;
+    }
+
+    /* ── COVER IMAGE ── */
+    .cover-wrap{
+      max-width:860px;margin:0 auto;
+      padding:0 clamp(20px,5vw,60px) 80px;
+    }
+    .cover-img-frame{
+      border-radius:20px;overflow:hidden;
+      position:relative;
+      box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(200,146,58,.15);
+    }
+    .cover-img-frame img{
+      width:100%;
+      object-fit:cover;
+      max-height:540px;
+    }
+    .cover-badge{
+      position:absolute;top:20px;right:20px;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:var(--ink);font-family:'Cinzel',serif;
+      font-size:8.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+      padding:8px 16px;border-radius:100px;
+    }
+    .cover-caption{
+      text-align:center;margin-top:20px;
+      font-family:'Cinzel',serif;font-size:9px;font-weight:500;
+      letter-spacing:3px;text-transform:uppercase;
+      color:rgba(255,255,255,.25);
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body{
+      max-width:var(--col-max);margin:0 auto;
+      padding:0 clamp(20px,5vw,40px) 120px;
+    }
+
+    /* Pull quote */
+    .pull-quote{
+      border-left:2px solid var(--gold);
+      padding:24px 0 24px 32px;
+      margin:56px 0;
+    }
+    .pull-quote p{
+      font-family:'Cormorant Garamond',serif;font-style:italic;
+      font-size:clamp(22px,3vw,30px);font-weight:400;
+      line-height:1.45;color:rgba(255,255,255,.85);
+    }
+    .pull-quote cite{
+      display:block;margin-top:16px;
+      font-family:'Cinzel',serif;font-size:9px;font-weight:500;
+      letter-spacing:3px;text-transform:uppercase;
+      color:var(--gold);font-style:normal;
+    }
+
+    /* Section headers */
+    .art-section-label{
+      font-family:'Cinzel',serif;font-size:9.5px;font-weight:600;
+      letter-spacing:4px;text-transform:uppercase;
+      color:var(--gold);margin-bottom:16px;
+      display:flex;align-items:center;gap:12px;
+    }
+    .art-section-label::after{content:'';flex:1;height:1px;background:rgba(200,146,58,.2)}
+
+    .art-h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(28px,4vw,44px);
+      font-weight:600;line-height:1.1;
+      letter-spacing:-0.3px;
+      color:var(--white);
+      margin-bottom:24px;
+    }
+    .art-h3{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(20px,2.5vw,28px);font-weight:500;
+      color:rgba(255,255,255,.9);margin-bottom:14px;margin-top:48px;
+      font-style:italic;
+    }
+
+    /* Body text */
+    .art-p{
+      font-family:'DM Sans',sans-serif;
+      font-size:clamp(15px,1.2vw,17.5px);font-weight:300;
+      line-height:1.95;color:var(--text-body);
+      margin-bottom:24px;
+    }
+    .art-p strong{font-weight:500;color:rgba(255,255,255,.9)}
+
+    /* Drop cap */
+    .art-p.dropcap::first-letter{
+      font-family:'Cormorant Garamond',serif;
+      font-size:4.5em;font-weight:600;
+      float:left;line-height:.82;
+      margin-right:.08em;margin-top:.05em;
+      background:linear-gradient(135deg,#E8C96A,#C8923A,#F0C060);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+
+    /* Highlight box */
+    .art-highlight{
+      background:rgba(200,146,58,.06);
+      border:1px solid rgba(200,146,58,.18);
+      border-radius:16px;padding:28px 32px;margin:48px 0;
+    }
+    .art-highlight p{
+      font-family:'Cormorant Garamond',serif;font-style:italic;
+      font-size:clamp(17px,2vw,21px);font-weight:400;line-height:1.6;
+      color:rgba(255,255,255,.75);
+    }
+
+    /* Awards list */
+    .awards-list{
+      list-style:none;margin:0 0 28px;padding:0;
+      display:flex;flex-direction:column;gap:14px;
+    }
+    .awards-list li{
+      display:flex;align-items:flex-start;gap:14px;
+      font-family:'DM Sans',sans-serif;
+      font-size:clamp(14px,1.1vw,16px);font-weight:300;
+      color:var(--text-body);line-height:1.55;
+    }
+    .awards-list li::before{
+      content:'✦';color:var(--gold);font-size:10px;flex-shrink:0;margin-top:4px
+    }
+
+    /* Image inline */
+    .art-img{
+      margin:48px 0;border-radius:16px;overflow:hidden;
+      box-shadow:0 20px 60px rgba(0,0,0,.5);
+    }
+    .art-img img{width:100%;object-fit:cover;max-height:440px}
+    .art-img figcaption{
+      padding:14px 0 0;
+      font-family:'Cinzel',serif;font-size:9px;font-weight:500;
+      letter-spacing:2.5px;text-transform:uppercase;
+      color:rgba(255,255,255,.3);text-align:center;
+    }
+
+    /* PDF embed section */
+    .pdf-section{
+      border-top:1px solid var(--border);
+      padding-top:72px;margin-top:80px;
+      max-width:var(--col-max);margin-left:auto;margin-right:auto;
+      padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);
+    }
+    .pdf-header{
+      text-align:center;margin-bottom:32px;
+    }
+    .pdf-embed-wrap{
+      border-radius:16px;overflow:hidden;
+      border:1px solid rgba(200,146,58,.15);
+      box-shadow:0 20px 60px rgba(0,0,0,.4);
+    }
+    .pdf-embed-wrap iframe{
+      width:100%;height:80vh;min-height:500px;border:none;
+      display:block;background:#111;
+    }
+    .pdf-fallback{
+      text-align:center;padding:48px 24px;
+    }
+    .pdf-fallback a{
+      display:inline-flex;align-items:center;gap:10px;
+      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
+      letter-spacing:2.5px;text-transform:uppercase;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:var(--ink);padding:16px 32px;border-radius:100px;
+      transition:transform .2s,box-shadow .2s;
+    }
+    .pdf-fallback a:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(200,146,58,.35)}
+
+    /* Footer bar */
+    .art-footer{
+      background:rgba(255,255,255,.02);border-top:1px solid var(--border);
+      padding:48px clamp(20px,5vw,60px);text-align:center;
+      margin-top:80px;
+    }
+    .art-footer p{
+      font-family:'Cinzel',serif;font-size:9.5px;font-weight:500;
+      letter-spacing:3px;text-transform:uppercase;
+      color:rgba(255,255,255,.2);margin-bottom:16px;
+    }
+    .art-footer a{
+      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
+      letter-spacing:2px;text-transform:uppercase;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:var(--ink);padding:13px 28px;border-radius:100px;
+      display:inline-block;transition:opacity .2s,transform .2s;
+    }
+    .art-footer a:hover{opacity:.88;transform:translateY(-1px)}
+
+    /* Scroll fade animations */
+    .fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .fade-up.in{opacity:1;transform:none}
+    .fade-in{opacity:0;transition:opacity .8s ease}
+    .fade-in.in{opacity:1}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+    @media(max-width:600px){
+      .topbar-brand{display:none}
+      .masthead{min-height:auto;padding-top:88px}
+      .pull-quote{padding-left:20px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topbar">
+  <a class="topbar-back" href="index.html">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to Main Page
+  </a>
+  <span class="topbar-brand">Crowned Eagles Global</span>
+  <a class="topbar-pdf" href="docs/magazine_article.pdf" target="_blank">View PDF</a>
+</nav>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-line"></div>
+  <p class="masthead-pub">Exquisite International Magazine</p>
+  <p class="masthead-eyebrow">Cover Story · Faith, Leadership &amp; Legacy</p>
+  <h1 class="masthead-title">
+    <span class="gold-name">Shekinaih<br/>Siew Sin Yap</span>
+    <span class="masthead-amp">&amp;</span>
+    <span class="silver-name">J Aaron<br/>K David</span>
+  </h1>
+  <p class="masthead-sub">Co-Founders · Crowned Eagles Global · Singapore</p>
+  <div class="masthead-divider"></div>
+</header>
+
+<!-- COVER IMAGE -->
+<div class="cover-wrap fade-in">
+  <figure class="cover-img-frame">
+    <img src="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg"
+         alt="Shekinaih Siew Sin Yap and J Aaron K David at the Global Leadership Summit 2025, Bangkok"
+         loading="eager"/>
+    <span class="cover-badge">Cover Feature</span>
+  </figure>
+  <p class="cover-caption">Global Leadership Summit 2025 · Bangkok, Thailand — United Nations 80th Anniversary</p>
+</div>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <div class="pull-quote fade-up">
+    <p>"Their story is one of faith activated by action — of leaders who not only speak of a better world, but who build it."</p>
+    <cite>— Exquisite International Magazine</cite>
+  </div>
+
+  <p class="art-section-label fade-up">The Story</p>
+
+  <h2 class="art-h2 fade-up">Eagles That Soar Above the Storm</h2>
+
+  <p class="art-p dropcap fade-up">
+    In a world that often measures success by material gain, Shekinaih Siew Sin Yap and J Aaron K David have charted a different course — one guided by faith, defined by service, and celebrated on the world stage. As co-founders of <strong>Crowned Eagles Global</strong>, they have built a platform that reaches thousands across Singapore and the globe, transforming lives through prophetic ministry, humanitarian outreach, and kingdom-principled leadership.
+  </p>
+
+  <p class="art-p fade-up">
+    Their journey is not one of overnight success, but of consecrated purpose — forged in prayer, refined through adversity, and ultimately vindicated by the impact they have made in communities across Asia, India, and beyond. It is a story that Exquisite International Magazine was honoured to place at the centre of its pages as a full cover story.
+  </p>
+
+  <figure class="art-img fade-in">
+    <img src="images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg"
+         alt="Shekinaih and J Aaron K David with delegates at GLS2025" loading="lazy"/>
+    <figcaption>Global Leadership Summit 2025 · Kantarat Auditorium, Bangkok</figcaption>
+  </figure>
+
+  <p class="art-section-label fade-up">International Recognition</p>
+
+  <h3 class="art-h3 fade-up">Honoured at the United Nations' 80th Anniversary Summit</h3>
+
+  <p class="art-p fade-up">
+    The defining moment of 2025 came when Shekinaih and Aaron received the <strong>Global Leadership Achievement Award</strong> at the Global Leadership Summit in Bangkok — an event held in celebration of the United Nations' 80th Anniversary. Presented at the prestigious Kantarat Auditorium before an audience of global dignitaries, diplomats, and leaders, this recognition affirmed what their community had long known: that their work carries significance that transcends borders and belief systems.
+  </p>
+
+  <p class="art-p fade-up">
+    The award was presented by three international organisations simultaneously — a rare and extraordinary honour that speaks to the multi-dimensional nature of their influence and the universal respect they have earned on the world stage.
+  </p>
+
+  <div class="art-highlight fade-up">
+    <p>"Recognised by the World Book of Records London, UNPKFC, and the Global Leadership Summit — their story stands as a testament to the extraordinary impact of principled, faith-driven leadership on our world."</p>
+  </div>
+
+  <p class="art-section-label fade-up">Awards &amp; Honours</p>
+
+  <h3 class="art-h3 fade-up">A Legacy Written in Service</h3>
+
+  <ul class="awards-list fade-up">
+    <li><strong>Global Leadership Achievement Award 2025</strong> — Global Leadership Summit, Bangkok, Thailand. Presented at the United Nations 80th Anniversary Summit.</li>
+    <li><strong>Distinguished Emblem — Positive Social Development</strong> — United Peace Keepers Federal Council (UNPKFC). Certificate of Honor recognising dedication to fostering positive social impact.</li>
+    <li><strong>Global Diplomacy Ambassador Awards</strong> — DMGP Global Diplomacy, Mumbai, India. Recognising exceptional commitment to international diplomacy and cross-cultural understanding.</li>
+    <li><strong>World Book of Records Recognition</strong> — London, United Kingdom. Acknowledging their outstanding contribution to humanitarian leadership at a global scale.</li>
+    <li><strong>Cover Story — Exquisite International Magazine</strong> — A prestigious publication celebrating outstanding global leaders, changemakers, and humanitarian champions.</li>
+  </ul>
+
+  <figure class="art-img fade-in">
+    <img src="images/Aaron_GLS2025_Achievement_Award_Certificate.jpeg"
+         alt="Global Leadership Achievement Award Certificate — J Aaron K David" loading="lazy"/>
+    <figcaption>Global Leadership Achievement Award Certificate · GLS 2025</figcaption>
+  </figure>
+
+  <p class="art-section-label fade-up">Ministry &amp; Mission</p>
+
+  <h2 class="art-h2 fade-up">Built on a Foundation That Cannot Shake</h2>
+
+  <p class="art-p fade-up">
+    Crowned Eagles Global was founded with a singular conviction: that Isaiah 61 was not merely a passage of scripture but a blueprint for ministry. <em>"The Spirit of the LORD is upon me; because He hath anointed me to preach good tidings unto the meek, to proclaim liberty to the captives."</em> That verse became the heartbeat of an organisation that now touches lives weekly through prophetic teaching, intercessory prayer, and compassionate outreach.
+  </p>
+
+  <p class="art-p fade-up">
+    From their base in Singapore, Shekinaih and Aaron have extended their reach through digital platforms — a Telegram Heaven Broadcast Channel, YouTube, Facebook, and Instagram — creating a daily flow of prophetic messages and divine insights that sustains a global community of believers. Their weekly broadcasts, archived from 2020 through 2026, serve as a growing library of faith, guidance, and biblical wisdom for thousands around the world.
+  </p>
+
+  <p class="art-section-label fade-up">A Vision for the Future</p>
+
+  <h3 class="art-h3 fade-up">Eagles Rising — The Next Chapter</h3>
+
+  <p class="art-p fade-up">
+    What makes the story of Shekinaih and Aaron so compelling is not only what they have accomplished, but what they are building toward. With a global network now in place, and an international profile that continues to grow, Crowned Eagles Global stands at the threshold of its next great season.
+  </p>
+
+  <p class="art-p fade-up">
+    Their vision is clear: a world in which the principles of the Kingdom — healing, liberty, justice, and transformation — are not confined to church walls, but expressed in communities, diplomacy, business, and the public square. It is a vision that has already begun to take shape, one life, one city, one nation at a time.
+  </p>
+
+  <div class="pull-quote fade-up">
+    <p>"They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."</p>
+    <cite>— Isaiah 40:31 · The foundation of Crowned Eagles Global</cite>
+  </div>
+
+  <figure class="art-img fade-in">
+    <img src="images/Shekinaih_Hug_GLS2025_Summit.jpeg"
+         alt="Shekinaih Siew Sin Yap at the GLS2025 Summit" loading="lazy"/>
+    <figcaption>A moment of celebration · Global Leadership Summit 2025</figcaption>
+  </figure>
+
+</article>
+
+<!-- FULL PDF EMBED -->
+<div class="pdf-section fade-up">
+  <div class="pdf-header">
+    <p class="art-section-label" style="justify-content:center">Full Publication</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,40px);font-weight:600;margin-bottom:12px">Read the Complete Magazine Article</h2>
+    <p style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:rgba(255,255,255,.45);max-width:480px;margin:0 auto 32px;line-height:1.8">
+      View the full Exquisite International Magazine cover story as originally published.
+    </p>
+  </div>
+
+  <div class="pdf-embed-wrap">
+    <iframe
+      src="docs/magazine_article.pdf#toolbar=1&navpanes=0&scrollbar=1&view=FitH"
+      title="Exquisite International Magazine — Cover Story PDF">
+    </iframe>
+  </div>
+
+  <div class="pdf-fallback" style="margin-top:24px">
+    <a href="docs/magazine_article.pdf" target="_blank">
+      ✦ Download PDF
+    </a>
+  </div>
+</div>
+
+<!-- ARTICLE FOOTER -->
+<footer class="art-footer">
+  <p>Crowned Eagles Global · Singapore · crownedeaglesglobal.org</p>
+  <a href="index.html">← Return to Main Page</a>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, {threshold:.12});
+document.querySelectorAll('.fade-up,.fade-in').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
