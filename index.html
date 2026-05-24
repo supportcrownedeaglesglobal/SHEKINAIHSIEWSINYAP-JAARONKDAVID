@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="Shekinaih Siew Sin Yap & J Aaron K David — Co-founders of Crowned Eagles Global. Internationally recognised faith leaders, Global Leadership Award recipients, and humanitarian ambassadors."/>
-  <title>Shekinaih Siew Sin Yap & J Aaron K David | Crowned Eagles Global</title>
+  <meta name="description" content="shekinaihssyap-jaaronkdavid.com — the personal IP branding website for Shekinaih Siew Sin Yap & J Aaron K David, internationally recognised faith leaders, award recipients, and humanitarian ambassadors."/>
+  <title>Shekinaih Siew Sin Yap & J Aaron K David | shekinaihssyap-jaaronkdavid.com</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
@@ -52,6 +52,12 @@
       font-family:'Cinzel',serif;font-weight:600;font-size:14px;
       letter-spacing:1.5px;color:var(--white);
       display:flex;align-items:center;gap:10px
+    }
+    .brand-domain{
+      font-size:10px;
+      letter-spacing:1.4px;
+      text-transform:lowercase;
+      white-space:nowrap
     }
     .nav-logo-dot{
       width:8px;height:8px;border-radius:50%;
@@ -103,6 +109,15 @@
       .nav-cta{display:none}
       .nav-hamburger{display:flex}
     }
+    @media(max-width:560px){
+      .brand-domain{
+        font-size:8.5px;
+        letter-spacing:.65px;
+        max-width:calc(100vw - 90px);
+        overflow:hidden;
+        text-overflow:ellipsis
+      }
+    }
 
     /* ── HERO ── */
     #hero{
@@ -138,15 +153,21 @@
     }
     /* Gold metallic for Shekinaih */
     .hero-h1 .name-gold{
-      background:linear-gradient(135deg,#E8C96A 0%,#C8923A 28%,#FFE08A 55%,#D4790A 75%,#F0C060 100%);
+      background:linear-gradient(115deg,#E7AE31 0%,#FFF3AE 17%,#F4C044 31%,#B9760B 45%,#FFEAA0 58%,#D8941C 71%,#FFF6BC 86%,#E2A329 100%);
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-      background-clip:text;font-weight:700
+      background-clip:text;font-weight:700;
+      font-size:.86em;letter-spacing:.02em;
+      -webkit-text-stroke:.35px rgba(255,232,155,.2);
+      filter:drop-shadow(0 5px 24px rgba(232,184,109,.28))
     }
     /* Silver metallic for J Aaron K David */
     .hero-h1 .name-silver{
-      background:linear-gradient(135deg,#C8C8C8 0%,#EFEFEF 30%,#929292 55%,#D8D8D8 78%,#ABABAB 100%);
+      background:linear-gradient(115deg,#AEB5C0 0%,#FFFFFF 18%,#D3D8E2 34%,#F8FAFF 48%,#8B929E 63%,#EEF2F8 82%,#C4CBD6 100%);
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-      background-clip:text;font-weight:700
+      background-clip:text;font-weight:700;
+      font-size:.92em;letter-spacing:.015em;
+      -webkit-text-stroke:.35px rgba(255,255,255,.18);
+      filter:drop-shadow(0 5px 24px rgba(230,235,244,.18))
     }
     .hero-h1 .gold{
       background:linear-gradient(135deg,var(--gold),var(--gold2));
@@ -402,6 +423,24 @@
       font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:800;
       margin-bottom:6px;line-height:1.15
     }
+    .profile-name-gold{
+      background:linear-gradient(115deg,#E7AE31 0%,#FFF3AE 17%,#F4C044 31%,#B9760B 45%,#FFEAA0 58%,#D8941C 71%,#FFF6BC 86%,#E2A329 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      -webkit-text-stroke:.25px rgba(255,232,155,.18);
+      filter:drop-shadow(0 3px 16px rgba(232,184,109,.24))
+    }
+    .profile-name-silver{
+      background:linear-gradient(115deg,#AEB5C0 0%,#FFFFFF 18%,#D3D8E2 34%,#F8FAFF 48%,#8B929E 63%,#EEF2F8 82%,#C4CBD6 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+      -webkit-text-stroke:.32px rgba(255,255,255,.22);
+      filter:drop-shadow(0 4px 18px rgba(230,235,244,.22))
+    }
     .profile-role{
       font-size:12px;font-weight:500;letter-spacing:2px;
       text-transform:uppercase;color:var(--muted);margin-bottom:20px
@@ -418,64 +457,186 @@
     .profile-award-pill span{font-size:11px;font-weight:600;color:var(--gold2);letter-spacing:.3px}
 
     /* ── AWARDS ── */
-    #awards{background:var(--ink2)}
+    #awards{
+      background:var(--ink2);
+      overflow:hidden
+    }
+    #awards::before{
+      content:'';position:absolute;inset:0;pointer-events:none;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.025),transparent 36%),
+        linear-gradient(90deg,rgba(200,146,58,.045),transparent 42%,rgba(255,255,255,.018))
+    }
 
     .awards-header{
       display:flex;justify-content:space-between;align-items:flex-end;
-      flex-wrap:wrap;gap:24px;margin-bottom:60px
+      flex-wrap:wrap;gap:24px;margin-bottom:64px
+    }
+    .awards-header .body-lead{
+      border-left:1px solid rgba(200,146,58,.28);
+      padding-left:24px
     }
 
     .awards-grid{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:2px
+      display:grid;
+      grid-template-columns:repeat(12,minmax(0,1fr));
+      gap:14px
     }
-    @media(max-width:900px){.awards-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:560px){.awards-grid{grid-template-columns:1fr}}
 
     .award-card{
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.06);
-      padding:40px 32px;
-      transition:background .3s,border-color .3s;
-      position:relative;overflow:hidden
+      grid-column:span 4;
+      min-height:390px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.048),rgba(255,255,255,.022)),
+        rgba(8,9,26,.38);
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:8px;
+      padding:34px 32px 30px;
+      transition:background .3s,border-color .3s,transform .3s,box-shadow .3s;
+      position:relative;overflow:hidden;
+      cursor:pointer;
+      display:flex;
+      flex-direction:column;
+      outline:none
+    }
+    .award-card:focus-visible{
+      border-color:rgba(232,184,109,.62);
+      box-shadow:0 0 0 3px rgba(200,146,58,.18),0 24px 70px rgba(0,0,0,.32)
+    }
+    .award-card-major{
+      grid-column:span 6;
+      min-height:430px
     }
     .award-card::before{
-      content:'';position:absolute;top:0;left:0;right:0;height:2px;
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
-      opacity:0;transition:opacity .3s
+      content:'';position:absolute;top:0;left:28px;right:28px;height:1px;
+      background:linear-gradient(90deg,rgba(232,184,109,.75),rgba(232,184,109,.16),transparent);
+      opacity:.78
     }
-    .award-card:hover{background:rgba(255,255,255,.06);border-color:rgba(200,146,58,.2)}
-    .award-card:hover::before{opacity:1}
+    .award-card::after{
+      content:'';position:absolute;left:30%;right:0;bottom:-45%;height:180px;
+      background:radial-gradient(circle,rgba(200,146,58,.11),transparent 68%);
+      opacity:0;transition:opacity .3s;
+      pointer-events:none
+    }
+    .award-card:hover{
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028)),
+        rgba(8,9,26,.5);
+      border-color:rgba(200,146,58,.3);
+      transform:translateY(-4px);
+      box-shadow:0 24px 70px rgba(0,0,0,.34)
+    }
+    .award-card:hover::after{opacity:1}
+
+    .award-topline{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:24px;
+      margin-bottom:34px
+    }
 
     .award-num{
-      font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:700;
-      letter-spacing:3px;color:rgba(255,255,255,.2);margin-bottom:24px
+      font-family:'Cinzel',serif;
+      font-size:10px;
+      font-weight:500;
+      letter-spacing:3px;
+      color:rgba(200,146,58,.62);
+      margin-bottom:0
     }
-    .award-icon-wrap{
-      width:48px;height:48px;border-radius:12px;
-      background:rgba(200,146,58,.12);
-      border:1px solid rgba(200,146,58,.2);
-      display:flex;align-items:center;justify-content:center;
-      font-size:22px;margin-bottom:20px
+    .award-seal{
+      width:54px;
+      height:54px;
+      border:1px solid rgba(200,146,58,.32);
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      background:radial-gradient(circle at 32% 22%,rgba(232,184,109,.2),rgba(255,255,255,.03) 58%,rgba(255,255,255,.01));
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)
+    }
+    .award-seal span{
+      font-family:'Cinzel',serif;
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:1.8px;
+      color:var(--gold2)
     }
     .award-org{
       font-size:10px;font-weight:700;letter-spacing:2.5px;
-      text-transform:uppercase;color:var(--gold);margin-bottom:10px
+      text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+      line-height:1.65
     }
     .award-name{
-      font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;
-      line-height:1.3;margin-bottom:14px
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(21px,2.05vw,30px);
+      font-weight:700;
+      line-height:1.12;
+      margin-bottom:18px;
+      color:#fff
     }
     .award-desc{
-      font-size:13px;font-weight:300;line-height:1.8;
-      color:rgba(255,255,255,.45);margin-bottom:20px
+      font-size:13.5px;
+      font-weight:300;
+      line-height:1.9;
+      color:rgba(255,255,255,.55);
+      margin-bottom:28px
     }
     .award-recipients{
       border-top:1px solid rgba(255,255,255,.06);
-      padding-top:16px;
+      padding-top:18px;
       display:flex;flex-direction:column;gap:5px
     }
-    .rec{font-size:12px;color:rgba(255,255,255,.5)}
-    .rec strong{color:rgba(255,255,255,.8);font-weight:500}
+    .award-meta-label{
+      font-family:'Cinzel',serif;
+      font-size:9px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:rgba(200,146,58,.62);
+      margin-bottom:7px
+    }
+    .award-card-body{flex:1}
+    .rec{
+      font-size:12px;
+      line-height:1.65;
+      color:rgba(255,255,255,.52)
+    }
+    .rec strong{color:rgba(255,255,255,.88);font-weight:600}
+    .award-action{
+      margin-top:26px;
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      font-family:'Cinzel',serif;
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:2.2px;
+      text-transform:uppercase;
+      color:var(--gold2)
+    }
+    .award-action::before{
+      content:'';
+      width:34px;
+      height:1px;
+      background:rgba(200,146,58,.55);
+      transition:width .3s
+    }
+    .award-card:hover .award-action::before{width:48px}
+    @media(max-width:1000px){
+      .award-card,
+      .award-card-major{grid-column:span 6}
+    }
+    @media(max-width:640px){
+      .awards-header .body-lead{text-align:left!important}
+      .awards-grid{gap:12px}
+      .award-card,
+      .award-card-major{
+        grid-column:span 12;
+        min-height:auto;
+        padding:30px 24px
+      }
+    }
 
     /* ── VIDEO SECTION ── */
     #video-section{background:var(--ink);padding:110px 0}
@@ -663,58 +824,261 @@
     .g-item:hover .g-caption{opacity:1;transform:none}
 
     /* ── TESTIMONIALS ── */
-    #testimonials{background:var(--ink)}
+    #testimonials{
+      background:var(--ink);
+      overflow:hidden
+    }
+    #testimonials::before{
+      content:'';position:absolute;inset:0;pointer-events:none;
+      background:
+        linear-gradient(90deg,rgba(200,146,58,.05) 0,transparent 34%),
+        linear-gradient(180deg,rgba(255,255,255,.025) 0,transparent 42%)
+    }
 
-    .testi-header{text-align:center;margin-bottom:72px}
+    .testi-header{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 58px
+    }
+    .testi-header .body-lead{
+      margin:0 auto;
+      color:rgba(255,255,255,.5)
+    }
 
-    .testi-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:24px
+    .testi-archive{
+      display:grid;
+      grid-template-columns:minmax(0,1.18fr) minmax(300px,.82fr);
+      gap:26px;
+      align-items:stretch;
+      margin-bottom:26px
     }
-    @media(max-width:768px){.testi-grid{grid-template-columns:1fr}}
+    @media(max-width:900px){
+      .testi-archive{grid-template-columns:1fr}
+    }
 
-    .testi-card{
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.07);
-      border-radius:20px;padding:36px 32px;
-      transition:border-color .3s,background .3s
+    .testi-featured,
+    .testi-credibility,
+    .testi-card,
+    .testi-ledger{
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.035);
+      box-shadow:0 22px 70px rgba(0,0,0,.24)
     }
-    .testi-card:hover{
-      background:rgba(255,255,255,.06);
-      border-color:rgba(200,146,58,.2)
+
+    .testi-featured{
+      position:relative;
+      border-radius:20px;
+      padding:52px 48px;
+      min-height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between
     }
-    .stars{
-      display:flex;gap:4px;margin-bottom:20px
+    .testi-featured::before{
+      content:'';position:absolute;left:0;top:32px;bottom:32px;width:3px;
+      background:linear-gradient(180deg,var(--gold),rgba(232,184,109,.18))
     }
-    .star{font-size:14px;color:var(--gold)}
+    .testi-kicker,
+    .testi-panel-label,
+    .testi-type{
+      font-family:'Cinzel',serif;
+      font-size:10px;
+      font-weight:500;
+      letter-spacing:2.6px;
+      text-transform:uppercase;
+      color:var(--gold);
+      line-height:1.6
+    }
+    .testi-featured .testi-kicker{margin-bottom:24px}
     .testi-text{
       font-family:'Playfair Display',serif;
-      font-size:clamp(16px,1.8vw,20px);
-      font-style:italic;font-weight:400;
-      line-height:1.65;color:rgba(255,255,255,.85);
+      font-size:1.2rem;
+      font-style:italic;
+      font-weight:400;
+      line-height:1.72;
+      color:rgba(255,255,255,.86);
       margin-bottom:28px
     }
-    .testi-author{display:flex;align-items:center;gap:14px}
+    .testi-featured .testi-text{
+      font-size:1.55rem;
+      color:#fff;
+      max-width:780px
+    }
+    .testi-author{
+      display:flex;
+      align-items:center;
+      gap:14px
+    }
     .testi-avatar{
-      width:42px;height:42px;border-radius:50%;flex-shrink:0;
-      background:linear-gradient(135deg,var(--gold),var(--gold2));
-      display:flex;align-items:center;justify-content:center;
-      font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:800;
-      color:var(--ink)
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      flex-shrink:0;
+      border:1px solid rgba(200,146,58,.42);
+      background:rgba(200,146,58,.1);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:'Cormorant Garamond',serif;
+      font-size:16px;
+      font-weight:800;
+      color:var(--gold2)
     }
     .testi-name{
-      font-size:14px;font-weight:600;color:#fff;margin-bottom:2px
+      font-size:14px;
+      font-weight:600;
+      color:#fff;
+      margin-bottom:2px
     }
-    .testi-role{font-size:12px;color:var(--muted)}
+    .testi-role{
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.55
+    }
 
-    /* featured quote */
-    .testi-featured{
-      background:linear-gradient(135deg,rgba(200,146,58,.12),rgba(232,184,109,.06));
-      border:1px solid rgba(200,146,58,.2);
-      border-radius:20px;padding:48px 44px;
-      text-align:center;margin:24px 0
+    .testi-credibility{
+      border-radius:20px;
+      padding:34px 30px;
+      display:flex;
+      flex-direction:column;
+      gap:22px
     }
-    .testi-featured .testi-text{font-size:clamp(20px,2.5vw,28px);color:#fff}
-    .testi-featured .testi-author{justify-content:center}
+    .testi-panel-label{color:rgba(200,146,58,.78)}
+    .testi-channel{
+      display:grid;
+      grid-template-columns:42px 1fr;
+      gap:16px;
+      padding-top:22px;
+      border-top:1px solid rgba(255,255,255,.075)
+    }
+    .testi-channel-num{
+      font-family:'Cormorant Garamond',serif;
+      font-size:24px;
+      line-height:1;
+      color:rgba(200,146,58,.48)
+    }
+    .testi-channel-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:19px;
+      font-weight:700;
+      color:#fff;
+      margin-bottom:7px;
+      line-height:1.2
+    }
+    .testi-channel-copy{
+      font-size:13px;
+      font-weight:300;
+      line-height:1.75;
+      color:rgba(255,255,255,.48)
+    }
+
+    .testi-collection{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:18px;
+      margin-bottom:26px
+    }
+    .testi-card{
+      position:relative;
+      grid-column:span 3;
+      border-radius:18px;
+      padding:32px 30px;
+      min-height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      transition:border-color .3s,background .3s,transform .3s
+    }
+    .testi-card:hover{
+      background:rgba(255,255,255,.052);
+      border-color:rgba(200,146,58,.2);
+      transform:translateY(-2px)
+    }
+    .testi-card::before{
+      content:'';position:absolute;top:0;left:30px;right:30px;height:1px;
+      background:linear-gradient(90deg,rgba(200,146,58,.55),transparent)
+    }
+    .testi-card-wide{grid-column:span 4}
+    .testi-card-compact{grid-column:span 2}
+    .testi-card .testi-type{margin-bottom:18px}
+    .testi-card .testi-text{
+      font-size:1.05rem;
+      margin-bottom:30px
+    }
+    @media(max-width:980px){
+      .testi-card,
+      .testi-card-wide,
+      .testi-card-compact{grid-column:span 6}
+    }
+
+    .testi-ledger{
+      border-radius:20px;
+      padding:30px;
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:28px;
+      align-items:start
+    }
+    .testi-ledger-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:0;
+      border-left:1px solid rgba(255,255,255,.08)
+    }
+    .testi-ledger-item{
+      padding:0 20px 2px;
+      border-right:1px solid rgba(255,255,255,.08)
+    }
+    .testi-ledger-item:last-child{border-right:0}
+    .testi-ledger-date{
+      display:block;
+      font-family:'Cinzel',serif;
+      font-size:10px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:rgba(200,146,58,.78);
+      margin-bottom:10px
+    }
+    .testi-ledger-item strong{
+      display:block;
+      font-family:'Cormorant Garamond',serif;
+      font-size:17px;
+      line-height:1.25;
+      color:#fff;
+      margin-bottom:8px
+    }
+    .testi-ledger-item p{
+      font-size:12px;
+      line-height:1.7;
+      color:rgba(255,255,255,.48)
+    }
+    @media(max-width:900px){
+      .testi-featured{padding:42px 34px}
+      .testi-ledger{grid-template-columns:1fr}
+      .testi-ledger-grid{
+        grid-template-columns:1fr 1fr;
+        border-left:0;
+        border-top:1px solid rgba(255,255,255,.08)
+      }
+      .testi-ledger-item{
+        padding:20px 18px;
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.08)
+      }
+    }
+    @media(max-width:560px){
+      .testi-featured,
+      .testi-credibility,
+      .testi-card,
+      .testi-ledger{border-radius:16px}
+      .testi-featured,
+      .testi-credibility,
+      .testi-card,
+      .testi-ledger{padding:28px 24px}
+      .testi-featured .testi-text{font-size:1.25rem}
+      .testi-ledger-grid{grid-template-columns:1fr}
+      .testi-ledger-item{padding-left:0;padding-right:0}
+    }
 
     /* ── CERTIFICATES ── */
     #certificates{background:var(--ink2);padding:110px 0}
@@ -1026,7 +1390,8 @@
     .footer-logo{
       font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:800;
       color:#fff;margin-bottom:12px;
-      display:flex;align-items:center;gap:10px
+      display:flex;align-items:center;gap:10px;
+      line-height:1.35
     }
     .footer-tagline{
       font-size:13px;font-weight:300;line-height:1.75;
@@ -1144,7 +1509,7 @@
 <nav id="nav">
   <a class="nav-logo" href="#">
     <span class="nav-logo-dot"></span>
-    Crowned Eagles Global
+    <span class="brand-domain">shekinaihssyap-jaaronkdavid.com</span>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -1165,11 +1530,11 @@
   <div class="hero-left">
     <div class="hero-eyebrow fade-in"><span></span>Exquisite International Magazine · Cover Story</div>
     <h1 class="hero-h1 fade-up">
-      <span class="name-gold">Shekinaih<br/>Siew Sin Yap</span>
+      <span class="name-gold">SHEKINAIH<br/>SIEW SIN YAP</span>
       <br/><span style="display:block;font-size:.4em;font-family:'Cinzel',serif;letter-spacing:5px;color:rgba(255,255,255,.2);margin:.4em 0 .35em;font-weight:400">&amp;</span>
-      <span class="name-silver">J Aaron<br/>K David</span>
+      <span class="name-silver">J AARON<br/>K DAVID</span>
     </h1>
-    <p class="hero-subtitle fade-up d1">Co-Founders · Crowned Eagles Global · Singapore</p>
+    <p class="hero-subtitle fade-up d1">Personal IP Brand · Singapore</p>
     <p class="hero-desc fade-up d2">
       Internationally recognised faith leaders, humanitarian ambassadors, and recipients of the Global Leadership Achievement Award 2025 — honoured at the United Nations 80th Anniversary Summit in Bangkok, Thailand.
     </p>
@@ -1220,7 +1585,7 @@
         <div class="about-photo-accent">
           <img src="images/Shekinaih_Hug_GLS2025_Summit.jpeg" alt="Shekinaih at GLS2025 Summit"/>
         </div>
-        <div class="about-ribbon">Crowned Eagles Global</div>
+        <div class="about-ribbon">Personal IP Brand</div>
       </div>
       <div class="about-content fade-up">
         <p class="eyebrow">The Founders</p>
@@ -1292,7 +1657,7 @@
         <img class="profile-img" src="images/Shekinaih_Medal_Ceremony_GLS2025.jpeg" alt="Shekinaih Siew Sin Yap receiving medal at GLS2025"/>
         <div class="profile-body">
           <p class="profile-number">01 · CO-FOUNDER</p>
-          <h3 class="profile-name">Shekinaih<br/>Siew Sin Yap</h3>
+          <h3 class="profile-name profile-name-gold">SHEKINAIH<br/>SIEW SIN YAP</h3>
           <p class="profile-role">Global Divinity Ambassador</p>
           <p class="profile-bio">
             A prophetic teacher, visionary leader, and humanitarian ambassador dedicated to fostering lasting positive change. Shekinaih is the central voice of Crowned Eagles Global, building a movement anchored in biblical truth and active compassion that spans continents.
@@ -1310,7 +1675,7 @@
         <img class="profile-img" src="images/Aaron_Medal_Ceremony_GLS2025.jpeg" alt="J Aaron K David receiving medal at GLS2025"/>
         <div class="profile-body">
           <p class="profile-number">02 · CO-FOUNDER</p>
-          <h3 class="profile-name">J Aaron<br/>K David</h3>
+          <h3 class="profile-name profile-name-silver">J AARON<br/>K DAVID</h3>
           <p class="profile-role">Global Peace Ambassador</p>
           <p class="profile-bio">
             A distinguished leader, peacemaker, and humanitarian whose service has earned recognition on the highest international stages. Aaron brings unwavering integrity and a deep commitment to advancing global cooperation, community wellbeing, and sustainable peace.
@@ -1339,75 +1704,123 @@
     </div>
     <div class="awards-grid">
 
-      <div class="award-card fade-up">
-        <p class="award-num">01</p>
-        <div class="award-icon-wrap">🏆</div>
-        <p class="award-org">GLS 2025 · Bangkok, Thailand</p>
-        <h3 class="award-name">Global Leadership Achievement Award 2025</h3>
-        <p class="award-desc">Presented at Kantarat Auditorium on the 80th Anniversary of the United Nations. Recognises distinguished leadership, visionary dedication, and exceptional contributions to global cooperation, peace, and sustainable development.</p>
-        <div class="award-recipients">
-          <p class="rec"><strong>J Aaron K David</strong></p>
-          <p class="rec"><strong>Shekinaih Siew Sin Yap</strong></p>
-          <p class="rec">14 December 2025 · Bangkok, Thailand</p>
+      <article class="award-card award-card-major fade-up" role="button" tabindex="0"
+               data-award-image="images/Aaron_GLS2025_Achievement_Award_Certificate.jpeg"
+               aria-label="View Global Leadership Achievement Award 2025 certificate">
+        <div class="award-topline">
+          <p class="award-num">01 · Official Honour</p>
+          <div class="award-seal" aria-hidden="true"><span>GLS</span></div>
         </div>
-      </div>
+        <div class="award-card-body">
+          <p class="award-org">GLS 2025 · Bangkok, Thailand</p>
+          <h3 class="award-name">Global Leadership Achievement Award 2025</h3>
+          <p class="award-desc">Presented at Kantarat Auditorium on the 80th Anniversary of the United Nations. Recognises distinguished leadership, visionary dedication, and exceptional contributions to global cooperation, peace, and sustainable development.</p>
+          <div class="award-recipients">
+            <p class="award-meta-label">Recipients</p>
+            <p class="rec"><strong>Shekinaih Siew Sin Yap</strong></p>
+            <p class="rec"><strong>J Aaron K David</strong></p>
+            <p class="rec">14 December 2025 · Bangkok, Thailand</p>
+          </div>
+        </div>
+        <span class="award-action">View award image</span>
+      </article>
 
-      <div class="award-card fade-up d1">
-        <p class="award-num">02</p>
-        <div class="award-icon-wrap">🎖️</div>
-        <p class="award-org">UNPKFC · United Peace Keepers Federal Council</p>
-        <h3 class="award-name">Distinguished Emblem — Positive Social Development</h3>
-        <p class="award-desc">Certificate of Honor in recognition of dedication to fostering positive social impact, promoting social progress, and making significant contributions to the development of society and community wellbeing.</p>
-        <div class="award-recipients">
-          <p class="rec"><strong>Shekinaih Siew Sin Yap</strong> — 15 Dec 2025</p>
-          <p class="rec"><strong>J Aaron K David</strong> — 19 Jun 2025</p>
+      <article class="award-card award-card-major fade-up d1" role="button" tabindex="0"
+               data-award-image="images/Shekinaih_UNPKFC_Certificate_Medal.jpeg"
+               aria-label="View Shekinaih Siew Sin Yap UNPKFC Certificate of Honor and Distinguished Emblem">
+        <div class="award-topline">
+          <p class="award-num">02 · Certificate of Honor</p>
+          <div class="award-seal" aria-hidden="true"><span>UN</span></div>
         </div>
-      </div>
+        <div class="award-card-body">
+          <p class="award-org">UNPKFC · United Peace Keepers Federal Council</p>
+          <h3 class="award-name">Distinguished Emblem for Positive Social Development</h3>
+          <p class="award-desc">Certificate of Honor in recognition of dedication to fostering positive social impact, promoting social progress, and making significant contributions to the development of society and community wellbeing.</p>
+          <div class="award-recipients">
+            <p class="award-meta-label">Recipients</p>
+            <p class="rec"><strong>Shekinaih Siew Sin Yap</strong> · 15 Dec 2025</p>
+            <p class="rec"><strong>J Aaron K David</strong> · 19 Jun 2025</p>
+          </div>
+        </div>
+        <span class="award-action">View award image</span>
+      </article>
 
-      <div class="award-card fade-up d2">
-        <p class="award-num">03</p>
-        <div class="award-icon-wrap">🌍</div>
-        <p class="award-org">DMGP Global Diplomacy · Mumbai, India</p>
-        <h3 class="award-name">Global Diplomacy Ambassador Awards</h3>
-        <p class="award-desc">Presented alongside Bollywood actor Shri Armaan Tahil. Recognises exceptional commitment to international diplomacy, peace, and cross-cultural understanding at a global level.</p>
-        <div class="award-recipients">
-          <p class="rec"><strong>Shekinaih Siew Sin Yap</strong> — Global Divinity Ambassador</p>
-          <p class="rec"><strong>J Aaron K David</strong> — Global Peace Ambassador</p>
+      <article class="award-card fade-up d2" role="button" tabindex="0"
+               data-award-image="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg"
+               aria-label="View Global Diplomacy Ambassador Awards photo">
+        <div class="award-topline">
+          <p class="award-num">03 · Global Diplomacy</p>
+          <div class="award-seal" aria-hidden="true"><span>DG</span></div>
         </div>
-      </div>
+        <div class="award-card-body">
+          <p class="award-org">DMGP Global Diplomacy · Mumbai, India</p>
+          <h3 class="award-name">Global Diplomacy Ambassador Awards</h3>
+          <p class="award-desc">Presented alongside Bollywood actor Shri Armaan Tahil. Recognises exceptional commitment to international diplomacy, peace, and cross-cultural understanding at a global level.</p>
+          <div class="award-recipients">
+            <p class="award-meta-label">Honourees</p>
+            <p class="rec"><strong>Shekinaih Siew Sin Yap</strong> · Global Divinity Ambassador</p>
+            <p class="rec"><strong>J Aaron K David</strong> · Global Peace Ambassador</p>
+          </div>
+        </div>
+        <span class="award-action">View award image</span>
+      </article>
 
-      <div class="award-card fade-up d3">
-        <p class="award-num">04</p>
-        <div class="award-icon-wrap">📖</div>
-        <p class="award-org">World Book of Records · London</p>
-        <h3 class="award-name">World Book of Records International Recognition</h3>
-        <p class="award-desc">One of the world's most prestigious record-keeping institutions recognised Crowned Eagles Global for outstanding contributions to faith, community, and humanitarian service on an international scale.</p>
-        <div class="award-recipients">
-          <p class="rec"><strong>Crowned Eagles Global</strong> — International Recognition</p>
+      <article class="award-card fade-up d3" role="button" tabindex="0"
+               data-award-image="images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg"
+               aria-label="View World Book of Records International Recognition photo">
+        <div class="award-topline">
+          <p class="award-num">04 · International Record</p>
+          <div class="award-seal" aria-hidden="true"><span>WBR</span></div>
         </div>
-      </div>
+        <div class="award-card-body">
+          <p class="award-org">World Book of Records · London</p>
+          <h3 class="award-name">World Book of Records International Recognition</h3>
+          <p class="award-desc">One of the world's most prestigious record-keeping institutions recognised Crowned Eagles Global for outstanding contributions to faith, community, and humanitarian service on an international scale.</p>
+          <div class="award-recipients">
+            <p class="award-meta-label">Recognised Entity</p>
+            <p class="rec"><strong>Crowned Eagles Global</strong> · International Recognition</p>
+          </div>
+        </div>
+        <span class="award-action">View award image</span>
+      </article>
 
-      <div class="award-card fade-up d4">
-        <p class="award-num">05</p>
-        <div class="award-icon-wrap">🥇</div>
-        <p class="award-org">Air Force Auditorium · Bangkok, Thailand</p>
-        <h3 class="award-name">Global Leadership Summit Gold Trophy</h3>
-        <p class="award-desc">A gold trophy awarded at the Royal Thai Air Force Auditorium in recognition of Crowned Eagles Global's extraordinary international leadership, unity, and humanitarian excellence.</p>
-        <div class="award-recipients">
-          <p class="rec"><strong>Crowned Eagles Global</strong></p>
+      <article class="award-card fade-up d4" role="button" tabindex="0"
+               data-award-image="images/Crowned_Eagles_Global_GLS2025_Trophy.jpeg"
+               aria-label="View Global Leadership Summit Gold Trophy image">
+        <div class="award-topline">
+          <p class="award-num">05 · Institutional Trophy</p>
+          <div class="award-seal" aria-hidden="true"><span>CEG</span></div>
         </div>
-      </div>
+        <div class="award-card-body">
+          <p class="award-org">Air Force Auditorium · Bangkok, Thailand</p>
+          <h3 class="award-name">Global Leadership Summit Gold Trophy</h3>
+          <p class="award-desc">A gold trophy awarded at the Royal Thai Air Force Auditorium in recognition of Crowned Eagles Global's extraordinary international leadership, unity, and humanitarian excellence.</p>
+          <div class="award-recipients">
+            <p class="award-meta-label">Recipient</p>
+            <p class="rec"><strong>Crowned Eagles Global</strong></p>
+          </div>
+        </div>
+        <span class="award-action">View award image</span>
+      </article>
 
-      <div class="award-card fade-up d5">
-        <p class="award-num">06</p>
-        <div class="award-icon-wrap">✨</div>
-        <p class="award-org">Exquisite International Magazine</p>
-        <h3 class="award-name">Magazine Cover Story Feature</h3>
-        <p class="award-desc">Featured as the cover story of Exquisite International Magazine — a prestigious publication celebrating outstanding global leaders, changemakers, and humanitarian champions shaping a better world.</p>
-        <div class="award-recipients">
-          <p class="rec"><strong>Shekinaih Siew Sin Yap &amp; J Aaron K David</strong></p>
+      <article class="award-card fade-up d5" role="button" tabindex="0"
+               data-award-video="videos/Aaron_Shekinaih_Video_Social_Event_2026-05-21.mp4"
+               aria-label="Watch Exquisite International Magazine cover story video">
+        <div class="award-topline">
+          <p class="award-num">06 · Published Feature</p>
+          <div class="award-seal" aria-hidden="true"><span>EXQ</span></div>
         </div>
-      </div>
+        <div class="award-card-body">
+          <p class="award-org">Exquisite International Magazine</p>
+          <h3 class="award-name">Magazine Cover Story Feature</h3>
+          <p class="award-desc">Featured as the cover story of Exquisite International Magazine — a prestigious publication celebrating outstanding global leaders, changemakers, and humanitarian champions shaping a better world.</p>
+          <div class="award-recipients">
+            <p class="award-meta-label">Featured Leaders</p>
+            <p class="rec"><strong>Shekinaih Siew Sin Yap &amp; J Aaron K David</strong></p>
+          </div>
+        </div>
+        <span class="award-action">Watch feature video</span>
+      </article>
 
     </div>
   </div>
@@ -1459,8 +1872,10 @@
 
       <div class="video-card fade-up">
         <div class="video-thumb">
-          <video src="videos/Aaron_Shekinaih_Video_Night_Event_2026-05-21.mp4" preload="none" muted playsinline id="vid2"></video>
-          <div class="video-play-overlay" onclick="openVideoModal('videos/Aaron_Shekinaih_Video_Night_Event_2026-05-21.mp4')">
+          <video src="videos/Aaron_Shekinaih_Video_Night_Event_2026-05-21.mp4"
+                 poster="images/Shekinaih_Aaron_Press_Interview_Cover.jpg"
+                 preload="metadata" muted playsinline id="vid2"></video>
+          <div class="video-play-overlay" onclick="openVideoModal('videos/Aaron_Shekinaih_Video_Night_Event_2026-05-21.mp4', 'images/Shekinaih_Aaron_Press_Interview_Cover.jpg')">
             <div class="play-btn">▶</div>
           </div>
         </div>
@@ -1518,27 +1933,60 @@
     <div class="testi-header fade-up">
       <p class="eyebrow">Words of Impact</p>
       <h2 class="display-title">What People<br/><span class="italic">Are Saying</span></h2>
-    </div>
-
-    <!-- Featured quote -->
-    <div class="testi-featured fade-up">
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <p class="testi-text">
-        "Their story is one of faith activated by action — of leaders who not only speak of a better world, but who roll up their sleeves and build it. Shekinaih and Aaron represent the very best of Singapore's humanitarian tradition on the global stage."
+      <p class="body-lead">
+        A curated witness record for personal testimonies, humanitarian acknowledgements, media recognition, and international credibility.
       </p>
-      <div class="testi-author">
-        <div class="testi-avatar">E</div>
-        <div>
-          <p class="testi-name">Editorial Team</p>
-          <p class="testi-role">Exquisite International Magazine</p>
-        </div>
-      </div>
     </div>
 
-    <div class="testi-grid" style="margin-top:24px">
-      <div class="testi-card fade-up">
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testi-text">"Through the teachings and prayers of Shekinaih and Aaron, my life has been completely transformed. I found purpose, healing, and a community that truly cares. Crowned Eagles Global is not just a ministry — it is a family."</p>
+    <div class="testi-archive" aria-label="Testimonial and credibility archive">
+      <figure class="testi-featured fade-up">
+        <div>
+          <p class="testi-kicker">Editorial Witness</p>
+          <blockquote class="testi-text">
+            "Their story is one of faith activated by action — of leaders who not only speak of a better world, but who roll up their sleeves and build it. Shekinaih and Aaron represent the very best of Singapore's humanitarian tradition on the global stage."
+          </blockquote>
+        </div>
+        <figcaption class="testi-author">
+          <div class="testi-avatar">E</div>
+          <div>
+            <p class="testi-name">Editorial Team</p>
+            <p class="testi-role">Exquisite International Magazine</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <aside class="testi-credibility fade-up d1" aria-label="Credibility channels">
+        <p class="testi-panel-label">Credibility Channels</p>
+        <div class="testi-channel">
+          <span class="testi-channel-num">01</span>
+          <div>
+            <p class="testi-channel-title">Community Testimonies</p>
+            <p class="testi-channel-copy">Firsthand accounts of spiritual care, healing, discipleship, and personal transformation within the ministry family.</p>
+          </div>
+        </div>
+        <div class="testi-channel">
+          <span class="testi-channel-num">02</span>
+          <div>
+            <p class="testi-channel-title">Humanitarian Witness</p>
+            <p class="testi-channel-copy">Statements that speak to compassion in action, social impact, community wellbeing, and sustained service.</p>
+          </div>
+        </div>
+        <div class="testi-channel">
+          <span class="testi-channel-num">03</span>
+          <div>
+            <p class="testi-channel-title">International Recognition</p>
+            <p class="testi-channel-copy">Endorsements, official honours, media features, and global-stage credibility can extend this record without changing the layout.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="testi-collection" aria-label="Witness entries">
+      <article class="testi-card testi-card-wide fade-up">
+        <div>
+          <p class="testi-type">Community Testimony</p>
+          <p class="testi-text">"Through the teachings and prayers of Shekinaih and Aaron, my life has been completely transformed. I found purpose, healing, and a community that truly cares. Crowned Eagles Global is not just a ministry — it is a family."</p>
+        </div>
         <div class="testi-author">
           <div class="testi-avatar">F</div>
           <div>
@@ -1546,21 +1994,13 @@
             <p class="testi-role">Ministry Member · Singapore</p>
           </div>
         </div>
-      </div>
-      <div class="testi-card fade-up d1">
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testi-text">"I have witnessed how Aaron's leadership and Shekinaih's prophetic gift have mobilised our community to serve with greater love and commitment. Their example is one of selfless dedication — truly a beacon for all of us."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">R</div>
-          <div>
-            <p class="testi-name">Rachel</p>
-            <p class="testi-role">Ministry Member</p>
-          </div>
+      </article>
+
+      <article class="testi-card testi-card-compact fade-up d1">
+        <div>
+          <p class="testi-type">Humanitarian Witness</p>
+          <p class="testi-text">"The work that Crowned Eagles Global does is extraordinary. Both Shekinaih and Aaron lead with humility and fire. Their humanitarian efforts have touched lives in ways that words cannot fully express."</p>
         </div>
-      </div>
-      <div class="testi-card fade-up d2">
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testi-text">"The work that Crowned Eagles Global does is extraordinary. Both Shekinaih and Aaron lead with humility and fire. Their humanitarian efforts have touched lives in ways that words cannot fully express."</p>
         <div class="testi-author">
           <div class="testi-avatar">W</div>
           <div>
@@ -1568,10 +2008,27 @@
             <p class="testi-role">Ministry Member</p>
           </div>
         </div>
-      </div>
-      <div class="testi-card fade-up d3">
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testi-text">"Meeting Shekinaih and Aaron at the Global Leadership Summit 2025 was a pivotal moment. Their conviction, warmth, and clarity of purpose set them apart as true global leaders — the kind the world desperately needs more of."</p>
+      </article>
+
+      <article class="testi-card fade-up d2">
+        <div>
+          <p class="testi-type">Service &amp; Leadership</p>
+          <p class="testi-text">"I have witnessed how Aaron's leadership and Shekinaih's prophetic gift have mobilised our community to serve with greater love and commitment. Their example is one of selfless dedication — truly a beacon for all of us."</p>
+        </div>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <p class="testi-name">Rachel</p>
+            <p class="testi-role">Ministry Member</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi-card fade-up d3">
+        <div>
+          <p class="testi-type">International Endorsement</p>
+          <p class="testi-text">"Meeting Shekinaih and Aaron at the Global Leadership Summit 2025 was a pivotal moment. Their conviction, warmth, and clarity of purpose set them apart as true global leaders — the kind the world desperately needs more of."</p>
+        </div>
         <div class="testi-author">
           <div class="testi-avatar">A</div>
           <div>
@@ -1579,8 +2036,34 @@
             <p class="testi-role">Global Leadership Summit 2025 · Bangkok</p>
           </div>
         </div>
-      </div>
+      </article>
     </div>
+
+    <aside class="testi-ledger fade-up d4" aria-label="Recognition and credibility record">
+      <p class="testi-panel-label">Recognition Ledger</p>
+      <div class="testi-ledger-grid">
+        <div class="testi-ledger-item">
+          <span class="testi-ledger-date">2025</span>
+          <strong>Global Leadership Achievement Award</strong>
+          <p>Honoured at the Global Leadership Summit in Bangkok, Thailand.</p>
+        </div>
+        <div class="testi-ledger-item">
+          <span class="testi-ledger-date">UNPKFC</span>
+          <strong>Certificate of Honor</strong>
+          <p>Recognising dedication to social progress and community wellbeing.</p>
+        </div>
+        <div class="testi-ledger-item">
+          <span class="testi-ledger-date">London</span>
+          <strong>World Book of Records</strong>
+          <p>International recognition for faith, community, and humanitarian service.</p>
+        </div>
+        <div class="testi-ledger-item">
+          <span class="testi-ledger-date">Media</span>
+          <strong>Exquisite International Magazine</strong>
+          <p>Cover story feature on their leadership, mission, and global impact.</p>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -1757,9 +2240,9 @@
     <div class="footer-brand">
       <div class="footer-logo">
         <span class="nav-logo-dot"></span>
-        Crowned Eagles Global
+        <span class="brand-domain">shekinaihssyap-jaaronkdavid.com</span>
       </div>
-      <p class="footer-tagline">A Singapore-based faith and humanitarian organisation dedicated to bringing healing, liberty, and transformation to communities worldwide.</p>
+      <p class="footer-tagline">The personal IP branding website for Shekinaih Siew Sin Yap and J Aaron K David, honouring their faith, leadership, humanitarian service, and international recognition.</p>
       <p class="footer-verse">"They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles." <br/><span style="font-size:11px;font-style:normal;letter-spacing:2px;text-transform:uppercase;font-family:'Inter',sans-serif;color:rgba(255,255,255,.2)">— Isaiah 40:31</span></p>
     </div>
     <div>
@@ -1776,9 +2259,9 @@
     <div>
       <p class="footer-col-title">Contact</p>
       <div class="footer-links">
-        <a href="mailto:ceg@crownedeaglesglobal.org">ceg@crownedeaglesglobal.org</a>
-        <a href="https://www.crownedeaglesglobal.org" target="_blank">crownedeaglesglobal.org</a>
-        <a href="https://www.crownedeaglesglobal.org/our-awards-humanitarian-works" target="_blank">Awards &amp; Humanitarian Works</a>
+        <a href="mailto:hello@shekinaihssyap-jaaronkdavid.com">hello@shekinaihssyap-jaaronkdavid.com</a>
+        <a href="https://shekinaihssyap-jaaronkdavid.com" target="_blank">shekinaihssyap-jaaronkdavid.com</a>
+        <a href="#awards">Awards &amp; Humanitarian Works</a>
       </div>
       <p class="footer-col-title" style="margin-top:32px">Recognition</p>
       <div class="footer-links" style="font-size:12px;letter-spacing:.3px">
@@ -1790,21 +2273,21 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2026 Crowned Eagles Global. All rights reserved. · Singapore</p>
-    <div class="footer-email"><a href="mailto:ceg@crownedeaglesglobal.org">ceg@crownedeaglesglobal.org</a></div>
+    <p class="footer-copy">© 2026 shekinaihssyap-jaaronkdavid.com. All rights reserved. · Singapore</p>
+    <div class="footer-email"><a href="mailto:hello@shekinaihssyap-jaaronkdavid.com">hello@shekinaihssyap-jaaronkdavid.com</a></div>
   </div>
 </footer>
 
 <!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
   <button class="lb-close" onclick="closeLightbox()">✕</button>
-  <img id="lightbox-img" src="" alt=""/>
+  <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()"/>
 </div>
 
 <!-- VIDEO MODAL -->
 <div id="video-modal" onclick="closeVideoModal()">
   <button class="vm-close" onclick="closeVideoModal()">✕</button>
-  <video id="modal-video" controls></video>
+  <video id="modal-video" controls poster="images/Shekinaih_Aaron_Press_Interview_Cover.jpg" onclick="event.stopPropagation()"></video>
 </div>
 
 <script>
@@ -1866,7 +2349,8 @@ counters.forEach(c => countIO.observe(c));
 
 // LIGHTBOX
 function openLightbox(src) {
-  document.getElementById('lightbox-img').src = src;
+  const imageSrc = src.startsWith('images/') || src.startsWith('http') || src.startsWith('/') ? src : `images/${src}`;
+  document.getElementById('lightbox-img').src = imageSrc;
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -1876,10 +2360,32 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeLightbox(); closeVideoModal(); } });
 
+document.querySelectorAll('[data-award-image], [data-award-video]').forEach(card => {
+  const openAwardMedia = () => {
+    if (card.dataset.awardVideo) {
+      openVideoModal(card.dataset.awardVideo, card.dataset.awardPoster || '');
+      return;
+    }
+    openLightbox(card.dataset.awardImage);
+  };
+  card.addEventListener('click', openAwardMedia);
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openAwardMedia();
+    }
+  });
+});
+
 // VIDEO MODAL
-function openVideoModal(src) {
+function openVideoModal(src, poster = '') {
   const v = document.getElementById('modal-video');
   v.src = src;
+  if (poster) {
+    v.poster = poster;
+  } else {
+    v.removeAttribute('poster');
+  }
   v.load();
   document.getElementById('video-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1892,10 +2398,6 @@ function closeVideoModal() {
   document.body.style.overflow = '';
 }
 
-// Set video poster frames
-document.querySelectorAll('.video-thumb video').forEach(v => {
-  v.currentTime = 1;
-});
 </script>
 
 
