@@ -64,13 +64,36 @@
     }
     .topbar-pdf:hover{opacity:.88;transform:translateY(-1px)}
 
+    /* ── MAGAZINE COVER HERO ── */
+    .cover-hero{
+      padding:80px clamp(20px,5vw,60px) 0;
+      display:flex;flex-direction:column;align-items:center;
+    }
+    .cover-hero-book{
+      max-width:480px;width:100%;position:relative;
+      border-radius:6px;overflow:hidden;
+      box-shadow:
+        0 80px 140px rgba(0,0,0,.75),
+        0 0 0 1px rgba(200,146,58,.22),
+        0 0 100px rgba(200,146,58,.07);
+    }
+    .cover-hero-book img{
+      width:100%;height:auto;display:block;
+    }
+    .cover-hero-caption{
+      margin-top:22px;
+      font-family:'Cinzel',serif;font-size:9px;font-weight:500;
+      letter-spacing:3px;text-transform:uppercase;
+      color:rgba(255,255,255,.25);text-align:center;
+    }
+
     /* ── HERO MASTHEAD ── */
     .masthead{
-      min-height:80svh;
+      min-height:auto;
       display:flex;flex-direction:column;
       align-items:center;justify-content:center;
       text-align:center;
-      padding:100px clamp(20px,5vw,60px) 72px;
+      padding:72px clamp(20px,5vw,60px) 60px;
       position:relative;
       overflow:hidden;
     }
@@ -326,6 +349,29 @@
     .fade-in.in{opacity:1}
     .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
+    /* ── VIDEO FEATURE ── */
+    .video-section{
+      border-top:1px solid var(--border);
+      padding-top:72px;margin-top:80px;
+      max-width:860px;
+      margin-left:auto;margin-right:auto;
+      padding-left:clamp(20px,5vw,60px);padding-right:clamp(20px,5vw,60px);
+      padding-bottom:80px;
+    }
+    .video-section-header{text-align:center;margin-bottom:40px}
+    .video-frame{
+      border-radius:20px;overflow:hidden;
+      box-shadow:0 40px 100px rgba(0,0,0,.65),0 0 0 1px rgba(200,146,58,.18);
+      background:#000;position:relative;
+    }
+    .video-frame video{width:100%;height:auto;display:block;object-fit:contain}
+    .video-caption{
+      text-align:center;margin-top:20px;
+      font-family:'Cinzel',serif;font-size:9px;font-weight:500;
+      letter-spacing:3px;text-transform:uppercase;
+      color:rgba(255,255,255,.25);
+    }
+
     @media(max-width:600px){
       .topbar-brand{display:none}
       .masthead{min-height:auto;padding-top:88px}
@@ -345,6 +391,17 @@
   <a class="topbar-pdf" href="docs/magazine_article.pdf" target="_blank">View PDF</a>
 </nav>
 
+<!-- EXQUISITE MAGAZINE COVER — full proportions, no crop -->
+<div class="cover-hero fade-in">
+  <div class="cover-hero-book">
+    <img
+      src="images/exquisite-cover.jpg"
+      alt="Exquisite International Magazine — Vol. 6 Issue 2 · Cover Story: Shekinaih Siew Sin Yap &amp; J Aaron K David"
+      loading="eager"/>
+  </div>
+  <p class="cover-hero-caption">Exquisite International Magazine · Vol. 6 · Issue 2 · Cover Story</p>
+</div>
+
 <!-- MASTHEAD -->
 <header class="masthead">
   <div class="masthead-line"></div>
@@ -359,17 +416,6 @@
   <div class="masthead-divider"></div>
 </header>
 
-<!-- COVER IMAGE -->
-<div class="cover-wrap fade-in">
-  <figure class="cover-img-frame">
-    <img src="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg"
-         alt="Shekinaih Siew Sin Yap and J Aaron K David at the Global Leadership Summit 2025, Bangkok"
-         loading="eager"/>
-    <span class="cover-badge">Cover Feature</span>
-  </figure>
-  <p class="cover-caption">Global Leadership Summit 2025 · Bangkok, Thailand — United Nations 80th Anniversary</p>
-</div>
-
 <!-- ARTICLE BODY -->
 <article class="article-body">
 
@@ -377,6 +423,13 @@
     <p>"Their story is one of faith activated by action — of leaders who not only speak of a better world, but who build it."</p>
     <cite>— Exquisite International Magazine</cite>
   </div>
+
+  <figure class="art-img fade-in" style="margin-top:0;margin-bottom:48px">
+    <img src="images/exquisite-cover.jpg"
+         alt="Exquisite International Magazine · Vol. 6 Issue 2 · Cover Story: Shekinaih Siew Sin Yap &amp; J Aaron K David"
+         loading="lazy" style="width:100%;height:auto;display:block;max-height:none"/>
+    <figcaption>Exquisite International Magazine · Vol. 6 · Issue 2 · Cover Story</figcaption>
+  </figure>
 
   <p class="art-section-label fade-up">The Story</p>
 
@@ -472,6 +525,32 @@
   </figure>
 
 </article>
+
+<!-- VIDEO FEATURE -->
+<div class="video-section">
+  <div class="video-section-header fade-up">
+    <p class="art-section-label" style="justify-content:center;max-width:none;margin-bottom:20px">In Motion</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,46px);font-weight:600;line-height:1.1;letter-spacing:-.3px;margin-bottom:16px">
+      A Community in <em style="color:#E8B86D;font-style:italic">Action</em>
+    </h2>
+    <p style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:rgba(255,255,255,.42);max-width:500px;margin:0 auto;line-height:1.85">
+      Beyond the stages, the awards, and the global summits — this is what Crowned Eagles Global looks like in the moments of community, celebration, and shared purpose that define who they are.
+    </p>
+  </div>
+
+  <div class="video-frame fade-in">
+    <video
+      controls
+      preload="metadata"
+      poster="images/exquisite-cover.jpg">
+      <source src="videos/Aaron_Shekinaih_Video_Social_Event_2026-05-21.mp4" type="video/mp4"/>
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <p class="video-caption fade-up">
+    SHEKINAIH SIEW SIN YAP &nbsp;&amp;&nbsp; J AARON K DAVID &nbsp;·&nbsp; Social Event &nbsp;·&nbsp; May 2026
+  </p>
+</div>
 
 <!-- FULL PDF EMBED -->
 <div class="pdf-section fade-up">
