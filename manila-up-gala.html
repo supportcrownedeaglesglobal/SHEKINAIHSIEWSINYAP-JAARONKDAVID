@@ -250,10 +250,10 @@
     .award-card-photo{
       width:100%;overflow:hidden;
       background:linear-gradient(160deg,rgba(18,21,43,1) 0%,rgba(8,9,26,1) 100%);
-      min-height:260px;display:flex;align-items:center;justify-content:center;
+      height:520px;
     }
     .award-card-photo img{
-      width:100%;height:auto;display:block;
+      width:100%;height:100%;object-fit:cover;object-position:top center;display:block;
       transition:transform .5s ease;
     }
     .award-card:hover .award-card-photo img{transform:scale(1.03)}
@@ -864,9 +864,9 @@
     <div class="award-card fade-up d1">
       <div class="award-card-photo">
         <img
-          src="images/manila-up-2025/manila-up-2025-shekinaih-personal-award-portrait-silver-gown.jpg"
+          src="images/shekinaih-manila-up-2025-award-portrait.jpg"
           alt="Shekinaih Siew Sin Yap — Divine Restoration Ignition Award, Hotel Indigo Los Angeles 2025"
-          loading="lazy"/>
+          loading="eager"/>
       </div>
       <div class="award-card-body">
         <p class="award-card-num">01 · Awardee</p>
@@ -911,7 +911,7 @@
   <!-- Both holding awards together -->
   <figure class="awards-feature fade-in">
     <img
-      src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-holding-awards-together-eyes-open.jpg"
+      src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-holding-awards-portrait.jpg"
       alt="Shekinaih Siew Sin Yap and J Aaron K David holding their Manila Up awards — Manila Up 10th Anniversary Gala 2025"
       loading="lazy"/>
   </figure>
@@ -1134,12 +1134,12 @@
     <!-- Full-width group photo -->
     <figure class="celeb-hero fade-in">
       <img
-        src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-with-lisa-lew-and-guest-gala.jpg"
-        alt="Shekinaih Siew Sin Yap and J Aaron K David with Lisa Manibog Lew Brennan and distinguished guest at the Manila Up Gala"
-        loading="lazy"/>
+        src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-group-photo-with-guests.jpg"
+        alt="J Aaron K David and Shekinaih Siew Sin Yap with Lisa Manibog Lew Brennan and Jun Parreño at the Manila Up Gala"
+        loading="eager"/>
     </figure>
     <p class="celeb-hero-caption fade-up">
-      Left to right: J Aaron K David · Shekinaih Siew Sin Yap · Lisa Manibog Lew Brennan · Distinguished Guest
+      Left to right: J Aaron K David · Shekinaih Siew Sin Yap · Lisa Manibog Lew Brennan · Jun Parreño
       &nbsp;·&nbsp; Hotel Indigo Los Angeles · November 2025
     </p>
 
@@ -1192,9 +1192,9 @@
         aria-label="Play: Shekinaih Siew Sin Yap with Lisa Manibog Lew Brennan at the Manila Up Gala"
       >
         <img
-          src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-with-lisa-lew-and-guest-gala.jpg"
-          alt="SHEKINAIH SIEW SIN YAP with Lisa Manibog Lew Brennan — Manila Up 10th Anniversary Gala, Hotel Indigo Los Angeles 2025"
-          loading="lazy"/>
+          src="images/manila-up-2025/photo_2025-11-22_22-05-01.jpg"
+          alt="SHEKINAIH SIEW SIN YAP & J AARON K DAVID with Lisa Manibog Lew Brennan — Manila Up 10th Anniversary Gala, Hotel Indigo Los Angeles 2025"
+          loading="eager"/>
         <div class="vp-overlay"></div>
         <div class="vp-play-btn">
           <div class="vp-play-ring"></div>
@@ -1232,14 +1232,15 @@
     </div>
 
     <!-- Single photo -->
-    <div class="connections-grid" style="grid-template-columns:1fr;max-width:640px">
+    <div class="connections-grid" style="grid-template-columns:1fr;max-width:560px;margin:0 auto">
 
       <div class="conn-item fade-in d1">
         <img
           src="images/manila-up-2025/manila-up-2025-shekinaih-with-guests-at-gala-event.jpg"
-          alt="Shekinaih Siew Sin Yap with Jun Parreño and distinguished guests at the Manila Up Gala"
-          loading="lazy"/>
-        <div class="conn-caption">SHEKINAIH SIEW SIN YAP · With Jun Parreño &amp; Distinguished Guests · Manila Up Gala 2025</div>
+          alt="Shekinaih Siew Sin Yap with Jun Parreño and distinguished guest at the Manila Up Gala"
+          loading="eager"
+          style="object-fit:cover;object-position:center center;width:100%"/>
+        <div class="conn-caption">SHEKINAIH SIEW SIN YAP · With Jun Parreño &amp; Distinguished Guest · Manila Up Gala 2025</div>
       </div>
 
     </div>
@@ -1264,22 +1265,22 @@
 
     <div class="gallery-item fade-in d1">
       <img
-        src="images/manila-up-2025/manila-up-2025-shekinaih-trophy-closeup.jpg"
-        alt="Shekinaih Yap Siew Sin — Divine Restoration Ignition Award" loading="lazy"/>
+        src="images/manila-up-2025/shekinaih_divine_restoration_award.jpg"
+        alt="Shekinaih Siew Sin Yap — Divine Restoration Ignition Award trophy, Manila Up 10th Anniversary" loading="lazy"/>
       <p class="gallery-caption">Shekinaih Siew Sin Yap · Divine Restoration Ignition Award</p>
     </div>
 
     <div class="gallery-item fade-in d2">
       <img
-        src="images/manila-up-2025/manila-up-2025-aaron-trophy-closeup.jpg"
-        alt="J Aaron K David — Transformational Leadership Award" loading="lazy"/>
+        src="images/manila-up-2025/jaaronkdavid_transformation_award.jpg"
+        alt="J Aaron K David — Transformational Leadership Award trophy, Manila Up 10th Anniversary" loading="lazy"/>
       <p class="gallery-caption">J Aaron K David · Transformational Leadership Award</p>
     </div>
 
     <div class="gallery-item fade-in d3">
       <img
-        src="images/manila-up-2025/manila-up-2025-shekinaih-magazine-profile-spread-pages-84-85.jpg"
-        alt="Shekinaih Yap Siew Sin — Manila Up International Magazine, pages 84–85" loading="lazy"/>
+        src="images/manila-up-2025/shekinaih_manila_up_magazine.jpg"
+        alt="Shekinaih Siew Sin Yap holding open Manila Up International Magazine profile spread, pages 84–85" loading="eager"/>
       <p class="gallery-caption">Shekinaih Siew Sin Yap · Manila Up Magazine · Pages 84–85</p>
     </div>
 
