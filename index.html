@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="shekinaihssyap-jaaronkdavid.com — the personal IP branding website for Shekinaih Siew Sin Yap & J Aaron K David, internationally recognised faith leaders, award recipients, and humanitarian ambassadors."/>
+  <meta name="description" content="SHEKINAIH SIEW SIN YAP & J AARON K DAVID — globally recognised humanitarians, international speakers, media personalities, authors, leadership voices, and transformation advocates. Founders of Crowned Eagles Global LLP and CE Global Network LLP. Transforming Lives. Connecting Nations. Inspiring Global Impact."/>
   <title>Shekinaih Siew Sin Yap & J Aaron K David | shekinaihssyap-jaaronkdavid.com</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -329,29 +329,45 @@
     #about{background:var(--ink2)}
 
     .about-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center
+      display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start
     }
     @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:48px}}
 
     .about-photo-stack{
-      position:relative;padding-bottom:60px;padding-right:40px
+      position:relative;
     }
     .about-photo-main{
       border-radius:20px;overflow:hidden;
-      box-shadow:0 32px 80px rgba(0,0,0,.5)
+      box-shadow:0 32px 80px rgba(0,0,0,.5);
+      margin-bottom:14px;
     }
     .about-photo-main img{
-      width:100%;height:520px;object-fit:cover;object-position:top
+      width:100%;height:auto;display:block;
     }
-    @media(max-width:768px){.about-photo-main img{height:70vw}}
-    .about-photo-accent{
-      position:absolute;bottom:0;right:0;
-      width:160px;height:200px;
+    .about-photo-sub-row{
+      display:grid;grid-template-columns:1fr 1fr;gap:14px;
+    }
+    .about-photo-sub{
       border-radius:14px;overflow:hidden;
-      border:3px solid var(--ink2);
-      box-shadow:0 16px 40px rgba(0,0,0,.4)
+      box-shadow:0 16px 40px rgba(0,0,0,.45);
+      border:1px solid rgba(200,146,58,.12);
+      transition:transform .3s,box-shadow .3s;
     }
-    .about-photo-accent img{width:100%;height:100%;object-fit:cover;object-position:top}
+    .about-photo-sub:hover{
+      transform:translateY(-3px);
+      box-shadow:0 24px 56px rgba(0,0,0,.55),0 0 0 1px rgba(200,146,58,.22);
+    }
+    .about-photo-sub img{
+      width:100%;height:auto;display:block;
+    }
+    .about-photo-sub-caption{
+      padding:10px 14px;
+      font-family:'Cinzel',serif;font-size:7.5px;font-weight:600;
+      letter-spacing:2px;text-transform:uppercase;
+      color:rgba(255,255,255,.3);
+      background:rgba(8,9,26,.7);
+      text-align:center;
+    }
     .about-ribbon{
       position:absolute;top:24px;left:-16px;
       background:linear-gradient(135deg,var(--gold),var(--gold2));
@@ -376,6 +392,53 @@
       color:rgba(255,255,255,.68)
     }
     .about-body p{margin-bottom:16px}
+    .about-sub-label{
+      font-family:'Cinzel',serif;font-size:8.5px;font-weight:700;
+      letter-spacing:3.5px;text-transform:uppercase;
+      color:var(--gold);margin:28px 0 12px;
+      display:flex;align-items:center;gap:12px;
+    }
+    .about-sub-label::after{
+      content:'';flex:1;height:1px;
+      background:linear-gradient(90deg,rgba(200,146,58,.3),transparent);
+    }
+    .about-bullets{
+      display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px;
+    }
+    .about-bullet{
+      font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;
+      letter-spacing:.3px;color:rgba(255,255,255,.6);
+      padding:5px 14px;border-radius:100px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.03);
+    }
+    .about-orgs{
+      display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px;
+    }
+    .about-org-pill{
+      font-family:'Cinzel',serif;font-size:9px;font-weight:700;
+      letter-spacing:2px;text-transform:uppercase;
+      color:var(--gold2);
+      padding:8px 18px;border-radius:100px;
+      border:1px solid rgba(200,146,58,.3);
+      background:rgba(200,146,58,.06);
+    }
+    .about-mission{
+      background:linear-gradient(135deg,rgba(200,146,58,.07),rgba(200,146,58,.02));
+      border:1px solid rgba(200,146,58,.22);
+      border-radius:16px;padding:24px 28px;margin-top:32px;
+      position:relative;overflow:hidden;text-align:center;
+    }
+    .about-mission::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    }
+    .about-mission-text{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(17px,1.8vw,22px);font-weight:600;font-style:italic;
+      line-height:1.5;color:var(--gold2);
+      filter:drop-shadow(0 0 10px rgba(232,184,109,.2));
+    }
     /* Inline pure gold name treatment for body copy */
     .name-inline-gold{
       color:#E8B86D;
@@ -404,6 +467,72 @@
       transition:background .2s
     }
     .tag:hover{background:rgba(200,146,58,.12)}
+
+    /* ── ABOUT EDITORIAL LAYOUT ── */
+    .about-editorial-intro{
+      text-align:left;max-width:820px;margin:0 auto 88px;
+    }
+    .about-editorial-intro .about-quote{margin:28px 0 0}
+    .about-editorial-identity{
+      font-family:'DM Sans',sans-serif;
+      font-size:clamp(14px,1.05vw,15.5px);font-weight:300;line-height:1.95;
+      color:rgba(255,255,255,.62);margin-top:32px;
+    }
+    .about-feature-row{
+      display:grid;grid-template-columns:1fr 1fr;gap:72px;
+      align-items:center;margin-bottom:88px;
+    }
+    @media(max-width:900px){
+      .about-feature-row{grid-template-columns:1fr;gap:40px;margin-bottom:56px}
+    }
+    .about-feature-photo{
+      border-radius:20px;overflow:hidden;
+      box-shadow:0 32px 80px rgba(0,0,0,.5);
+      border:1px solid rgba(200,146,58,.1);
+    }
+    .about-feature-photo img{width:100%;height:auto;display:block}
+    .about-feature-photo-duo{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+    .about-feature-photo-duo p{grid-column:1/-1}
+    .about-feature-photo-cap{
+      font-family:'Cinzel',serif;font-size:7.5px;font-weight:600;
+      letter-spacing:2px;text-transform:uppercase;
+      color:rgba(255,255,255,.3);
+      padding:12px 16px;background:rgba(8,9,26,.75);
+      text-align:center;
+    }
+    .about-feature-text>.about-sub-label:first-child{margin-top:0}
+    .about-feature-text p:not(.about-sub-label){
+      font-family:'DM Sans',sans-serif;
+      font-size:15px;font-weight:300;line-height:1.9;
+      color:rgba(255,255,255,.65);margin-bottom:16px;
+    }
+    .about-feature-text .about-bullets{margin-top:4px;margin-bottom:0}
+    .about-gallery-section{margin-bottom:88px}
+    .about-gallery-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;
+    }
+    @media(max-width:768px){.about-gallery-grid{grid-template-columns:1fr 1fr}}
+    .about-gallery-item{
+      border-radius:16px;overflow:hidden;
+      box-shadow:0 16px 40px rgba(0,0,0,.4);
+      border:1px solid rgba(200,146,58,.1);
+      transition:transform .3s,box-shadow .3s;
+    }
+    .about-gallery-item:hover{
+      transform:translateY(-4px);
+      box-shadow:0 24px 56px rgba(0,0,0,.55),0 0 0 1px rgba(200,146,58,.2);
+    }
+    .about-gallery-item img{width:100%;height:auto;display:block}
+    .about-gallery-item-cap{
+      padding:10px 14px;
+      font-family:'Cinzel',serif;font-size:7.5px;font-weight:600;
+      letter-spacing:2px;text-transform:uppercase;
+      color:rgba(255,255,255,.3);background:rgba(8,9,26,.7);text-align:center;
+    }
+    .about-foundation{text-align:center;max-width:640px;margin:0 auto}
+    .about-foundation>.about-sub-label{justify-content:center}
+    .about-foundation>.about-sub-label::after{display:none}
+    .about-foundation .about-orgs{justify-content:center;margin-bottom:32px}
 
     /* ── PROFILE CARDS ── */
     #profiles{background:var(--ink)}
@@ -1553,9 +1682,9 @@
       <br/><span style="display:block;font-size:.4em;font-family:'Cinzel',serif;letter-spacing:5px;color:rgba(255,255,255,.2);margin:.4em 0 .35em;font-weight:400">&amp;</span>
       <span class="name-silver">J AARON<br/>K DAVID</span>
     </h1>
-    <p class="hero-subtitle fade-up d1">Personal IP Brand · Singapore</p>
+    <p class="hero-subtitle fade-up d1">Global Humanitarians · International Speakers · Media Personalities · Authors · Leadership Voices · Transformation Advocates</p>
     <p class="hero-desc fade-up d2">
-      Internationally recognised faith leaders, humanitarian ambassadors, and recipients of the Global Leadership Achievement Award 2025 — honoured at the United Nations 80th Anniversary Summit in Bangkok, Thailand.
+      Internationally recognised figures known for their growing influence across global leadership platforms, humanitarian missions, international media engagements, spiritual gatherings, business networking circles, and transformational initiatives — spanning Asia, the United States, and beyond. Founders of Crowned Eagles Global LLP and CE Global Network LLP.
     </p>
     <div class="hero-ctas fade-up d3">
       <a class="btn-primary" href="#about">Discover Their Story</a>
@@ -1563,16 +1692,16 @@
     </div>
     <div class="hero-stats fade-up d4">
       <div class="stat-item">
-        <div class="stat-num counter" data-target="6">0</div>
-        <div class="stat-label">Major Awards</div>
+        <div class="stat-num counter" data-target="10">0</div>
+        <div class="stat-label">International Awards</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num counter" data-target="3">0</div>
-        <div class="stat-label">Countries</div>
+        <div class="stat-num counter" data-target="5">0</div>
+        <div class="stat-label">Nations</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num counter" data-target="2025">0</div>
-        <div class="stat-label">Year Recognised</div>
+        <div class="stat-num counter" data-target="30">0</div>
+        <div class="stat-label">Years Experience</div>
       </div>
     </div>
     <div class="scroll-hint fade-in d5">
@@ -1584,7 +1713,7 @@
     <img src="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg" alt="Shekinaih Siew Sin Yap and J Aaron K David at the Global Leadership Summit 2025, Bangkok" loading="eager"/>
     <div class="hero-img-overlay"></div>
     <div class="hero-award-badge">
-      <div class="badge-icon">🏆</div>
+      <div class="badge-icon" style="font-family:'Cinzel',serif;font-size:11px;font-weight:700;color:var(--ink)">GLS</div>
       <div class="badge-text">
         <strong>GLS 2025 · Bangkok</strong>
         Global Leadership Achievement Award — 80th Anniversary of the United Nations
@@ -1596,68 +1725,144 @@
 <!-- ABOUT -->
 <section id="about" class="pad-section">
   <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-photo-stack fade-in">
-        <div class="about-photo-main">
-          <img src="images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg" alt="Shekinaih and Aaron on stage at GLS2025"/>
+
+    <!-- ① Editorial Intro — centered header -->
+    <div class="about-editorial-intro fade-up">
+      <p class="eyebrow">The Founders</p>
+      <h2 class="display-title">Faith That <span class="italic">Moves Nations</span></h2>
+      <blockquote class="about-quote">
+        "The Spirit of the LORD is upon me; because He hath anointed me to preach good tidings unto the meek, to proclaim liberty to the captives."
+        <br/><cite style="font-size:11px;font-style:normal;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-family:'Cinzel',serif">— Isaiah 61:1 · The Calling of Crowned Eagles Global</cite>
+      </blockquote>
+      <div class="about-stats fade-up d1">
+        <div class="about-stat">
+          <span class="about-stat-num">10+</span>
+          <span class="about-stat-label">International<br/>Awards</span>
         </div>
-        <div class="about-photo-accent">
-          <img src="images/Shekinaih_Hug_GLS2025_Summit.jpeg" alt="Shekinaih at GLS2025 Summit"/>
+        <div class="about-stat-divider"></div>
+        <div class="about-stat">
+          <span class="about-stat-num">5+</span>
+          <span class="about-stat-label">Nations<br/>Recognised</span>
         </div>
-        <div class="about-ribbon">Personal IP Brand</div>
+        <div class="about-stat-divider"></div>
+        <div class="about-stat">
+          <span class="about-stat-num">30+</span>
+          <span class="about-stat-label">Years<br/>Experience</span>
+        </div>
+        <div class="about-stat-divider"></div>
+        <div class="about-stat">
+          <span class="about-stat-num">∞</span>
+          <span class="about-stat-label">Lives<br/>Transformed</span>
+        </div>
       </div>
-      <div class="about-content fade-up">
-        <p class="eyebrow">The Founders</p>
-        <h2 class="display-title">Faith That <span class="italic">Moves Nations</span></h2>
-        <blockquote class="about-quote">
-          "The Spirit of the LORD is upon me; because He hath anointed me to preach good tidings unto the meek, to proclaim liberty to the captives."
-          <br/><cite style="font-size:11px;font-style:normal;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-family:'Cinzel',serif">— Isaiah 61:1 · The Calling of Crowned Eagles Global</cite>
-        </blockquote>
+      <p class="about-editorial-identity fade-up d2">
+        <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> are internationally recognised leadership voices, humanitarian advocates, media personalities, authors, global networkers, and transformational speakers whose influence continues to expand across Asia, the United States, and international platforms worldwide. Through leadership summits, humanitarian outreach missions, international diplomacy engagements, ministry gatherings, media appearances, red carpet events, and transformational platforms, they have established a growing global presence — connecting entrepreneurs, leaders, creatives, and communities across multiple nations.
+      </p>
+    </div>
 
-        <!-- Stats Strip -->
-        <div class="about-stats fade-up d1">
-          <div class="about-stat">
-            <span class="about-stat-num">5+</span>
-            <span class="about-stat-label">International<br/>Awards</span>
-          </div>
-          <div class="about-stat-divider"></div>
-          <div class="about-stat">
-            <span class="about-stat-num">3</span>
-            <span class="about-stat-label">Nations<br/>Recognised</span>
-          </div>
-          <div class="about-stat-divider"></div>
-          <div class="about-stat">
-            <span class="about-stat-num">16yr</span>
-            <span class="about-stat-label">Active<br/>Ministry</span>
-          </div>
-          <div class="about-stat-divider"></div>
-          <div class="about-stat">
-            <span class="about-stat-num">∞</span>
-            <span class="about-stat-label">Lives<br/>Transformed</span>
-          </div>
+    <!-- ② Feature Row A: Hollywood & LA — text left, photo right -->
+    <div class="about-feature-row fade-up">
+      <div class="about-feature-text">
+        <p class="about-sub-label">Hollywood &amp; Los Angeles Media</p>
+        <p>
+          Participated in professional media interviews, entertainment gatherings, networking receptions, and red carpet events in Los Angeles and Hollywood — appearing alongside international leaders, media personalities, and entertainment figures. Engagements included associations with <strong style="color:rgba(255,255,255,.85)">Authentic TV Global Media</strong>, <strong style="color:rgba(255,255,255,.85)">NSI Universal Inc.</strong>, <strong style="color:rgba(255,255,255,.85)">The Avantgarde</strong>, <strong style="color:rgba(255,255,255,.85)">Timeless Music</strong>, <strong style="color:rgba(255,255,255,.85)">Revel Live Entertainment</strong>, <strong style="color:rgba(255,255,255,.85)">Devlux Entertainment Group</strong>, and <strong style="color:rgba(255,255,255,.85)">From The Heart Productions</strong>.
+        </p>
+        <p class="about-sub-label">Their Influence Spans</p>
+        <div class="about-bullets">
+          <span class="about-bullet">Leadership Empowerment</span>
+          <span class="about-bullet">Humanitarian Contribution</span>
+          <span class="about-bullet">Transformational Speaking</span>
+          <span class="about-bullet">International Networking</span>
+          <span class="about-bullet">Business Development</span>
+          <span class="about-bullet">Media Engagement</span>
+          <span class="about-bullet">Spiritual Encouragement</span>
+          <span class="about-bullet">Cross-Cultural Collaboration</span>
         </div>
+      </div>
+      <div class="about-feature-photo about-feature-photo-duo">
+        <img src="images/Aaron_Shekinaih_Hollywood_Red_Carpet_Interview_01.jpg"
+             alt="J Aaron K David and Shekinaih Siew Sin Yap — Red Carpet Press Interview, Hollywood, Los Angeles"
+             loading="lazy" onerror="this.src='images/Shekinaih_Aaron_Press_Interview_Cover.jpg'"/>
+        <img src="images/Aaron_Shekinaih_Hollywood_Red_Carpet_Interview_02.jpg"
+             alt="J Aaron K David and Shekinaih Siew Sin Yap — Red Carpet Media Interview, Hollywood, Los Angeles"
+             loading="lazy" onerror="this.src='images/Shekinaih_Aaron_Press_Interview_Cover.jpg'"/>
+        <p class="about-feature-photo-cap">Hollywood Red Carpet · Press Interview · Los Angeles</p>
+      </div>
+    </div>
 
-        <div class="about-body">
-          <p>
-            <span class="name-inline-gold">Shekinaih Siew Sin Yap</span> and <span class="name-inline-silver">J Aaron K David</span> are Singapore-based faith leaders, humanitarian ambassadors, and co-founders of Crowned Eagles Global — a movement anchored in the prophetic vision of Isaiah 61, with a mandate to bring healing, liberty, and lasting transformation to communities across the world.
-          </p>
-          <p>
-            Over sixteen years of dedicated service, they have built an international platform of spiritual leadership and cross-cultural diplomacy — earning recognition from the World Book of Records London, the United Nations-affiliated UNPKFC, and the Global Leadership Summit 2025 in Bangkok, Thailand.
-          </p>
-          <p>
-            Their story — featured as a cover story in Exquisite International Magazine — stands as a testament to what principled, courageous leadership looks like when anchored in an unshakeable calling.
-          </p>
-        </div>
-        <div class="about-tags fade-up d3">
-          <span class="tag">Faith Leadership</span>
-          <span class="tag">Humanitarian Work</span>
-          <span class="tag">International Diplomacy</span>
-          <span class="tag">Prophetic Ministry</span>
-          <span class="tag">Singapore</span>
-          <span class="tag">Global Impact</span>
+    <!-- ③ Feature Row B: UNPKFC — photo left, humanitarian text right -->
+    <div class="about-feature-row fade-up">
+      <div class="about-feature-photo about-feature-photo-duo">
+        <img src="images/shekinaih_siewsinyap_award.jpg"
+             alt="Shekinaih Siew Sin Yap — Global Leadership Summit 2025"
+             loading="lazy"/>
+        <img src="images/jaaronkdavid_award.jpg"
+             alt="J Aaron K David — Global Leadership Summit 2025"
+             loading="lazy"/>
+        <p class="about-feature-photo-cap">Global Leadership Summit 2025 · Award Ceremony · International Recognition</p>
+      </div>
+      <div class="about-feature-text">
+        <p class="about-sub-label">Global Humanitarian &amp; Community Impact</p>
+        <div class="about-bullets">
+          <span class="about-bullet">Peace Ambassador Engagements</span>
+          <span class="about-bullet">Humanitarian Recognition Ceremonies</span>
+          <span class="about-bullet">Outreach Missions Across Asia</span>
+          <span class="about-bullet">International Leadership Forums</span>
+          <span class="about-bullet">Social Development Initiatives</span>
+          <span class="about-bullet">Community Transformation Projects</span>
+          <span class="about-bullet">Global Peace &amp; Diplomacy Programs</span>
+          <span class="about-bullet">Cross-Cultural Relationship Building</span>
         </div>
       </div>
     </div>
+
+    <!-- ④ Feature Row C: Manila Up — text left, photo right -->
+    <div class="about-feature-row fade-up">
+      <div class="about-feature-text">
+        <p class="about-sub-label">Manila Up International Magazine</p>
+        <p>
+          Recognised among international awardees, entrepreneurs, and distinguished personalities at the 10th Anniversary celebration of <strong style="color:rgba(255,255,255,.85)">Manila Up International Magazine</strong> — a prestigious red carpet gala in Los Angeles celebrating leadership, creativity, humanitarian contribution, cultural influence, and international collaboration across the global Filipino community and beyond.
+        </p>
+      </div>
+      <div class="about-feature-photo">
+        <img src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-holding-awards-portrait.jpg"
+             alt="J Aaron K David and Shekinaih Siew Sin Yap holding their Manila Up 10th Anniversary Awards — Transformational Leadership Award"
+             loading="lazy" onerror="this.src='images/manila-up-2025/manila-up-2025-shekinaih-aaron-holding-awards-close-up.jpg'"/>
+        <p class="about-feature-photo-cap">Manila Up · 10th Anniversary · Transformational Leadership Award</p>
+      </div>
+    </div>
+
+    <!-- ⑤ Feature Row D: IISA Oman photo left, Ministry text right -->
+    <div class="about-feature-row fade-up">
+      <div class="about-feature-photo">
+        <img src="images/his-presence-fire-ministries-2025-aaron-shekinaih-dr-gershom-sikaala.jpg"
+             alt="J Aaron K David and Shekinaih Siew Sin Yap with Dr. Gershom Sikaala — His Presence Fire Ministries, Los Angeles, November 2025"
+             loading="lazy" onerror="this.src='images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg'"/>
+        <p class="about-feature-photo-cap">His Presence Fire Ministries · Dr. Gershom Sikaala · Los Angeles 2025</p>
+      </div>
+      <div class="about-feature-text">
+        <p class="about-sub-label">Los Angeles &amp; Hollywood Ministry</p>
+        <p>
+          Participated in a ministry gathering at <strong style="color:rgba(255,255,255,.85)">His Presence Fire Ministries</strong> under Dr. Gershom Sikaala on 23 November 2025. A message covering spiritual awakening, restoration, breakthrough, deliverance, healing, and revival was shared before the congregation — emphasising renewed faith and transformation across personal, family, and community spheres in California, Hollywood, and beyond.
+        </p>
+      </div>
+    </div>
+
+    <!-- ⑦ Foundation: Organizations + Mission -->
+    <div class="about-foundation fade-up">
+      <p class="about-sub-label">Founders &amp; Organizations</p>
+      <div class="about-orgs">
+        <span class="about-org-pill">Crowned Eagles Global LLP</span>
+        <span class="about-org-pill">CE Global Network LLP</span>
+      </div>
+      <div class="about-mission fade-up d1">
+        <p class="about-mission-text">"Transforming Lives &nbsp;·&nbsp; Connecting Nations &nbsp;·&nbsp; Inspiring Global Impact"</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:300;color:rgba(255,255,255,.38);margin-top:16px;line-height:1.85;max-width:560px;margin-left:auto;margin-right:auto;">
+          To inspire transformation, empower individuals and communities, strengthen global relationships, and build bridges across nations, industries, and cultures — through leadership, outreach, networking, and transformational engagement that uplifts lives and connects the world.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1667,7 +1872,7 @@
     <div class="profiles-header fade-up">
       <p class="eyebrow">The Leaders</p>
       <h2 class="display-title">Meet the <span class="italic">Founders</span></h2>
-      <p class="body-lead" style="margin:0 auto">Two lives. One mission. A global movement built on faith, compassion, and the unwavering belief that one dedicated person can change the world.</p>
+      <p class="body-lead" style="margin:0 auto">Two voices. One mission. A global movement built on faith, spiritual conviction, humanitarian service, and the transformative belief that restored lives can change nations.</p>
     </div>
     <div class="profiles-grid">
 
@@ -1677,14 +1882,17 @@
         <div class="profile-body">
           <p class="profile-number">01 · CO-FOUNDER</p>
           <h3 class="profile-name profile-name-gold">SHEKINAIH<br/>SIEW SIN YAP</h3>
-          <p class="profile-role">Global Divinity Ambassador</p>
+          <p class="profile-role">Global Divinity Ambassador · Humanitarian · Author · International Speaker</p>
           <p class="profile-bio">
-            A prophetic teacher, visionary leader, and humanitarian ambassador dedicated to fostering lasting positive change. Shekinaih is the central voice of Crowned Eagles Global, building a movement anchored in biblical truth and active compassion that spans continents.
+            An internationally recognised humanitarian, author, international speaker, and media personality whose growing global presence spans leadership summits, red carpet events, humanitarian missions, and transformational platforms across Asia, the United States, and beyond. Co-founder of <strong style="color:rgba(255,255,255,.85)">Crowned Eagles Global LLP</strong> and <strong style="color:rgba(255,255,255,.85)">CE Global Network LLP</strong>, appointed Global Divinity Ambassador — she has appeared at Hollywood and Los Angeles media events alongside global leaders and entertainment personalities, with associations including <strong style="color:rgba(255,255,255,.85)">Authentic TV Global Media</strong>, <strong style="color:rgba(255,255,255,.85)">NSI Universal Inc.</strong>, <strong style="color:rgba(255,255,255,.85)">The Avantgarde</strong>, <strong style="color:rgba(255,255,255,.85)">Timeless Music</strong>, <strong style="color:rgba(255,255,255,.85)">Revel Live Entertainment</strong>, and <strong style="color:rgba(255,255,255,.85)">Devlux Entertainment Group</strong>. Honoured with the <strong style="color:rgba(255,255,255,.85)">Divine Restoration Ignition Award</strong> at the Manila Up International Magazine 10th Anniversary Red Carpet Gala, Los Angeles 2025. Co-author of the transformational <em>"BEHOLD MY MESSENGER"</em> five-volume series, and a ministry partner of <strong style="color:rgba(255,255,255,.85)">His Presence Fire Ministries</strong> under Dr. Gershom Sikaala.
           </p>
           <div>
-            <div class="profile-award-pill"><span>🎖️ Global Divinity Ambassador Award</span></div>
-            <div class="profile-award-pill"><span>🏆 GLS 2025 Achievement Award</span></div>
-            <div class="profile-award-pill"><span>🌟 UNPKFC Distinguished Emblem</span></div>
+            <div class="profile-award-pill"><span>✦ Divine Restoration Ignition Award · Manila Up 2025</span></div>
+            <div class="profile-award-pill"><span>🏆 GLS 2025 Achievement Award · Bangkok</span></div>
+            <div class="profile-award-pill"><span>✦ Global Divinity Ambassador · DMGP</span></div>
+            <div class="profile-award-pill"><span>✦ UNPKFC Distinguished Emblem</span></div>
+            <div class="profile-award-pill"><span>✦ Author · "BEHOLD MY MESSENGER"</span></div>
+            <div class="profile-award-pill"><span>✦ Hollywood &amp; LA · International Media</span></div>
           </div>
         </div>
       </div>
@@ -1695,14 +1903,17 @@
         <div class="profile-body">
           <p class="profile-number">02 · CO-FOUNDER</p>
           <h3 class="profile-name profile-name-silver">J AARON<br/>K DAVID</h3>
-          <p class="profile-role">Global Peace Ambassador</p>
+          <p class="profile-role">Global Peace Ambassador · Humanitarian · Leadership Voice · Speaker</p>
           <p class="profile-bio">
-            A distinguished leader, peacemaker, and humanitarian whose service has earned recognition on the highest international stages. Aaron brings unwavering integrity and a deep commitment to advancing global cooperation, community wellbeing, and sustainable peace.
+            A globally recognised humanitarian, international speaker, and media personality whose principled leadership and cross-border influence span leadership summits, diplomatic engagements, red carpet events, and transformational platforms across Asia, the United States, and beyond. Co-founder of <strong style="color:rgba(255,255,255,.85)">Crowned Eagles Global LLP</strong> and <strong style="color:rgba(255,255,255,.85)">CE Global Network LLP</strong>, appointed Global Peace Ambassador — he has participated in Hollywood and Los Angeles red carpet events, international networking gatherings, and media engagements alongside global leaders and entertainment communities, with associations including <strong style="color:rgba(255,255,255,.85)">Authentic TV Global Media</strong>, <strong style="color:rgba(255,255,255,.85)">NSI Universal Inc.</strong>, <strong style="color:rgba(255,255,255,.85)">The Avantgarde</strong>, <strong style="color:rgba(255,255,255,.85)">Timeless Music</strong>, and <strong style="color:rgba(255,255,255,.85)">From The Heart Productions</strong>. Honoured with the <strong style="color:rgba(255,255,255,.85)">Transformational Leadership Award</strong> at the Manila Up International Magazine 10th Anniversary Red Carpet Gala, Los Angeles 2025. His steadfast commitment to advancing global cooperation, community wellbeing, and sustainable impact continues to build bridges across leadership, media, and humanitarian communities worldwide.
           </p>
           <div>
-            <div class="profile-award-pill"><span>🕊️ Global Peace Ambassador Award</span></div>
-            <div class="profile-award-pill"><span>🏆 GLS 2025 Achievement Award</span></div>
-            <div class="profile-award-pill"><span>🌟 UNPKFC Distinguished Emblem</span></div>
+            <div class="profile-award-pill"><span>✦ Transformational Leadership Award · Manila Up 2025</span></div>
+            <div class="profile-award-pill"><span>🏆 GLS 2025 Achievement Award · Bangkok</span></div>
+            <div class="profile-award-pill"><span>✦ Global Peace Ambassador · DMGP</span></div>
+            <div class="profile-award-pill"><span>✦ UNPKFC Distinguished Emblem</span></div>
+            <div class="profile-award-pill"><span>✦ International Humanitarian Leadership</span></div>
+            <div class="profile-award-pill"><span>✦ Hollywood &amp; LA · International Media</span></div>
           </div>
         </div>
       </div>
@@ -1719,15 +1930,35 @@
         <p class="eyebrow">Honours &amp; Recognition</p>
         <h2 class="display-title">Awards &amp; <span class="italic">Achievements</span></h2>
       </div>
-      <p class="body-lead fade-up d2" style="max-width:380px;text-align:right">Recognised across three countries by five prestigious international organisations.</p>
+      <p class="body-lead fade-up d2" style="max-width:380px;text-align:right">Recognised across five nations through multiple prestigious international organisations and global platforms.</p>
     </div>
     <div class="awards-grid">
 
       <article class="award-card award-card-major fade-up" role="button" tabindex="0"
+               aria-label="IISA 2026 International Institute of Influencers — Muscat, Oman">
+        <div class="award-topline">
+          <p class="award-num">01 · International Recognition</p>
+          <div class="award-seal" aria-hidden="true"><span>IISA</span></div>
+        </div>
+        <div class="award-card-body">
+          <p class="award-org">IISA 2026 · International Institute of Influencers · Muscat, Oman</p>
+          <h3 class="award-name">IISA 2026 Recognition · Oman Vision 2040</h3>
+          <p class="award-desc">Recognised at the International Institute of Influencers 2026 in Muscat, Oman — connected with Oman Vision 2040, global partnerships, business collaboration, international trade, talent development, leadership, and technology.</p>
+          <div class="award-recipients">
+            <p class="award-meta-label">Recipients</p>
+            <p class="rec"><strong>Shekinaih Siew Sin Yap</strong></p>
+            <p class="rec"><strong>J Aaron K David</strong></p>
+            <p class="rec">2026 · Muscat, Oman</p>
+          </div>
+        </div>
+        <span class="award-action">View award</span>
+      </article>
+
+      <article class="award-card award-card-major fade-up d1" role="button" tabindex="0"
                data-award-image="images/Aaron_GLS2025_Achievement_Award_Certificate.jpeg"
                aria-label="View Global Leadership Achievement Award 2025 certificate">
         <div class="award-topline">
-          <p class="award-num">01 · Official Honour</p>
+          <p class="award-num">02 · Official Honour</p>
           <div class="award-seal" aria-hidden="true"><span>GLS</span></div>
         </div>
         <div class="award-card-body">
@@ -1744,17 +1975,17 @@
         <span class="award-action">View award image</span>
       </article>
 
-      <article class="award-card award-card-major fade-up d1" role="button" tabindex="0"
+      <article class="award-card fade-up d2" role="button" tabindex="0"
                data-award-image="images/Shekinaih_UNPKFC_Certificate_Medal.jpeg"
                aria-label="View Shekinaih Siew Sin Yap UNPKFC Certificate of Honor and Distinguished Emblem">
         <div class="award-topline">
-          <p class="award-num">02 · Certificate of Honor</p>
+          <p class="award-num">03 · Certificate of Honor</p>
           <div class="award-seal" aria-hidden="true"><span>UN</span></div>
         </div>
         <div class="award-card-body">
           <p class="award-org">UNPKFC · United Peace Keepers Federal Council</p>
           <h3 class="award-name">Distinguished Emblem for Positive Social Development</h3>
-          <p class="award-desc">Certificate of Honor in recognition of dedication to fostering positive social impact, promoting social progress, and making significant contributions to the development of society and community wellbeing.</p>
+          <p class="award-desc">Certificate of Honor recognising dedication to fostering positive social impact, promoting social progress, peace advocacy, and making significant contributions to community wellbeing and humanitarian service.</p>
           <div class="award-recipients">
             <p class="award-meta-label">Recipients</p>
             <p class="rec"><strong>Shekinaih Siew Sin Yap</strong> · 15 Dec 2025</p>
@@ -1764,17 +1995,36 @@
         <span class="award-action">View award image</span>
       </article>
 
-      <article class="award-card fade-up d2" role="button" tabindex="0"
+      <article class="award-card fade-up d3" role="button" tabindex="0"
+               aria-label="Manila Up International Magazine 10th Anniversary Awards">
+        <div class="award-topline">
+          <p class="award-num">04 · Magazine Recognition</p>
+          <div class="award-seal" aria-hidden="true"><span>MU</span></div>
+        </div>
+        <div class="award-card-body">
+          <p class="award-org">Manila Up International Magazine · 10th Anniversary</p>
+          <h3 class="award-name">Manila Up International Magazine Awards</h3>
+          <p class="award-desc">Featured and recognised during the 10th Anniversary of Manila Up International Magazine — positioning both leaders as global transformation figures with published profiles highlighting leadership, resilience, vision, and international influence.</p>
+          <div class="award-recipients">
+            <p class="award-meta-label">Individual Awards</p>
+            <p class="rec"><strong>Shekinaih Siew Sin Yap</strong> · Divine Restoration Ignition Award</p>
+            <p class="rec"><strong>J Aaron K David</strong> · Transformational Leadership Award</p>
+          </div>
+        </div>
+        <span class="award-action">View award</span>
+      </article>
+
+      <article class="award-card fade-up d4" role="button" tabindex="0"
                data-award-image="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg"
                aria-label="View Global Diplomacy Ambassador Awards photo">
         <div class="award-topline">
-          <p class="award-num">03 · Global Diplomacy</p>
+          <p class="award-num">05 · Global Diplomacy</p>
           <div class="award-seal" aria-hidden="true"><span>DG</span></div>
         </div>
         <div class="award-card-body">
           <p class="award-org">DMGP Global Diplomacy · Mumbai, India</p>
           <h3 class="award-name">Global Diplomacy Ambassador Awards</h3>
-          <p class="award-desc">Presented alongside Bollywood actor Shri Armaan Tahil. Recognises exceptional commitment to international diplomacy, peace, and cross-cultural understanding at a global level.</p>
+          <p class="award-desc">Presented alongside Bollywood actor Shri Armaan Tahil. Recognises exceptional commitment to international diplomacy, peace, humanitarian responsibility, and cross-cultural understanding at a global level.</p>
           <div class="award-recipients">
             <p class="award-meta-label">Honourees</p>
             <p class="rec"><strong>Shekinaih Siew Sin Yap</strong> · Global Divinity Ambassador</p>
@@ -1784,17 +2034,17 @@
         <span class="award-action">View award image</span>
       </article>
 
-      <article class="award-card fade-up d3" role="button" tabindex="0"
+      <article class="award-card fade-up d5" role="button" tabindex="0"
                data-award-image="images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg"
                aria-label="View World Book of Records International Recognition photo">
         <div class="award-topline">
-          <p class="award-num">04 · International Record</p>
+          <p class="award-num">06 · International Record</p>
           <div class="award-seal" aria-hidden="true"><span>WBR</span></div>
         </div>
         <div class="award-card-body">
           <p class="award-org">World Book of Records · London</p>
           <h3 class="award-name">World Book of Records International Recognition</h3>
-          <p class="award-desc">One of the world's most prestigious record-keeping institutions recognised Crowned Eagles Global for outstanding contributions to faith, community, and humanitarian service on an international scale.</p>
+          <p class="award-desc">One of the world's most prestigious record-keeping institutions recognised Crowned Eagles Global for outstanding contributions to leadership, humanitarian service, community impact, and international excellence.</p>
           <div class="award-recipients">
             <p class="award-meta-label">Recognised Entity</p>
             <p class="rec"><strong>Crowned Eagles Global</strong> · International Recognition</p>
@@ -1803,42 +2053,23 @@
         <span class="award-action">View award image</span>
       </article>
 
-      <article class="award-card fade-up d4" role="button" tabindex="0"
+      <article class="award-card fade-up" style="transition-delay:.6s" role="button" tabindex="0"
                data-award-image="images/Crowned_Eagles_Global_GLS2025_Trophy.jpeg"
                aria-label="View Global Leadership Summit Gold Trophy image">
         <div class="award-topline">
-          <p class="award-num">05 · Institutional Trophy</p>
+          <p class="award-num">07 · Institutional Trophy</p>
           <div class="award-seal" aria-hidden="true"><span>CEG</span></div>
         </div>
         <div class="award-card-body">
           <p class="award-org">Air Force Auditorium · Bangkok, Thailand</p>
           <h3 class="award-name">Global Leadership Summit Gold Trophy</h3>
-          <p class="award-desc">A gold trophy awarded at the Royal Thai Air Force Auditorium in recognition of Crowned Eagles Global's extraordinary international leadership, unity, and humanitarian excellence.</p>
+          <p class="award-desc">A gold trophy awarded at the Royal Thai Air Force Auditorium in recognition of Crowned Eagles Global's extraordinary international leadership, unity, humanitarian engagement, and global excellence.</p>
           <div class="award-recipients">
             <p class="award-meta-label">Recipient</p>
             <p class="rec"><strong>Crowned Eagles Global</strong></p>
           </div>
         </div>
         <span class="award-action">View award image</span>
-      </article>
-
-      <article class="award-card fade-up d5" role="button" tabindex="0"
-               data-award-video="videos/Aaron_Shekinaih_Video_Social_Event_2026-05-21.mp4"
-               aria-label="Watch Exquisite International Magazine cover story video">
-        <div class="award-topline">
-          <p class="award-num">06 · Published Feature</p>
-          <div class="award-seal" aria-hidden="true"><span>EXQ</span></div>
-        </div>
-        <div class="award-card-body">
-          <p class="award-org">Exquisite International Magazine</p>
-          <h3 class="award-name">Magazine Cover Story Feature</h3>
-          <p class="award-desc">Featured as the cover story of Exquisite International Magazine — a prestigious publication celebrating outstanding global leaders, changemakers, and humanitarian champions shaping a better world.</p>
-          <div class="award-recipients">
-            <p class="award-meta-label">Featured Leaders</p>
-            <p class="rec"><strong>Shekinaih Siew Sin Yap &amp; J Aaron K David</strong></p>
-          </div>
-        </div>
-        <span class="award-action">Watch feature video</span>
       </article>
 
     </div>
@@ -1937,10 +2168,6 @@
       <div class="g-item fade-in d4" onclick="openLightbox('Shekinaih_Hug_GLS2025_Summit.jpeg')">
         <img src="images/Shekinaih_Hug_GLS2025_Summit.jpeg" alt="Shekinaih at GLS2025 summit" loading="lazy"/>
         <div class="g-caption">Summit Celebration · GLS 2025</div>
-      </div>
-      <div class="g-item fade-in d5" onclick="openLightbox('Aaron_Shekinaih_Group_Photo_Social_Event.jpeg')">
-        <img src="images/Aaron_Shekinaih_Group_Photo_Social_Event.jpeg" alt="Aaron and Shekinaih at social event" loading="lazy"/>
-        <div class="g-caption">Fellowship · Social Event</div>
       </div>
     </div>
   </div>
@@ -2147,12 +2374,13 @@
           "Their story is one of faith activated by action — of leaders who not only speak of a better world, but who build it."
         </blockquote>
         <p style="font-size:15px;font-weight:300;line-height:1.9;color:rgba(255,255,255,.5);margin-bottom:16px">
-          Shekinaih Siew Sin Yap and J Aaron K David were honoured with a full cover story in Exquisite International Magazine — spotlighting their extraordinary journey as founders of Crowned Eagles Global, their international recognition, and the profound difference they are making in communities worldwide.
+          <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> were honoured with a full cover story in Exquisite International Magazine — spotlighting their extraordinary journey as internationally recognised business leaders, humanitarian ambassadors, and transformation voices, and founders of Crowned Eagles Global LLP and CE Global Network LLP.
         </p>
         <p style="font-size:15px;font-weight:300;line-height:1.9;color:rgba(255,255,255,.5);margin-bottom:32px">
-          Recognised by the World Book of Records London, UNPKFC, and the Global Leadership Summit — their story stands as a testament to the extraordinary impact of principled, faith-driven leadership on our world.
+          Recognised at IISA 2026 Oman, the World Book of Records London, UNPKFC, the Global Leadership Summit Bangkok, Manila Up International Magazine, and DMGP Global Diplomacy — their story stands as a testament to the extraordinary impact of principled leadership, humanitarian service, and strategic global positioning across Singapore, India, Oman, the United States, and beyond.
         </p>
         <a class="btn-primary mag-btn" href="magazine-article.html">✦ Read the Magazine Article</a>
+        <a class="btn-primary mag-btn" href="manila-up-gala.html" style="margin-left:16px;background:linear-gradient(135deg,#1a2040,#2a3060);border:1px solid rgba(200,146,58,.35);color:var(--gold2)">✦ Manila Up Gala 2025</a>
       </div>
     </div>
   </div>
@@ -2167,12 +2395,12 @@
       <p class="body-lead" style="margin-top:16px">Crowned Eagles Global's mission is lived out daily through tangible acts of service, spiritual empowerment, and community transformation.</p>
     </div>
     <div class="hwork-grid">
-      <div class="hw-card fade-up"><p class="hw-num">01</p><div class="hw-icon">🙏</div><h3 class="hw-title">Prophetic Teaching</h3><p class="hw-desc">Weekly broadcasts archived 2020–2026, providing prophetic insight and biblical guidance to thousands across Singapore and globally.</p></div>
-      <div class="hw-card fade-up d1"><p class="hw-num">02</p><div class="hw-icon">🤝</div><h3 class="hw-title">Community Development</h3><p class="hw-desc">Active involvement in local initiatives promoting social progress, enhancing quality of life, and inspiring individuals to create meaningful change.</p></div>
-      <div class="hw-card fade-up d2"><p class="hw-num">03</p><div class="hw-icon">🌐</div><h3 class="hw-title">International Diplomacy</h3><p class="hw-desc">Representing Singapore on the world stage through GLS forums, UNPKFC events, and DMGP Diplomacy — advancing peace, unity, and sustainable development.</p></div>
-      <div class="hw-card fade-up d3"><p class="hw-num">04</p><div class="hw-icon">📚</div><h3 class="hw-title">Publications &amp; Education</h3><p class="hw-desc">The "Seven Names Series" and other books equip believers and community leaders to walk in purpose, excellence, and transformational impact.</p></div>
-      <div class="hw-card fade-up d4"><p class="hw-num">05</p><div class="hw-icon">🎵</div><h3 class="hw-title">Music Ministry</h3><p class="hw-desc">Original music releases that bring healing, worship, and inspiration — extending the ministry's reach through the profound power of song.</p></div>
-      <div class="hw-card fade-up d5"><p class="hw-num">06</p><div class="hw-icon">📡</div><h3 class="hw-title">Digital Outreach</h3><p class="hw-desc">Through Telegram Heaven Broadcast Channel, YouTube, Facebook, and Instagram, reaching a global audience with timely prophetic messages daily.</p></div>
+      <div class="hw-card fade-up"><p class="hw-num">01</p><div class="hw-icon" style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--gold)">FD</div><h3 class="hw-title">Food Distribution</h3><p class="hw-desc">Providing food to the poor and needy in India and beyond — hands-on acts of compassion and service reaching the most vulnerable members of the community.</p></div>
+      <div class="hw-card fade-up d1"><p class="hw-num">02</p><div class="hw-icon" style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--gold)">WD</div><h3 class="hw-title">Water Distribution</h3><p class="hw-desc">Delivering clean water during humanitarian outreach missions — meeting essential needs while carrying a message of hope, dignity, and care to those in need.</p></div>
+      <div class="hw-card fade-up d2"><p class="hw-num">03</p><div class="hw-icon" style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--gold)">BD</div><h3 class="hw-title">Blanket Distribution</h3><p class="hw-desc">Distributing blankets to vulnerable communities — tangible care extended to those facing hardship, offering warmth, comfort, and the reminder that they are not forgotten.</p></div>
+      <div class="hw-card fade-up d3"><p class="hw-num">04</p><div class="hw-icon" style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--gold)">PC</div><h3 class="hw-title">Peace Ceremonies</h3><p class="hw-desc">Participating in peace ceremonies and interfaith gatherings — bridging cultures, faiths, and communities through shared compassion, mutual respect, and a commitment to peace.</p></div>
+      <div class="hw-card fade-up d4"><p class="hw-num">05</p><div class="hw-icon" style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--gold)">BM</div><h3 class="hw-title">Buddhist Monastery Offering</h3><p class="hw-desc">Visiting and offering at Buddhist monasteries in India — an expression of cross-cultural compassion, interfaith engagement, and service to spiritual communities beyond borders.</p></div>
+      <div class="hw-card fade-up d5"><p class="hw-num">06</p><div class="hw-icon" style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--gold)">GP</div><h3 class="hw-title">Global Peace Initiatives</h3><p class="hw-desc">Active participation in global peace platforms, peace walks, and international advocacy — advancing compassion, restoration, and dignity across nations, communities, and generations.</p></div>
     </div>
   </div>
 </section>
@@ -2261,7 +2489,7 @@
         <span class="nav-logo-dot"></span>
         <span class="brand-domain">shekinaihssyap-jaaronkdavid.com</span>
       </div>
-      <p class="footer-tagline">The personal IP branding website for Shekinaih Siew Sin Yap and J Aaron K David, honouring their faith, leadership, humanitarian service, and international recognition.</p>
+      <p class="footer-tagline">Transforming Lives · Connecting Nations · Inspiring Global Impact<br/>The official platform for SHEKINAIH SIEW SIN YAP and J AARON K DAVID — global humanitarians, international speakers, media personalities, authors, leadership voices, and transformation advocates.</p>
       <p class="footer-verse">"They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles." <br/><span style="font-size:11px;font-style:normal;letter-spacing:2px;text-transform:uppercase;font-family:'Inter',sans-serif;color:rgba(255,255,255,.2)">— Isaiah 40:31</span></p>
     </div>
     <div>
