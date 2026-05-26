@@ -134,6 +134,32 @@ Avoid:
 * social-media-style layouts
 * aggressive marketing language
 
+---
+
+## Title & Heading Color Rules — MANDATORY
+
+All major titles, section headings, achievement award names, and headline elements across ALL pages must use:
+
+* **Color:** `#E8B86D` (brand gold — `var(--gold2)`)
+* **Glow:** `filter:drop-shadow(0 2px 18px rgba(232,184,109,.25))`
+
+This applies to every page in the project including but not limited to:
+
+* `index.html` — all `.display-title`, `.award-name`, `.cert-name`, `.video-title`, `.testi-channel-title`
+* `events.html` — `.hero-title`, `.featured-name`, `.card-name`, `.upcoming-title`
+* `us-megasuccess2025.html` — chapter titles, section display headings
+* `magazine-article.html` — article body headings
+* `hollywood-walk-of-fame-2025.html`, `manila-up-gala.html` — all section h2/h3 titles
+
+**Do NOT leave major headings as white (`#fff`) or muted grey.**
+
+When adding any new section, page, or component:
+
+1. Apply `color:#E8B86D` to all `h1`, `h2`, `h3` display-level headings.
+2. Add subtle glow: `filter:drop-shadow(0 2px 18px rgba(232,184,109,.25))`
+3. Exception: body-copy inline `<strong>` highlights may use `rgba(255,255,255,.88)` for contrast.
+4. Exception: SHEKINAIH SIEW SIN YAP gold and J AARON K DAVID silver name rules remain as defined above — do not override name colors.
+
 Motion should feel:
 
 * subtle
