@@ -282,7 +282,7 @@
       margin:48px 0;border-radius:16px;overflow:hidden;
       box-shadow:0 20px 60px rgba(0,0,0,.5);
     }
-    .art-img img{width:100%;object-fit:cover;max-height:440px}
+    .art-img img{width:100%;height:auto;display:block}
     .art-img figcaption{
       padding:14px 0 0;
       font-family:'Cinzel',serif;font-size:9px;font-weight:500;
@@ -391,17 +391,6 @@
   <a class="topbar-pdf" href="docs/magazine_article.pdf" target="_blank">View PDF</a>
 </nav>
 
-<!-- EXQUISITE MAGAZINE COVER — full proportions, no crop -->
-<div class="cover-hero fade-in">
-  <div class="cover-hero-book">
-    <img
-      src="images/exquisite-cover.jpg"
-      alt="Exquisite International Magazine — Vol. 6 Issue 2 · Cover Story: Shekinaih Siew Sin Yap &amp; J Aaron K David"
-      loading="eager"/>
-  </div>
-  <p class="cover-hero-caption">Exquisite International Magazine · Vol. 6 · Issue 2 · Cover Story</p>
-</div>
-
 <!-- MASTHEAD -->
 <header class="masthead">
   <div class="masthead-line"></div>
@@ -416,6 +405,32 @@
   <div class="masthead-divider"></div>
 </header>
 
+<!-- VIDEO FEATURE -->
+<div class="video-section" id="video-feature">
+  <div class="video-section-header fade-up">
+    <p class="art-section-label" style="justify-content:center;max-width:none;margin-bottom:20px">In Motion</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,46px);font-weight:600;line-height:1.1;letter-spacing:-.3px;margin-bottom:16px">
+      A Community in <em style="color:#E8B86D;font-style:italic">Action</em>
+    </h2>
+    <p style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:rgba(255,255,255,.42);max-width:500px;margin:0 auto;line-height:1.85">
+      Beyond the stages, the awards, and the global summits — this is what Crowned Eagles Global looks like in the moments of community, celebration, and shared purpose that define who they are.
+    </p>
+  </div>
+
+  <div class="video-frame fade-in" id="video-frame-main">
+    <video
+      controls
+      preload="metadata"
+      poster="images/magazine/exquisite_magazine.jpg">
+      <source src="videos/Aaron_Shekinaih_Video_Social_Event_2026-05-21.mp4" type="video/mp4"/>
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <p class="video-caption fade-up">
+    SHEKINAIH SIEW SIN YAP &nbsp;&amp;&nbsp; J AARON K DAVID &nbsp;·&nbsp; Social Event &nbsp;·&nbsp; May 2026
+  </p>
+</div>
+
 <!-- ARTICLE BODY -->
 <article class="article-body">
 
@@ -424,8 +439,9 @@
     <cite>— Exquisite International Magazine</cite>
   </div>
 
-  <figure class="art-img fade-in" style="margin-top:0;margin-bottom:48px">
-    <img src="images/exquisite-cover.jpg"
+  <figure class="art-img fade-in" id="magazine-cover-figure" style="margin-top:0;margin-bottom:48px">
+    <img id="magazine-cover-img"
+         src="images/magazine/exquisite_magazine.jpg"
          alt="Exquisite International Magazine · Vol. 6 Issue 2 · Cover Story: Shekinaih Siew Sin Yap &amp; J Aaron K David"
          loading="lazy" style="width:100%;height:auto;display:block;max-height:none"/>
     <figcaption>Exquisite International Magazine · Vol. 6 · Issue 2 · Cover Story</figcaption>
@@ -444,7 +460,7 @@
   </p>
 
   <figure class="art-img fade-in">
-    <img src="images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg"
+    <img src="images/gls-2025/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg"
          alt="Shekinaih and J Aaron K David with delegates at GLS2025" loading="lazy"/>
     <figcaption>Global Leadership Summit 2025 · Kantarat Auditorium, Bangkok</figcaption>
   </figure>
@@ -478,13 +494,13 @@
   </ul>
 
   <figure class="art-img fade-in">
-    <img src="images/Shekinaih_UNPKFC_Certificate_Medal.jpeg"
+    <img src="images/unpkfc-2024/Shekinaih_UNPKFC_Certificate_Medal.jpeg"
          alt="Shekinaih Siew Sin Yap UNPKFC Certificate of Honor and distinguished emblem medal" loading="lazy"/>
     <figcaption>Shekinaih Siew Sin Yap · UNPKFC Certificate of Honor &amp; Distinguished Emblem</figcaption>
   </figure>
 
   <figure class="art-img fade-in">
-    <img src="images/Aaron_GLS2025_Achievement_Award_Certificate.jpeg"
+    <img src="images/gls-2025/Aaron_GLS2025_Achievement_Award_Certificate.jpeg"
          alt="Global Leadership Achievement Award Certificate — J Aaron K David" loading="lazy"/>
     <figcaption>J Aaron K David · Global Leadership Achievement Award Certificate · GLS 2025</figcaption>
   </figure>
@@ -519,38 +535,12 @@
   </div>
 
   <figure class="art-img fade-in">
-    <img src="images/Shekinaih_Hug_GLS2025_Summit.jpeg"
+    <img src="images/gls-2025/Shekinaih_Hug_GLS2025_Summit.jpeg"
          alt="Shekinaih Siew Sin Yap at the GLS2025 Summit" loading="lazy"/>
     <figcaption>A moment of celebration · Global Leadership Summit 2025</figcaption>
   </figure>
 
 </article>
-
-<!-- VIDEO FEATURE -->
-<div class="video-section">
-  <div class="video-section-header fade-up">
-    <p class="art-section-label" style="justify-content:center;max-width:none;margin-bottom:20px">In Motion</p>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,46px);font-weight:600;line-height:1.1;letter-spacing:-.3px;margin-bottom:16px">
-      A Community in <em style="color:#E8B86D;font-style:italic">Action</em>
-    </h2>
-    <p style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:rgba(255,255,255,.42);max-width:500px;margin:0 auto;line-height:1.85">
-      Beyond the stages, the awards, and the global summits — this is what Crowned Eagles Global looks like in the moments of community, celebration, and shared purpose that define who they are.
-    </p>
-  </div>
-
-  <div class="video-frame fade-in">
-    <video
-      controls
-      preload="metadata"
-      poster="images/exquisite-cover.jpg">
-      <source src="videos/Aaron_Shekinaih_Video_Social_Event_2026-05-21.mp4" type="video/mp4"/>
-      Your browser does not support HTML5 video.
-    </video>
-  </div>
-  <p class="video-caption fade-up">
-    SHEKINAIH SIEW SIN YAP &nbsp;&amp;&nbsp; J AARON K DAVID &nbsp;·&nbsp; Social Event &nbsp;·&nbsp; May 2026
-  </p>
-</div>
 
 <!-- FULL PDF EMBED -->
 <div class="pdf-section fade-up">

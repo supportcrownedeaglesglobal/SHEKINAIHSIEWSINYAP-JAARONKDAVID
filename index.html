@@ -313,7 +313,9 @@
       font-family:'Cormorant Garamond',serif;
       font-size:clamp(34px,4.8vw,66px);
       font-weight:600;line-height:1.06;
-      letter-spacing:-0.3px;margin-bottom:20px
+      letter-spacing:-0.3px;margin-bottom:20px;
+      color:#E8B86D;
+      filter:drop-shadow(0 2px 20px rgba(232,184,109,.22))
     }
     .display-title .italic{
       font-family:'Cormorant Garamond',serif;
@@ -720,7 +722,8 @@
       font-weight:700;
       line-height:1.12;
       margin-bottom:18px;
-      color:#fff
+      color:#E8B86D;
+      filter:drop-shadow(0 2px 16px rgba(232,184,109,.3))
     }
     .award-desc{
       font-size:13.5px;
@@ -923,7 +926,8 @@
     }
     .video-title{
       font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;
-      line-height:1.3;margin-bottom:6px
+      line-height:1.3;margin-bottom:6px;
+      color:#E8B86D
     }
     .video-date{font-size:12px;color:var(--muted)}
 
@@ -1107,7 +1111,7 @@
       font-family:'Cormorant Garamond',serif;
       font-size:19px;
       font-weight:700;
-      color:#fff;
+      color:#E8B86D;
       margin-bottom:7px;
       line-height:1.2
     }
@@ -1242,10 +1246,11 @@
       box-shadow:0 8px 40px rgba(0,0,0,.3)
     }
     .cert-item img{
-      width:100%;height:420px;object-fit:cover;
-      object-position:top;transition:transform .6s
+      width:100%;height:auto;display:block;
+      transition:transform .6s
     }
-    @media(max-width:768px){.cert-item img{height:60vw}}
+    /* full-scale: no height cap on any viewport */
+    @media(max-width:768px){.cert-item img{height:auto}}
     .cert-item:hover img{transform:scale(1.04)}
     .cert-overlay{
       position:absolute;bottom:0;left:0;right:0;
@@ -1254,7 +1259,8 @@
     }
     .cert-name{
       font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;
-      color:#fff;margin-bottom:4px
+      color:#E8B86D;margin-bottom:4px;
+      filter:drop-shadow(0 1px 10px rgba(232,184,109,.3))
     }
     .cert-sub{
       font-size:11px;letter-spacing:2px;text-transform:uppercase;
@@ -1298,7 +1304,8 @@
       color:var(--gold);margin-bottom:4px
     }
     .mag-ribbon-sub{
-      font-size:14px;font-weight:600;color:#fff
+      font-size:14px;font-weight:600;color:#E8B86D;
+      filter:drop-shadow(0 1px 8px rgba(232,184,109,.3))
     }
 
     .mag-content{}
@@ -1634,6 +1641,178 @@
 
     /* counter */
     .counter{font-variant-numeric:tabular-nums}
+
+    /* ═══════════════════════════════════════════════════
+       MOBILE — SECTION DIVIDERS & ORDERING (About)
+       ═══════════════════════════════════════════════════ */
+
+    /* Divider element: hidden on desktop, gold line on mobile */
+    .mobile-section-divider{
+      display:none;
+    }
+    @media(max-width:900px){
+      .mobile-section-divider{
+        display:flex;
+        align-items:center;
+        gap:14px;
+        padding:32px 0 28px;
+        margin:0;
+        position:relative;
+      }
+      .mobile-section-divider::before{
+        content:'';
+        flex:1;
+        height:1px;
+        background:linear-gradient(to right, transparent, rgba(200,146,58,.6));
+      }
+      .mobile-section-divider::after{
+        content:'';
+        flex:1;
+        height:1px;
+        background:linear-gradient(to left, transparent, rgba(200,146,58,.6));
+      }
+      .mobile-section-divider-icon{
+        font-family:'Cinzel',serif;
+        font-size:11px;
+        letter-spacing:4px;
+        color:rgba(200,146,58,.75);
+        flex-shrink:0;
+        text-shadow:0 0 12px rgba(200,146,58,.45);
+      }
+      /* Always show text label BEFORE photos on mobile — prevents
+         photos from adjacent sections appearing as one block */
+      .about-feature-row .about-feature-text{order:1}
+      .about-feature-row .about-feature-photo{order:2}
+    }
+
+    /* ═══════════════════════════════════════════════════
+       MOBILE IMPROVEMENTS — comprehensive responsive pass
+       ═══════════════════════════════════════════════════ */
+
+    /* ① Fix broken display:none rules — missing selector bug
+          (hero-award-badge and scroll-hint were never actually
+           hidden on mobile because the @media rules above had
+           no CSS selector inside them) */
+    @media(max-width:768px){
+      .hero-award-badge{display:none!important}
+      .scroll-hint{display:none!important}
+    }
+
+    /* ② Hero section */
+    @media(max-width:768px){
+      /* Tighter letter-spacing on subtitle so it wraps less */
+      .hero-subtitle{
+        letter-spacing:1.8px;
+        font-size:10.5px;
+        line-height:2.1;
+      }
+      /* Reduce stats gap on narrow screens */
+      .hero-stats{gap:18px}
+    }
+    @media(max-width:480px){
+      /* Tighten hero-left internal padding */
+      .hero-left{padding:52px 20px 40px}
+      .hero-eyebrow{margin-bottom:18px}
+      /* Slightly smaller heading on very narrow screens */
+      .hero-h1{font-size:clamp(34px,8.5vw,44px);margin-bottom:10px}
+      .hero-subtitle{letter-spacing:1px;font-size:10px}
+      .hero-desc{font-size:13.5px;margin-bottom:30px}
+      /* Full-width CTA buttons for easier tapping */
+      .hero-ctas{flex-direction:column;gap:10px;margin-bottom:36px}
+      .hero-ctas .btn-primary,
+      .hero-ctas .btn-ghost{
+        display:block;width:100%;text-align:center;
+        padding:15px 20px;
+      }
+      /* Compact stats row */
+      .hero-stats{gap:12px}
+      .stat-num{font-size:28px}
+      .stat-label{font-size:8px}
+    }
+
+    /* ③ About section — reduce oversized spacings */
+    @media(max-width:768px){
+      .about-editorial-intro{margin-bottom:52px}
+      .about-gallery-section{margin-bottom:52px}
+    }
+    @media(max-width:480px){
+      .about-editorial-intro{margin-bottom:40px}
+      .about-gallery-section{margin-bottom:40px}
+    }
+
+    /* ④ Profile cards — responsive image height */
+    @media(max-width:768px){
+      .profiles-header{margin-bottom:48px}
+      /* Replace the fixed 380px height with a viewport-relative value */
+      .profile-img{height:58vw;min-height:180px}
+      .profile-body{padding:22px 20px}
+    }
+
+    /* ⑤ Awards header spacing */
+    @media(max-width:640px){
+      .awards-header{margin-bottom:40px}
+    }
+
+    /* ⑥ Video section header + YT featured info stacking */
+    @media(max-width:768px){
+      .video-header{margin-bottom:40px}
+    }
+    @media(max-width:600px){
+      /* Stack avatar + quote vertically on small screens */
+      .yt-featured-info{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+      }
+      .yt-quote{max-width:none}
+    }
+
+    /* ⑦ Gallery header spacing */
+    @media(max-width:768px){
+      .gallery-header{margin-bottom:40px}
+    }
+
+    /* ⑧ Testimonials header spacing */
+    @media(max-width:768px){
+      .testi-header{margin-bottom:40px}
+    }
+
+    /* ⑨ Magazine section — fix negative-positioned badge,
+          tighten ribbon on narrow screens */
+    @media(max-width:768px){
+      /* .mag-badge uses right:-16px which overflows on mobile */
+      .mag-badge{display:none}
+      .mag-ribbon{bottom:16px;left:16px;right:auto;padding:12px 16px}
+      .mag-ribbon-sub{font-size:13px}
+    }
+
+    /* ⑩ Humanitarian section header */
+    @media(max-width:768px){
+      .hwork-header{margin-bottom:48px}
+    }
+
+    /* ⑪ QR Links section header */
+    @media(max-width:768px){
+      .qr-section-header{margin-bottom:40px}
+    }
+
+    /* ⑫ Footer bottom — stack copyright and email on mobile */
+    @media(max-width:560px){
+      .footer-bottom{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:10px;
+      }
+      .footer-top{gap:32px;padding-bottom:40px}
+    }
+
+    /* ⑬ General section padding reduction for very small screens */
+    @media(max-width:480px){
+      .pad-section{padding:60px 0}
+      #video-section,#gallery,#certificates,#humanitarian,#cta,#qr-links{padding:60px 0}
+      .section-inner{padding:0 20px}
+    }
   </style>
 </head>
 <body>
@@ -1710,7 +1889,7 @@
     </div>
   </div>
   <div class="hero-right">
-    <img src="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg" alt="Shekinaih Siew Sin Yap and J Aaron K David at the Global Leadership Summit 2025, Bangkok" loading="eager"/>
+    <img src="images/gls-2025/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg" alt="Shekinaih Siew Sin Yap and J Aaron K David at the Global Leadership Summit 2025, Bangkok" loading="eager"/>
     <div class="hero-img-overlay"></div>
     <div class="hero-award-badge">
       <div class="badge-icon" style="font-family:'Cinzel',serif;font-size:11px;font-weight:700;color:var(--ink)">GLS</div>
@@ -1765,7 +1944,7 @@
       <div class="about-feature-text">
         <p class="about-sub-label">Hollywood &amp; Los Angeles Media</p>
         <p>
-          Participated in professional media interviews, entertainment gatherings, networking receptions, and red carpet events in Los Angeles and Hollywood — appearing alongside international leaders, media personalities, and entertainment figures. Engagements included associations with <strong style="color:rgba(255,255,255,.85)">Authentic TV Global Media</strong>, <strong style="color:rgba(255,255,255,.85)">NSI Universal Inc.</strong>, <strong style="color:rgba(255,255,255,.85)">The Avantgarde</strong>, <strong style="color:rgba(255,255,255,.85)">Timeless Music</strong>, <strong style="color:rgba(255,255,255,.85)">Revel Live Entertainment</strong>, <strong style="color:rgba(255,255,255,.85)">Devlux Entertainment Group</strong>, and <strong style="color:rgba(255,255,255,.85)">From The Heart Productions</strong>.
+          Being interviewed for professional media, entertainment gatherings, networking receptions, and red carpet events in Los Angeles and Hollywood — appearing alongside international leaders, media personalities, and entertainment figures. Engagements included associations with <strong style="color:rgba(255,255,255,.85)">Authentic TV Global Media</strong>, <strong style="color:rgba(255,255,255,.85)">NSI Universal Inc.</strong>, <strong style="color:rgba(255,255,255,.85)">The Avantgarde</strong>, <strong style="color:rgba(255,255,255,.85)">Timeless Music</strong>, <strong style="color:rgba(255,255,255,.85)">Revel Live Entertainment</strong>, <strong style="color:rgba(255,255,255,.85)">Devlux Entertainment Group</strong>, and <strong style="color:rgba(255,255,255,.85)">From The Heart Productions</strong>.
         </p>
         <p class="about-sub-label">Their Influence Spans</p>
         <div class="about-bullets">
@@ -1778,31 +1957,76 @@
           <span class="about-bullet">Spiritual Encouragement</span>
           <span class="about-bullet">Cross-Cultural Collaboration</span>
         </div>
+        <div style="margin-top:28px">
+          <a class="btn-primary mag-btn" href="hollywood-walk-of-fame-2025.html"
+             style="background:linear-gradient(135deg,#1a2040,#2a3060);border:1px solid rgba(200,146,58,.35);color:var(--gold2)">
+            ✦ Hollywood Walk of Fame Week · 2025
+          </a>
+          <p style="margin-top:14px;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:400;color:rgba(255,255,255,.5);letter-spacing:.3px;line-height:1.65;max-width:460px">
+            Red carpet, media coverage, and a personal church-service moment with Pastor Derrick L. Boseman,
+            elder brother of the late Chadwick Boseman of Marvel's <em>Black Panther</em> — Los Angeles, November 2025.
+          </p>
+        </div>
       </div>
       <div class="about-feature-photo about-feature-photo-duo">
-        <img src="images/Aaron_Shekinaih_Hollywood_Red_Carpet_Interview_01.jpg"
+        <img src="images/la-hollywood-2025/Aaron_Shekinaih_Hollywood_Red_Carpet_Interview_01.jpg"
              alt="J Aaron K David and Shekinaih Siew Sin Yap — Red Carpet Press Interview, Hollywood, Los Angeles"
-             loading="lazy" onerror="this.src='images/Shekinaih_Aaron_Press_Interview_Cover.jpg'"/>
-        <img src="images/Aaron_Shekinaih_Hollywood_Red_Carpet_Interview_02.jpg"
+             loading="lazy" onerror="this.src='images/la-hollywood-2025/Shekinaih_Aaron_Press_Interview_Cover.jpg'"/>
+        <img src="images/la-hollywood-2025/Aaron_Shekinaih_Hollywood_Red_Carpet_Interview_02.jpg"
              alt="J Aaron K David and Shekinaih Siew Sin Yap — Red Carpet Media Interview, Hollywood, Los Angeles"
-             loading="lazy" onerror="this.src='images/Shekinaih_Aaron_Press_Interview_Cover.jpg'"/>
+             loading="lazy" onerror="this.src='images/la-hollywood-2025/Shekinaih_Aaron_Press_Interview_Cover.jpg'"/>
         <p class="about-feature-photo-cap">Hollywood Red Carpet · Press Interview · Los Angeles</p>
       </div>
     </div>
 
+    <!-- Mobile divider: separates Row A from Row B -->
+    <div class="mobile-section-divider" aria-hidden="true">
+      <span class="mobile-section-divider-icon">✦ &nbsp; HUMANITARIAN &nbsp; ✦</span>
+    </div>
+
     <!-- ③ Feature Row B: UNPKFC — photo left, humanitarian text right -->
     <div class="about-feature-row fade-up">
-      <div class="about-feature-photo about-feature-photo-duo">
-        <img src="images/shekinaih_siewsinyap_award.jpg"
-             alt="Shekinaih Siew Sin Yap — Global Leadership Summit 2025"
-             loading="lazy"/>
-        <img src="images/jaaronkdavid_award.jpg"
-             alt="J Aaron K David — Global Leadership Summit 2025"
-             loading="lazy"/>
-        <p class="about-feature-photo-cap">Global Leadership Summit 2025 · Award Ceremony · International Recognition</p>
+      <div class="about-feature-photo" id="unpkfc-humanitarian-photos">
+        <!-- Top: UNPKFC group photo — full width, no crop -->
+        <img id="unpkfc-group-top-photo"
+             src="images/unpkfc-2024/unpkfc_shek_aaron_1.jpg"
+             alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID — UNPKFC Certificate of Honor Recognition"
+             loading="lazy"
+             style="margin-bottom:8px"/>
+        <!-- Below: individual award photos side by side -->
+        <div class="about-feature-photo-duo">
+          <img src="images/awards/shekinaih_siewsinyap_award.jpg"
+               alt="Shekinaih Siew Sin Yap — Global Leadership Summit 2025"
+               loading="lazy"/>
+          <img src="images/awards/jaaronkdavid_award.jpg"
+               alt="J Aaron K David — Global Leadership Summit 2025"
+               loading="lazy"/>
+          <p class="about-feature-photo-cap">Global Leadership Summit 2025 · Award Ceremony · International Recognition</p>
+        </div>
       </div>
       <div class="about-feature-text">
         <p class="about-sub-label">Global Humanitarian &amp; Community Impact</p>
+
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,32px);font-weight:600;line-height:1.2;color:#E8B86D;margin:0 0 18px;letter-spacing:-.2px;filter:drop-shadow(0 2px 18px rgba(232,184,109,.28))">
+          Humanitarian Partners of <em style="font-style:italic">UNPKFC</em>
+        </h3>
+
+        <p>
+          <strong style="color:#E8B86D">SHEKINAIH SIEW SIN YAP</strong> and <strong style="color:#B8C4D8">J AARON K DAVID</strong> partnered with the <strong style="color:rgba(255,255,255,.88)">United Nations Peace Keepers Federal Council (UNPKFC)</strong> in humanitarian service — dedicating themselves to community development, positive social impact, and cross-border advocacy that earned them formal recognition on the international stage.
+        </p>
+
+        <p>
+          Both were conferred the <strong style="color:rgba(255,255,255,.88)">Certificate of Honor</strong> and the <strong style="color:rgba(255,255,255,.88)">Distinguished Emblem for Positive Social Development</strong> by UNPKFC — a prestigious acknowledgement of their selfless commitment to fostering peace, unity, and transformational change within communities across Asia and beyond.
+        </p>
+
+        <div style="border-left:2px solid rgba(200,146,58,.4);padding:14px 0 14px 20px;margin:6px 0 22px">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(14px,1.3vw,17px);line-height:1.7;color:rgba(255,255,255,.7);margin-bottom:8px">
+            "Inspiring and motivating others to join in creating positive change for the greater good."
+          </p>
+          <span style="display:block;font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:rgba(200,146,58,.55)">— UNPKFC Certificate of Honor &nbsp;·&nbsp; December 2025</span>
+        </div>
+
+        <p class="about-sub-label">Their Humanitarian Engagements</p>
         <div class="about-bullets">
           <span class="about-bullet">Peace Ambassador Engagements</span>
           <span class="about-bullet">Humanitarian Recognition Ceremonies</span>
@@ -1814,6 +2038,11 @@
           <span class="about-bullet">Cross-Cultural Relationship Building</span>
         </div>
       </div>
+    </div>
+
+    <!-- Mobile divider: separates Row B from Row C -->
+    <div class="mobile-section-divider" aria-hidden="true">
+      <span class="mobile-section-divider-icon">✦ &nbsp; INTERNATIONAL PRESENCE &nbsp; ✦</span>
     </div>
 
     <!-- ④ Feature Row C: Manila Up — text left, photo right -->
@@ -1832,12 +2061,17 @@
       </div>
     </div>
 
+    <!-- Mobile divider: separates Row C from Row D -->
+    <div class="mobile-section-divider" aria-hidden="true">
+      <span class="mobile-section-divider-icon">✦ &nbsp; MINISTRY &amp; MISSION &nbsp; ✦</span>
+    </div>
+
     <!-- ⑤ Feature Row D: IISA Oman photo left, Ministry text right -->
     <div class="about-feature-row fade-up">
       <div class="about-feature-photo">
-        <img src="images/his-presence-fire-ministries-2025-aaron-shekinaih-dr-gershom-sikaala.jpg"
+        <img src="images/ministry/his-presence-fire-ministries-2025-aaron-shekinaih-dr-gershom-sikaala.jpg"
              alt="J Aaron K David and Shekinaih Siew Sin Yap with Dr. Gershom Sikaala — His Presence Fire Ministries, Los Angeles, November 2025"
-             loading="lazy" onerror="this.src='images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg'"/>
+             loading="lazy" onerror="this.src='images/gls-2025/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg'"/>
         <p class="about-feature-photo-cap">His Presence Fire Ministries · Dr. Gershom Sikaala · Los Angeles 2025</p>
       </div>
       <div class="about-feature-text">
@@ -1846,6 +2080,11 @@
           Participated in a ministry gathering at <strong style="color:rgba(255,255,255,.85)">His Presence Fire Ministries</strong> under Dr. Gershom Sikaala on 23 November 2025. A message covering spiritual awakening, restoration, breakthrough, deliverance, healing, and revival was shared before the congregation — emphasising renewed faith and transformation across personal, family, and community spheres in California, Hollywood, and beyond.
         </p>
       </div>
+    </div>
+
+    <!-- Mobile divider: separates Row D from Foundation -->
+    <div class="mobile-section-divider" aria-hidden="true">
+      <span class="mobile-section-divider-icon">✦ &nbsp; FOUNDATION &amp; VISION &nbsp; ✦</span>
     </div>
 
     <!-- ⑦ Foundation: Organizations + Mission -->
@@ -1878,7 +2117,7 @@
 
       <!-- Shekinaih -->
       <div class="profile-card fade-up">
-        <img class="profile-img" src="images/Shekinaih_Medal_Ceremony_GLS2025.jpeg" alt="Shekinaih Siew Sin Yap receiving medal at GLS2025"/>
+        <img class="profile-img" src="images/gls-2025/Shekinaih_Medal_Ceremony_GLS2025.jpeg" alt="Shekinaih Siew Sin Yap receiving medal at GLS2025"/>
         <div class="profile-body">
           <p class="profile-number">01 · CO-FOUNDER</p>
           <h3 class="profile-name profile-name-gold">SHEKINAIH<br/>SIEW SIN YAP</h3>
@@ -1899,7 +2138,7 @@
 
       <!-- Aaron -->
       <div class="profile-card fade-up d2">
-        <img class="profile-img" src="images/Aaron_Medal_Ceremony_GLS2025.jpeg" alt="J Aaron K David receiving medal at GLS2025"/>
+        <img class="profile-img" src="images/gls-2025/Aaron_Medal_Ceremony_GLS2025.jpeg" alt="J Aaron K David receiving medal at GLS2025"/>
         <div class="profile-body">
           <p class="profile-number">02 · CO-FOUNDER</p>
           <h3 class="profile-name profile-name-silver">J AARON<br/>K DAVID</h3>
@@ -1955,7 +2194,7 @@
       </article>
 
       <article class="award-card award-card-major fade-up d1" role="button" tabindex="0"
-               data-award-image="images/Aaron_GLS2025_Achievement_Award_Certificate.jpeg"
+               data-award-image="images/gls-2025/Aaron_GLS2025_Achievement_Award_Certificate.jpeg"
                aria-label="View Global Leadership Achievement Award 2025 certificate">
         <div class="award-topline">
           <p class="award-num">02 · Official Honour</p>
@@ -1976,7 +2215,7 @@
       </article>
 
       <article class="award-card fade-up d2" role="button" tabindex="0"
-               data-award-image="images/Shekinaih_UNPKFC_Certificate_Medal.jpeg"
+               data-award-image="images/unpkfc-2024/Shekinaih_UNPKFC_Certificate_Medal.jpeg"
                aria-label="View Shekinaih Siew Sin Yap UNPKFC Certificate of Honor and Distinguished Emblem">
         <div class="award-topline">
           <p class="award-num">03 · Certificate of Honor</p>
@@ -2015,7 +2254,7 @@
       </article>
 
       <article class="award-card fade-up d4" role="button" tabindex="0"
-               data-award-image="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg"
+               data-award-image="images/gls-2025/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg"
                aria-label="View Global Diplomacy Ambassador Awards photo">
         <div class="award-topline">
           <p class="award-num">05 · Global Diplomacy</p>
@@ -2035,7 +2274,7 @@
       </article>
 
       <article class="award-card fade-up d5" role="button" tabindex="0"
-               data-award-image="images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg"
+               data-award-image="images/gls-2025/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg"
                aria-label="View World Book of Records International Recognition photo">
         <div class="award-topline">
           <p class="award-num">06 · International Record</p>
@@ -2054,7 +2293,7 @@
       </article>
 
       <article class="award-card fade-up" style="transition-delay:.6s" role="button" tabindex="0"
-               data-award-image="images/Crowned_Eagles_Global_GLS2025_Trophy.jpeg"
+               data-award-image="images/gls-2025/Crowned_Eagles_Global_GLS2025_Trophy.jpeg"
                aria-label="View Global Leadership Summit Gold Trophy image">
         <div class="award-topline">
           <p class="award-num">07 · Institutional Trophy</p>
@@ -2123,9 +2362,9 @@
       <div class="video-card fade-up">
         <div class="video-thumb">
           <video src="videos/Aaron_Shekinaih_Video_Night_Event_2026-05-21.mp4"
-                 poster="images/Shekinaih_Aaron_Press_Interview_Cover.jpg"
+                 poster="images/la-hollywood-2025/Shekinaih_Aaron_Press_Interview_Cover.jpg"
                  preload="metadata" muted playsinline id="vid2"></video>
-          <div class="video-play-overlay" onclick="openVideoModal('videos/Aaron_Shekinaih_Video_Night_Event_2026-05-21.mp4', 'images/Shekinaih_Aaron_Press_Interview_Cover.jpg')">
+          <div class="video-play-overlay" onclick="openVideoModal('videos/Aaron_Shekinaih_Video_Night_Event_2026-05-21.mp4', 'images/la-hollywood-2025/Shekinaih_Aaron_Press_Interview_Cover.jpg')">
             <div class="play-btn">▶</div>
           </div>
         </div>
@@ -2150,23 +2389,23 @@
     </div>
     <div class="gallery-masonry">
       <div class="g-item wide fade-in" onclick="openLightbox('Aaron_Shekinaih_Award_Stage_GLS2025.jpeg')">
-        <img src="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg" alt="Shekinaih and Aaron on stage at GLS2025 receiving awards" loading="lazy"/>
+        <img src="images/gls-2025/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg" alt="Shekinaih and Aaron on stage at GLS2025 receiving awards" loading="lazy"/>
         <div class="g-caption">Global Leadership Summit 2025 · Bangkok</div>
       </div>
       <div class="g-item tall fade-in d1" onclick="openLightbox('Aaron_Medal_Ceremony_GLS2025.jpeg')">
-        <img src="images/Aaron_Medal_Ceremony_GLS2025.jpeg" alt="J Aaron K David receiving medal" loading="lazy"/>
+        <img src="images/gls-2025/Aaron_Medal_Ceremony_GLS2025.jpeg" alt="J Aaron K David receiving medal" loading="lazy"/>
         <div class="g-caption">Aaron · Medal Ceremony</div>
       </div>
       <div class="g-item fade-in d2" onclick="openLightbox('Shekinaih_Medal_Ceremony_GLS2025.jpeg')">
-        <img src="images/Shekinaih_Medal_Ceremony_GLS2025.jpeg" alt="Shekinaih receiving medal" loading="lazy"/>
+        <img src="images/gls-2025/Shekinaih_Medal_Ceremony_GLS2025.jpeg" alt="Shekinaih receiving medal" loading="lazy"/>
         <div class="g-caption">Shekinaih · Medal Ceremony</div>
       </div>
       <div class="g-item fade-in d3" onclick="openLightbox('Aaron_Shekinaih_Group_Stage_GLS2025.jpeg')">
-        <img src="images/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg" alt="Group photo on GLS2025 stage" loading="lazy"/>
+        <img src="images/gls-2025/Aaron_Shekinaih_Group_Stage_GLS2025.jpeg" alt="Group photo on GLS2025 stage" loading="lazy"/>
         <div class="g-caption">GLS 2025 · Group Stage Photo</div>
       </div>
       <div class="g-item fade-in d4" onclick="openLightbox('Shekinaih_Hug_GLS2025_Summit.jpeg')">
-        <img src="images/Shekinaih_Hug_GLS2025_Summit.jpeg" alt="Shekinaih at GLS2025 summit" loading="lazy"/>
+        <img src="images/gls-2025/Shekinaih_Hug_GLS2025_Summit.jpeg" alt="Shekinaih at GLS2025 summit" loading="lazy"/>
         <div class="g-caption">Summit Celebration · GLS 2025</div>
       </div>
     </div>
@@ -2322,28 +2561,28 @@
     </div>
     <div class="cert-grid">
       <div class="cert-item fade-in" onclick="openLightbox('Shekinaih_UNPKFC_Certificate_Medal.jpeg')">
-        <img src="images/Shekinaih_UNPKFC_Certificate_Medal.jpeg" alt="Shekinaih UNPKFC Certificate of Honor and medal" loading="lazy"/>
+        <img src="images/unpkfc-2024/Shekinaih_UNPKFC_Certificate_Medal.jpeg" alt="Shekinaih UNPKFC Certificate of Honor and medal" loading="lazy"/>
         <div class="cert-overlay">
           <p class="cert-name">Shekinaih Siew Sin Yap</p>
           <p class="cert-sub">UNPKFC Certificate of Honor · Distinguished Emblem</p>
         </div>
       </div>
       <div class="cert-item fade-in d1" onclick="openLightbox('Aaron_UNPKFC_Certificate_Medal.jpeg')">
-        <img src="images/Aaron_UNPKFC_Certificate_Medal.jpeg" alt="Aaron UNPKFC Certificate of Honor and medal" loading="lazy"/>
+        <img src="images/unpkfc-2024/Aaron_UNPKFC_Certificate_Medal.jpeg" alt="Aaron UNPKFC Certificate of Honor and medal" loading="lazy"/>
         <div class="cert-overlay">
           <p class="cert-name">J Aaron K David</p>
           <p class="cert-sub">UNPKFC Certificate of Honor · Distinguished Emblem</p>
         </div>
       </div>
       <div class="cert-item fade-in d2" onclick="openLightbox('Aaron_GLS2025_Achievement_Award_Certificate.jpeg')">
-        <img src="images/Aaron_GLS2025_Achievement_Award_Certificate.jpeg" alt="Aaron GLS2025 Achievement Award Certificate" loading="lazy"/>
+        <img src="images/gls-2025/Aaron_GLS2025_Achievement_Award_Certificate.jpeg" alt="Aaron GLS2025 Achievement Award Certificate" loading="lazy"/>
         <div class="cert-overlay">
           <p class="cert-name">J Aaron K David</p>
           <p class="cert-sub">Global Leadership Achievement Award 2025</p>
         </div>
       </div>
       <div class="cert-item fade-in d3" onclick="openLightbox('Crowned_Eagles_Global_GLS2025_Trophy.jpeg')">
-        <img src="images/Crowned_Eagles_Global_GLS2025_Trophy.jpeg" alt="Crowned Eagles Global GLS2025 Trophy" loading="lazy"/>
+        <img src="images/gls-2025/Crowned_Eagles_Global_GLS2025_Trophy.jpeg" alt="Crowned Eagles Global GLS2025 Trophy" loading="lazy"/>
         <div class="cert-overlay">
           <p class="cert-name">Crowned Eagles Global</p>
           <p class="cert-sub">Global Leadership Summit 2025 · Gold Trophy</p>
@@ -2359,7 +2598,7 @@
     <div class="mag-grid">
       <div class="mag-visual fade-in">
         <div class="mag-frame">
-          <img src="images/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg" alt="Shekinaih and Aaron — Exquisite International Magazine Cover" loading="lazy"/>
+          <img src="images/gls-2025/Aaron_Shekinaih_Award_Stage_GLS2025.jpeg" alt="Shekinaih and Aaron — Exquisite International Magazine Cover" loading="lazy"/>
         </div>
         <div class="mag-badge">Cover Feature</div>
         <div class="mag-ribbon">
@@ -2420,7 +2659,7 @@
     <a class="qr-card fade-up d1" href="https://www.crownedeaglesglobal.org/2026-broadcast-from-heaven" target="_blank" rel="noopener">
       <p class="qr-card-number">01</p>
       <div class="qr-img-wrap">
-        <img src="images/qr_testimonials.png" alt="QR — Breakthrough Testimonies" loading="lazy"/>
+        <img src="images/qr-codes/qr_testimonials.png" alt="QR — Breakthrough Testimonies" loading="lazy"/>
       </div>
       <p class="qr-card-label">Watch Breakthrough Testimonies &amp; Divine Revelations</p>
       <p class="qr-card-desc">More life-changing stories of healing, miracles, and prophetic fulfilment.</p>
@@ -2431,7 +2670,7 @@
     <a class="qr-card fade-up d2" href="https://www.crownedeaglesglobal.org/florence-s-testimony" target="_blank" rel="noopener">
       <p class="qr-card-number">02</p>
       <div class="qr-img-wrap">
-        <img src="images/qr_danielyn.png" alt="QR — Danielyn Florence Breakthroughs" loading="lazy"/>
+        <img src="images/qr-codes/qr_danielyn.png" alt="QR — Danielyn Florence Breakthroughs" loading="lazy"/>
       </div>
       <p class="qr-card-label">Danielyn &amp; Florence's 10 Unstoppable Breakthroughs in 6 Months</p>
       <p class="qr-card-desc">Discover the proven pathway to rapid, lasting transformation.</p>
@@ -2442,7 +2681,7 @@
     <a class="qr-card fade-up d3" href="https://t.me/HEAVEN_BROADCAST" target="_blank" rel="noopener">
       <p class="qr-card-number">03</p>
       <div class="qr-img-wrap">
-        <img src="images/qr_heaven_broadcast.png" alt="QR — Heaven Broadcast Telegram" loading="lazy"/>
+        <img src="images/qr-codes/qr_heaven_broadcast.png" alt="QR — Heaven Broadcast Telegram" loading="lazy"/>
       </div>
       <p class="qr-card-label">Join Heaven Broadcast</p>
       <p class="qr-card-desc">Daily prophetic messages, decrees and divine insights for your life.</p>
@@ -2453,7 +2692,7 @@
     <a class="qr-card fade-up d4" href="https://chat.whatsapp.com/GYFfVRVMRjOKpuyN8IjQEk?mode=ac_t" target="_blank" rel="noopener">
       <p class="qr-card-number">04</p>
       <div class="qr-img-wrap">
-        <img src="images/qr_billionaire.png" alt="QR — Billionaire Destiny Group WhatsApp" loading="lazy"/>
+        <img src="images/qr-codes/qr_billionaire.png" alt="QR — Billionaire Destiny Group WhatsApp" loading="lazy"/>
       </div>
       <p class="qr-card-label">Join Billionaire Destiny Group</p>
       <p class="qr-card-desc">A community of high-level believers stepping into generational wealth and Kingdom purpose.</p>
@@ -2535,7 +2774,7 @@
 <!-- VIDEO MODAL -->
 <div id="video-modal" onclick="closeVideoModal()">
   <button class="vm-close" onclick="closeVideoModal()">✕</button>
-  <video id="modal-video" controls poster="images/Shekinaih_Aaron_Press_Interview_Cover.jpg" onclick="event.stopPropagation()"></video>
+  <video id="modal-video" controls poster="images/la-hollywood-2025/Shekinaih_Aaron_Press_Interview_Cover.jpg" onclick="event.stopPropagation()"></video>
 </div>
 
 <script>
