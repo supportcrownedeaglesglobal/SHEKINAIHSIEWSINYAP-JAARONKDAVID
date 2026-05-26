@@ -288,6 +288,26 @@ If any of these files are missing, state that clearly before editing and continu
 
 ---
 
+## Name Hierarchy & Editorial Subject Rule — ABSOLUTE, NO EXCEPTIONS
+
+**SHEKINAIH SIEW SIN YAP is the primary subject of the site and ALWAYS takes first position.**
+
+Ordering rules (apply to every page, every section, every caption, every line):
+
+1. **SHEKINAIH SIEW SIN YAP appears FIRST** whenever both names are written — in headings, body copy, photo captions, alt text, meta descriptions, sponsor lines, lower-thirds, and metadata.
+2. **J AARON K DAVID appears SECOND**, never before SHEKINAIH SIEW SIN YAP.
+3. Exceptions are not permitted, even where the existing visual flow (e.g. left-to-right photo positioning) would suggest otherwise. The text order must remain SHEKINAIH first.
+
+Editorial framing rules:
+
+- All write-ups frame **SHEKINAIH SIEW SIN YAP as the lead protagonist**. J AARON K DAVID is the second-named co-subject, never the lead.
+- Every paragraph about an encounter, event, recognition, or relationship must reinforce SHEKINAIH SIEW SIN YAP's positioning, credibility, and stature first.
+- **Other guests, celebrities, dignitaries, and figures appear only to establish the calibre of the circles SHEKINAIH SIEW SIN YAP and J AARON K DAVID are received within** — they are credentials of association, not subjects of the page.
+- Never let the page tilt into being "about" the celebrity, host, or honoree being met. The page is always about SHEKINAIH SIEW SIN YAP and J AARON K DAVID.
+- Body text grammar should keep SHEKINAIH SIEW SIN YAP (and AARON) as the grammatical subjects of sentences whenever possible.
+
+---
+
 ## Handover Notes For Future Agents
 
 This project rewards restraint. When in doubt, preserve the existing editorial identity, slow the interaction down, and make the work feel honorable rather than commercial.

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -453,6 +453,23 @@
       font-family:'DM Sans',sans-serif;font-size:11px;font-weight:300;
       color:rgba(255,255,255,.45);letter-spacing:.5px;
     }
+    /* Video thumbnail without an attached source — visually communicate that
+       the video file is not yet available, and disable click/hover affordances */
+    .vp-thumb-pending{
+      cursor:default;pointer-events:none;opacity:.72;
+      filter:saturate(.65) brightness(.85);
+    }
+    .vp-thumb-pending .vp-play-ring{display:none}
+    .vp-thumb-pending::after{
+      content:'Video Coming Soon';
+      position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
+      letter-spacing:3px;text-transform:uppercase;color:var(--gold2);
+      padding:10px 18px;background:rgba(8,9,26,.75);
+      backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+      border:1px solid rgba(200,146,58,.35);border-radius:100px;
+      z-index:4;white-space:nowrap;
+    }
 
     /* ─── VIDEO MODAL ────────────────────────────────── */
     .vp-modal{
@@ -704,6 +721,7 @@
     }
 
     /* — Drop cap on lead paragraph — */
+    .lead-p{overflow:hidden}
     .lead-p::first-letter{
       font-family:'Cormorant Garamond',serif;
       font-size:4.4em;font-weight:600;
@@ -940,9 +958,122 @@
         padding:14px 8px;
       }
       .glance-cell:last-child{border-bottom:none}
-      .lead-p::first-letter{
+      .lead-p{overflow:hidden}
+    .lead-p::first-letter{
         font-size:3.6em;padding:4px 10px 0 0;
       }
+    }
+    /* ═══════════════════════════════════════════════════════
+       FINAL POLISH — Editorial justification, mobile touch
+       comfort, and small responsive fixes (applied via review)
+       ═══════════════════════════════════════════════════════ */
+
+    /* Editorial justify on long-form prose only (not on headings,
+       not on captions, not on metadata tables). Hyphenation is
+       enabled to prevent ugly rivers/gaps when justifying. */
+    .section-body,
+    .editorial-p,
+    .dist-card-body,
+    .story-body,
+    .hero-desc,
+    .section-sub,
+    .prestige-body{
+      text-align:justify;
+      hyphens:auto;
+      -webkit-hyphens:auto;
+      -ms-hyphens:auto;
+      text-justify:inter-word;
+    }
+    /* Hero copy stays centered (it is centered-justified, which is fine on wide screens) */
+    .hero .hero-desc{text-align:center}
+
+    /* Reading-comfort: lift line-height a touch on narrow screens */
+    @media(max-width:760px){
+      .section-body,.editorial-p,.dist-card-body,.story-body{
+        text-align:left;        /* justified short lines look broken on phones */
+        line-height:1.85;
+      }
+      .hero-desc,.section-sub,.prestige-body{
+        text-align:left;
+      }
+    }
+
+    /* Mobile touch comfort — larger tap zones for the topbar back link
+       and any CTA-style buttons, plus safer side padding for narrow phones */
+    @media(max-width:520px){
+      .topbar-back{min-height:44px;display:inline-flex;align-items:center}
+      .hero-pills .hero-pill{padding:9px 16px}
+      /* Prevent any unexpected horizontal overflow on very narrow phones */
+      .section,.section.wide,.gallery-inner,.at-a-glance,.video-inner,.hero{
+        padding-left:max(16px, env(safe-area-inset-left));
+        padding-right:max(16px, env(safe-area-inset-right));
+      }
+      /* Tighten oversized hero title slightly on very small phones */
+      .hero-title{font-size:clamp(32px,9vw,46px) !important;letter-spacing:-1px}
+      /* Section-titles stay readable but not crowded */
+      .section-title{font-size:clamp(26px,7vw,34px) !important}
+    }
+    /* ═══════════════════════════════════════════════════════
+       MOBILE READABILITY — Phone-friendly typography & spacing
+       Designed so the body copy is comfortable on a 360–414px
+       phone screen, with no horizontal scroll, generous line
+       height, and tap-comfortable interactive elements.
+       ═══════════════════════════════════════════════════════ */
+    @media(max-width:760px){
+      /* Bump body text up so reading is easier on phones */
+      .section-body,.editorial-p,.dist-card-body,.story-body,
+      .prestige-body,.hero-desc,.mission-body,.cert-meta,
+      .plaque-meta,.story-sub{
+        font-size:15.5px !important;
+        line-height:1.85 !important;
+      }
+      .section-sub{font-size:15px !important;line-height:1.8 !important}
+      /* Pull-quote readable at phone size */
+      .pull-quote p{font-size:19px !important;line-height:1.55}
+      .pull-quote{padding-left:20px;margin:32px 0}
+      /* Distinguished-host cards: more comfortable phone padding */
+      .dist-card{padding:28px 22px}
+      .dist-card-name{font-size:24px}
+      .dist-card-title{font-size:9px;letter-spacing:1.8px}
+      /* Photo card captions easier to read */
+      .photo-card-caption{font-size:9.5px;padding:14px 14px 16px;letter-spacing:2px}
+      /* Section vertical rhythm slightly tighter on phones */
+      .section,.section.wide{padding-top:48px;padding-bottom:48px}
+    }
+
+    @media(max-width:520px){
+      /* Even-smaller phones — keep body text readable */
+      .section-body,.editorial-p,.dist-card-body,.story-body,
+      .prestige-body,.hero-desc,.mission-body{
+        font-size:15px !important;line-height:1.8 !important;
+      }
+      /* At-a-Glance cell tuning so values don't truncate */
+      .glance-cell-value{font-size:18px}
+      .glance-cell-sub{font-size:12px;line-height:1.45}
+      .glance-cell-label{font-size:8px;letter-spacing:2px}
+      /* Hero pills wrap nicely on tiny phones */
+      .hero-pills{gap:8px}
+      .hero-pill{font-size:8px;padding:8px 14px;letter-spacing:2px}
+      /* Album header collapses cleanly */
+      .album-header{padding-bottom:14px}
+      .album-title{font-size:22px}
+      .album-count{font-size:8.5px;padding:7px 12px;letter-spacing:2.5px}
+      /* Chapter labels stack cleanly */
+      .chapter-label{gap:10px;margin-bottom:18px}
+      .chapter-num{padding:5px 9px;font-size:9.5px;letter-spacing:2px}
+      .chapter-eyebrow{font-size:8.5px;letter-spacing:3px}
+      /* Pull quotes — keep readable */
+      .pull-quote p{font-size:18px !important}
+      .pull-quote cite{font-size:8.5px;letter-spacing:2.5px}
+      /* Distinguished cards more compact */
+      .dist-card{padding:24px 18px;margin:32px 0}
+      /* Photo cards tighter on tiny phones */
+      .photo-card-caption{font-size:9px;padding:12px 12px 14px}
+      /* Topbar badge can shrink */
+      .topbar-badge{font-size:8px;padding:7px 12px;letter-spacing:1.5px}
+      /* Footer comfortable */
+      .art-footer p{font-size:8.5px;letter-spacing:2.5px}
+      .art-footer a{font-size:9px;padding:12px 22px;letter-spacing:1.8px}
     }
   </style>
 </head>
@@ -1039,11 +1170,13 @@
         the American entertainment world.
       </p>
       <p class="prestige-body fade-up d3">
-        Their participation in these gatherings — hosted under the banner of organisations including
-        Authentic TV Global Media, NSI Universal Inc., The Avantgarde, Timeless Music, Reveal Live
-        Entertainment, Devlux Entertainment Group, and From The Heart Productions — reflects a
-        steady and widening international footprint, extending well beyond the Asia-Pacific circuits
-        where they first built their public profile.
+        The participation of <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
+        <span style="color:var(--silver)">J AARON K DAVID</span> in these gatherings — hosted
+        under the banner of organisations including Authentic TV Global Media, NSI Universal
+        Inc., The Avantgarde, Timeless Music, Reveal Live Entertainment, Devlux Entertainment
+        Group, and From The Heart Productions — reflects a steady and widening international
+        footprint, extending well beyond the Asia-Pacific circuits where they first built their
+        public profile.
       </p>
 
       <div class="prestige-facts-row fade-up d4">
@@ -1159,9 +1292,12 @@
       </div>
 
       <p class="editorial-p fade-up d2">
-        The gatherings took place across multiple Los Angeles venues during a single November 2025
-        visit — each one deepening a network of relationships that spans entertainment, media,
-        humanitarian leadership, and faith-based international platforms.
+        For <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
+        <span style="color:var(--silver)">J AARON K DAVID</span>, those gatherings took place
+        across multiple Los Angeles venues during a single November 2025 visit — each one
+        deepening a network of relationships that spans entertainment, media, humanitarian
+        leadership, and faith-based international platforms they have built across more than
+        a decade.
       </p>
     </div>
   </div>
@@ -1717,10 +1853,21 @@
     const close  = document.getElementById(closeId);
     const video  = document.getElementById(videoId);
 
+    // Detect if this video has a usable <source>. If sources are commented out
+    // or absent, mark the thumbnail visually and skip wiring — prevents users
+    // clicking into a dead/empty modal.
+    const hasSource = video && video.querySelector('source[src]') !== null;
+    if (thumb && !hasSource) {
+      thumb.classList.add('vp-thumb-pending');
+      thumb.setAttribute('aria-disabled', 'true');
+      thumb.setAttribute('tabindex', '-1');
+      return;
+    }
+
     function openModal(){
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
-      if(video) video.play();
+      if(video) video.play().catch(()=>{});
     }
     function closeModal(){
       modal.classList.remove('open');
