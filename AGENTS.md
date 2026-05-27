@@ -308,8 +308,57 @@ Editorial framing rules:
 
 ---
 
+## Image Selection & Cropping Rules — ABSOLUTE, NO EXCEPTIONS
+
+**Never use an image — source file or rendered — that crops a subject's head, face, or body.**
+
+This rule applies to every image of SHEKINAIH SIEW SIN YAP, J AARON K DAVID, their guests, dignitaries, ministers, family, or anyone else appearing on this site.
+
+### Mandatory pre-flight check before any image is placed
+
+Before referencing any new `<img src="…">` in HTML, the agent MUST:
+
+1. **Open the source file and inspect it visually** (e.g. via `Read` on the image path).
+2. **Confirm the subject's full head and full body silhouette are present** within the image frame. Tops of heads must not be sliced off. Faces must not be partially out of frame. Feet/legs must not be cut except where a posed mid-thigh-up portrait was the photographer's deliberate intent.
+3. **If the source file is itself cropped at the top, bottom, or sides**, it is disqualified — pick a different file from the same shoot folder. Never attempt to "rescue" a cropped source via CSS `object-fit` or `object-position`; CSS cannot uncrop pixels that were never captured.
+4. **If no full-body / full-face alternative exists in the folder**, ask the user before proceeding rather than silently using a cropped image.
+
+### CSS rules that follow from this
+
+- `object-fit: cover` is **forbidden** on any image of a person. Use `width:100%; height:auto` and a masonry/natural-aspect layout instead.
+- Aspect-ratio constraints (`aspect-ratio: 4/3` etc.) on portrait or full-body photos are **forbidden** unless paired with `object-fit: contain` and a neutral letterbox.
+- Fixed-height image wrappers with `overflow:hidden` around portraits are **forbidden**.
+
+### Why this matters
+
+These photographs document the subjects' presence at significant international events. Cropping a head off a red-carpet photograph diminishes the dignity of the recognition and the subject. This is not a stylistic preference — it is a hard rule.
+
+---
+
+## Visual-First Storytelling — Reduce Text Walls
+
+**Where a section is reaching three or more paragraphs of body copy, replace some of that text with a visual device.**
+
+Preferred substitutes:
+
+- **Photo strip** — three to six related images with a single one-sentence caption beneath, rather than three paragraphs of explanation
+- **Stat callouts** — a quantity + descriptor pair (e.g. *"5 Nations · 30+ Years · 10+ Recognitions"*) where the prose was repeating numbers
+- **Pull-quote** — a single italic line from the subject or a third-party recognition, set large, replacing a long paragraph of summary
+- **Editorial lede** — one italic sentence at the top of the section that captures the entire point of what follows
+- **Infographic / GIF** — when a concept benefits from motion or diagrammatic explanation, use the **HyperFrames plugin** (`/plugin install hyperframes@claude-plugins-official`) to generate a composition rather than describing it in text
+
+Rules of thumb:
+
+- A category section should rarely exceed **two short paragraphs** of body prose.
+- A keyword band (Cinzel uppercase, gold) is preferred over a sentence enumerating the same themes.
+- If you find yourself listing four or more nouns in a sentence, ask whether a photo strip or a keyword band would carry the meaning more elegantly.
+
+---
+
 ## Handover Notes For Future Agents
 
 This project rewards restraint. When in doubt, preserve the existing editorial identity, slow the interaction down, and make the work feel honorable rather than commercial.
 
 The goal is not to make the site louder. The goal is to make the recognition, testimony, humanitarian service, and spiritual calling feel more legible, credible, and dignified.
+
+**When in any doubt about an image: open it, look at it, and choose a better one. Never use an image that crops a person.**
