@@ -839,6 +839,24 @@ body,p,li{font-weight:500}
 .partners-name{color:#C9D4E6 !important;font-weight:800 !important;opacity:1 !important;border-color:rgba(184,196,216,.4) !important}
 .partners-label{color:rgba(201,212,230,.72) !important;font-weight:700 !important}
 .art-footer p{color:#C9D4E6 !important;font-weight:800 !important}
+
+/* Opening stage photo (first photo of the page) */
+.hero-stage-feature{ max-width:460px; margin:6px auto 0; padding:0 22px; }
+.hero-stage-feature img{
+  width:100%; height:auto; display:block; border-radius:18px;
+  box-shadow:0 40px 100px rgba(0,0,0,.6), 0 0 0 1px rgba(200,146,58,.28), 0 0 80px rgba(200,146,58,.08);
+}
+.hero-stage-caption{ display:block; text-align:center; margin-top:18px; }
+.hero-stage-caption .hsc-names{
+  display:block; font-family:'Cormorant Garamond',serif;
+  font-size:clamp(20px,2.4vw,27px); font-weight:700; line-height:1.3; letter-spacing:.5px;
+}
+.hero-stage-caption .hsc-amp{ color:rgba(255,255,255,.32); font-weight:500; margin:0 8px; font-size:.8em; vertical-align:middle; }
+.hero-stage-caption .hsc-meta{
+  display:block; margin-top:10px; font-family:'Cinzel',serif;
+  font-size:clamp(10px,1vw,12px); font-weight:600; letter-spacing:2.5px; text-transform:uppercase;
+  color:rgba(232,184,109,.6);
+}
 </style>
 </head>
 <body>
@@ -875,6 +893,17 @@ body,p,li{font-weight:500}
   </div>
   <div class="hero-divider"></div>
 </header>
+
+<!-- OPENING STAGE PHOTO (first photo of the page) -->
+<figure class="hero-stage-feature fade-in">
+  <img src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-awardees-group-on-stage-gala.jpg"
+       width="850" height="1280" loading="eager"
+       alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID on the Grand Awards stage with fellow honourees at the Manila Up International Magazine 10th Anniversary Gala, Hotel Indigo Los Angeles 2025"/>
+  <figcaption class="hero-stage-caption">
+    <span class="hsc-names"><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span><span class="hsc-amp">&amp;</span><span class="name-inline-silver">J AARON K DAVID</span></span>
+    <span class="hsc-meta">On the Grand Awards stage with fellow honourees · Manila Up 10th Anniversary Gala · Los Angeles 2025</span>
+  </figcaption>
+</figure>
 
 <!-- GALA PRESTIGE EDITORIAL -->
 <div class="gala-prestige">
