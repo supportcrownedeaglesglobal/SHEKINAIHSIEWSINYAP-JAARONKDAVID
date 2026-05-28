@@ -34,7 +34,7 @@
     }
     .topbar-back{
       display:flex;align-items:center;gap:10px;
-      font-family:'Cinzel',serif;font-size:10px;font-weight:500;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:2.5px;text-transform:uppercase;
       color:rgba(255,255,255,.5);transition:color .2s;
     }
@@ -46,7 +46,7 @@
       white-space:nowrap;max-width:42vw;overflow:hidden;text-overflow:ellipsis;
     }
     .topbar-badge{
-      font-family:'Cinzel',serif;font-size:9px;font-weight:700;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:2px;text-transform:uppercase;
       background:linear-gradient(135deg,var(--gold),var(--gold2));
       color:var(--ink);padding:8px 16px;border-radius:100px;
@@ -67,12 +67,12 @@
     .hero-line{width:40px;height:1px;background:var(--gold);margin:0 auto 28px}
     .hero-dateline{
       display:inline-flex;gap:12px;align-items:center;margin-bottom:14px;
-      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
       letter-spacing:5px;text-transform:uppercase;color:var(--gold);
     }
     .hero-dateline::before,.hero-dateline::after{content:'';width:28px;height:1px;background:var(--gold)}
     .hero-place{
-      font-family:'Cinzel',serif;font-size:9px;font-weight:400;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:3px;text-transform:uppercase;
       color:rgba(255,255,255,.4);margin-bottom:36px;
     }
@@ -90,7 +90,7 @@
     }
     .hero-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
     .hero-pill{
-      font-family:'Cinzel',serif;font-size:8.5px;font-weight:600;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
       letter-spacing:2.5px;text-transform:uppercase;
       border:1px solid rgba(200,146,58,.35);
       color:rgba(255,255,255,.6);padding:8px 20px;border-radius:100px;
@@ -112,7 +112,7 @@
     .hero-poster:hover img{transform:scale(1.025)}
     .hero-poster-caption{
       text-align:center;margin-top:12px;
-      font-family:'Cinzel',serif;font-size:8.5px;font-weight:500;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.32);
     }
 
@@ -128,7 +128,7 @@
       background:linear-gradient(90deg,transparent,var(--gold),transparent);
     }
     .glance-label{
-      font-family:'Cinzel',serif;font-size:9.5px;font-weight:700;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:4px;text-transform:uppercase;color:var(--gold);
       text-align:center;margin-bottom:26px;
       display:flex;align-items:center;justify-content:center;gap:14px;
@@ -138,7 +138,7 @@
     .glance-cell{padding:8px 16px;text-align:center;border-right:1px solid rgba(200,146,58,.15)}
     .glance-cell:last-child{border-right:none}
     .glance-cell-label{
-      font-family:'Cinzel',serif;font-size:8.5px;font-weight:600;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
       letter-spacing:2.5px;text-transform:uppercase;
       color:rgba(200,146,58,.7);margin-bottom:10px;
     }
@@ -163,7 +163,7 @@
       background:rgba(200,146,58,.06);flex-shrink:0;
     }
     .chapter-eyebrow{
-      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
       letter-spacing:4px;text-transform:uppercase;color:var(--gold);
       flex:1;display:flex;align-items:center;gap:14px;
     }
@@ -210,9 +210,18 @@
     }
     .story-photo img{width:100%;height:auto;display:block;transition:transform .5s ease}
     .story-photo:hover img{transform:scale(1.02)}
+    /* Side-by-side dual poster display for Chief Guest pair */
+    .story-photos-dual{
+      grid-column:1/-1;
+      display:grid;grid-template-columns:1fr 1fr;gap:24px;
+      max-width:1100px;margin:0 auto;
+    }
+    @media (max-width:720px){
+      .story-photos-dual{grid-template-columns:1fr;gap:18px}
+    }
     .story-text{display:flex;flex-direction:column;gap:14px}
     .story-eyebrow{
-      font-family:'Cinzel',serif;font-size:9px;font-weight:700;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:4px;text-transform:uppercase;color:var(--gold);
     }
     .story-title{
@@ -240,7 +249,7 @@
     }
     .pull-quote cite{
       display:block;margin-top:14px;
-      font-family:'Cinzel',serif;font-size:9px;font-weight:500;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-style:normal;
     }
 
@@ -279,7 +288,7 @@
     .plaque-name.gold{color:#E8B86D;filter:drop-shadow(0 2px 12px rgba(232,184,109,.3))}
     .plaque-name.silver{color:var(--silver)}
     .plaque-role{
-      font-family:'Cinzel',serif;font-size:10px;font-weight:700;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:3.5px;text-transform:uppercase;
       color:var(--gold);margin-bottom:18px;
     }
@@ -289,7 +298,7 @@
     .plaque-meta-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid rgba(200,146,58,.12)}
     .plaque-meta-row:last-child{border-bottom:none}
     .plaque-meta-label{
-      font-family:'Cinzel',serif;font-size:8.5px;font-weight:600;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
       letter-spacing:2px;text-transform:uppercase;color:rgba(200,146,58,.65);flex-shrink:0;
     }
     .plaque-meta-val{
@@ -318,7 +327,7 @@
     .photo-card:hover img{transform:scale(1.025)}
     .photo-badge{
       position:absolute;top:14px;left:14px;z-index:3;
-      font-family:'Cinzel',serif;font-size:9px;font-weight:700;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:2.5px;text-transform:uppercase;color:var(--gold2);
       padding:6px 11px;background:rgba(8,9,26,.75);
       backdrop-filter:blur(8px);
@@ -326,7 +335,7 @@
     }
     .photo-card-caption{
       padding:14px 18px 16px;
-      font-family:'Cinzel',serif;font-size:8.5px;font-weight:600;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
       letter-spacing:2.5px;text-transform:uppercase;
       color:rgba(255,255,255,.55);
       border-top:1px solid rgba(200,146,58,.12);
@@ -339,13 +348,13 @@
       padding:60px clamp(20px,5vw,60px);text-align:center;
     }
     .partners-label{
-      font-family:'Cinzel',serif;font-size:9px;font-weight:600;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
       letter-spacing:4px;text-transform:uppercase;
       color:rgba(255,255,255,.25);margin-bottom:24px;
     }
     .partners-list{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 16px}
     .partners-name{
-      font-family:'Cinzel',serif;font-size:8.5px;font-weight:500;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:2px;text-transform:uppercase;
       color:rgba(255,255,255,.22);
       border:1px solid rgba(255,255,255,.08);
@@ -377,7 +386,7 @@
       letter-spacing:.3px;color:rgba(255,255,255,.72);line-height:1.7;
     }
     .lb-caption .lb-cap-label{
-      display:block;font-family:'Cinzel',serif;font-size:9px;font-weight:700;
+      display:block;font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:3.5px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px;
     }
     .lb-close, .lb-nav{
@@ -413,12 +422,12 @@
       padding:48px clamp(20px,5vw,60px);text-align:center;margin-top:40px;
     }
     .art-footer p{
-      font-family:'Cinzel',serif;font-size:9.5px;font-weight:500;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
       letter-spacing:3px;text-transform:uppercase;
       color:rgba(255,255,255,.2);margin-bottom:20px;
     }
     .art-footer a{
-      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
+      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
       letter-spacing:2px;text-transform:uppercase;
       background:linear-gradient(135deg,var(--gold),var(--gold2));
       color:var(--ink);padding:13px 28px;border-radius:100px;
@@ -566,6 +575,56 @@
       .art-footer p{font-size:8.5px;letter-spacing:2.5px}
       .art-footer a{font-size:9px;padding:12px 22px;letter-spacing:1.8px}
     }
+  
+    /* Name styling — ABSOLUTE: gold for SHEKINAIH, silver for J AARON K DAVID */
+    .name-inline-gold {
+      color: #F0C660;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      text-shadow: 0 0 1px rgba(232,184,109,.5);
+      filter: drop-shadow(0 1px 6px rgba(232,184,109,.35));
+    }
+    .name-inline-silver {
+      color: #DDE3EE;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      text-shadow: 0 0 1px rgba(220,228,242,.4);
+    }
+  
+    /* ── GLOBAL MOBILE READABILITY BUMP (<=720px) ── */
+    @media (max-width:720px){
+      body, p { font-size: 15.5px !important; line-height: 1.75 !important }
+      .hero-desc, .hero-meta, .body, .e-desc, .lede, .section-sub,
+      .art-p, .art-body, .gala-prestige-body, .gala-spotlight-body,
+      .celeb-card-bio, .celeb-video-sub, .video-caption, .video-caption-title,
+      .aw-body, .event-detail-body, .pull-quote p { font-size: 16px !important; line-height: 1.7 !important; font-weight: 500 !important }
+      .hero-title, .masthead-title, .gala-prestige-title, .display-title { font-size: clamp(34px, 9vw, 52px) !important }
+      .section-title, .featured-title, .gala-spotlight-names, .celeb-card-name { font-size: clamp(26px, 7.5vw, 36px) !important }
+      .eyebrow, .hero-eyebrow, .hero-pub, .gala-prestige-eyebrow, .section-label, .art-section-label,
+      .featured-eyebrow, .masthead-pub, .masthead-eyebrow, .cover-badge, .celeb-card-eyebrow,
+      .gala-spotlight-label, .gala-fact-pill, .hero-pill { font-size: 12.5px !important; font-weight: 700 !important }
+      .nav-links a, .topbar-back, .topbar-pdf, .topbar-brand { font-size: 12px !important; font-weight: 700 !important }
+      .e-date, .e-link, .gallery-caption, .video-caption, .finale-caption-pub,
+      .award-label, .award-presenter, .celeb-video-label { font-size: 12.5px !important; font-weight: 700 !important }
+      .btn, .btn-primary, .btn-readmore, .btn-ghost, .mm-cta, .vp-button {
+        font-size: 13px !important; min-height: 54px !important; padding: 15px 26px !important; font-weight: 700 !important;
+      }
+      .name-inline-gold, .name-inline-silver { font-size: inherit !important; letter-spacing: .04em !important }
+    }
+  
+    /* ── EDITORIAL JUSTIFIED PROSE (magazine style) ── */
+    .body, .lede, .e-desc, .mag-desc, .art-p, .art-body,
+    .gala-prestige-body, .gala-spotlight-body, .celeb-card-bio,
+    .event-detail-body, .founder-card p, .featured-body p,
+    .section-sub, .pull-quote-body, .video-summary p {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
   </style>
 </head>
 <body>
@@ -589,17 +648,18 @@
     <h1 class="hero-title">From the Republic Day Pulpit<br/><em>to the Maghi Purnima Walk</em></h1>
     <p class="hero-desc">
       Across two of India's most sacred civic and Buddhist observances,
-      <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-      <span style="color:var(--silver)">J AARON K DAVID</span> were honoured as
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> were honoured as
       <strong style="color:rgba(255,255,255,.92)">Special Guests</strong> by the
       <strong style="color:rgba(255,255,255,.92)">Tollygunge Sambodhi Buddhist Monastery</strong>
       and the <strong style="color:rgba(255,255,255,.92)">UN Peace Keepers Federal Council
       (UNPKFC)</strong> — receiving commemorative <em>75 Years of Peace</em> plaques at the
       historic <em>Walking-PEACE · Symbolic Peace Talk and Peace March for Maghi Purnima</em>.
       Five days earlier, on Republic Day,
-      <span style="color:var(--silver)">J AARON K DAVID</span> served as
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> served as
       <strong style="color:rgba(255,255,255,.92)">Chief Guest</strong> at the Alms Offering
-      and 151 Buddha Statue Distribution Ceremony at the Buddha Spiritual Park, Nagpur.
+      Ceremony at the Buddha Spiritual Park, Nagpur.
     </p>
     <div class="hero-pills">
       <span class="hero-pill">Tollygunge Sambodhi · 75 Years of Peace</span>
@@ -671,15 +731,15 @@
   <h2 class="section-title fade-up d1">Two Indian Observances, One Calling</h2>
   <p class="section-body lead-p fade-up d2">
     In the closing days of January and the opening days of February 2026,
-    <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-    <span style="color:var(--silver)">J AARON K DAVID</span> moved through two of India's
+    <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+    <span class="name-inline-silver">J AARON K DAVID</span> moved through two of India's
     most spiritually significant observances. On the
     <strong style="color:rgba(255,255,255,.92)">Republic Day of India</strong>, in central Nagpur,
-    <span style="color:var(--silver)">J AARON K DAVID</span> was named
+    <span class="name-inline-silver">J AARON K DAVID</span> was named
     <strong style="color:rgba(255,255,255,.92)">Chief Guest</strong> of the Alms Offering Ceremony
     and the 151 Buddha Statue Distribution at the Buddha Spiritual Park. Five days later, in Kolkata,
-    both <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-    <span style="color:var(--silver)">J AARON K DAVID</span> were honoured as
+    both <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+    <span class="name-inline-silver">J AARON K DAVID</span> were honoured as
     <strong style="color:rgba(255,255,255,.92)">Special Guests</strong> of the
     <em>Walking-PEACE · Symbolic Peace Talk and Peace March for Maghi Purnima</em>, marking
     <strong style="color:rgba(255,255,255,.92)">75 Years of Peace</strong> at the Tollygunge
@@ -689,15 +749,15 @@
     The two observances are not unrelated. Republic Day commemorates the founding charter of
     modern India; Maghi Purnima commemorates the Buddha's announcement of the timing of his
     parinibbāna. Both are observances of national and spiritual covenant — and the recognitions
-    conferred on <span style="color:var(--gold2)">SHEKINAIH</span> and
-    <span style="color:var(--silver)">AARON</span> at both placed them inside the trusted civic
+    conferred on <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+    <span class="name-inline-silver">J AARON K DAVID</span> at both placed them inside the trusted civic
     and dharmic register of their Indian hosts.
   </p>
 
   <div class="pull-quote fade-up d2">
     <p>
-      "<span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> from Malaysia · Special Guest.
-      <span style="color:var(--silver)">J AARON K DAVID</span>, Co-Founder and Partner of Crowned
+      "<span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> from Malaysia · Special Guest.
+      <span class="name-inline-silver">J AARON K DAVID</span>, Co-Founder and Partner of Crowned
       Eagles Global LLP · Special Guest. Walk for Peace &amp; Peace Day Observation,
       Kolkata, February 1, 2026."
     </p>
@@ -706,25 +766,54 @@
 </section>
 
 <!-- ─── CHAPTER 02 — NAGPUR · REPUBLIC DAY ─── -->
-<section class="section wide">
+<section class="section wide" id="ev-nagpur">
   <div class="chapter-label fade-up">
     <span class="chapter-num">02</span>
     <span class="chapter-eyebrow">Nagpur · Republic Day · 26 January 2026</span>
   </div>
+  <h2 class="section-title fade-up d1">From the Airport Garland to the Chief Guest Pulpit</h2>
+  <p class="section-sub fade-up d2" style="max-width:780px">
+    <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+    <span class="name-inline-silver">J AARON K DAVID</span> arrived at
+    <strong style="color:rgba(255,255,255,.92)">Dr. Babasaheb Ambedkar International Airport,
+    Nagpur</strong> on the morning of <strong style="color:rgba(255,255,255,.92)">26 January
+    2026 — India's Republic Day</strong>. The organising society greeted them at the arrival
+    gate with <strong style="color:rgba(255,255,255,.92)">flower garlands</strong> — the
+    customary Indian welcome reserved for honoured guests of a public observance. From the
+    airport the delegation drove directly to the <strong style="color:rgba(255,255,255,.92)">Buddha
+    Spiritual Park, Sihora-Kanhan</strong>, where the day's programme — the Alms Offering
+    Ceremony and the 151 Buddha Statue Distribution — was already convening under the printed
+    posters bearing each founder's name.
+  </p>
+</section>
+<section id="ev-nagpur-chiefguest" class="section wide" style="padding-top:0">
   <h2 class="section-title fade-up d1">Chief Guest at the 151 Buddha Statue Distribution</h2>
 </section>
 
+<!-- Dual Chief Guest poster display — Shekinaih first per AGENTS.md ordering rule -->
 <div class="story-block">
-  <div class="story-photo fade-up zoom-trigger"
-       data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-chief-guest-buddha-statue-distribution-nagpur.jpg"
-       data-lb-label="Chief Guest · 151 Buddha Statue Distribution · Nagpur · 26 January 2026"
-       data-lb-caption="Official ceremony poster naming J AARON K DAVID as Chief Guest of the Alms Offering Ceremony and 151 Buddha Statue Distribution at the Buddha Spiritual Park, Sihora, Kanhan, Nagpur — Republic Day of India, 26 January 2026.">
-    <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-chief-guest-buddha-statue-distribution-nagpur.jpg"
-         alt="Republic Day ceremony poster naming J AARON K DAVID as Chief Guest of the Alms Offering and 151 Buddha Statue Distribution, Nagpur" loading="lazy"/>
+  <div class="story-photos-dual">
+    <div class="story-photo fade-up zoom-trigger"
+         data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-chief-guest-buddha-statue-distribution-nagpur.jpg"
+         data-lb-label="SHEKINAIH SIEW SIN YAP · Chief Guest · 151 Buddha Statue Distribution · Nagpur · 26 January 2026"
+         data-lb-caption="Official ceremony poster naming SHEKINAIH SIEW SIN YAP — Founder and Managing Partner of Crowned Eagles Global LLP and CE Global Network LLP — as Chief Guest of the Alms Offering Ceremony and 151 Buddha Statue Distribution at the Buddha Spiritual Park, Sihora, Kanhan, Nagpur — Republic Day of India, 26 January 2026.">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-chief-guest-buddha-statue-distribution-nagpur.jpg"
+           alt="Republic Day ceremony poster naming SHEKINAIH SIEW SIN YAP as Chief Guest of the Alms Offering and 151 Buddha Statue Distribution, Nagpur" loading="lazy"/>
+    </div>
+    <div class="story-photo fade-up d1 zoom-trigger"
+         data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-chief-guest-buddha-statue-distribution-nagpur.jpg"
+         data-lb-label="J AARON K DAVID · Chief Guest · 151 Buddha Statue Distribution · Nagpur · 26 January 2026"
+         data-lb-caption="Official ceremony poster naming J AARON K DAVID — Co-Founder and Partner of Crowned Eagles Global LLP and CE Global Network LLP — as Chief Guest of the Alms Offering Ceremony and 151 Buddha Statue Distribution at the Buddha Spiritual Park, Sihora, Kanhan, Nagpur — Republic Day of India, 26 January 2026.">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-chief-guest-buddha-statue-distribution-nagpur.jpg"
+           alt="Republic Day ceremony poster naming J AARON K DAVID as Chief Guest of the Alms Offering and 151 Buddha Statue Distribution, Nagpur" loading="lazy"/>
+    </div>
   </div>
-  <div class="story-text fade-up d1">
+</div>
+
+<div class="story-block">
+  <div class="story-text fade-up" style="grid-column:1/-1;max-width:none">
     <p class="story-eyebrow">The Republic Day Pulpit</p>
-    <h3 class="story-title">A Chief Guest from Singapore at the Buddha Spiritual Park</h3>
+    <h3 class="story-title">Two Chief Guests from Singapore at the Buddha Spiritual Park</h3>
     <p class="story-meta">
       <strong>26 January 2026 · 11:00 am</strong><br/>
       The Buddha Spiritual Park, Sihora, Kanhan · Nagpur, India
@@ -732,17 +821,20 @@
     <p class="story-body">
       On the morning of India's <strong style="color:rgba(255,255,255,.9)">Republic Day</strong>,
       the official programme of the Alms Offering Ceremony and 151 Buddha Statue Distribution
-      named <span style="color:var(--silver)">J AARON K DAVID</span> — Co-Founder and Partner of
-      Crowned Eagles Global LLP and CE Global Network LLP — as
-      <strong style="color:rgba(255,255,255,.9)">Chief Guest</strong> of the ceremony.
+      named both <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> — Founder and
+      Managing Partner of Crowned Eagles Global LLP and CE Global Network LLP — and
+      <span class="name-inline-silver">J AARON K DAVID</span> — Co-Founder and Partner — as
+      <strong style="color:rgba(255,255,255,.9)">Chief Guests</strong> of the ceremony, each
+      honoured on their own official poster issued by the organising society.
     </p>
     <p class="story-body">
       The role of Chief Guest at an Indian Buddhist observance of this scale is not honorary in
       name only; it carries the responsibility of opening the ceremonial Alms Offering and
       symbolically commissioning the distribution of the 151 Buddha statues to the gathered
-      monastic and lay community. <span style="color:var(--silver)">AARON</span> shared the
-      programme with <strong style="color:rgba(255,255,255,.9)">Bhante Vinacharya</strong>
-      (Delhi), Bollywood's <strong style="color:rgba(255,255,255,.9)">Himanshu Soni</strong>
+      monastic and lay community. <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
+      and <span class="name-inline-silver">J AARON K DAVID</span> shared the programme with
+      <strong style="color:rgba(255,255,255,.9)">Bhante Vinacharya</strong> (Delhi),
+      Bollywood's <strong style="color:rgba(255,255,255,.9)">Himanshu Soni</strong>
       (best known for portraying the Buddha in Indian television), and
       <strong style="color:rgba(255,255,255,.9)">Nitin Gajbhiye</strong>, President of the
       Ahilyabai Holkar Multipurpose Education Society.
@@ -750,8 +842,92 @@
   </div>
 </div>
 
+<!-- ─── ON THE GROUND · TATHAGAT BUDDHA VIHAR EVENING SERVICE ─── -->
+<section class="section wide" style="margin-top:24px">
+  <div class="chapter-label fade-up">
+    <span class="chapter-num">02b</span>
+    <span class="chapter-eyebrow">On the Ground · Tathagat Buddha Vihar · Hiwari Nagar</span>
+  </div>
+  <h2 class="section-title fade-up d1">A Humanitarian Mission, Witnessed and Photographed</h2>
+  <p class="section-sub fade-up d2" style="max-width:780px">
+    Following the morning ceremony at the Buddha Spiritual Park, the day's mission moved to
+    <strong style="color:rgba(255,255,255,.92)">Tathagat Buddha Vihar, Hiwari Nagar, Nagpur</strong>
+    for the evening service — a public food and blanket distribution under the
+    <strong style="color:rgba(255,255,255,.92)">Crowned Eagles Global</strong> banner, jointly
+    held with the Ahilyabai Holkar Multipurpose Education Society. The photographs below document
+    the official welcome banner, the founders received at the venue, and the formal alms-offering
+    of robes and blankets to the resident monastics before the larger public distribution began.
+  </p>
+</section>
+
+<div class="story-block">
+  <div class="story-photos-dual">
+    <div class="story-photo fade-up zoom-trigger"
+         data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-event-banner-crowned-eagles-global-republic-day.jpg"
+         data-lb-label="Official Welcome Banner · Tathagat Buddha Vihar · 26 January 2026"
+         data-lb-caption="The official Crowned Eagles Global welcome banner displayed at Tathagat Buddha Vihar, Hiwari Nagar, Nagpur — Food &amp; Blanket Distribution for the Poor, Needy, Hungry &amp; Sick, dated 26 January 2026 at 5:00 pm, honouring SHEKINAIH SIEW SIN YAP, Founder and Managing Partner of Crowned Eagles Global LLP, and J AARON K DAVID, Co-Founder and Partner.">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-event-banner-crowned-eagles-global-republic-day.jpg"
+           alt="Crowned Eagles Global official welcome banner naming SHEKINAIH SIEW SIN YAP and J AARON K DAVID — Food &amp; Blanket Distribution at Tathagat Buddha Vihar, Nagpur, 26 January 2026" loading="lazy"/>
+    </div>
+    <div class="story-photo fade-up d1 zoom-trigger"
+         data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-event-banner-tathagat-buddha-vihar-food-blanket-distribution.jpg"
+         data-lb-label="SHEKINAIH SIEW SIN YAP &amp; J AARON K DAVID · Welcomed at Tathagat Buddha Vihar"
+         data-lb-caption="SHEKINAIH SIEW SIN YAP and J AARON K DAVID standing in white-and-gold ceremonial robes beside the Crowned Eagles Global welcome banner at the entrance of Tathagat Buddha Vihar, Hiwari Nagar, Nagpur — Republic Day evening service, 26 January 2026.">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-event-banner-tathagat-buddha-vihar-food-blanket-distribution.jpg"
+           alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID in ceremonial white robes flanking the Crowned Eagles Global banner at Tathagat Buddha Vihar, Nagpur" loading="lazy"/>
+    </div>
+  </div>
+</div>
+
+<div class="story-block">
+  <div class="story-photos-dual">
+    <div class="story-photo fade-up zoom-trigger"
+         data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-giving-monk-robes-to-buddhist-monks.jpg"
+         data-lb-label="SHEKINAIH SIEW SIN YAP · Offering Robes to the Sangha"
+         data-lb-caption="SHEKINAIH SIEW SIN YAP, in white-and-gold ceremonial robes with the purple shawl of honour, personally offering folded monk robes to seated Buddhist monastics at Tathagat Buddha Vihar, Nagpur — Republic Day Alms Offering Ceremony, 26 January 2026.">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-giving-monk-robes-to-buddhist-monks.jpg"
+           alt="SHEKINAIH SIEW SIN YAP personally offering folded monk robes to seated Buddhist monks at Tathagat Buddha Vihar, Nagpur" loading="lazy"/>
+    </div>
+    <div class="story-photo fade-up d1 zoom-trigger"
+         data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-giving-monk-robes-to-buddhist-monks.jpg"
+         data-lb-label="J AARON K DAVID · Offering Robes to the Sangha"
+         data-lb-caption="J AARON K DAVID, in white-and-gold ceremonial robes with the marigold garland of honour, personally offering folded monk robes to seated Buddhist monastics at Tathagat Buddha Vihar, Nagpur — Republic Day Alms Offering Ceremony, 26 January 2026.">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-giving-monk-robes-to-buddhist-monks.jpg"
+           alt="J AARON K DAVID personally offering folded monk robes to seated Buddhist monks at Tathagat Buddha Vihar, Nagpur" loading="lazy"/>
+    </div>
+  </div>
+</div>
+
+<div class="story-block">
+  <div class="story-text fade-up" style="grid-column:1/-1;max-width:none">
+    <p class="story-eyebrow">A Sequence Recorded by Witnesses</p>
+    <h3 class="story-title">"GOD OF THE UNIVERSE Bless You, Heal You, Restore You…"</h3>
+    <p class="story-body">
+      The banner at the entrance of <strong style="color:rgba(255,255,255,.92)">Tathagat
+      Buddha Vihar</strong> opened the evening service with the printed blessing — <em>"GOD OF
+      THE UNIVERSE bless you, heal you, restore you with the warmth of their love and give you
+      hope."</em> It named <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> as
+      <strong style="color:rgba(255,255,255,.92)">Founder and Managing Partner</strong> and
+      <span class="name-inline-silver">J AARON K DAVID</span> as
+      <strong style="color:rgba(255,255,255,.92)">Co-Founder and Partner</strong> of Crowned
+      Eagles Global LLP and CE Global Network LLP, and dedicated the food-and-blanket
+      distribution to <em>the poor, the needy, the hungry, and the unwell in all areas of their
+      lives.</em>
+    </p>
+    <p class="story-body">
+      Inside the vihar, beneath the seated Buddha and the gathered villagers,
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> each personally offered folded
+      monastic robes to the resident monks — a ceremonial alms-offering witnessed by hundreds
+      and photographed for the public record. The Indian, Malaysian and Singaporean flags
+      printed on the banner alongside the Crowned Eagles Global crest marked the mission's
+      tri-national character: Singapore-registered, India-served, regionally supported.
+    </p>
+  </div>
+</div>
+
 <!-- ─── CHAPTER 03 — KOLKATA · MAGHI PURNIMA ─── -->
-<section class="section wide" style="margin-top:40px">
+<section class="section wide" id="ev-kolkata" style="margin-top:40px">
   <div class="chapter-label fade-up">
     <span class="chapter-num">03</span>
     <span class="chapter-eyebrow">Kolkata · Maghi Purnima · 1 February 2026</span>
@@ -760,8 +936,8 @@
   <p class="section-sub fade-up d2" style="max-width:760px">
     Maghi Purnima — the full moon of the holy Magha month — is one of the most significant
     days in the Indian Buddhist calendar. On this morning in 2026,
-    <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-    <span style="color:var(--silver)">J AARON K DAVID</span> walked at the head of the
+    <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+    <span class="name-inline-silver">J AARON K DAVID</span> walked at the head of the
     <strong style="color:rgba(255,255,255,.92)">Walking-PEACE</strong> procession in Regent
     Park, Kolkata, beside the senior monastics of the
     <strong style="color:rgba(255,255,255,.92)">Tollygunge Moore Avenue Buddha Samity</strong>
@@ -787,12 +963,12 @@
     <p class="story-body">
       The Walking-PEACE procession opened with the senior monastics of the Tollygunge Sambodhi
       Buddhist Monastery, flanked on either side by
-      <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-      <span style="color:var(--silver)">J AARON K DAVID</span>, holding the Platinum Jubilee
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span>, holding the Platinum Jubilee
       Peace Procession banner together. The theme of the observance —
       <em>"Ahimsa · Karuna · Coexistence — Compassion Knows No Boundaries"</em> — placed
-      <span style="color:var(--gold2)">SHEKINAIH</span> and
-      <span style="color:var(--silver)">AARON</span> at the symbolic head of an international
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> at the symbolic head of an international
       peace procession that linked Kolkata to global peace walks announced under the same
       UNPKFC framework.
     </p>
@@ -817,8 +993,8 @@
     </p>
     <p class="story-body">
       In the formal presentation that followed the procession,
-      <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-      <span style="color:var(--silver)">J AARON K DAVID</span> were called forward by the
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> were called forward by the
       monastery's leadership and presented their <em>75 Years of Peace</em> commemorative
       plaques. The presentation took place beneath the framed inscriptions of
       <strong style="color:rgba(255,255,255,.9)">Rabindranath Tagore</strong> on the wall of
@@ -827,8 +1003,8 @@
     </p>
     <p class="story-body">
       The plaques formally name
-      <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-      <span style="color:var(--silver)">J AARON K DAVID</span> — with full citation —
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> — with full citation —
       as <strong style="color:rgba(255,255,255,.9)">Special Guests of the Walk for Peace
       and Peace Day Observation, Kolkata, February 1, 2026</strong>.
     </p>
@@ -852,12 +1028,46 @@
     </p>
     <p class="story-body">
       Following the conferment,
-      <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-      <span style="color:var(--silver)">J AARON K DAVID</span> were invited to stand among
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> were invited to stand among
       the senior monastics for the formal observance portrait. The
       multi-coloured Buddhist flags — the standard of Theravāda observance recognised globally
       — were placed in their hands by the hosting monastery, an ordinary gesture extended to
       ordinary visitors only on the most significant ceremonial days.
+    </p>
+  </div>
+</div>
+
+<!-- Story 3b: tender moment with Aloha, the rescued temple dog -->
+<div class="story-block" style="margin-top:48px">
+  <div class="story-photo fade-up zoom-trigger"
+       data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-with-rescued-dog-aloha-buddhist-flag.jpg"
+       data-lb-label="With Aloha · The Rescued Temple Dog · 1 February 2026"
+       data-lb-caption="SHEKINAIH SIEW SIN YAP and J AARON K DAVID kneeling with Aloha — a rescued dog cared for by the Tollygunge Sambodhi Buddhist Monastery — beneath the Buddhist flag at the monastery grounds, Kolkata, 1 February 2026.">
+    <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-with-rescued-dog-aloha-buddhist-flag.jpg"
+         alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID kneeling beside Aloha, the rescued temple dog wearing a saffron bandana, beneath the Buddhist flag at Tollygunge Sambodhi Buddhist Monastery, Kolkata" loading="lazy"/>
+  </div>
+  <div class="story-text fade-up d1">
+    <p class="story-eyebrow">A Quiet Aside · Beyond the Procession</p>
+    <h3 class="story-title">A Moment with Aloha · The Monastery's Rescued Dog</h3>
+    <p class="story-meta">
+      Maghi Purnima · 1 February 2026 · Tollygunge Sambodhi Monastery Grounds, Kolkata
+    </p>
+    <p class="story-body">
+      Before the ceremonial photographs began, <span class="name-inline-gold">SHEKINAIH SIEW SIN
+      YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> knelt for a quiet
+      moment with <strong style="color:rgba(255,255,255,.92)">Aloha</strong> — a rescued dog
+      cared for by the resident monastics of the
+      <strong style="color:rgba(255,255,255,.92)">Tollygunge Sambodhi Buddhist Monastery</strong>.
+      The saffron bandana around his neck marked him as one of the monastery's family. The
+      Buddhist flag flew above as the morning observance began.
+    </p>
+    <p class="story-body">
+      Aside from the public plaques, the keynote photographs, and the senior-monastic
+      portrait, this was the kind of unscripted moment that arguably told the larger truth of
+      the visit — that the founders' attention extended past the formal recognitions, into the
+      ordinary creatures the monastery loves and keeps. The kind of detail that, on a personal
+      brand site, does the quiet work of credibility better than any award caption.
     </p>
   </div>
 </div>
@@ -877,11 +1087,11 @@
     <p class="story-body">
       After the procession and the conferment, the observance moved into the monastery's
       symposium hall.
-      <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-      <span style="color:var(--silver)">J AARON K DAVID</span> were seated in the front row
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> were seated in the front row
       — the customary position reserved for the day's named Special Guests — wearing the
       ceremonial scarves placed upon them during the welcoming. The hall filled behind them
-      with students of <strong style="color:rgba(255,255,255,.9)">Geter Ninedita University
+      with students of <strong style="color:rgba(255,255,255,.9)">Sister Nivedita University
       (SNU India)</strong> and members of the monastery's lay community.
     </p>
   </div>
@@ -896,8 +1106,8 @@
   <h2 class="section-title fade-up d1">Two Plaques. One Calling.</h2>
   <p class="section-sub fade-up d2" style="max-width:720px">
     The commemorative <em>75 Years of Peace</em> plaques presented to
-    <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-    <span style="color:var(--silver)">J AARON K DAVID</span> at the Tollygunge Sambodhi
+    <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+    <span class="name-inline-silver">J AARON K DAVID</span> at the Tollygunge Sambodhi
     Buddhist Monastery, Kolkata. Click either plaque to view it full size.
   </p>
 </section>
@@ -912,7 +1122,7 @@
            alt="SHEKINAIH SIEW SIN YAP — 75 Years of Peace Special Guest plaque, Tollygunge Sambodhi Buddhist Monastery, Kolkata, 1 February 2026" loading="lazy"/>
     </div>
     <h3 class="plaque-name gold">SHEKINAIH SIEW SIN YAP</h3>
-    <p class="plaque-role">Special Guest · Malaysia</p>
+    <p class="plaque-role">Special Guest · Singapore</p>
     <div class="plaque-meta">
       <div class="plaque-meta-row"><span class="plaque-meta-label">Conferred By</span><span class="plaque-meta-val">Tollygunge Sambodhi Buddhist Monastery</span></div>
       <div class="plaque-meta-row"><span class="plaque-meta-label">Occasion</span><span class="plaque-meta-val">75 Years of Peace · 1949–2024</span></div>
@@ -931,7 +1141,7 @@
            alt="J AARON K DAVID — 75 Years of Peace Special Guest plaque, Tollygunge Sambodhi Buddhist Monastery, Kolkata, 1 February 2026" loading="lazy"/>
     </div>
     <h3 class="plaque-name silver">J AARON K DAVID</h3>
-    <p class="plaque-role">Special Guest · Crowned Eagles Global</p>
+    <p class="plaque-role">Special Guest · Singapore</p>
     <div class="plaque-meta">
       <div class="plaque-meta-row"><span class="plaque-meta-label">Conferred By</span><span class="plaque-meta-val">Tollygunge Sambodhi Buddhist Monastery</span></div>
       <div class="plaque-meta-row"><span class="plaque-meta-label">Occasion</span><span class="plaque-meta-val">75 Years of Peace · 1949–2024</span></div>
@@ -942,17 +1152,117 @@
   </div>
 </div>
 
+<!-- ─── CHAPTER 04b — SISTER NIVEDITA UNIVERSITY · THE AWARD & THE WORSHIP ─── -->
+<section class="section wide" style="margin-top:80px">
+  <div class="chapter-label fade-up">
+    <span class="chapter-num">04b</span>
+    <span class="chapter-eyebrow">Sister Nivedita University · Kolkata</span>
+  </div>
+  <h2 class="section-title fade-up d1">Honoured by the University · Then Asked to Sing</h2>
+  <p class="section-sub fade-up d2" style="max-width:780px">
+    Beyond the monastery, the Kolkata visit also brought <span class="name-inline-gold">SHEKINAIH
+    SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> to
+    <strong style="color:rgba(255,255,255,.92)">Sister Nivedita University (SNU)</strong> in
+    Newtown — first for a university award conferment, then on a separate day for a far more
+    personal moment: a funeral service in which both founders were asked to lead the worship.
+  </p>
+</section>
+
+<!-- Story · Award at Sister Nivedita University -->
+<div class="story-block" style="margin-top:24px">
+  <div class="story-photo fade-up zoom-trigger"
+       data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-kolkata-shekinaih-aaron-delegation-at-sister-nivedita-university-entrance.jpg"
+       data-lb-label="Sister Nivedita University · Award Conferment · Kolkata · February 2026"
+       data-lb-caption="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with the senior delegation at the entrance of Sister Nivedita University, Kolkata, ahead of the university's award conferment ceremony, February 2026.">
+    <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-kolkata-shekinaih-aaron-delegation-at-sister-nivedita-university-entrance.jpg"
+         alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with the senior delegation at the entrance of Sister Nivedita University, Kolkata" loading="lazy"/>
+  </div>
+  <div class="story-text fade-up d1">
+    <p class="story-eyebrow">The Award · Sister Nivedita University</p>
+    <h3 class="story-title">An Honour from the University Named for a Saint of India</h3>
+    <p class="story-meta">
+      Sister Nivedita University · Newtown, Kolkata · February 2026
+    </p>
+    <p class="story-body">
+      <strong style="color:rgba(255,255,255,.92)">Sister Nivedita University</strong> — named
+      for the Irish-born disciple of Swami Vivekananda who served the poor of Kolkata until
+      her death in 1911 — conferred a university award upon
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> in the presence of senior monastic
+      and university dignitaries, including the venerable Bhante and the chancellor's office.
+    </p>
+    <p class="story-body">
+      The conferment was filmed and is preserved in the project archive.
+    </p>
+
+    <!-- Award conferment video -->
+    <div class="story-video-wrap" style="margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid rgba(200,146,58,.22);box-shadow:0 20px 60px rgba(0,0,0,.5)">
+      <video controls preload="metadata" playsinline style="width:100%;display:block;background:#000"
+             poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-kolkata-shekinaih-aaron-delegation-at-sister-nivedita-university-entrance.jpg">
+        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-kolkata-shekinaih-aaron-receiving-award-at-sister-nivedita-university.mp4" type="video/mp4"/>
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+    <p style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;color:#F0C660;text-align:center;margin-top:14px;text-shadow:0 1px 8px rgba(232,184,109,.3)">Watch · The Award Conferment · Sister Nivedita University</p>
+  </div>
+</div>
+
+<!-- Story · The Funeral Service / Worship Moment -->
+<div class="story-block reverse" style="margin-top:64px">
+  <div class="story-text fade-up">
+    <p class="story-eyebrow">A Separate Day · The Funeral Service</p>
+    <h3 class="story-title">"LORD, Make Me to Know My End"</h3>
+    <p class="story-meta">
+      Sister Nivedita University · Kolkata · A separate day in the same visit
+    </p>
+    <p class="story-body">
+      On another day during the same Kolkata visit,
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> were invited back to Sister
+      Nivedita University — this time not for an honour, but to participate in a
+      <strong style="color:rgba(255,255,255,.92)">funeral service</strong> being held within the
+      university community. They were asked to lead the worship.
+    </p>
+    <p class="story-body">
+      The song they led was drawn from
+      <strong style="color:rgba(255,255,255,.92)">Psalm 39</strong>:
+      <em>"LORD, make me to know mine end, and the measure of my days, what it is; that I may
+      know how frail I am."</em> A psalm of David — chosen for its quiet honesty about mortality
+      and the brevity of the human life — sung over a grieving community by two visitors from
+      Singapore who had been received with such honour earlier in the same week, and who now
+      stood before the bereaved to offer a moment of comfort.
+    </p>
+    <p class="story-body">
+      The trust extended by the university — to invite outside visitors into a funeral service
+      and ask them to carry the worship — is not a small thing. It is the kind of recognition
+      that does not appear on a plaque or a certificate, but speaks to the way
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> are received by the communities
+      they visit: not as celebrities to be photographed with, but as people who can be trusted
+      to carry weight when weight needs to be carried.
+    </p>
+  </div>
+  <div class="story-photo fade-up d1" style="border-radius:18px;overflow:hidden;border:1px solid rgba(200,146,58,.22);box-shadow:0 30px 80px rgba(0,0,0,.55)">
+    <video controls preload="metadata" playsinline style="width:100%;display:block;background:#000">
+      <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-lord-make-me-to-know-how-frail-i-am-worship-moment.mp4" type="video/mp4"/>
+      Your browser does not support HTML5 video.
+    </video>
+    <p style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;color:#F0C660;text-align:center;padding:14px 12px;background:rgba(8,9,26,.85);margin:0;text-shadow:0 1px 8px rgba(232,184,109,.3)">Watch · The Worship · Psalm 39 · Funeral Service</p>
+  </div>
+</div>
+
 <!-- ─── CLOSING REFLECTION ─── -->
 <section class="section">
   <div class="pull-quote fade-up" style="margin-top:80px">
     <p>
       Between Republic Day and Maghi Purnima — six days, two cities, two observances —
-      <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-      <span style="color:var(--silver)">J AARON K DAVID</span> were drawn into the
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> were drawn into the
       ceremonial heart of India's national and Buddhist calendar. Not as observers.
       As Chief Guest. As Special Guests. As the hands holding the banner.
+      As the voices carrying the worship.
     </p>
-    <cite>Nagpur · Kolkata · Republic of India · January–February 2026</cite>
+    <cite>Nagpur · Kolkata · Sister Nivedita University · Republic of India · January–February 2026</cite>
   </div>
 </section>
 
@@ -966,8 +1276,8 @@
     <h2 class="section-title fade-up d1">From the Procession Floor</h2>
     <p class="section-sub fade-up d2" style="max-width:600px">
       The complete photographic record of
-      <span style="color:var(--gold2)">SHEKINAIH SIEW SIN YAP</span> and
-      <span style="color:var(--silver)">J AARON K DAVID</span> across both observances.
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
+      <span class="name-inline-silver">J AARON K DAVID</span> across both observances.
       Tap any photograph to view it full size.
     </p>
 
@@ -993,20 +1303,30 @@
       </div>
 
       <div class="photo-card fade-in d3" tabindex="0" role="button"
+           data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-chief-guest-buddha-statue-distribution-nagpur.jpg"
+           data-lb-label="Chief Guest Poster · SHEKINAIH SIEW SIN YAP · Nagpur · 26 January 2026"
+           data-lb-caption="SHEKINAIH SIEW SIN YAP named as Chief Guest of the Alms Offering and 151 Buddha Statue Distribution Ceremony, Buddha Spiritual Park, Nagpur, Republic Day 2026.">
+        <span class="photo-badge">03 / 10</span>
+        <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-chief-guest-buddha-statue-distribution-nagpur.jpg"
+             alt="Republic Day Chief Guest poster featuring SHEKINAIH SIEW SIN YAP, Nagpur" loading="lazy"/>
+        <p class="photo-card-caption">Chief Guest Poster · SHEKINAIH</p>
+      </div>
+
+      <div class="photo-card fade-in d1" tabindex="0" role="button"
            data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-chief-guest-buddha-statue-distribution-nagpur.jpg"
-           data-lb-label="Chief Guest Poster · Nagpur · 26 January 2026"
+           data-lb-label="Chief Guest Poster · J AARON K DAVID · Nagpur · 26 January 2026"
            data-lb-caption="J AARON K DAVID named as Chief Guest of the Alms Offering and 151 Buddha Statue Distribution Ceremony, Buddha Spiritual Park, Nagpur, Republic Day 2026.">
-        <span class="photo-badge">03 / 09</span>
+        <span class="photo-badge">04 / 10</span>
         <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-chief-guest-buddha-statue-distribution-nagpur.jpg"
              alt="Republic Day Chief Guest poster featuring J AARON K DAVID, Nagpur" loading="lazy"/>
-        <p class="photo-card-caption">Chief Guest Poster · Nagpur</p>
+        <p class="photo-card-caption">Chief Guest Poster · AARON</p>
       </div>
 
       <div class="photo-card fade-in d1" tabindex="0" role="button"
            data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-peace-procession-banner-kolkata.jpg"
            data-lb-label="Peace Procession · Kolkata · 1 February 2026"
            data-lb-caption="SHEKINAIH SIEW SIN YAP and J AARON K DAVID at the head of the Walking-PEACE procession with Buddhist monastics, holding the Platinum Jubilee banner, Kolkata.">
-        <span class="photo-badge">04 / 09 · Featured</span>
+        <span class="photo-badge">05 / 10 · Featured</span>
         <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-peace-procession-banner-kolkata.jpg"
              alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with monastics holding Peace Procession banner" loading="lazy"/>
         <p class="photo-card-caption">At the Head of the Procession</p>
@@ -1016,7 +1336,7 @@
            data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-receiving-walk-for-peace-plaque.jpg"
            data-lb-label="Receiving the Plaque · Kolkata · 1 February 2026"
            data-lb-caption="SHEKINAIH SIEW SIN YAP and J AARON K DAVID receive their Walk for Peace and Peace Day Observation commemorative plaque from the senior monastics of Tollygunge Sambodhi Buddhist Monastery.">
-        <span class="photo-badge">05 / 09</span>
+        <span class="photo-badge">06 / 10</span>
         <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-receiving-walk-for-peace-plaque.jpg"
              alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID receiving the Walk for Peace plaque" loading="lazy"/>
         <p class="photo-card-caption">The Conferment</p>
@@ -1026,7 +1346,7 @@
            data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-with-buddhist-monks-flags.jpg"
            data-lb-label="With the Sangha · Kolkata · 1 February 2026"
            data-lb-caption="SHEKINAIH SIEW SIN YAP and J AARON K DAVID standing with the senior monastics of Tollygunge Sambodhi, holding international Buddhist flags.">
-        <span class="photo-badge">06 / 09</span>
+        <span class="photo-badge">07 / 10</span>
         <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-with-buddhist-monks-flags.jpg"
              alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with monastics holding Buddhist flags" loading="lazy"/>
         <p class="photo-card-caption">Holding the Buddhist Flags</p>
@@ -1036,7 +1356,7 @@
            data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-seated-as-guests-of-honor.jpg"
            data-lb-label="Guests of Honour · Kolkata · 1 February 2026"
            data-lb-caption="SHEKINAIH SIEW SIN YAP and J AARON K DAVID seated in the front row as Guests of Honour at the Maghi Purnima symposium following the Walking-PEACE procession.">
-        <span class="photo-badge">07 / 09</span>
+        <span class="photo-badge">08 / 10</span>
         <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-seated-as-guests-of-honor.jpg"
              alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID seated as Guests of Honour" loading="lazy"/>
         <p class="photo-card-caption">Front Row · Symposium Hall</p>
@@ -1046,7 +1366,7 @@
            data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-special-guest-plaque-75-years-of-peace.jpg"
            data-lb-label="SHEKINAIH SIEW SIN YAP — Special Guest Plaque"
            data-lb-caption="The 75 Years of Peace commemorative plaque conferred upon SHEKINAIH SIEW SIN YAP, Tollygunge Sambodhi, Kolkata, 1 February 2026.">
-        <span class="photo-badge">08 / 09</span>
+        <span class="photo-badge">09 / 10</span>
         <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-special-guest-plaque-75-years-of-peace.jpg"
              alt="SHEKINAIH SIEW SIN YAP 75 Years of Peace plaque" loading="lazy"/>
         <p class="photo-card-caption">SHEKINAIH · Plaque Close-Up</p>
@@ -1056,7 +1376,7 @@
            data-lb-src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-special-guest-plaque-75-years-of-peace.jpg"
            data-lb-label="J AARON K DAVID — Special Guest Plaque"
            data-lb-caption="The 75 Years of Peace commemorative plaque conferred upon J AARON K DAVID, Tollygunge Sambodhi, Kolkata, 1 February 2026.">
-        <span class="photo-badge">09 / 09</span>
+        <span class="photo-badge">10 / 10</span>
         <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-special-guest-plaque-75-years-of-peace.jpg"
              alt="J AARON K DAVID 75 Years of Peace plaque" loading="lazy"/>
         <p class="photo-card-caption">AARON · Plaque Close-Up</p>
@@ -1072,7 +1392,7 @@
     <span class="partners-name">Tollygunge Sambodhi Buddhist Monastery (Estd 1949)</span>
     <span class="partners-name">Tollygunge Moore Avenue Buddha Samity</span>
     <span class="partners-name">UN Peace Keepers Federal Council (UNPKFC)</span>
-    <span class="partners-name">Geter Ninedita University · SNU India</span>
+    <span class="partners-name">Sister Nivedita University · SNU India</span>
     <span class="partners-name">Buddha Spiritual Park · Nagpur</span>
     <span class="partners-name">Ahilyabai Holkar Multipurpose Education Society</span>
     <span class="partners-name">Crowned Eagles Global LLP</span>
