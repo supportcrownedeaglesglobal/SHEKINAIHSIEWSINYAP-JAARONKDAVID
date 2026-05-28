@@ -307,9 +307,33 @@
     }
     .awards-feature img{width:100%;height:auto;display:block}
     .awards-feature-caption{
-      text-align:center;
-      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
-      letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);
+      text-align:center;margin-top:8px;
+    }
+    .awards-feature-caption .afc-names{
+      display:block;
+      font-family:'Cinzel',serif;
+      font-size:clamp(17px, 2.3vw, 25px);
+      font-weight:800;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      line-height:1.35;
+    }
+    .awards-feature-caption .name-inline-gold,
+    .awards-feature-caption .name-inline-silver{
+      font-weight:800;
+    }
+    .awards-feature-caption .afc-amp{
+      color:rgba(255,255,255,.32);
+      font-weight:500;margin:0 8px;font-size:.78em;
+      vertical-align:middle;
+    }
+    .awards-feature-caption .afc-meta{
+      display:block;margin-top:13px;
+      font-family:'Cinzel',serif;
+      font-size:clamp(10.5px, 1.05vw, 13px);
+      font-weight:600;
+      letter-spacing:3px;text-transform:uppercase;
+      color:rgba(232,184,109,.62);
     }
 
     /* ─── RED CARPET SECTION ──────────────────────────── */
@@ -980,7 +1004,8 @@ body,p,li{font-weight:500}
       loading="lazy"/>
   </figure>
   <p class="awards-feature-caption fade-up">
-    SHEKINAIH SIEW SIN YAP &nbsp;&amp;&nbsp; J AARON K DAVID &nbsp;·&nbsp; Manila Up 10th Anniversary Awards &nbsp;·&nbsp; Los Angeles 2025
+    <span class="afc-names"><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span><span class="afc-amp">&amp;</span><span class="name-inline-silver">J AARON K DAVID</span></span>
+    <span class="afc-meta">Manila Up 10th Anniversary Awards &nbsp;·&nbsp; Los Angeles 2025</span>
   </p>
 
 </div>
