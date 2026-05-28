@@ -521,6 +521,13 @@ body,p,li{font-weight:500}
 .partners-name{color:#C9D4E6 !important;font-weight:800 !important;opacity:1 !important;border-color:rgba(184,196,216,.4) !important}
 .partners-label{color:rgba(201,212,230,.72) !important;font-weight:700 !important}
 .art-footer p{color:#C9D4E6 !important;font-weight:800 !important}
+
+/* Bug fix: every video fits the viewport & shows in full */
+video{max-width:100%;max-height:82vh;object-fit:contain}
+/* Republic Day video block */
+.np-video{border-radius:16px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.55),0 0 0 1px rgba(200,146,58,.18);background:#000}
+.np-video video{width:100%;height:auto;display:block}
+.np-video-label{text-align:center;font-family:'Cinzel',serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#E8B86D;font-weight:600;margin-top:14px}
 </style>
 </head>
 <body>
@@ -800,6 +807,19 @@ body,p,li{font-weight:500}
       <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-with-local-families-and-children.jpg"
            alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with local families and children at Tathagat Buddha Vihar, Nagpur" loading="lazy"/>
     </div>
+  </div>
+</div>
+
+<!-- ─── VIDEO · A REPUBLIC DAY MOMENT ─── -->
+<div class="section" style="padding-top:8px;padding-bottom:0">
+  <div style="max-width:900px;margin:0 auto">
+    <div class="np-video fade-up">
+      <video controls preload="metadata" playsinline>
+        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-event-video-from-nepal-folder.mp4" type="video/mp4"/>
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+    <p class="np-video-label">Watch · A Moment from the Republic Day Celebrations · Nagpur</p>
   </div>
 </div>
 
