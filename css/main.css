@@ -5,8 +5,8 @@
 
 /* ---------- 0. Tokens ---------- */
 :root {
-  --ink:    #08091A;
-  --ink2:   #12152B;
+  --ink:    #002F5D;
+  --ink2:   #002F5D;
   --ink3:   #1A1E3A;
   --gold:   #C8923A;
   --gold2:  #E8B86D;
@@ -39,6 +39,11 @@ html {
   html { scroll-behavior: auto }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important }
 }
+
+/* In-page anchoring — offset scroll targets below the fixed nav so headings
+   are never hidden behind it when jumped to via #anchor links. */
+[id] { scroll-margin-top: 88px; }
+@media (max-width: 900px) { [id] { scroll-margin-top: 72px; } }
 
 body {
   font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
@@ -250,14 +255,14 @@ body::before {
   z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 20px var(--container-pad);
-  background: rgba(8,9,26,.55);
+  background: rgba(0,47,93,.55);
   backdrop-filter: blur(18px) saturate(140%);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   border-bottom: 1px solid rgba(255,255,255,.04);
   transition: background .35s ease, padding .35s ease, border-color .35s ease;
 }
 .nav.scrolled {
-  background: rgba(8,9,26,.82);
+  background: rgba(0,47,93,.82);
   backdrop-filter: blur(22px) saturate(160%);
   -webkit-backdrop-filter: blur(22px) saturate(160%);
   padding: 14px var(--container-pad);
@@ -389,19 +394,29 @@ body::before {
 }
 .hero h1 .name-gold, .hero h1 .name-silver { display: block; font-size: 1em }
 .hero h1 .amp { display: block; font-size: .35em; margin: .35em 0; letter-spacing: 5px }
+/* Hero eyebrow — "Exquisite International · Vol. 6 Iss. 2" — larger than section eyebrows */
+.hero .eyebrow {
+  font-size: clamp(14px, 1.6vw, 19px);
+  letter-spacing: 3.5px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+/* Hero keyword band — "International Humanitarian Leadership · Peace · Transformation · Global Impact" */
 .hero .subhead {
   font-family: 'Cinzel', serif;
-  font-size: clamp(13px, 1.15vw, 15px);
-  letter-spacing: 2px;
+  font-size: clamp(16px, 2vw, 24px);
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #F0C660;
-  font-weight: 700;
-  line-height: 1.9;
-  margin-bottom: 28px;
-  text-shadow: 0 1px 12px rgba(232,184,109,.45), 0 0 1px rgba(232,184,109,.6);
-  filter: drop-shadow(0 1px 8px rgba(232,184,109,.2));
+  font-weight: 800;
+  line-height: 1.7;
+  margin-bottom: 34px;
+  max-width: 760px;
+  text-shadow: 0 2px 18px rgba(232,184,109,.5), 0 0 2px rgba(232,184,109,.7);
+  filter: drop-shadow(0 2px 10px rgba(232,184,109,.28));
 }
-.hero .subhead .sep { color: rgba(200,146,58,.42); margin: 0 8px }
+@media (min-width: 901px) { .hero .subhead { max-width: none } }
+.hero .subhead .sep { color: rgba(200,146,58,.5); margin: 0 10px }
 .hero-ctas {
   display: flex; flex-wrap: wrap; gap: 12px;
   justify-content: center;
@@ -476,7 +491,7 @@ body::before {
   .mags { grid-template-columns: 1fr 1fr; gap: 32px }
 }
 .mag-card {
-  background: rgba(8,9,26,.55);
+  background: rgba(0,47,93,.55);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 22px;
   overflow: hidden;
@@ -700,7 +715,7 @@ body::before {
 }
 .yt-fallback:hover, .yt-fallback:focus-visible {
   color: var(--gold2); border-color: rgba(232,184,109,.5);
-  background: rgba(8,9,26,.7);
+  background: rgba(0,47,93,.7);
 }
 @media (max-width: 540px) {
   .yt-badge { font-size: 9px; padding: 6px 12px; left: 12px; bottom: 12px; letter-spacing: 2px }
@@ -708,14 +723,14 @@ body::before {
   .yt-play svg { width: 56px; height: 40px }
 }
 .video-caption {
-  text-align: center; margin-top: 24px;
+  text-align: center; margin-top: 26px;
   font-family: 'Cinzel', serif;
-  font-size: clamp(13px, 1.15vw, 15px);
-  letter-spacing: 2.2px; text-transform: uppercase;
-  color: #F0C660; font-weight: 700;
-  text-shadow: 0 1px 12px rgba(232,184,109,.45), 0 0 1px rgba(232,184,109,.55);
-  filter: drop-shadow(0 1px 6px rgba(232,184,109,.2));
-  line-height: 1.6;
+  font-size: clamp(15px, 1.5vw, 19px);
+  letter-spacing: 2.6px; text-transform: uppercase;
+  color: #F0C660; font-weight: 800;
+  text-shadow: 0 2px 16px rgba(232,184,109,.5), 0 0 2px rgba(232,184,109,.65);
+  filter: drop-shadow(0 2px 8px rgba(232,184,109,.25));
+  line-height: 1.55;
   padding: 0 16px;
 }
 
@@ -769,7 +784,7 @@ body::before {
   .founder-grid { grid-template-columns: 1fr 1fr; gap: 32px }
 }
 .founder-card {
-  background: rgba(8,9,26,.55);
+  background: rgba(0,47,93,.55);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 20px;
   padding: 32px 30px;
@@ -819,7 +834,7 @@ body::before {
   max-width: 1080px;
   margin: 0 auto 80px;
   padding: clamp(28px, 4vw, 48px);
-  background: linear-gradient(180deg, rgba(18,21,43,.72) 0%, rgba(8,9,26,.85) 100%);
+  background: linear-gradient(180deg, rgba(1,58,110,.72) 0%, rgba(0,47,93,.85) 100%);
   border: 1px solid rgba(200,146,58,.22);
   border-radius: 22px;
   position: relative;
@@ -1045,7 +1060,7 @@ body::before {
   width: 14px; height: 14px; border-radius: 50%;
   background: var(--gold-grad);
   box-shadow:
-    0 0 0 6px rgba(8,9,26,1),
+    0 0 0 6px rgba(0,47,93,1),
     0 0 0 7px rgba(200,146,58,.4),
     0 0 24px rgba(200,146,58,.4);
   position: relative; z-index: 2;
@@ -1055,7 +1070,7 @@ body::before {
 }
 .j-card {
   grid-column: 2;
-  background: rgba(8,9,26,.6);
+  background: rgba(0,47,93,.6);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 16px;
   padding: 20px 22px;
@@ -1156,7 +1171,7 @@ body::before {
 }
 .event .e-card {
   grid-column: 2;
-  background: rgba(8,9,26,.6);
+  background: rgba(0,47,93,.6);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 16px;
   padding: 20px 22px 22px;
@@ -1282,7 +1297,7 @@ body::before {
 .full-img-wrap::after {
   content: '';
   position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(180deg, transparent 60%, rgba(8,9,26,.55) 100%);
+  background: linear-gradient(180deg, transparent 60%, rgba(0,47,93,.55) 100%);
 }
 
 .text-2col {
@@ -1315,7 +1330,7 @@ body::before {
 @media (min-width: 980px) { .awards-grid { grid-template-columns: repeat(3, 1fr) } }
 @media (min-width: 1180px) { .awards-grid { grid-template-columns: repeat(5, 1fr) } }
 .award-card-min {
-  background: rgba(8,9,26,.55);
+  background: rgba(0,47,93,.55);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 16px;
   padding: 28px 24px;
@@ -1369,7 +1384,7 @@ body::before {
   display: flex; flex-direction: column; align-items: center;
   text-align: center;
   padding: 22px 14px;
-  background: rgba(8,9,26,.45);
+  background: rgba(0,47,93,.45);
   border: 1px solid rgba(200,146,58,.18);
   border-radius: 14px;
   position: relative;
@@ -1405,7 +1420,7 @@ body::before {
   margin: 0 auto;
 }
 .aw-card {
-  background: linear-gradient(180deg, rgba(18,21,43,.7) 0%, rgba(8,9,26,.85) 100%);
+  background: linear-gradient(180deg, rgba(1,58,110,.7) 0%, rgba(0,47,93,.85) 100%);
   border: 1px solid rgba(200,146,58,.22);
   border-radius: 22px;
   padding: clamp(28px, 4vw, 48px);
@@ -1467,7 +1482,7 @@ body::before {
 .aw-grid-single { grid-template-columns: 1fr !important }
 .aw-figure {
   display: flex; flex-direction: column;
-  background: rgba(8,9,26,.55);
+  background: rgba(0,47,93,.55);
   border: 1px solid rgba(200,146,58,.18);
   border-radius: 16px;
   padding: 16px;
@@ -1875,7 +1890,7 @@ body::before {
 @media (min-width: 720px) { .connect-grid-4 { grid-template-columns: repeat(2, 1fr) } }
 @media (min-width: 1080px) { .connect-grid-4 { grid-template-columns: repeat(4, 1fr) } }
 .connect-card {
-  background: rgba(8,9,26,.55);
+  background: rgba(0,47,93,.55);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 18px;
   padding: 30px 28px 28px;
@@ -1976,7 +1991,7 @@ body::before {
   padding: 11px 18px 11px 14px;
   border: 1px solid rgba(200,146,58,.42);
   border-radius: 100px;
-  background: linear-gradient(135deg, rgba(8,9,26,.92), rgba(18,21,43,.92));
+  background: linear-gradient(135deg, rgba(0,47,93,.92), rgba(1,58,110,.92));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 12px 36px rgba(0,0,0,.5);
@@ -2012,7 +2027,7 @@ body::before {
 @media (max-width: 380px) { .chapter-fab .lab { max-width: 90px } }
 .sheet-scrim {
   position: fixed; inset: 0; z-index: 9998;
-  background: rgba(8,9,26,.6);
+  background: rgba(0,47,93,.6);
   backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   opacity: 0; pointer-events: none;
   transition: opacity .35s ease;
@@ -2020,7 +2035,7 @@ body::before {
 .sheet-scrim.is-open { opacity: 1; pointer-events: auto }
 .sheet {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
-  background: linear-gradient(180deg, rgba(18,21,43,.98), rgba(8,9,26,.98));
+  background: linear-gradient(180deg, rgba(1,58,110,.98), rgba(0,47,93,.98));
   border-top: 1px solid rgba(200,146,58,.28);
   border-radius: 24px 24px 0 0;
   box-shadow: 0 -24px 80px rgba(0,0,0,.65);
@@ -2090,7 +2105,7 @@ body::before {
 /* ---------- 17. Mobile menu (hamburger) ---------- */
 .mm {
   display: none; position: fixed; inset: 0; z-index: 9990;
-  background: linear-gradient(180deg, rgba(8,9,26,.98), rgba(18,21,43,.99));
+  background: linear-gradient(180deg, rgba(0,47,93,.98), rgba(1,58,110,.99));
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   flex-direction: column;
   opacity: 0; transition: opacity .35s ease;
@@ -2101,7 +2116,7 @@ body.mm-open .chapter-fab { display: none !important }
 .mm-close {
   position: absolute; top: 18px; right: 18px; z-index: 5;
   width: 44px; height: 44px; border-radius: 50%;
-  background: rgba(8,9,26,.6);
+  background: rgba(0,47,93,.6);
   border: 1px solid rgba(200,146,58,.32);
   color: var(--gold2); cursor: pointer;
   display: flex; align-items: center; justify-content: center;
@@ -2189,7 +2204,7 @@ body.mm-open .chapter-fab { display: none !important }
 .mm-foot {
   padding: 18px 22px 22px;
   border-top: 1px solid rgba(200,146,58,.16);
-  background: rgba(8,9,26,.55);
+  background: rgba(0,47,93,.55);
   text-align: center;
   display: flex; flex-direction: column; gap: 12px;
 }
@@ -2238,7 +2253,7 @@ body.mm-open .chapter-fab { display: none !important }
 @media (min-width: 980px) { .thumb-grid { grid-template-columns: repeat(3, 1fr) } }
 
 .thumb {
-  background: rgba(8,9,26,.55);
+  background: rgba(0,47,93,.55);
   border: 1px solid rgba(200,146,58,.18);
   border-radius: 16px;
   overflow: hidden;

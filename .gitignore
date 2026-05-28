@@ -7,3 +7,6 @@ dist/
 .DS_Store
 Thumbs.db
 *.log
+
+# Local-only video production scripts — not part of the website
+video-scripts/
