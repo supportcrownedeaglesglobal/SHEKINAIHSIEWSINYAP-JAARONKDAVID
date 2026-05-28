@@ -228,17 +228,17 @@
     }
     .hero-subline {
       font-family:'DM Sans',sans-serif;
-      font-size:clamp(13px,1.1vw,15px);
-      font-weight:300; line-height:1.75;
-      color:rgba(255,255,255,.45);
-      max-width:560px;
+      font-size:clamp(16px,1.5vw,19px);
+      font-weight:500; line-height:1.8;
+      color:rgba(255,255,255,.78);
+      max-width:600px;
       margin-bottom:36px;
       letter-spacing:.01em;
     }
     .hero-names-headline {
       font-family:'Cinzel',serif;
-      font-size:clamp(20px,2.8vw,44px);
-      font-weight:700; letter-spacing:3px; line-height:1.4;
+      font-size:clamp(30px,5vw,60px);
+      font-weight:800; letter-spacing:2.5px; line-height:1.3;
       margin-bottom:14px;
       display:flex; flex-direction:column; gap:4px;
     }
@@ -251,9 +251,9 @@
     .hero-event-subhead {
       font-family:'Cormorant Garamond',serif;
       font-style:italic;
-      font-size:clamp(16px,1.6vw,22px);
-      font-weight:300; color:rgba(255,255,255,.55);
-      margin-bottom:6px; letter-spacing:.3px;
+      font-size:clamp(21px,2.5vw,32px);
+      font-weight:600; color:rgba(255,255,255,.85);
+      margin-bottom:8px; letter-spacing:.3px;
     }
     .hero-location-line {
       font-family:'Cinzel',serif;
@@ -969,18 +969,16 @@
       display:block;
     }
     /* Rich bottom gradient for caption readability */
-    .carousel-slide::after {
-      content:''; position:absolute; inset:auto 0 0 0;
-      height:62%;
-      background:linear-gradient(transparent, rgba(5,6,16,.96) 78%);
-      border-radius:0 0 12px 12px;
-      z-index:1;
-    }
-    /* Caption overlay */
+    .carousel-slide::after { display:none; }
+    /* Caption — solid panel, separated from the photo (no longer a faint overlay) */
     .carousel-caption {
       position:absolute; bottom:0; left:0; right:0;
-      padding:clamp(18px,3vw,28px) clamp(18px,3vw,28px) clamp(16px,2.5vw,22px);
+      padding:clamp(16px,2.5vw,24px) clamp(18px,3vw,28px);
       z-index:2; color:#fff;
+      background:rgba(0,26,52,.97);
+      border-top:2px solid rgba(200,146,58,.55);
+      border-radius:0 0 12px 12px;
+      box-shadow:0 -18px 40px rgba(0,20,45,.55);
     }
     .cc-eyebrow {
       font-family:'Cinzel',serif; font-size:11.5px; letter-spacing:3.5px;
@@ -988,6 +986,7 @@
     }
     /* Caption: Shekinaih & Aaron — hero names on top */
     .cc-host-block {
+      display:none; /* redundant — hosts already shown in the header above the photo */
       font-family:'Cinzel',serif;
       font-size:clamp(18px,2.4vw,34px);
       letter-spacing:4px; text-transform:uppercase;
@@ -996,7 +995,7 @@
       text-shadow:0 2px 24px rgba(0,0,0,.7);
     }
     .cc-with-bridge {
-      display:block;
+      display:none;
       font-family:'DM Sans',sans-serif;
       font-size:9px; letter-spacing:3px;
       text-transform:uppercase; font-style:italic;
@@ -1005,19 +1004,19 @@
     }
     .cc-name {
       font-family:'Cormorant Garamond',serif;
-      font-size:clamp(15px,1.6vw,20px);
-      font-weight:500; line-height:1.2; margin:0; letter-spacing:-.1px;
-      color:rgba(255,255,255,.82);
+      font-size:clamp(23px,2.7vw,32px);
+      font-weight:700; line-height:1.12; margin:0; letter-spacing:-.1px;
+      color:#fff;
     }
     .cc-role {
-      font-size:11px; font-weight:400; margin:5px 0 0;
+      font-size:14px; font-weight:700; margin:6px 0 0;
       color:#E8B86D; letter-spacing:.3px; line-height:1.4;
     }
     .cc-desc {
-      font-size:12px; margin:8px 0 0;
-      color:rgba(255,255,255,.62); line-height:1.65;
-      max-width:560px;
-      display:-webkit-box; -webkit-line-clamp:2;
+      font-size:14.5px; font-weight:500; margin:9px 0 0;
+      color:rgba(255,255,255,.86); line-height:1.6;
+      max-width:640px;
+      display:-webkit-box; -webkit-line-clamp:3;
       -webkit-box-orient:vertical; overflow:hidden;
     }
 
@@ -1316,7 +1315,27 @@
       -webkit-hyphens: auto;
       -ms-hyphens: auto;
     }
-  </style>
+  
+/* GLOBAL READABILITY (requested): heavier body copy */
+body,p,li{font-weight:500}
+.section-body,.story-body,.hero-desc,.section-sub,.story-meta,.art-p,.art-body,.body,.lede,.e-desc,.mission-body,.cert-meta,.prestige-body,.dist-card-body{font-weight:500 !important}
+
+/* ── JOURNEY GRID + HONOURS — bigger, bolder, modern, easy to read (requested) ── */
+#journey-strip .journey-header h2{font-size:clamp(30px,4.2vw,48px) !important;font-weight:800 !important}
+#journey-strip .journey-header p{font-size:15.5px !important;color:rgba(255,255,255,.62) !important;font-weight:600 !important;letter-spacing:.4px !important}
+.journey-stop{background:rgba(0,40,78,.6) !important;border:1px solid rgba(200,146,58,.22) !important}
+.journey-stop--active{border-color:rgba(232,184,109,.75) !important;box-shadow:0 0 0 1px rgba(232,184,109,.45),0 24px 60px rgba(0,0,0,.5) !important}
+.js-num{font-size:18px !important;font-weight:800 !important;color:#E8B86D !important;border-color:rgba(232,184,109,.6) !important}
+.js-date{font-size:12.5px !important;font-weight:800 !important;letter-spacing:2.5px !important;color:#E8B86D !important}
+.js-city{font-size:clamp(18px,1.9vw,22px) !important;font-weight:800 !important;color:#fff !important;line-height:1.18 !important}
+.js-event{font-size:14.5px !important;font-weight:600 !important;color:rgba(255,255,255,.8) !important;line-height:1.45 !important}
+.js-award{font-size:12px !important;font-weight:800 !important;color:#E8B86D !important}
+.recog-list li{font-size:16px !important;font-weight:700 !important;color:rgba(255,255,255,.92) !important;line-height:1.75 !important}
+#recognitions .recog-wrap h3{font-weight:700 !important;font-size:clamp(24px,2.6vw,32px) !important}
+
+/* EVENTS + MAIN SITE topbar buttons — bold (requested) */
+.nav-pill,.nav-pill--ghost,.topbar-back,.topbar-home{font-weight:800 !important;letter-spacing:2px}
+</style>
 </head>
 <body>
 
@@ -1326,7 +1345,7 @@
 <nav id="nav">
   <a class="nav-logo" href="index.html">
     <span class="nav-dot"></span>
-    <span class="nav-brand">shekinaihssyap-jaaronkdavid.com</span>
+    <span class="nav-brand"><span style="color:#F0C660">shekinaihssyap-</span><span style="color:#DDE3EE">jaaronkdavid.com</span></span>
   </a>
   <div style="display:flex;align-items:center;gap:12px">
     <a class="nav-pill" href="events.html">Events</a>
@@ -2029,7 +2048,7 @@
 <footer>
   <div class="footer-logo">
     <span class="nav-dot"></span>
-    <span class="nav-brand">shekinaihssyap-jaaronkdavid.com</span>
+    <span class="nav-brand"><span style="color:#F0C660">shekinaihssyap-</span><span style="color:#DDE3EE">jaaronkdavid.com</span></span>
   </div>
   <p class="footer-copy">© 2025 Mega Success · Los Angeles Event Archive · SHEKINAIH SIEW SIN YAP &amp; J AARON K DAVID</p>
 </footer>
