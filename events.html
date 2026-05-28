@@ -1,762 +1,658 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="International Events & Appearances — Shekinaih Siew Sin Yap & J Aaron K David across the world stage."/>
-  <title>International Events · Shekinaih Siew Sin Yap & J Aaron K David</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
-  <style>
-    /* ─── TOKENS ─────────────────────────────────── */
-    :root{
-      --ink:#08091A; --ink2:#12152B; --ink3:#0D1028;
-      --gold:#C8923A; --gold2:#E8B86D;
-      --cream:#F6F1E9; --muted:#8A8EA8;
-      --border:rgba(255,255,255,0.08);
-      --gold-border:rgba(200,146,58,0.18);
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'DM Sans',sans-serif;
-      background:var(--ink); color:#fff;
-      overflow-x:hidden; -webkit-font-smoothing:antialiased;
-      line-height:1.7; font-weight:300;
-    }
-    a{text-decoration:none;color:inherit}
-    img{display:block;max-width:100%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <meta name="theme-color" content="#08091A">
 
-    /* film grain */
-    body::before{
-      content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-      opacity:.4;
-    }
+  <title>The Chronicle · International Events — SHEKINAIH SIEW SIN YAP & J AARON K DAVID</title>
+  <meta name="description" content="The chronological record of international events, awards, ministry, humanitarian work and recognitions — SHEKINAIH SIEW SIN YAP and J AARON K DAVID, 2025–2026.">
 
-    /* ─── NAV ───────────────────────────────────── */
-    #nav{
-      position:fixed;top:0;left:0;right:0;z-index:999;
-      padding:0 clamp(20px,5vw,60px); height:68px;
-      display:flex;align-items:center;justify-content:space-between;
-      transition:background .3s,backdrop-filter .3s,border-color .3s;
-      border-bottom:1px solid transparent;
-    }
-    #nav.scrolled{
-      background:rgba(8,9,26,0.88);
-      backdrop-filter:blur(20px);
-      border-color:rgba(255,255,255,0.06);
-    }
-    .nav-logo{
-      font-family:'Cinzel',serif;font-weight:600;
-      display:flex;align-items:center;gap:10px;color:#fff;
-    }
-    .nav-logo-dot{
-      width:8px;height:8px;border-radius:50%;flex-shrink:0;
-      background:linear-gradient(135deg,var(--gold),var(--gold2));
-    }
-    .brand-domain{font-size:10px;letter-spacing:1.4px;text-transform:lowercase;white-space:nowrap}
-    .nav-links{
-      display:flex;gap:32px;list-style:none;
-      font-size:13px;font-weight:500;letter-spacing:.3px;color:rgba(255,255,255,.6);
-    }
-    .nav-links a{transition:color .2s}.nav-links a:hover{color:#fff}
-    .nav-links a.active{color:#fff;border-bottom:1px solid var(--gold);padding-bottom:2px}
-    .nav-cta{
-      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
-      letter-spacing:2px;text-transform:uppercase;
-      background:linear-gradient(135deg,var(--gold),var(--gold2));
-      color:var(--ink);padding:11px 22px;border-radius:100px;
-      transition:opacity .2s,transform .2s;
-    }
-    .nav-cta:hover{opacity:.9;transform:translateY(-1px)}
-    .nav-hamburger{
-      display:none;flex-direction:column;gap:5px;cursor:pointer;
-      background:none;border:none;padding:4px;
-    }
-    .nav-hamburger span{
-      display:block;width:24px;height:2px;
-      background:#fff;border-radius:2px;transition:transform .3s,opacity .3s;
-    }
-    #mobile-menu{
-      display:none;position:fixed;inset:0;z-index:998;
-      background:rgba(8,9,26,.97);backdrop-filter:blur(20px);
-      flex-direction:column;align-items:center;justify-content:center;gap:36px;
-    }
-    #mobile-menu.open{display:flex}
-    #mobile-menu a{
-      font-family:'Cinzel',serif;font-size:22px;font-weight:600;
-      color:rgba(255,255,255,.7);transition:color .2s;letter-spacing:1.5px;
-    }
-    #mobile-menu a:hover{color:#fff}
-    .menu-close{
-      position:absolute;top:24px;right:24px;font-size:28px;
-      color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;
-    }
-    @media(max-width:900px){
-      .nav-links,.nav-cta{display:none}
-      .nav-hamburger{display:flex}
-    }
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://shekinaih-jaaronkdavid.com/events.html">
+  <meta property="og:title" content="The Chronicle — International Events">
+  <meta property="og:description" content="Ten chapters. Ten cities. One unfolding mission.">
+  <meta property="og:image" content="https://shekinaih-jaaronkdavid.com/images/magazine/exquisite_magazine.jpg">
 
-    /* ─── HERO BANNER ───────────────────────────── */
-    #hero{
-      position:relative;overflow:hidden;
-      padding:160px clamp(24px,5vw,72px) 100px;
-      border-bottom:1px solid var(--border);
-    }
-    #hero::before{
-      content:'';position:absolute;inset:0;z-index:0;
-      background:
-        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(200,146,58,.07) 0%, transparent 70%),
-        linear-gradient(180deg, var(--ink2) 0%, var(--ink) 100%);
-    }
-    .hero-inner{position:relative;z-index:1;max-width:800px;}
-    .hero-eyebrow{
-      font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;
-      text-transform:uppercase;color:var(--gold);
-      display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;
-    }
-    .hero-eyebrow::before{
-      content:'';display:inline-block;width:32px;height:1px;background:var(--gold);
-    }
-    .hero-title{
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(36px,5vw,72px);font-weight:300;
-      line-height:1.05;letter-spacing:-.5px;color:#E8B86D;margin-bottom:24px;
-      filter:drop-shadow(0 2px 22px rgba(232,184,109,.25));
-    }
-    .hero-title em{font-style:italic;color:#E8B86D}
-    .hero-desc{
-      font-size:15px;font-weight:300;line-height:1.8;
-      color:rgba(255,255,255,.5);max-width:580px;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
-    /* ─── SECTION WRAPPER ───────────────────────── */
-    .section-inner{
-      max-width:1200px;margin:0 auto;
-      padding:0 clamp(24px,5vw,60px);
-    }
-    .eyebrow{
-      font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;
-      text-transform:uppercase;color:var(--gold);
-      display:block;margin-bottom:16px;
-    }
-
-    /* ─── EVENTS SECTION ────────────────────────── */
-    #events{padding:100px 0 120px}
-
-    /* ─── FEATURED CARD ─────────────────────────── */
-    .featured-card{
-      display:grid;grid-template-columns:1.15fr 1fr;
-      gap:0;overflow:hidden;border-radius:16px;
-      border:1px solid var(--gold-border);
-      background:var(--ink2);
-      box-shadow:0 40px 100px rgba(0,0,0,.5);
-      margin-bottom:48px;transition:box-shadow .4s;
-    }
-    .featured-card:hover{box-shadow:0 48px 120px rgba(0,0,0,.65)}
-    .featured-photo{
-      position:relative;overflow:hidden;min-height:440px;
-    }
-    .featured-photo img{
-      width:100%;height:100%;object-fit:cover;object-position:center top;
-      transition:transform .8s ease;display:block;
-    }
-    .featured-card:hover .featured-photo img{transform:scale(1.03)}
-    .featured-photo::after{
-      content:'';position:absolute;inset:0;
-      background:linear-gradient(90deg,transparent 60%,var(--ink2) 100%);
-    }
-    .featured-badge{
-      position:absolute;top:20px;left:20px;z-index:2;
-      font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;
-      text-transform:uppercase;color:var(--ink);
-      background:linear-gradient(135deg,var(--gold),var(--gold2));
-      padding:6px 16px;border-radius:100px;
-    }
-    .featured-body{
-      padding:clamp(40px,5vw,64px) clamp(32px,4vw,56px);
-      display:flex;flex-direction:column;justify-content:center;
-    }
-    .event-meta{
-      font-family:'Cinzel',serif;font-size:9px;letter-spacing:3.5px;
-      text-transform:uppercase;color:var(--gold);margin-bottom:20px;
-      display:flex;align-items:center;gap:10px;
-    }
-    .event-meta::before{width:20px;height:1px;background:var(--gold);content:'';display:inline-block}
-    .featured-name{
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(28px,3vw,46px);font-weight:500;
-      line-height:1.1;color:#E8B86D;letter-spacing:-.2px;
-      margin-bottom:12px;
-      filter:drop-shadow(0 2px 18px rgba(232,184,109,.28));
-    }
-    .featured-name em{font-style:italic;color:#E8B86D}
-    .featured-location{
-      font-size:13px;font-weight:400;color:rgba(255,255,255,.45);
-      margin-bottom:24px;display:flex;align-items:center;gap:8px;
-    }
-    .featured-desc{
-      font-size:14px;font-weight:300;line-height:1.8;
-      color:rgba(255,255,255,.55);margin-bottom:36px;
-    }
-    .btn-gold{
-      display:inline-flex;align-items:center;gap:10px;
-      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
-      letter-spacing:2px;text-transform:uppercase;
-      background:linear-gradient(135deg,var(--gold),var(--gold2));
-      color:var(--ink);padding:14px 28px;border-radius:100px;
-      transition:opacity .2s,transform .2s;align-self:flex-start;
-    }
-    .btn-gold:hover{opacity:.9;transform:translateY(-2px)}
-    .btn-gold svg{width:14px;height:14px;stroke:var(--ink);fill:none;stroke-width:2}
-
-    /* ─── UPCOMING GRID ─────────────────────────── */
-    .upcoming-title{
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(22px,2.2vw,32px);font-weight:300;color:#E8B86D;
-      letter-spacing:-.2px;margin-bottom:32px;
-      filter:drop-shadow(0 1px 14px rgba(232,184,109,.2));
-    }
-    .upcoming-title em{font-style:italic;color:#E8B86D;opacity:.7}
-    .event-grid{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
-    }
-    @media(max-width:900px){.event-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:560px){.event-grid{grid-template-columns:1fr}}
-
-    .event-card{
-      border-radius:12px;overflow:hidden;
-      border:1px solid var(--border);
-      background:var(--ink2);
-      transition:border-color .3s,transform .3s,box-shadow .3s;
-      display:flex;flex-direction:column;
-    }
-    .event-card:hover{
-      border-color:var(--gold-border);
-      transform:translateY(-4px);
-      box-shadow:0 24px 60px rgba(0,0,0,.4);
-    }
-    .card-photo{
-      position:relative;aspect-ratio:16/9;overflow:hidden;
-    }
-    .card-photo-gradient{
-      width:100%;height:100%;
-    }
-    .card-photo img{
-      width:100%;height:100%;object-fit:cover;
-      object-position:center top;
-      transition:transform .6s ease;
-    }
-    .event-card:hover .card-photo img{transform:scale(1.04)}
-    .card-badge{
-      position:absolute;top:14px;left:14px;
-      font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;
-      text-transform:uppercase;padding:5px 12px;border-radius:100px;
-    }
-    .badge-upcoming{
-      color:rgba(255,255,255,.7);
-      background:rgba(8,9,26,.7);backdrop-filter:blur(8px);
-      border:1px solid rgba(255,255,255,.12);
-    }
-    .badge-live{
-      color:var(--ink);
-      background:linear-gradient(135deg,var(--gold),var(--gold2));
-    }
-    .card-body{
-      padding:28px 24px 32px;flex:1;display:flex;flex-direction:column;
-    }
-    .card-meta{
-      font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:3px;
-      text-transform:uppercase;color:var(--gold);margin-bottom:12px;
-    }
-    .card-name{
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(20px,2vw,26px);font-weight:500;
-      line-height:1.15;color:#E8B86D;letter-spacing:-.1px;margin-bottom:10px;
-      filter:drop-shadow(0 1px 12px rgba(232,184,109,.25));
-    }
-    .card-name em{font-style:italic;color:#E8B86D}
-    .card-location{
-      font-size:12px;color:rgba(255,255,255,.38);margin-bottom:14px;
-      display:flex;align-items:center;gap:6px;
-    }
-    .card-location svg{width:11px;height:11px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0}
-    .card-desc{
-      font-size:13px;font-weight:300;line-height:1.75;
-      color:rgba(255,255,255,.45);margin-bottom:24px;flex:1;
-    }
-    .btn-outline{
-      display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
-      font-family:'Cinzel',serif;font-size:9px;font-weight:600;
-      letter-spacing:2px;text-transform:uppercase;
-      color:rgba(255,255,255,.45);padding:10px 20px;border-radius:100px;
-      border:1px solid rgba(255,255,255,.12);
-      transition:color .2s,border-color .2s;
-    }
-    .btn-outline:hover{color:#fff;border-color:rgba(255,255,255,.35)}
-    .btn-gold{
-      display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
-      font-family:'Cinzel',serif;font-size:9px;font-weight:700;
-      letter-spacing:2px;text-transform:uppercase;
-      color:var(--ink);padding:11px 24px;border-radius:100px;
-      background:linear-gradient(135deg,var(--gold),var(--gold2));
-      text-decoration:none;
-      transition:opacity .2s,transform .2s;box-shadow:0 6px 20px rgba(200,146,58,.35);
-    }
-    .btn-gold:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 10px 28px rgba(200,146,58,.5)}
-
-    /* placeholder gradient backgrounds for upcoming events */
-    .grad-thailand{background:linear-gradient(135deg,#0D1428 0%,#0E1A35 50%,#0A1520 100%)}
-    .grad-oman{background:linear-gradient(135deg,#150E0A 0%,#1E1208 50%,#120D07 100%)}
-    .grad-manila{background:linear-gradient(135deg,#0A0D1A 0%,#101428 50%,#090C18 100%)}
-
-    .location-art{
-      width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-      position:relative;overflow:hidden;
-    }
-    .location-art::before{
-      content:attr(data-flag);
-      font-size:clamp(48px,8vw,72px);
-      opacity:.15;line-height:1;
-      position:absolute;top:50%;left:50%;
-      transform:translate(-50%,-50%);
-    }
-    .location-art-label{
-      font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;
-      text-transform:uppercase;color:rgba(255,255,255,.2);
-      position:relative;z-index:1;
-    }
-
-    /* ─── DIVIDER ────────────────────────────────── */
-    .section-divider{
-      width:100%;height:1px;background:var(--border);
-      margin:0;
-    }
-
-    /* ─── FOOTER ─────────────────────────────────── */
-    footer{
-      background:#060710;padding:72px clamp(24px,5vw,60px) 40px;
-      border-top:1px solid var(--border);position:relative;z-index:1;
-    }
-    .footer-top{
-      display:grid;grid-template-columns:1.5fr 1fr 1fr;
-      gap:48px;padding-bottom:56px;
-      border-bottom:1px solid var(--border);margin-bottom:40px;
-    }
-    @media(max-width:768px){.footer-top{grid-template-columns:1fr;gap:40px}}
-    .footer-logo{
-      font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:800;
-      color:#fff;margin-bottom:12px;
-      display:flex;align-items:center;gap:10px;line-height:1.35;
-    }
-    .footer-tagline{
-      font-size:13px;font-weight:300;line-height:1.75;
-      color:rgba(255,255,255,.35);max-width:280px;margin-bottom:24px;
-    }
-    .footer-verse{
-      font-family:'Playfair Display',serif;font-style:italic;
-      font-size:13px;line-height:1.65;color:rgba(255,255,255,.3);max-width:300px;
-    }
-    .footer-col-title{
-      font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;
-      text-transform:uppercase;color:var(--gold);margin-bottom:20px;
-    }
-    .footer-links{display:flex;flex-direction:column;gap:12px}
-    .footer-links a,.footer-links span{
-      font-size:13px;color:rgba(255,255,255,.4);transition:color .2s;
-    }
-    .footer-links a:hover{color:#fff}
-    .footer-bottom{
-      display:flex;justify-content:space-between;align-items:center;
-      flex-wrap:wrap;gap:12px;
-    }
-    .footer-copy{font-size:12px;color:rgba(255,255,255,.2);letter-spacing:.3px}
-    .footer-email a{font-size:12px;color:rgba(255,255,255,.25);transition:color .2s}
-    .footer-email a:hover{color:#fff}
-
-    /* ─── FADE ANIMATIONS ────────────────────────── */
-    .fade-up{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
-    .fade-up.in{opacity:1;transform:none}
-    .fade-in{opacity:0;transition:opacity .9s ease}
-    .fade-in.in{opacity:1}
-    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-    .d4{transition-delay:.4s}.d5{transition-delay:.5s}
-
-    /* ─── FEATURED CARD RESPONSIVE ───────────────── */
-    @media(max-width:768px){
-      .featured-card{grid-template-columns:1fr}
-      .featured-photo{min-height:260px}
-      .featured-photo::after{
-        background:linear-gradient(0deg,var(--ink2) 0%,transparent 60%);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-<!-- MOBILE MENU -->
-<div id="mobile-menu">
-  <button class="menu-close" id="menu-close-btn">✕</button>
-  <a href="index.html">About</a>
-  <a href="index.html#awards">Awards</a>
-  <a href="index.html#gallery">Gallery</a>
-  <a href="events.html" style="color:#E8B86D">Events</a>
-  <a href="index.html#testimonials">Testimonials</a>
-  <a href="https://t.me/HEAVEN_BROADCAST" target="_blank" rel="noopener">Connect With Us</a>
-</div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<!-- NAV -->
-<nav id="nav">
-  <a class="nav-logo" href="index.html">
-    <span class="nav-logo-dot"></span>
-    <span class="brand-domain">shekinaihssyap-jaaronkdavid.com</span>
+<!-- TOP NAV -->
+<nav class="nav" id="nav" aria-label="Primary">
+  <a class="brand" href="index.html" aria-label="SHEKINAIH SIEW SIN YAP & J AARON K DAVID — Home">
+    <span class="brand-dot" aria-hidden="true"></span>
+    <span class="brand-full">
+      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
+      <span class="brand-amp">&amp;</span>
+      <span class="name-inline-silver">J AARON K DAVID</span>
+    </span>
+    <span class="brand-compact">SHEKINAIH-JAARONKDAVID.COM</span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#awards">Awards</a></li>
-    <li><a href="index.html#gallery">Gallery</a></li>
-    <li><a href="events.html" class="active">Events</a></li>
-    <li><a href="index.html#video-section">Videos</a></li>
-    <li><a href="index.html#testimonials">Testimonials</a></li>
-    <li><a href="index.html#magazine">Magazine</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#founders">About Us</a></li>
+    <li><a href="index.html#journey">Chronicle</a></li>
+    <li><a href="index.html#awards">Recognition</a></li>
+    <li><a href="index.html#magazines">Magazines</a></li>
+    <li><a href="#thumbs">Gallery</a></li>
   </ul>
-  <a class="nav-cta" href="https://t.me/HEAVEN_BROADCAST" target="_blank" rel="noopener">Connect Now</a>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+  <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="mm" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-
-<!-- ═══════════════════════════════════════════════
-     HERO
-════════════════════════════════════════════════ -->
-<section id="hero">
-  <div class="hero-inner">
-    <p class="hero-eyebrow fade-in">International Journey</p>
-    <h1 class="hero-title fade-up d1">
-      Events &amp; <em>Appearances</em>
-    </h1>
-    <p class="hero-desc fade-up d2">
-      Across nations and continents, Shekinaih and Aaron bring their message of faith, leadership, and transformation to the world stage — forging connections with global entrepreneurs, celebrities, and changemakers.
+<!-- MOBILE MENU -->
+<aside class="mm" id="mm" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
+  <button class="mm-close" id="mmClose" type="button" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+      <path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+    </svg>
+  </button>
+  <header class="mm-head">
+    <p class="eyebrow">The Chronicle</p>
+    <p class="brandname">
+      <span class="name-gold">SHEKINAIH SIEW SIN YAP</span>
+      <span class="amp">&amp;</span>
+      <span class="name-silver">J AARON K DAVID</span>
     </p>
+    <p class="tag">International Events · 2025 — 2026</p>
+  </header>
+  <div class="mm-scroll">
+    <section class="mm-group">
+      <p class="mm-glabel">Discover</p>
+      <a href="index.html" class="mm-item"><span class="mm-n">·</span><span class="mm-l">Home</span></a>
+      <a href="index.html#founders" class="mm-item"><span class="mm-n">·</span><span class="mm-l">About Us</span></a>
+      <a href="index.html#journey" class="mm-item"><span class="mm-n">·</span><span class="mm-l">The Chronicle</span></a>
+      <a href="index.html#awards" class="mm-item"><span class="mm-n">·</span><span class="mm-l">Recognition</span></a>
+      <a href="index.html#magazines" class="mm-item"><span class="mm-n">·</span><span class="mm-l">Magazines</span></a>
+      <a href="#thumbs" class="mm-item"><span class="mm-n">·</span><span class="mm-l">Gallery (this page)</span></a>
+    </section>
+    <section class="mm-group">
+      <p class="mm-glabel">The Chronicle · 10 Events</p>
+      <a href="#ev-megasuccess" class="mm-item"><span class="mm-n">01</span><span class="mm-l">Nov 2025 · MegaSuccess · Los Angeles</span></a>
+      <a href="#ev-manila" class="mm-item"><span class="mm-n">02</span><span class="mm-l">Nov 2025 · Manila Up Awards · Los Angeles</span></a>
+      <a href="#ev-hollywood" class="mm-item"><span class="mm-n">03</span><span class="mm-l">Nov 2025 · Hollywood Walk of Fame · Los Angeles</span></a>
+      <a href="#ev-his-presence" class="mm-item"><span class="mm-n">04</span><span class="mm-l">Nov 2025 · His Presence Fire · Los Angeles</span></a>
+      <a href="#ev-thailand" class="mm-item"><span class="mm-n">05</span><span class="mm-l">Dec 2025 · UNPKFC / GLS · Bangkok</span></a>
+      <a href="#ev-dalai-lama" class="mm-item"><span class="mm-n">06</span><span class="mm-l">Jan 2026 · Dalai Lama Audience · Mundgod</span></a>
+      <a href="#ev-mumbai" class="mm-item"><span class="mm-n">07</span><span class="mm-l">Jan 2026 · DMGP Diplomacy Awards · Mumbai</span></a>
+      <a href="#ev-nagpur" class="mm-item"><span class="mm-n">08</span><span class="mm-l">Jan 2026 · Republic Day Mission · Nagpur</span></a>
+      <a href="#ev-kolkata" class="mm-item"><span class="mm-n">09</span><span class="mm-l">Jan 2026 · Walk for Peace · Kolkata</span></a>
+      <a href="#ev-oman" class="mm-item"><span class="mm-n">10</span><span class="mm-l">Feb 2026 · IISA 2026 · Muscat, Oman</span></a>
+    </section>
   </div>
-</section>
+  <footer class="mm-foot">
+    <a class="mm-cta" href="index.html#connect">Connect With Us</a>
+    <p class="mm-meta">© 2026 <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span> · Singapore</p>
+  </footer>
+</aside>
 
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="container">
+    <div class="section-head fade-up" style="margin:0 auto">
+      <p class="eyebrow">The Chronicle</p>
+      <h1 class="display" style="font-size:clamp(36px,5.4vw,68px);margin-bottom:18px">
+        International Events <span class="italic">2025 — 2026</span>
+      </h1>
+      <p class="lede">Ten chapters. Ten cities. One unfolding mission. The record of where <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> have served, spoken, and stood.</p>
+    </div>
+  </div>
+</header>
 
-<!-- ═══════════════════════════════════════════════
-     EVENTS
-════════════════════════════════════════════════ -->
-<section id="events">
-  <div class="section-inner">
+<!-- THUMBNAIL GRID — index of all events -->
+<section class="section sm" id="thumbs" aria-labelledby="thumbs-h">
+  <div class="container">
+    <div class="section-head fade-up">
+      <p class="eyebrow">Index</p>
+      <h2 id="thumbs-h" class="display" style="font-size:clamp(28px,3.4vw,44px)">Browse the <span class="italic">Chronicle</span></h2>
+    </div>
 
-    <!-- ── Featured: Mega Success 2025 ── -->
-    <span class="eyebrow fade-up">Latest Event</span>
+    <div class="thumb-grid">
 
-    <a class="featured-card fade-up d1" href="us-megasuccess2025.html">
-      <div class="featured-photo">
-        <img src="images/us-mega-success-2025/mega-success-2025-la-18.jpg"
-             alt="Mega Success 2025 · Los Angeles · Shekinaih and Aaron on stage"
-             loading="eager"/>
-        <span class="featured-badge">Live</span>
-      </div>
-      <div class="featured-body">
-        <p class="event-meta">November 2025</p>
-        <h2 class="featured-name">
-          Mega Success <em>2025</em>
-        </h2>
-        <p class="featured-location">
-          <svg viewBox="0 0 14 14" style="width:13px;height:13px;stroke:#C8923A;fill:none;stroke-width:2;flex-shrink:0;display:inline-block"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-          Los Angeles, California, USA
-        </p>
-        <p class="featured-desc">
-          Shekinaih Siew Sin Yap and J Aaron K David took the international stage at Mega Success 2025 in Los Angeles — one of the world's premier entrepreneurship and leadership summits. Sharing the platform with billionaires, celebrities, and global changemakers, they connected with figures including John Paul DeJoria, JT Foxx, Birdman, Charlotte McKinney, and many more.
-        </p>
-        <span class="btn-gold">
-          Explore Event
-          <svg viewBox="0 0 14 14"><polyline points="3,7 11,7 8,4"/><polyline points="8,10 11,7"/></svg>
-        </span>
-      </div>
-    </a>
+      <a class="thumb fade-up" href="#ev-megasuccess">
+        <div class="t-img">
+          <span class="t-num">01</span>
+          <img src="images/us-mega-success-2025/mega-success-2025-la-05.jpg" loading="lazy"
+               alt="J AARON K DAVID, MegaSuccess host and SHEKINAIH SIEW SIN YAP — backstage portrait at MegaSuccess 2025 Los Angeles">
+        </div>
+        <div class="t-body">
+          <p class="t-date">November 2025</p>
+          <p class="t-title">MegaSuccess</p>
+          <p class="t-loc">Los Angeles, USA</p>
+        </div>
+      </a>
 
-    <!-- ── Upcoming Events ── -->
-    <p class="upcoming-title fade-up d2">
-      Upcoming <em>& Recent Engagements</em>
-    </p>
+      <a class="thumb fade-up" href="#ev-manila">
+        <div class="t-img">
+          <span class="t-num">02</span>
+          <img src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-holding-open-magazine-spreads-newport.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID holding their Manila Up Magazine feature spreads">
+        </div>
+        <div class="t-body">
+          <p class="t-date">2025</p>
+          <p class="t-title">Manila Up Red Carpet &amp; Feature</p>
+          <p class="t-loc">Newport World Resorts, Manila</p>
+        </div>
+      </a>
 
-    <div class="event-grid">
+      <a class="thumb fade-up" href="#ev-hollywood">
+        <div class="t-img">
+          <span class="t-num">03</span>
+          <img src="images/la-hollywood-2025/la-red-carpet-2025-shekinaih-aaron-portrait-01.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID on the Hollywood Walk of Fame red carpet">
+        </div>
+        <div class="t-body">
+          <p class="t-date">2025</p>
+          <p class="t-title">Hollywood Walk of Fame</p>
+          <p class="t-loc">Los Angeles, USA</p>
+        </div>
+      </a>
 
-      <!-- GLS 2025 Thailand — Completed -->
-      <div class="event-card fade-up d2">
-        <div class="card-photo">
-          <div class="card-photo-gradient grad-thailand">
-            <div class="location-art" data-flag="🇹🇭">
-              <span class="location-art-label">Bangkok · Thailand</span>
-            </div>
-          </div>
-          <span class="card-badge badge-live">Completed</span>
+      <a class="thumb fade-up" href="#ev-his-presence">
+        <div class="t-img">
+          <span class="t-num">04</span>
+          <img src="images/his-presence-fire-cathedral-2025/his-presence-fire-2025-shekinaih-aaron-at-the-pulpit.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID at the His Presence Fire Ministries pulpit">
         </div>
-        <div class="card-body">
-          <p class="card-meta">December 2025</p>
-          <h3 class="card-name">Global Leadership <em>Summit 2025</em></h3>
-          <p class="card-location">
-            <svg viewBox="0 0 14 14"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-            Bangkok, Thailand
-          </p>
-          <p class="card-desc">
-            SHEKINAIH SIEW SIN YAP and J AARON K DAVID were received at the Global Leadership Summit 2025 in Bangkok — convened by the United Peace Keepers Federal Council (UNPKFC) under the leadership of Dr. Aphinita Chaichana, among international peacekeepers, humanitarian advocates, and dignitaries from over 160 countries.
-          </p>
-          <a class="btn-gold" href="gls-thailand-2025.html">View Event →</a>
+        <div class="t-body">
+          <p class="t-date">November 2025</p>
+          <p class="t-title">His Presence Fire — Pray &amp; Preach</p>
+          <p class="t-loc">Los Angeles, USA</p>
         </div>
-      </div>
+      </a>
 
-      <!-- Hollywood Walk of Fame Week 2025 — Completed -->
-      <div class="event-card fade-up d2">
-        <div class="card-photo">
-          <div class="card-photo-gradient grad-manila">
-            <div class="location-art" data-flag="🇺🇸">
-              <span class="location-art-label">Hollywood · Los Angeles</span>
-            </div>
-          </div>
-          <span class="card-badge badge-live">Completed</span>
+      <a class="thumb fade-up" href="#ev-thailand">
+        <div class="t-img">
+          <span class="t-num">05</span>
+          <img src="images/gls-thailand-2025/gls-thailand-2025-shekinaih-aaron-03.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID at GLS Bangkok 2025">
         </div>
-        <div class="card-body">
-          <p class="card-meta">November 2025</p>
-          <h3 class="card-name">Hollywood Walk of <em>Fame Week</em></h3>
-          <p class="card-location">
-            <svg viewBox="0 0 14 14"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-            Hollywood, Los Angeles, California
-          </p>
-          <p class="card-desc">
-            SHEKINAIH SIEW SIN YAP and J AARON K DAVID on the red carpet at Hollywood Walk of Fame Week — and personally received by Pastor Derrick L. Boseman, elder brother of the late Chadwick Boseman of Marvel's <em>Black Panther</em>, around the posthumous Walk of Fame star ceremony.
-          </p>
-          <a class="btn-gold" href="hollywood-walk-of-fame-2025.html">View Event →</a>
+        <div class="t-body">
+          <p class="t-date">December 2025</p>
+          <p class="t-title">Global Leadership Summit</p>
+          <p class="t-loc">Bangkok, Thailand</p>
         </div>
-      </div>
+      </a>
 
-      <!-- An Honorable Audience with His Holiness the Dalai Lama · Mundgod · 21 January 2026 -->
-      <div class="event-card fade-up d2">
-        <div class="card-photo">
-          <div class="card-photo-gradient grad-thailand">
-            <div class="location-art" data-flag="🇮🇳">
-              <span class="location-art-label">Mundgod · Karnataka</span>
-            </div>
-          </div>
-          <span class="card-badge badge-live">Completed</span>
+      <a class="thumb fade-up" href="#ev-dalai-lama">
+        <div class="t-img">
+          <span class="t-num">06</span>
+          <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2025-shekinaih-aaron-illuminated-monastery-night-formal-portrait.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID in front of the illuminated Ganden Monastery at night, wearing yellow khata from His Holiness the Dalai Lama">
         </div>
-        <div class="card-body">
-          <p class="card-meta">21 January 2026</p>
-          <h3 class="card-name">Audience · <em>His Holiness the Dalai Lama</em></h3>
-          <p class="card-location">
-            <svg viewBox="0 0 14 14"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-            Gaden Jangtse College · Mundgod, Karnataka
-          </p>
-          <p class="card-desc">
-            SHEKINAIH SIEW SIN YAP and J AARON K DAVID received in personal audience by His Holiness the 14th Dalai Lama at Gaden Jangtse College, Doeguling Tibetan Settlement, on the day of His Holiness' consecration of the College's new classroom building and the statues of Jé Tsongkhapa. Each honoured with a formal commemorative citation issued by the Gaden Jangste Norling College of Buddhist Cultural and Welfare Association.
-          </p>
-          <a class="btn-gold" href="dalai-lama-audience-2026.html">View Event →</a>
+        <div class="t-body">
+          <p class="t-date">January 2026</p>
+          <p class="t-title">Audience with His Holiness the Dalai Lama</p>
+          <p class="t-loc">Mundgod, near Hubballi · Karnataka, India</p>
         </div>
-      </div>
+      </a>
 
-      <!-- Nagpur & Kolkata · 75 Years of Peace · January–February 2026 -->
-      <div class="event-card fade-up d2">
-        <div class="card-photo">
-          <div class="card-photo-gradient grad-thailand">
-            <div class="location-art" data-flag="🇮🇳">
-              <span class="location-art-label">Nagpur · Kolkata</span>
-            </div>
-          </div>
-          <span class="card-badge badge-live">Completed</span>
+      <a class="thumb fade-up" href="#ev-mumbai">
+        <div class="t-img">
+          <span class="t-num">07</span>
+          <img src="images/mumbai-bollywood/photo_2026-01-28_18-35-31.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with fellow DMGP awardees at the press conference, Mumbai">
         </div>
-        <div class="card-body">
-          <p class="card-meta">26 January – 1 February 2026</p>
-          <h3 class="card-name">75 Years of <em>Peace · India</em></h3>
-          <p class="card-location">
-            <svg viewBox="0 0 14 14"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-            Tollygunge Sambodhi · Buddha Spiritual Park
-          </p>
-          <p class="card-desc">
-            SHEKINAIH SIEW SIN YAP and J AARON K DAVID honoured as Special Guests of the Walking-PEACE Maghi Purnima observance at the Tollygunge Sambodhi 75 Years Buddhist Monastery (Kolkata, 1 Feb 2026) — receiving commemorative plaques under UNPKFC. Five days earlier on Republic Day, J AARON K DAVID served as Chief Guest of the Alms Offering &amp; 151 Buddha Statue Distribution at the Buddha Spiritual Park, Nagpur.
-          </p>
-          <a class="btn-gold" href="nagpur-kolkata-2026.html">View Event →</a>
+        <div class="t-body">
+          <p class="t-date">January 2026</p>
+          <p class="t-title">Mumbai Bollywood · DMGP Awards</p>
+          <p class="t-loc">Marriott Hotel Powai, Mumbai</p>
         </div>
-      </div>
+      </a>
 
-      <!-- Mumbai · Bollywood · DMGP Republic Week 2026 -->
-      <div class="event-card fade-up d2">
-        <div class="card-photo">
-          <div class="card-photo-gradient grad-manila">
-            <div class="location-art" data-flag="🇮🇳">
-              <span class="location-art-label">Mumbai · India</span>
-            </div>
-          </div>
-          <span class="card-badge badge-live">Completed</span>
+      <a class="thumb fade-up" href="#ev-nagpur">
+        <div class="t-img">
+          <span class="t-num">08</span>
+          <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-holding-food-trays-feeding-the-poor.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID holding food trays — Flower Gala &amp; feeding the poor in Nagpur">
         </div>
-        <div class="card-body">
-          <p class="card-meta">Republic Week · January 2026</p>
-          <h3 class="card-name">DMGP Global <em>Diplomacy Awards</em></h3>
-          <p class="card-location">
-            <svg viewBox="0 0 14 14"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-            Lakeside Marriott Hotel, Powai, Mumbai
-          </p>
-          <p class="card-desc">
-            SHEKINAIH SIEW SIN YAP was conferred the Global Divinity Ambassador certificate and J AARON K DAVID the Global Peace Ambassador certificate at the DMGP Global Diplomacy Awards in Mumbai — hosted by Dr. Anil Nair Thampi, with Dr. Aphinita Chaichana (UNPKFC) and the Bollywood circle present. Followed by a Republic Day humanitarian mission at Buddha Spiritual Park, Nagpur, under Crowned Eagles Global.
-          </p>
-          <a class="btn-gold" href="mumbai-bollywood-2026.html">View Event →</a>
+        <div class="t-body">
+          <p class="t-date">January 2026</p>
+          <p class="t-title">Nagpur — Flower Gala &amp; Feeding the Poor</p>
+          <p class="t-loc">Buddha Spiritual Park, Sihora-Kanhan, Nagpur</p>
         </div>
-      </div>
+      </a>
 
-      <!-- His Presence Fire Cathedral — Pulpit Engagement -->
-      <div class="event-card fade-up d3">
-        <div class="card-photo">
-          <div class="card-photo-gradient grad-manila">
-            <div class="location-art" data-flag="🇺🇸">
-              <span class="location-art-label">Glendale · California</span>
-            </div>
-          </div>
-          <span class="card-badge badge-live">Completed</span>
+      <a class="thumb fade-up" href="#ev-kolkata">
+        <div class="t-img">
+          <span class="t-num">09</span>
+          <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-receiving-walk-for-peace-plaque.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID receiving the Walk for Peace plaque in Kolkata">
         </div>
-        <div class="card-body">
-          <p class="card-meta">24 November 2025</p>
-          <h3 class="card-name">At the Pulpit · <em>His Presence Fire</em></h3>
-          <p class="card-location">
-            <svg viewBox="0 0 14 14"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-            His Presence Fire Cathedral, Glendale CA
-          </p>
-          <p class="card-desc">
-            SHEKINAIH SIEW SIN YAP and J AARON K DAVID were invited to share at the pulpit of His Presence Fire Cathedral under Dr. Gershom Sikaala — the Zambian-born senior pastor who served as the pastor and spiritual mentor to the late Chadwick Boseman.
-          </p>
-          <a class="btn-gold" href="his-presence-fire-cathedral-2025.html">View Event →</a>
+        <div class="t-body">
+          <p class="t-date">February 2026</p>
+          <p class="t-title">Kolkata · Sister Nivedita &amp; Walk for Peace</p>
+          <p class="t-loc">Sister Nivedita University, Kolkata</p>
         </div>
-      </div>
+      </a>
 
-      <!-- Oman -->
-      <div class="event-card fade-up d3">
-        <div class="card-photo">
-          <div class="card-photo-gradient grad-oman">
-            <div class="location-art" data-flag="🇴🇲">
-              <span class="location-art-label">Muscat · Oman</span>
-            </div>
-          </div>
-          <span class="card-badge badge-upcoming">Upcoming</span>
+      <a class="thumb fade-up" href="oman-iisa-2026.html">
+        <div class="t-img">
+          <span class="t-num">10</span>
+          <img src="images/oman/photo_2026-05-25_09-09-07.jpg" loading="lazy"
+               alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID on the IISA 2026 stage in Oman with the Omani delegate">
         </div>
-        <div class="card-body">
-          <p class="card-meta">2026</p>
-          <h3 class="card-name">International <em>Mission · Oman</em></h3>
-          <p class="card-location">
-            <svg viewBox="0 0 14 14"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-            Muscat, Sultanate of Oman
-          </p>
-          <p class="card-desc">
-            An international diplomatic and leadership engagement in the Sultanate of Oman — extending cross-cultural dialogue, humanitarian service, and principled leadership across the Middle East.
-          </p>
-          <span class="btn-outline">Coming Soon</span>
+        <div class="t-body">
+          <p class="t-date">February 2026</p>
+          <p class="t-title">IISA 2026 — Oman &amp; UAE</p>
+          <p class="t-loc">Sheraton Oman Hotel, Muscat</p>
         </div>
-      </div>
-
-      <!-- Manila Up Gala -->
-      <div class="event-card fade-up d4">
-        <div class="card-photo">
-          <div class="card-photo-gradient grad-manila">
-            <div class="location-art" data-flag="🇵🇭">
-              <span class="location-art-label">Manila · Philippines</span>
-            </div>
-          </div>
-          <span class="card-badge badge-live">Completed</span>
-        </div>
-        <div class="card-body">
-          <p class="card-meta">November 2025</p>
-          <h3 class="card-name">Manila Up <em>10th Anniversary Gala</em></h3>
-          <p class="card-location">
-            <svg viewBox="0 0 14 14"><path d="M7 1C4.79 1 3 2.79 3 5c0 3.25 4 8 4 8s4-4.75 4-8c0-2.21-1.79-4-4-4z"/><circle cx="7" cy="5" r="1.5"/></svg>
-            Hotel Indigo Los Angeles, California, USA
-          </p>
-          <p class="card-desc">
-            SHEKINAIH SIEW SIN YAP and J AARON K DAVID were honoured as spotlight awardees at the prestigious Manila Up International Magazine 10th Anniversary Red Carpet Gala — the sold-out event celebrating a decade of Filipino global excellence.
-          </p>
-          <a class="btn-gold" href="manila-up-gala.html">View Event →</a>
-        </div>
-      </div>
+      </a>
 
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- ════════════════════════════════════════════════════════════
+     DETAIL SECTIONS — chronological order
+     Photo policy per AGENTS.md: Shekinaih FIRST, then Aaron.
+     ════════════════════════════════════════════════════════════ -->
 
+<!-- 01 — MEGA SUCCESS LA -->
+<section class="event-detail" id="ev-megasuccess">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 01 · November 2025</p>
+      <h2 class="ed-title">MegaSuccess — <span class="italic">Los Angeles</span></h2>
+      <p class="ed-loc">JT Foxx MegaSuccess Platform · Los Angeles, USA</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>The JT Foxx MegaSuccess platform in Los Angeles — international leadership presence on one of America's recognised business stages. <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> joined a global cohort of leaders, entrepreneurs, and creatives for what became the season's defining marker.</p>
+    </div>
+    <div class="ed-photos fade-up d2">
+      <img src="images/us-mega-success-2025/mega-success-2025-la-05.jpg" loading="lazy" alt="MegaSuccess 2025 backstage portrait — J AARON K DAVID, the MegaSuccess host, and SHEKINAIH SIEW SIN YAP">
+      <img src="images/us-mega-success-2025/mega-success-2025-la-01.jpg" loading="lazy" alt="MegaSuccess 2025 Los Angeles stage moment">
+      <img src="images/us-mega-success-2025/mega-success-2025-la-10.jpg" loading="lazy" alt="MegaSuccess 2025 networking — Los Angeles">
+    </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="us-megasuccess2025.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
 
-<!-- ═══════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════ -->
-<footer>
-  <div class="section-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <span class="nav-logo-dot"></span>
-          <span class="brand-domain">shekinaihssyap-jaaronkdavid.com</span>
-        </div>
-        <p class="footer-tagline">The personal IP branding website for Shekinaih Siew Sin Yap and J Aaron K David, honouring their faith, leadership, humanitarian service, and international recognition.</p>
-        <p class="footer-verse">"They that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."<br/><span style="font-size:11px;font-style:normal;letter-spacing:2px;text-transform:uppercase;font-family:'DM Sans',sans-serif;color:rgba(255,255,255,.2)">— Isaiah 40:31</span></p>
-      </div>
-      <div>
-        <p class="footer-col-title">Navigate</p>
-        <div class="footer-links">
-          <a href="index.html#about">About</a>
-          <a href="index.html#awards">Awards</a>
-          <a href="index.html#gallery">Gallery</a>
-          <a href="events.html">Events</a>
-          <a href="index.html#video-section">Videos</a>
-          <a href="index.html#testimonials">Testimonials</a>
-          <a href="index.html#magazine">Magazine</a>
-        </div>
-      </div>
-      <div>
-        <p class="footer-col-title">Contact</p>
-        <div class="footer-links">
-          <a href="mailto:hello@shekinaihssyap-jaaronkdavid.com">hello@shekinaihssyap-jaaronkdavid.com</a>
-          <a href="https://shekinaihssyap-jaaronkdavid.com" target="_blank">shekinaihssyap-jaaronkdavid.com</a>
-        </div>
-        <p class="footer-col-title" style="margin-top:32px">Recognition</p>
-        <div class="footer-links" style="font-size:12px;letter-spacing:.3px">
-          <span style="color:rgba(255,255,255,.3)">UNPKFC</span>
-          <span style="color:rgba(255,255,255,.3)">World Book of Records · London</span>
-          <span style="color:rgba(255,255,255,.3)">GLS 2025 · Bangkok</span>
-          <span style="color:rgba(255,255,255,.3)">DMGP Global Diplomacy</span>
-        </div>
+<!-- 02 — MANILA UP RED CARPET & AWARDS -->
+<section class="event-detail" id="ev-manila">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 02 · 2025</p>
+      <h2 class="ed-title">Manila Up — <span class="italic">Red Carpet &amp; Awards</span></h2>
+      <p class="ed-loc">Newport, Manila · 10th Anniversary Edition</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>The prestigious 10th Anniversary celebration of <strong>Manila Up International Magazine</strong> — a red-carpet recognition gathering of international awardees, entrepreneurs, creatives, and distinguished guests. <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> was featured as <em>"The Visionary Voice Bridging Heaven and Humanity"</em>; <span class="name-inline-silver">J AARON K DAVID</span> as <em>"The Quiet Force Behind a Global Awakening."</em></p>
+    </div>
+    <div class="ed-photos fade-up d2">
+      <img src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-holding-open-magazine-spreads-newport.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID holding open spreads of their Manila Up Magazine feature articles">
+      <img src="images/manila-up-2025/manila-up-2025-shekinaih-holding-magazine-profile-spread.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP holding her Manila Up Magazine feature spread — &ldquo;The Visionary Voice&rdquo;">
+      <img src="images/manila-up-2025/manila-up-2025-aaron-holding-magazine-profile-spread.jpg" loading="lazy" alt="J AARON K DAVID holding his Manila Up Magazine feature spread — &ldquo;The Quiet Force&rdquo;">
+      <img src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-holding-awards-portrait.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID holding their Manila Up awards portrait">
+      <img src="images/manila-up-2025/manila-up-2025-magazine-honoring-awardees-group-stage-photo.jpg" loading="lazy" alt="Manila Up awardees group stage photo">
+      <img src="images/manila-up-2025/manila-up-2025-shekinaih-aaron-with-lisa-lew-and-guest-gala.jpg" loading="lazy" alt="SHEKINAIH and J AARON K DAVID with Lisa Lew and a gala guest">
+    </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="manila-up-gala.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- 03 — HOLLYWOOD WALK OF FAME -->
+<section class="event-detail" id="ev-hollywood">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 03 · 2025</p>
+      <h2 class="ed-title">Hollywood — <span class="italic">Walk of Fame Red Carpet</span></h2>
+      <p class="ed-loc">Los Angeles, USA</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>Los Angeles and Hollywood-connected entertainment platforms — red-carpet press lines and networking receptions among international media houses including <strong>Authentic TV Global Media, NSI Universal Inc., The Avantgarde, Timeless Music, Revel Live Entertainment, Devlux Entertainment Group,</strong> and <strong>From The Heart Productions.</strong></p>
+    </div>
+    <div class="ed-photos fade-up d2">
+      <img src="images/la-hollywood-2025/la-red-carpet-2025-shekinaih-aaron-portrait-01.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID — red-carpet portrait, Los Angeles">
+      <img src="images/la-hollywood-2025/Aaron_Shekinaih_Hollywood_Red_Carpet_Interview_02.jpg" loading="lazy" alt="With the press interviewer on the Hollywood red carpet">
+      <img src="images/la-hollywood-2025/la-entertainment-2025-shekinaih-aaron-with-entertainment-personality-01.jpg" loading="lazy" alt="With an entertainment personality at the Los Angeles gathering">
+      <img src="images/la-hollywood-2025/la-entertainment-2025-shekinaih-aaron-with-derrick-boseman-01.jpg" loading="lazy" alt="With Derrick Boseman at the Los Angeles entertainment event">
+    </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="hollywood-walk-of-fame-2025.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- 04 — HIS PRESENCE FIRE -->
+<section class="event-detail" id="ev-his-presence">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 04 · 23 November 2025</p>
+      <h2 class="ed-title">His Presence Fire — <span class="italic">Pray &amp; Preach</span></h2>
+      <p class="ed-loc">His Presence Fire Ministries · Los Angeles, USA</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>A Sunday service at <strong>His Presence Fire Ministries</strong> under <strong>Dr. Gershom Sikaala</strong>. A message of spiritual awakening, restoration, breakthrough, and deliverance carried before the congregation — encouragement for those facing struggle, and a charge of renewal across personal, family, and community spheres.</p>
+    </div>
+    <div class="ed-photos fade-up d2">
+      <img src="images/his-presence-fire-cathedral-2025/his-presence-fire-2025-shekinaih-aaron-at-the-pulpit.jpg" loading="lazy" alt="SHEKINAIH and J AARON K DAVID at the pulpit, His Presence Fire Ministries">
+      <img src="images/his-presence-fire-cathedral-2025/his-presence-fire-2025-shekinaih-aaron-pastor-sikaala-on-stage.jpg" loading="lazy" alt="On stage with Pastor Dr. Gershom Sikaala">
+      <img src="images/his-presence-fire-cathedral-2025/his-presence-fire-2025-aaron-praying-over-pastor-sikaala.jpg" loading="lazy" alt="J AARON K DAVID praying over Pastor Dr. Gershom Sikaala">
+      <img src="images/his-presence-fire-cathedral-2025/his-presence-fire-2025-shekinaih-aaron-cathedral-banner-wide.jpg" loading="lazy" alt="Cathedral banner wide shot at the gathering">
+    </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="his-presence-fire-cathedral-2025.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- 05 — THAILAND GLS -->
+<section class="event-detail" id="ev-thailand">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 05 · December 2025</p>
+      <h2 class="ed-title">Bangkok — <span class="italic">Global Leadership Summit</span></h2>
+      <p class="ed-loc">Bangkok, Thailand · GLS 2025</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>The <strong>Global Leadership Summit 2025</strong> in Bangkok — Leadership Achievement Award presented alongside international peers, marking the <strong>80th Anniversary of the United Nations.</strong> A platform of leadership empowerment, humanitarian recognition, and cross-cultural collaboration.</p>
+    </div>
+    <div class="ed-photos fade-up d2">
+      <img src="images/gls-thailand-2025/gls-thailand-2025-shekinaih-aaron-03.jpg" loading="lazy" alt="SHEKINAIH and J AARON K DAVID at GLS Bangkok 2025">
+      <img src="images/gls-thailand-2025/gls-thailand-2025-shekinaih-aaron-07.jpg" loading="lazy" alt="At the GLS Bangkok 2025 ceremony">
+      <img src="images/gls-2025/Shekinaih_Medal_Ceremony_GLS2025.jpeg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP receiving the GLS 2025 medal">
+      <img src="images/gls-2025/Aaron_Medal_Ceremony_GLS2025.jpeg" loading="lazy" alt="J AARON K DAVID receiving the GLS 2025 medal">
+    </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="gls-thailand-2025.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- 06 — DALAI LAMA AUDIENCE -->
+<section class="event-detail" id="ev-dalai-lama">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 06 · January 2026</p>
+      <h2 class="ed-title">Audience with <span class="italic">His Holiness the Dalai Lama</span></h2>
+      <p class="ed-loc">Ganden Monastery · Mundgod, near Hubballi, Karnataka</p>
+    </div>
+
+    <div class="ed-body fade-up d1">
+      <p><em class="em" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(19px,1.8vw,24px);line-height:1.55;color:rgba(255,255,255,.95);display:block;border-left:3px solid var(--gold);padding-left:24px;margin:0 0 28px">A private audience with His Holiness the 14th Dalai Lama is one of the most difficult honours to obtain in the world.</em></p>
+
+      <p>Most applications are politely declined. Of those granted, many wait years. The diary of His Holiness — protected by his office at Thekchen Chöling, Dharamsala — is reserved largely for <strong>heads of state, Nobel laureates, senior religious leaders, and a small handful of humanitarian figures</strong> whose work has reached a stature worthy of his time. Visiting delegations from outside Tibetan Buddhist communities are an exception, not a rule.</p>
+
+      <p>In <strong>January 2026</strong>, <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> were received at <strong>Gaden Jangtse Norling College</strong>, in the Tibetan monastic settlement of <strong>Mundgod, near Hubli (Hubballi), Karnataka</strong> — the largest re-established Buddhist community outside Tibet — for the formal audience with His Holiness the 14th Dalai Lama. They entered the hall as part of the distinguished delegation of the <strong>United Peace Keepers Federal Council (UNPKFC)</strong>, led by its Global President <strong>Dr. Aphinita Chaichana</strong> — the <em>sole woman</em> invited to deliver the keynote address before the high-level spiritual assembly that day, who framed <em>Compassion and Inner Peace</em> as the working framework for resolving modern global conflicts.</p>
+
+      <p>The gathering drew <strong>thousands of devotees and practitioners</strong> from across the globe in an atmosphere of profound reverence and spiritual unity. The mission carried a steadfast humanitarian seal — UNPKFC's financial support extended to over <strong>1,600 monks and novices</strong> in the settlement — and the entire journey rested on the spiritual guidance of the venerable <strong>Tsendok Rinpoche</strong>, the teacher whose counsel was its cornerstone. Both <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> received <strong>commemorative audience certificates</strong> from the office of His Holiness, and walked out of Mundgod carrying the yellow ceremonial khata as a permanent record of the encounter.</p>
+
+      <p>For an international faith and humanitarian leadership platform still in its growing season, this was not a casual visit. It was a marker — a quiet recognition by one of the most revered spiritual figures alive that the work of Crowned Eagles Global belongs in the room where peace, compassion, and cross-faith dignity are taken seriously.</p>
+    </div>
+
+    <!-- Featured hero shot: illuminated monastery night portrait -->
+    <div class="full-img fade-up d2" style="padding:0 var(--container-pad)">
+      <div class="full-img-wrap">
+        <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2025-shekinaih-aaron-illuminated-monastery-night-formal-portrait.jpg"
+             width="1280" height="853" loading="lazy"
+             alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID — formal portrait at night in front of the illuminated Ganden Monastery, wearing white robes with yellow khata scarves received from His Holiness the Dalai Lama">
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 shekinaihssyap-jaaronkdavid.com. All rights reserved. · Singapore</p>
-      <div class="footer-email"><a href="mailto:hello@shekinaihssyap-jaaronkdavid.com">hello@shekinaihssyap-jaaronkdavid.com</a></div>
+    <p style="text-align:center;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:500;margin-bottom:36px">
+      Ganden Monastery · Mundgod, near Hubballi · January 2026
+    </p>
+    <div class="ed-photos fade-up d2">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-shekinaih-aaron-formal-portrait-temple-yellow-khata.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID — formal portrait in the temple wearing the yellow khata, hundreds of monks seated on both sides">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-shekinaih-aaron-thangka-hall-khata-offering-ceremony.jpg" loading="lazy" alt="Khata offering ceremony in the thangka hall — SHEKINAIH and J AARON">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-shekinaih-giving-alms-to-monks-in-temple.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP personally giving alms to seated monks in the temple hall">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-shekinaih-standing-in-temple-aisle-with-monks.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP standing in the temple aisle with hundreds of young monks seated on either side, hands in prayer">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-aaron-walking-with-khata-among-young-monks.jpg" loading="lazy" alt="J AARON K DAVID walking with the white khata scarf among rows of young monks during the alms ceremony">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-aaron-kneeling-in-temple-aisle-with-monks.jpg" loading="lazy" alt="J AARON K DAVID kneeling in the central aisle of the temple, hands in prayer, surrounded by monks">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-shekinaih-aaron-illuminated-temple-night-prayer.jpg" loading="lazy" alt="Illuminated temple night prayer — SHEKINAIH and J AARON with delegation">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-shekinaih-aaron-with-his-holiness-portraits-ganden-monastery.jpg" loading="lazy" alt="At Ganden Monastery with portraits of His Holiness">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-shekinaih-commemorative-audience-certificate.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP — commemorative audience certificate">
+      <img src="images/dalai-lama-audience-2026/dalai-lama-audience-2026-aaron-commemorative-audience-certificate.jpg" loading="lazy" alt="J AARON K DAVID — commemorative audience certificate">
     </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="dalai-lama-audience-2026.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- 07 — MUMBAI BOLLYWOOD · DMGP -->
+<section class="event-detail" id="ev-mumbai">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 07 · January 2026</p>
+      <h2 class="ed-title">Mumbai &amp; Bollywood — <span class="italic">DMGP Global Diplomacy Awards</span></h2>
+      <p class="ed-loc">Lakeside Marriott Hotel, Powai, Mumbai</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>The <strong>DMGP Global Diplomacy Awards</strong> were held at the Lakeside Marriott Hotel, Powai, Mumbai, in the presence of distinguished international delegates, dignitaries, and media representatives. <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> was recognised as <strong>Global Divinity Ambassador</strong>; <span class="name-inline-silver">J AARON K DAVID</span> as <strong>Global Peace Ambassador.</strong></p>
+      <p>The ceremony was covered in <em>Niche Magazine</em> and across the Indian press, alongside the Mahatma Gandhi Diplomatic Award and Dr. B. R. Ambedkar Excellency Award presentations.</p>
+    </div>
+
+    <!-- Featured DMGP ceremony videos -->
+    <div class="full-img fade-up d2" style="padding:0 var(--container-pad)">
+      <div class="full-img-wrap" style="background:#000">
+        <video controls preload="metadata"
+               poster="images/mumbai-bollywood/mumbai-bollywood-2026-shekinaih-certificate-global-divinity-ambassador.jpg"
+               style="width:100%;height:auto;display:block">
+          <source src="images/mumbai-bollywood/mumbai-bollywood-2026-shekinaih-aaron-video-01.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p style="text-align:center;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:500;margin-bottom:32px">
+      Watch · DMGP Ceremony · Mumbai
+    </p>
+
+    <div class="ed-photos fade-up d3" style="grid-template-columns:repeat(2,1fr);display:grid;gap:14px;column-count:unset;max-width:1080px;margin:0 auto 32px">
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/mumbai-bollywood/mumbai-bollywood-2026-shekinaih-press-conference-with-dmgp-certificate-and-medal.jpg">
+        <source src="images/mumbai-bollywood/mumbai-bollywood-2026-shekinaih-aaron-video-03.mp4" type="video/mp4">
+      </video>
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/mumbai-bollywood/photo_2026-01-28_18-35-31.jpg">
+        <source src="images/mumbai-bollywood/mumbai-bollywood-2026-event-clip-short.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p style="text-align:center;font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(232,184,109,.7);font-weight:500;margin-bottom:32px">
+      DMGP press conference &amp; awards ceremony clips
+    </p>
+    <div class="ed-photos fade-up d2">
+      <img src="images/mumbai-bollywood/mumbai-bollywood-2026-shekinaih-certificate-global-divinity-ambassador.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP — DMGP Global Divinity Ambassador certificate">
+      <img src="images/mumbai-bollywood/mumbai-bollywood-2026-aaron-certificate-global-peace-ambassador.jpg" loading="lazy" alt="J AARON K DAVID — DMGP Global Peace Ambassador certificate">
+      <img src="images/mumbai-bollywood/mumbai-bollywood-2026-shekinaih-press-conference-with-dmgp-certificate-and-medal.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP at the DMGP press conference with certificate and medal">
+      <img src="images/mumbai-bollywood/mumbai-bollywood-2026-aaron-press-conference-with-dmgp-certificate-and-medal.jpg" loading="lazy" alt="J AARON K DAVID at the DMGP press conference with certificate and medal">
+      <img src="images/mumbai-bollywood/photo_2026-01-28_18-35-31.jpg" loading="lazy" alt="DMGP four-awardees group with certificates">
+      <img src="images/mumbai-bollywood/photo_2026-03-12_16-53-59.jpg" loading="lazy" alt="Niche Magazine coverage of the DMGP Mumbai event">
+    </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="mumbai-bollywood-2026.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- 08 — NAGPUR FLOWER GALA -->
+<section class="event-detail" id="ev-nagpur">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 08 · January 2026</p>
+      <h2 class="ed-title">Nagpur — <span class="italic">Flower Gala &amp; Feeding the Poor</span></h2>
+      <p class="ed-loc">Buddha Spiritual Park, Sihora-Kanhan, Nagpur, India</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>On the Auspicious Occasion of Republic Day of India — a humanitarian gathering at <strong>Buddha Spiritual Park, Sihora-Kanhan, Nagpur.</strong> Flower Gala, Alms Offering Ceremony, the distribution of <strong>151 Buddha statues</strong>, and the feeding of underprivileged communities.</p>
+      <p>Covered in the <em>Navbharat · Nagpur Metro</em> edition (Republic Day) — recognising the work of international humanitarian leaders alongside Bhante Vinacharya of Delhi, Himanshu Soni, and the local community.</p>
+    </div>
+
+    <!-- Featured worship moment video -->
+    <div class="full-img fade-up d2" style="padding:0 var(--container-pad)">
+      <div class="full-img-wrap" style="background:#000">
+        <video controls preload="metadata"
+               poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-holding-food-trays-feeding-the-poor.jpg"
+               style="width:100%;height:auto;display:block">
+          <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-lord-make-me-to-know-how-frail-i-am-worship-moment.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p style="text-align:center;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:500;margin-bottom:32px">
+      Watch · <em style="font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.5px;color:rgba(255,255,255,.85)">&ldquo;Lord, make me to know how frail I am&rdquo;</em> · A worship moment in Nagpur
+    </p>
+
+    <!-- Event clips strip -->
+    <div class="ed-photos fade-up d3" style="grid-template-columns:repeat(2,1fr);display:grid;gap:14px;column-count:unset;max-width:1080px;margin:0 auto 32px">
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-distributing-food-to-community-wide.jpg">
+        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-event-clip-01.mp4" type="video/mp4">
+      </video>
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-serving-food-to-seated-guests.jpg">
+        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-event-clip-02.mp4" type="video/mp4">
+      </video>
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-seated-as-guests-of-honor.jpg">
+        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-event-clip-03.mp4" type="video/mp4">
+      </video>
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-chief-guest-buddha-statue-distribution-nagpur.jpg">
+        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-event-clip-04.mp4" type="video/mp4">
+      </video>
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-with-buddhist-monks-flags.jpg">
+        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-event-clip-05.mp4" type="video/mp4">
+      </video>
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-with-local-families-and-children.jpg">
+        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-event-clip-06.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p style="text-align:center;font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(232,184,109,.7);font-weight:500;margin-bottom:32px">
+      Six clips from the Republic Day Flower Gala &amp; Feeding the Poor
+    </p>
+    <div class="ed-photos fade-up d2">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-event-banner-crowned-eagles-global-republic-day.jpg" loading="lazy" alt="Event banner — Crowned Eagles Global Food &amp; Blanket Distribution at Tathagat Buddha Vihar, Hiwari Nagar, Nagpur · 26 January 2026">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-holding-food-trays-feeding-the-poor.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID holding trays of food cups — feeding the poor in Nagpur">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-giving-monk-robes-to-buddhist-monks.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP personally offering monk robes to seated Buddhist monks at the Nagpur ceremony">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-giving-monk-robes-to-buddhist-monks.jpg" loading="lazy" alt="J AARON K DAVID offering monk robes to seated Buddhist monks at the Nagpur ceremony">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-distributing-food-to-community-wide.jpg" loading="lazy" alt="SHEKINAIH and J AARON K DAVID distributing food to the local community at Nagpur">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-serving-food-to-seated-guests.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID serving food to seated guests at the Nagpur humanitarian event">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-nagpur-shekinaih-aaron-with-local-families-and-children.jpg" loading="lazy" alt="SHEKINAIH and J AARON K DAVID with local families and children at the Nagpur Flower Gala">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-with-rescued-dog-aloha-buddhist-flag.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with a rescued local dog wearing an Aloha bandana, Buddhist prayer flag in the background">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-seated-as-guests-of-honor.jpg" loading="lazy" alt="SHEKINAIH and J AARON K DAVID seated as guests of honor at the Nagpur Flower Gala">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-walking-peace-event-poster.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP — Walking Peace event poster, Nagpur">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-walking-peace-event-poster.jpg" loading="lazy" alt="J AARON K DAVID — Walking Peace event poster, Nagpur">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-chief-guest-buddha-statue-distribution-nagpur.jpg" loading="lazy" alt="J AARON K DAVID as chief guest at the 151 Buddha Statue Distribution Ceremony, Nagpur">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-with-buddhist-monks-flags.jpg" loading="lazy" alt="With Buddhist monks holding flags of peace">
+    </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="nagpur-kolkata-2026.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- 09 — KOLKATA · SISTER NIVEDITA & WALK FOR PEACE -->
+<section class="event-detail" id="ev-kolkata">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 09 · February 2026</p>
+      <h2 class="ed-title">Kolkata — <span class="italic">Sister Nivedita &amp; Walk for Peace</span></h2>
+      <p class="ed-loc">Sister Nivedita University · Kolkata, India</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>A peace procession and recognition ceremony at <strong>Sister Nivedita University, Kolkata</strong> — alongside Buddhist monks, university officials, and Indian dignitaries. The <strong>Walk for Peace</strong> plaque was received at the <strong>75 Years of Peace</strong> observance.</p>
+    </div>
+
+    <!-- Featured: Award-receiving video at Sister Nivedita University -->
+    <div class="full-img fade-up d2" style="padding:0 var(--container-pad)">
+      <div class="full-img-wrap" style="background:#000">
+        <video controls preload="metadata"
+               poster="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-receiving-walk-for-peace-plaque.jpg"
+               style="width:100%;height:auto;display:block">
+          <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-kolkata-shekinaih-aaron-receiving-award-at-sister-nivedita-university.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p style="text-align:center;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:500;margin-bottom:32px">
+      Watch · Receiving the Award at Sister Nivedita University · Kolkata
+    </p>
+    <div class="ed-photos fade-up d2">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-kolkata-shekinaih-aaron-delegation-at-sister-nivedita-university-entrance.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with the delegation at the Sister Nivedita University entrance, Kolkata">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-receiving-walk-for-peace-plaque.jpg" loading="lazy" alt="SHEKINAIH and J AARON K DAVID receiving the Walk for Peace plaque, Kolkata">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-aaron-peace-procession-banner-kolkata.jpg" loading="lazy" alt="Peace procession banner in Kolkata">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-shekinaih-special-guest-plaque-75-years-of-peace.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP — special guest plaque, 75 Years of Peace">
+      <img src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-aaron-special-guest-plaque-75-years-of-peace.jpg" loading="lazy" alt="J AARON K DAVID — special guest plaque, 75 Years of Peace">
+    </div>
+    <div class="ed-cta fade-up d3"><a class="btn btn-readmore" href="nagpur-kolkata-2026.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- 10 — OMAN IISA 2026 -->
+<section class="event-detail" id="ev-oman">
+  <div class="container">
+    <div class="ed-head fade-up">
+      <p class="ed-date">Chapter 10 · February 2026</p>
+      <h2 class="ed-title">IISA 2026 — <span class="italic">Oman &amp; UAE</span></h2>
+      <p class="ed-loc">Sheraton Oman Hotel, Muscat · 12 February 2026</p>
+    </div>
+    <div class="ed-body fade-up d1">
+      <p>The <strong>IISA 2026 · 5th Edition</strong> at the Sheraton Oman Hotel — organised by I.I.I Group, Gulf Skill Pioneers and BCI under the theme <em>Oman Vision 2040: Global Partnerships Beyond Borders, Trade Talent &amp; Technology.</em> <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> delivered a keynote address; both founders were recognised on stage alongside an international cohort of delegates.</p>
+    </div>
+
+    <!-- Featured: Shekinaih Keynote Video -->
+    <div class="full-img fade-up d2" style="padding:0 var(--container-pad)">
+      <div class="full-img-wrap" style="background:#000">
+        <video controls preload="metadata"
+               poster="images/oman/photo_2026-05-25_09-09-07.jpg"
+               style="width:100%;height:auto;display:block">
+          <source src="images/oman/oman-2026-iisa-shekinaih-speech-on-stage.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p style="text-align:center;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:500;margin-bottom:32px">
+      Watch · <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> · IISA 2026 Keynote
+    </p>
+
+    <!-- Additional Oman event clips -->
+    <div class="fade-up" style="grid-template-columns:repeat(2,1fr);display:grid;gap:14px;max-width:1080px;margin:0 auto 32px;padding:0 var(--container-pad)">
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/oman/photo_2026-05-25_09-09-07.jpg">
+        <source src="images/oman/oman-2026-iisa-event-clip-01.mp4" type="video/mp4">
+      </video>
+      <video controls preload="metadata" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#000" poster="images/oman/photo_2026-05-27_09-58-36.jpg">
+        <source src="images/oman/oman-2026-iisa-event-clip-02.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p style="text-align:center;font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(232,184,109,.7);font-weight:500;margin-bottom:32px">
+      Additional IISA 2026 ceremony clips
+    </p>
+
+    <div class="ed-photos fade-up d3">
+      <img src="images/oman/photo_2026-02-10_04-12-45.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP — IISA 2026 Delegate event poster">
+      <img src="images/oman/photo_2026-02-10_04-13-04.jpg" loading="lazy" alt="J AARON K DAVID — IISA 2026 Delegate event poster">
+      <img src="images/oman/oman-2026-iisa-international-awardees-lineup-on-stage.jpg" loading="lazy" alt="International IISA 2026 awardees lineup on stage with SHEKINAIH SIEW SIN YAP and J AARON K DAVID">
+      <img src="images/oman/photo_2026-05-27_09-58-36.jpg" loading="lazy" alt="SHEKINAIH SIEW SIN YAP receiving the award plaque from the Omani official">
+      <img src="images/oman/photo_2026-05-27_09-59-46.jpg" loading="lazy" alt="J AARON K DAVID speaking on stage with international delegate panel">
+      <img src="images/oman/oman-2026-iisa-aaron-praying-with-young-omani-girl-shekinaih-present.jpg" loading="lazy" alt="J AARON K DAVID praying with a young Omani girl in a wheelchair while SHEKINAIH SIEW SIN YAP sits beside in quiet presence">
+      <img src="images/oman/oman-2026-ilsoman-welcome-sign-honoring-delegation.jpg" loading="lazy" alt="ILSOMAN welcome sign honoring the Crowned Eagles Global delegation">
+      <img src="images/oman/oman-2026-ilsoman-delegation-group-photo-conference-room.jpg" loading="lazy" alt="ILSOMAN conference room delegation photo with the Sultanate of Oman flag">
+    </div>
+    <div class="ed-cta fade-up d4"><a class="btn btn-readmore" href="oman-iisa-2026.html">Read the Full Article <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- BACK TO TOP / THUMBNAILS -->
+<button class="back-to-top" id="backTop" type="button" aria-label="Back to event index">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <span class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span>SHEKINAIH-JAARONKDAVID.COM</span>
+    </span>
+    <p class="footer-tag"><em>Transforming Lives · Connecting Nations · Inspiring Global Impact</em></p>
+    <p class="footer-meta">© 2026 <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span> · Singapore</p>
   </div>
 </footer>
 
-
+<script src="js/main.js" defer></script>
 <script>
-  // Nav scroll
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
-
-  // Mobile menu
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.add('open');
-  });
-  document.getElementById('menu-close-btn').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.remove('open');
-  });
-
-  // Scroll reveals
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  // Show/hide back-to-top button after scroll
+  (function () {
+    var btn = document.getElementById('backTop');
+    if (!btn) return;
+    function sync () { btn.classList.toggle('is-on', window.scrollY > 600); }
+    window.addEventListener('scroll', sync, { passive: true });
+    btn.addEventListener('click', function () {
+      var thumbs = document.getElementById('thumbs');
+      if (thumbs) thumbs.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
-  document.querySelectorAll('.fade-up, .fade-in').forEach(el => io.observe(el));
+    sync();
+  })();
 </script>
 
 </body>

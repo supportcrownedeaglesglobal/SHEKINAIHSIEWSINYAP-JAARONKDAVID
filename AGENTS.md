@@ -1,5 +1,33 @@
 # AGENTS.md
 
+# 🔒 The Single Most Important Rule
+
+**SHEKINAIH SIEW SIN YAP is ALWAYS rendered in GOLD font.**
+**J AARON K DAVID is ALWAYS rendered in SILVER font.**
+
+This rule is absolute. It applies to every page, every section, every component, every reference in body copy. No exceptions.
+
+```html
+<span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
+<span class="name-inline-silver">J AARON K DAVID</span>
+```
+
+— or, for display-size hero/heading contexts:
+
+```html
+<span class="name-gold">SHEKINAIH SIEW SIN YAP</span>
+<span class="name-silver">J AARON K DAVID</span>
+```
+
+❌ Plain unstyled text — forbidden
+❌ Inline `style="color: ..."` — forbidden; use the classes
+❌ White, muted, grey, default body colour — forbidden
+❌ Lowercase, mixed case, sentence case — forbidden (use FULL CAPS in source code too)
+
+This rule is checked on every commit to every page. If a name appears unstyled or in the wrong colour, the page is broken.
+
+---
+
 # AI Governance & Editing Rules
 
 This repository is a premium editorial-style personal branding and international credibility website for:
@@ -274,17 +302,53 @@ If any of these files are missing, state that clearly before editing and continu
 
 ## Name Styling Rules — ABSOLUTE, NO EXCEPTIONS
 
-| Person | Case | Colour |
-|---|---|---|
-| **SHEKINAIH SIEW SIN YAP** | FULL CAPS always | Gold `#E8B86D` with soft glow |
-| **J AARON K DAVID** | FULL CAPS always | Silver `#B8C4D8` |
+| Person | Case | Colour | Title |
+|---|---|---|---|
+| **SHEKINAIH SIEW SIN YAP** | FULL CAPS always | Gold `#E8B86D` with soft glow | **Founder** · Global Divinity Ambassador |
+| **J AARON K DAVID** | FULL CAPS always | Silver `#B8C4D8` | **Co-Founder** · Global Peace Ambassador |
 
-- Both names must **always** appear in FULL UPPERCASE.
+### Full-name rule — non-negotiable
+
+- Always write the **full name** every time. No abbreviations. No initials. No first-name-only.
+- ✅ **SHEKINAIH SIEW SIN YAP** — always all four words, in this order
+- ❌ "Shekinaih" alone — forbidden
+- ❌ "Ms Yap" — forbidden
+- ❌ "S. Yap" — forbidden
+- ❌ "Shekinaih Yap" — forbidden (must keep "SIEW SIN" middle name in full)
+- ✅ **J AARON K DAVID** — always all four words, in this order
+- ❌ "Aaron" alone — forbidden
+- ❌ "J. A. K. David" — forbidden
+- ❌ "Mr David" — forbidden
+- ❌ "J Aaron David" — forbidden (must keep "K" middle initial)
+
+### Full-caps rule — non-negotiable
+
+- Both names must **always** render in **FULL UPPERCASE** wherever they appear in visible body text, headings, captions, overlays, CTAs, role labels, image alt text, document titles, social meta, anywhere.
+- ❌ "Shekinaih Siew Sin Yap" (mixed case) — forbidden
+- ❌ "j aaron k david" (lowercase) — forbidden
+- CSS already applies `text-transform: uppercase` via the `.name-gold` / `.name-silver` / `.name-inline-gold` / `.name-inline-silver` classes, but content authors should ALSO type the names in CAPS in source code so they read correctly without CSS (and for SEO).
+
+### Title / role rule
+
+- **SHEKINAIH SIEW SIN YAP** is the **Founder**.
+- **J AARON K DAVID** is the **Co-Founder**. (NOT "Founder", NOT "Partner alone" — Co-Founder.)
+- Both lead **Crowned Eagles Global LLP** and **CE Global Network LLP** together.
+
+### Colour rule
+
 - `SHEKINAIH SIEW SIN YAP` → **gold** (`#E8B86D`), never white, never muted.
-- `J AARON K DAVID` → **silver** (`#B8C4D8`), never gold, never white.
+- `J AARON K DAVID` → **silver** (`#B8C4D8` / metallic silver gradient), never gold, never white.
 - When both names appear together the ampersand `&` is in `rgba(255,255,255,.2)`.
 - These rules apply everywhere: headings, captions, overlays, running copy, CTAs.
-- Never abbreviate either name. Never use first name only.
+
+### Where the visual styling is NOT applied (but the typed casing still must be)
+
+- `<title>` HTML elements — browsers strip nested HTML; type the names in CAPS but do NOT wrap in `<span>` here
+- `alt="..."` attributes on images — type the names in CAPS but spans are stripped
+- `<meta>` tag `content="..."` attributes — type in CAPS, spans stripped
+- `data-lb-caption=` / `data-lb-label=` lightbox JSON attributes — type in CAPS, JS strips HTML
+
+In all other places — wrap the names with the appropriate `.name-*` class so the gold/silver colour treatment is applied.
 
 ---
 
@@ -305,6 +369,71 @@ Editorial framing rules:
 - **Other guests, celebrities, dignitaries, and figures appear only to establish the calibre of the circles SHEKINAIH SIEW SIN YAP and J AARON K DAVID are received within** — they are credentials of association, not subjects of the page.
 - Never let the page tilt into being "about" the celebrity, host, or honoree being met. The page is always about SHEKINAIH SIEW SIN YAP and J AARON K DAVID.
 - Body text grammar should keep SHEKINAIH SIEW SIN YAP (and AARON) as the grammatical subjects of sentences whenever possible.
+
+---
+
+## Photo Ordering Rule — ABSOLUTE, NO EXCEPTIONS
+
+**SHEKINAIH SIEW SIN YAP's photo always appears FIRST. J AARON K DAVID's photo follows.**
+
+This is the visual counterpart to the name-ordering rule. It applies to every page, every section, every component where photos of the founders are displayed.
+
+### Ordering rules
+
+1. **Single photo of both subjects** — preferred. Shekinaih should be in the frame; ideally positioned left or foreground. Filenames that follow the `shekinaih-aaron-…` convention indicate Shekinaih is the primary subject — pick those over `aaron-shekinaih-…` variants.
+2. **Two photos side-by-side or stacked** — Shekinaih's photo always **first** (left on desktop, top on mobile vertical stacks). Aaron's photo follows.
+3. **Multiple thumbnails in a grid** — when both subjects have individual portraits, Shekinaih's appears in the **first/top-left** position.
+4. **Galleries / masonry** — first item in any filtered set should feature Shekinaih (alone or together with Aaron). Aaron-only photos come after.
+
+### Both-must-appear rule
+
+**Every event, every section, every card that visually represents the founders must include BOTH SHEKINAIH SIEW SIN YAP and J AARON K DAVID in some form.**
+
+- If only one of them has a photo available for a specific event (e.g. Aaron alone was Chief Guest at a ceremony), you must still include Shekinaih's representation — either:
+  - A separate photo of Shekinaih from the same trip/event series, displayed first; **or**
+  - A both-together photo from the same trip; **or**
+  - If neither exists, ask the user — do not publish a single-subject event card.
+- **A single-subject Aaron-only photo as the sole image of an event is forbidden.** Shekinaih is the lead protagonist; her absence from the visual must always be remedied.
+
+### Pre-flight check before placing an event-card image
+
+1. Open the candidate image with `Read` and confirm Shekinaih is visible in the frame.
+2. If she's not, find another image from the same event folder where both subjects appear, or use a dual-image layout.
+3. If no suitable image exists, surface this to the user before publishing.
+
+### Video ordering — same rule as photos
+
+Where the page presents **video** files of the founders (speeches, interviews, ministry moments):
+
+- A video of **SHEKINAIH SIEW SIN YAP speaking solo** appears **before** any video of J AARON K DAVID speaking solo.
+- A both-together video (e.g. JT Foxx interview) takes precedence over either solo video.
+- When featuring a single hero video for an event, prefer a clip in which SHEKINAIH appears or speaks first.
+- Filenames following the `shekinaih-…` or `shekinaih-aaron-…` convention signal correct ordering; pick those over `aaron-…` variants where both exist.
+
+### New-media audit habit — run BEFORE touching any event section
+
+Before improving or restructuring an event section (Oman, Mumbai, Manila Up, etc.) the agent **must** re-scan for new generic-named files added since the last visit. Files commonly arrive with names like:
+
+- `WhatsApp Image YYYY-MM-DD at HH.MM.SS.jpeg`
+- `IMG_NNNN.jpg`
+- `photo_YYYY-MM-DD_HH-MM-SS.jpg`
+- `video_YYYY-MM-DD_HH-MM-SS.mp4`
+- All-caps descriptive names like `SHEKINAIH OMAN SPEECH.mp4`
+- `oman_forwarding_company_N.jpeg` and other camelCase / underscore variants
+
+Standard command to find them:
+
+```bash
+find images/ videos/ -type f \( -iname "photo_*" -o -iname "video_*" -o -iname "IMG_*" -o -iname "WhatsApp Image*" -o -iname "*OMAN SPEECH*" -o -iname "*forwarding_company*" \) 2>/dev/null
+```
+
+Once located, each new file must be **opened**, **content-identified**, and **renamed** to follow:
+
+```
+<event-slug>-<year>-<subject-or-context>-<short-description>.<ext>
+```
+
+The agent does not leave WhatsApp / IMG / all-caps / generic-named files in the production folders. Always rename before placing references in HTML.
 
 ---
 
