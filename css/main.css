@@ -2441,3 +2441,6 @@ body.mm-open .chapter-fab { display: none !important }
 /* ── GLOBAL READABILITY (requested): heavier, easier-to-read body copy ── */
 body, p, li { font-weight: 500 }
 .lede, .body, .e-desc, .mag-desc, .section-sub, .aw-body, .aw-presenter, .bio-prose p, .founder-card p, .video-summary p, .glance-cell-sub, .conn-subtitle { font-weight: 500 !important }
+
+/* ── Bug fix: every video fits the viewport & shows in full (no overflow/cropping) ── */
+video{max-width:100%;max-height:82vh;object-fit:contain}
