@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     :root{
-      --ink:#08091A; --ink2:#12152B;
+      --ink:#002F5D; --ink2:#002F5D;
       --gold:#C8923A; --gold2:#E8B86D;
       --silver:#B8C4D8; --saffron:#E29C44;
       --white:#FFFFFF;
@@ -27,7 +27,7 @@
     /* ─── TOP NAV ─── */
     .topbar{
       position:fixed;top:0;left:0;right:0;z-index:99;height:60px;
-      background:rgba(8,9,26,.9);backdrop-filter:blur(20px);
+      background:rgba(0,47,93,.9);backdrop-filter:blur(20px);
       border-bottom:1px solid rgba(255,255,255,.06);
       display:flex;align-items:center;justify-content:space-between;
       padding:0 clamp(20px,5vw,60px);
@@ -221,7 +221,7 @@
     .video-label{
       font-family:'Cinzel',serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
       font-weight:700;color:#F0C660;text-align:center;
-      padding:14px 12px;background:rgba(8,9,26,.85);margin:0;
+      padding:14px 12px;background:rgba(0,47,93,.85);margin:0;
       text-shadow:0 1px 8px rgba(232,184,109,.3);
     }
 
@@ -626,9 +626,20 @@
   </div>
 </section>
 
-<div class="story-block reverse" style="margin-top:48px">
-  <div class="story-text fade-up">
-    <p class="story-eyebrow">Watch · The Worship</p>
+<!-- The Worship video — brought to the front, right after the scripture lead-in -->
+<div class="section wide" style="padding-top:24px;padding-bottom:0">
+  <div class="video-wrap fade-up" style="max-width:900px;margin:0 auto">
+    <video controls preload="metadata" playsinline>
+      <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-lord-make-me-to-know-how-frail-i-am-worship-moment.mp4" type="video/mp4"/>
+      Your browser does not support HTML5 video.
+    </video>
+    <p class="video-label">Watch · The Worship · Psalm 39 · Funeral Service</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="story-text fade-up" style="max-width:820px;margin:0 auto">
+    <p class="story-eyebrow">The Worship</p>
     <h3 class="story-title">A Psalm of David, Sung Over a Grieving Community</h3>
     <p class="story-meta">Sister Nivedita University · Kolkata · A separate day in the same visit</p>
     <p class="story-body">
@@ -646,16 +657,7 @@
       weight when weight needs to be carried.
     </p>
   </div>
-  <div class="fade-up d1">
-    <div class="video-wrap">
-      <video controls preload="metadata" playsinline>
-        <source src="images/nagpur-kolkata-2026/nagpur-kolkata-2026-lord-make-me-to-know-how-frail-i-am-worship-moment.mp4" type="video/mp4"/>
-        Your browser does not support HTML5 video.
-      </video>
-      <p class="video-label">Watch · The Worship · Psalm 39 · Funeral Service</p>
-    </div>
-  </div>
-</div>
+</section>
 
 <!-- ─── CLOSING REFLECTION ─── -->
 <section class="section">
