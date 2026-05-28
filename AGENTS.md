@@ -334,6 +334,17 @@ If any of these files are missing, state that clearly before editing and continu
 - **J AARON K DAVID** is the **Co-Founder**. (NOT "Founder", NOT "Partner alone" — Co-Founder.)
 - Both lead **Crowned Eagles Global LLP** and **CE Global Network LLP** together.
 
+### Strategy & execution framing — ABSOLUTE
+
+- **SHEKINAIH SIEW SIN YAP** is the **core / main business strategist** who **writes the blueprint AND executes it** — the strategic architect and **lead executor**. She **executes**.
+- **J AARON K DAVID** **co-executes** — the **co-executing force** who builds it **alongside her**. (NOT "the one who executes it", NOT "executing force" alone — always *co*-execute / *co*-executing.)
+- Canonical phrasing: *"SHEKINAIH SIEW SIN YAP writes the blueprint and executes it; J AARON K DAVID co-executes it alongside her."*
+
+### Corporate titles (current — keep in sync)
+
+- **SHEKINAIH SIEW SIN YAP** — Founder & Managing Partner, **Crowned Eagles Global LLP** · Managing Partner, **CE Global Network LLP** · **Managing Director** of **Crowned Eagles Global Group Holdings Pte. Ltd.**, **CE Global Network International Pte. Ltd.**, and **Crowned Eagles Global IP Holdings Pte. Ltd.**
+- **J AARON K DAVID** — Co-Founder & Partner, **Crowned Eagles Global LLP** and **CE Global Network LLP**.
+
 ### Colour rule
 
 - `SHEKINAIH SIEW SIN YAP` → **gold** (`#E8B86D`), never white, never muted.
