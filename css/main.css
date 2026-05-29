@@ -132,13 +132,11 @@ body::before {
   text-shadow: 0 0 1px rgba(232,184,109,.4);
 }
 .name-silver {
-  background: linear-gradient(135deg, #E8ECF2 0%, #FFFFFF 35%, #B8C4D8 65%, #E8ECF2 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
+  color: #D9E1EF;
+  font-weight: 800;
   letter-spacing: .045em;
   text-transform: uppercase;
-  filter: drop-shadow(0 1px 8px rgba(230,235,244,.35));
+  text-shadow: 0 1px 10px rgba(200,212,232,.35);
 }
 .amp {
   color: rgba(255,255,255,.32);
@@ -157,11 +155,11 @@ body::before {
   filter: drop-shadow(0 1px 6px rgba(232,184,109,.35));
 }
 .name-inline-silver {
-  color: #DDE3EE;
-  font-weight: 700;
+  color: #DDE5F2;
+  font-weight: 800;
   letter-spacing: .04em;
   text-transform: uppercase;
-  text-shadow: 0 0 1px rgba(220,228,242,.4);
+  text-shadow: 0 0 1px rgba(220,228,242,.55);
 }
 
 /* ---------- 3. Layout primitives ---------- */
@@ -888,8 +886,20 @@ body::before {
 @media (min-width: 880px) {
   .bio { grid-template-columns: 520px 1fr; gap: 48px; align-items: stretch }
   .bio-alt { grid-template-columns: 1fr 520px }
-  .bio-alt .bio-portrait { order: 2 }
+  .bio-alt .bio-left { order: 2 }
   .bio-alt .bio-body { order: 1 }
+  /* Header group (role · name · subtitle · award) above the portrait */
+  .bio-head { display: flex; flex-direction: column; gap: 10px; }
+  /* Left column = credential block stacked above the portrait.
+     The write-up (right) defines the height; the image fills the remaining
+     space below the credentials so left and right columns match height. */
+  .bio-left {
+    display: flex; flex-direction: column; gap: 20px;
+    align-self: stretch; min-height: 0;
+  }
+  .bio-left .bio-credentials { margin: 0; }
+  .bio-left .bio-portrait { flex: 1 1 auto; min-height: 0; }
+
   /* The write-up defines the height; the book image fills it without cropping.
      Image is taken out of flow so it never drives the row taller than the text.
      NOTE: selectors are prefixed with .bio to out-specify the base mobile rule. */
@@ -2539,12 +2549,40 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 }
 
 /* Silver metallic name treatment (J AARON K DAVID inline) — stands out from white */
-.name-inline-silver{background:linear-gradient(120deg,#C2CEE2 0%,#F2F6FC 20%,#90A1BE 46%,#6E82A2 68%,#C2CEE2 100%) !important;-webkit-background-clip:text !important;background-clip:text !important;-webkit-text-fill-color:transparent !important;color:transparent !important;text-shadow:0 0 16px rgba(140,165,205,.38) !important}
+.name-inline-silver{background:none !important;-webkit-background-clip:border-box !important;background-clip:border-box !important;-webkit-text-fill-color:currentColor !important;color:#DDE5F2 !important;font-weight:800 !important;text-shadow:0 1px 10px rgba(200,212,232,.40) !important}
 
 /* Event newspaper English-translation caption */
 .e-cap{font-size:13px;line-height:1.65;color:rgba(255,255,255,.6);margin:-2px 0 16px}
 .e-cap em{color:var(--gold2);font-style:normal;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;margin-right:4px}
 .e-cap strong{color:rgba(255,255,255,.82)}
+
+/* ── Translated newspaper excerpt panel ── */
+.e-translation{
+  margin:-2px 0 18px;
+  padding:18px 20px 19px;
+  background:var(--ink2);
+  border:1px solid rgba(232,184,109,.18);
+  border-radius:12px;
+}
+.e-translation-label{
+  font-family:'Cinzel',serif;font-size:10px;font-weight:700;
+  letter-spacing:2.4px;text-transform:uppercase;
+  color:var(--gold2);margin:0 0 7px;
+}
+.e-translation-meta{
+  font-size:11.5px;letter-spacing:.4px;
+  color:rgba(255,255,255,.5);margin:0 0 10px;
+}
+.e-translation-meta strong{color:rgba(255,255,255,.82);font-weight:700}
+.e-translation-head{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(18px,1.9vw,22px);font-weight:600;line-height:1.3;
+  color:#fff;margin:0 0 10px;
+}
+.e-translation-body{
+  font-size:13.5px;line-height:1.7;
+  color:rgba(255,255,255,.66);margin:0;
+}
 
 /* ── Hero credential chips (replaces plain subhead list) ── */
 .hero-creds{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px;padding:0;max-width:760px}
