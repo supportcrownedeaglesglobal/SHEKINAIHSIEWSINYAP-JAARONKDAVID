@@ -28,6 +28,36 @@ This rule is checked on every commit to every page. If a name appears unstyled o
 
 ---
 
+# 🏛 MASTER POSITIONING & WRITING STANDARD (applies to EVERY page — design + copy)
+
+**Objective:** this is not a ministry website. It is a **world-class historical archive / leadership-diplomacy platform / humanitarian-legacy institution**. Every page should read like *history documenting itself* — a presidential archive crossed with a cinematic documentary. The visitor's reaction should be: *"Who are these people, and why are universities, diplomats, monks, peace bodies and global events receiving them?"*
+
+### Writing style — museum-grade, documentary, restrained
+- Tone: **timeless, elegant, restrained, intelligent, globally credible.** Museum/diplomatic-archive + cinematic-documentary — NOT inspirational-blog, NOT promotional.
+- **SHOW significance, never CLAIM it.** Let institutions, audiences, ceremonies and environments prove the stature. ❌ "They are powerful leaders." ✅ "In hall after hall, institutions opened their doors — not merely to host them, but to receive what they carried."
+- **Never** sound boastful, self-promoting, exaggerated, or commercial. Feel **documented, witnessed, archived, institutionally acknowledged.**
+- Avoid adjective pile-ups, repeated grand claims, and over-explaining spirituality. Short, powerful paragraphs; emotional pacing (curiosity → intrigue → awe → reflection); elegant quote blocks; atmospheric transitions.
+
+### Event-page narrative arc (structure every event this way)
+**Context** (why it mattered) → **Arrival** (how they entered) → **Atmosphere** (the room's tone) → **Interaction** (with leaders/audiences/institutions) → **Key Moment** (the defining prayer/blessing/speech/humanitarian act/recognition) → **Impact** (how people responded) → **Legacy** (why it matters beyond the day).
+
+### Captions — archival, not labels
+❌ "SHEKINAIH with university leaders." ✅ "Moments before the prayer over the institution and its students." Every caption reads like a documentary archive line.
+
+### Positioning
+- Frame them as **bridge figures** between nations, faiths, cultures, education, humanitarian causes, diplomacy and transformation — far stronger than "religious figures."
+- Subtly reinforce **international recognition & institutional trust** (universities welcoming them, peace bodies recognising them, cross-cultural receptions, ceremonies) without arrogance — this is **global legitimacy**.
+- Foreground **humanitarian action** (peace missions, food/blanket distribution, feeding the sangha, community service) — the strongest cross-audience credibility signal.
+- **SHEKINAIH SIEW SIN YAP** = calm, composed, dignified, maternal, internationally respected, ceremonially honoured, emotionally grounding central presence (NOT aggressive authority). **J AARON K DAVID** = steady, intelligent, composed, trusted, the strategic/co-executing counterpart. The pairing is balanced; Shekinaih is always featured first.
+
+### Design / visual storytelling
+- Cinematic: generous spacing, elegant typography, large impactful visuals, slow-scroll sequencing, real (documentary-authentic) photography — no artificial/fantasy graphics. Authenticity creates authority.
+- Group higher-level legacy framing where natural: International Engagements · Universities & Institutions · Humanitarian Missions · Peace & Diplomacy · Global Recognition · Documentary Archives.
+
+**Final test for any page:** does it feel credible enough for diplomats, universities, investors and international leaders — like an internationally-received transformational legacy, not a personal promo?
+
+---
+
 # AI Governance & Editing Rules
 
 This repository is a premium editorial-style personal branding and international credibility website for:
