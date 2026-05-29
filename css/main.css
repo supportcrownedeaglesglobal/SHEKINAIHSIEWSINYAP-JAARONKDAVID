@@ -886,18 +886,46 @@ body::before {
   background: linear-gradient(90deg, transparent 0%, #B8C4D8 35%, #DDE3EE 50%, #B8C4D8 65%, transparent 100%);
 }
 @media (min-width: 880px) {
-  .bio { grid-template-columns: 520px 1fr; gap: 48px; align-items: start }
+  .bio { grid-template-columns: 520px 1fr; gap: 48px; align-items: stretch }
   .bio-alt { grid-template-columns: 1fr 520px }
   .bio-alt .bio-portrait { order: 2 }
   .bio-alt .bio-body { order: 1 }
+  /* The write-up defines the height; the book image fills it without cropping.
+     Image is taken out of flow so it never drives the row taller than the text.
+     NOTE: selectors are prefixed with .bio to out-specify the base mobile rule. */
+  .bio .bio-portrait { align-self: stretch; }
+  /* Blurred copy of the same photo fills the leftover space elegantly */
+  .bio .bio-portrait::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: var(--bio-bg);
+    background-size: cover; background-position: center;
+    transform: scale(1.18);
+    filter: blur(34px) brightness(.45) saturate(1.1);
+    z-index: 0;
+  }
+  .bio .bio-portrait::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(8,9,26,.35), rgba(8,9,26,.55));
+    z-index: 0;
+  }
+  .bio .bio-portrait img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    object-position: center;
+    z-index: 1;
+  }
+  .bio .bio-portrait-tag { z-index: 2; }
 }
 
-/* Portrait — show the full magazine, never cropped, at a bigger scale */
+/* Portrait — show the full magazine, never cropped; height matches the write-up */
 .bio-portrait {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  align-self: start;
+  background: var(--ink2);
   box-shadow:
     0 30px 80px rgba(0,0,0,.55),
     0 0 0 1px rgba(200,146,58,.28);
@@ -929,6 +957,47 @@ body::before {
   letter-spacing: 3px; text-transform: uppercase;
   color: #F0C660; font-weight: 800;
   text-shadow: 0 1px 12px rgba(232,184,109,.4);
+}
+
+/* Organized, tiered corporate credential block (role · entity) */
+.bio-credentials {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bio-credentials li {
+  display: grid;
+  grid-template-columns: minmax(170px, 200px) 1fr;
+  gap: 4px 22px;
+  align-items: start;
+  padding: 11px 0;
+  border-top: 1px solid rgba(232,184,109,.16);
+}
+.bio-credentials li:first-child { border-top: none; padding-top: 2px; }
+.bio-credentials .bcr-role {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #F0C660;
+  text-shadow: 0 1px 10px rgba(232,184,109,.35);
+  line-height: 1.5;
+}
+.bio-credentials .bcr-org {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: rgba(255,255,255,.9);
+  line-height: 1.45;
+}
+.bio-credentials .bcr-org br { line-height: 1.7; }
+@media (max-width: 640px) {
+  .bio-credentials li { grid-template-columns: 1fr; gap: 2px; }
+  .bio-credentials .bcr-role { font-size: 11px; letter-spacing: 2px; }
 }
 .bio-role-silver { color: #DDE3EE; text-shadow: 0 1px 12px rgba(213,221,233,.35) }
 .bio-name {
