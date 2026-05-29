@@ -586,7 +586,7 @@ body,p,li{font-weight:500}
 /* Mobile reading polish (latest): larger, easier body copy on phones */
 @media (max-width:720px){.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc,.citation-text{font-size:16.5px !important;line-height:1.74 !important}}
 /* Silver metallic name treatment (J AARON K DAVID inline) — stands out from white */
-.name-inline-silver{background:none !important;-webkit-background-clip:border-box !important;background-clip:border-box !important;-webkit-text-fill-color:currentColor !important;color:#DDE5F2 !important;font-weight:800 !important;text-shadow:0 1px 10px rgba(200,212,232,.40) !important}
+.name-inline-silver{background:none !important;-webkit-background-clip:border-box !important;background-clip:border-box !important;-webkit-text-fill-color:currentColor !important;color:#EBF1FB !important;font-weight:800 !important;text-shadow:0 0 1px rgba(255,255,255,.55), 0 0 12px rgba(176,198,235,.42) !important}
 </style>
 </head>
 <body>
@@ -1191,5 +1191,67 @@ body,p,li{font-weight:500}
   });
 })();
 </script>
+<!-- cx-nav -->
+<style id="cx-nav-style">
+body{padding-bottom:96px}
+.cx-bar{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:9990;display:flex;align-items:center;gap:6px;background:rgba(18,21,43,.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(232,184,109,.28);border-radius:100px;padding:7px 8px;box-shadow:0 18px 50px rgba(0,0,0,.55)}
+.cx-bar a,.cx-bar button{font-family:'Cinzel',serif;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:#EFE4CC;background:none;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:7px;border-radius:100px;transition:background .2s,color .2s}
+.cx-arrow{width:42px;height:42px;justify-content:center;font-size:20px;line-height:1;color:#E8B86D}
+.cx-arrow:hover{background:rgba(232,184,109,.16)}
+.cx-arrow.cx-off{opacity:.22;pointer-events:none}
+.cx-center{padding:11px 18px;font-size:12px}
+.cx-center:hover{background:rgba(232,184,109,.16);color:#fff}
+.cx-center .cx-count{color:#E8B86D}
+.cx-dot{width:6px;height:6px;border-radius:50%;background:#E8B86D;box-shadow:0 0 9px rgba(232,184,109,.75);flex-shrink:0}
+.cx-panel{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;background:rgba(4,5,15,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.cx-panel.cx-open{display:flex}
+.cx-sheet{background:#0B0D20;border:1px solid rgba(232,184,109,.25);border-radius:20px;max-width:580px;width:calc(100% - 40px);max-height:82vh;overflow:auto;padding:28px 22px 22px;box-shadow:0 40px 100px rgba(0,0,0,.7)}
+.cx-sheet h4{font-family:'Cinzel',serif;color:#E8B86D;font-size:13px;letter-spacing:3px;text-transform:uppercase;margin:0 0 18px;text-align:center}
+.cx-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}
+.cx-list a{display:flex;align-items:baseline;gap:13px;padding:12px 14px;border-radius:12px;text-decoration:none;color:#DDE3EE;transition:background .2s}
+.cx-list a:hover{background:rgba(232,184,109,.10)}
+.cx-list a.cx-current{background:rgba(232,184,109,.14);box-shadow:inset 0 0 0 1px rgba(232,184,109,.32)}
+.cx-num{font-family:'Cinzel',serif;color:#E8B86D;font-size:12px;font-weight:700;min-width:28px}
+.cx-ti{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;line-height:1.25;color:#fff}
+.cx-da{display:block;font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:3px}
+.cx-foot{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.cx-foot a,.cx-foot button{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);background:none;border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:10px 22px;cursor:pointer;text-decoration:none;transition:color .2s,border-color .2s}
+.cx-foot a:hover,.cx-foot button:hover{color:#fff;border-color:rgba(232,184,109,.55)}
+@media(max-width:600px){
+ .cx-bar{left:12px;right:12px;bottom:12px;transform:none;justify-content:space-between}
+ .cx-center{flex:1;justify-content:center}
+ .cx-panel{align-items:flex-end}
+ .cx-sheet{border-radius:20px 20px 0 0;width:100%;max-height:86vh}
+}
+</style>
+<nav class="cx-bar" aria-label="Chapter navigation">
+  <a class="cx-arrow" href="nagpur-republic-day-2026.html" aria-label="Previous chapter">‹</a>
+  <button class="cx-center" type="button" onclick="document.getElementById('cxPanel').classList.add('cx-open')"><span class="cx-dot"></span> Chapters <span class="cx-count">9 / 11</span></button>
+  <a class="cx-arrow" href="sister-nivedita-university-2026.html" aria-label="Next chapter">›</a>
+</nav>
+<div class="cx-panel" id="cxPanel" onclick="if(event.target===this)this.classList.remove('cx-open')">
+  <div class="cx-sheet" role="dialog" aria-label="All chapters">
+    <h4>The Chronicle · Eleven Chapters</h4>
+    <ul class="cx-list">
+      <li><a class="" href="us-megasuccess2025.html"><span class="cx-num">01</span><span><span class="cx-ti">MegaSuccess — Los Angeles</span><span class="cx-da">November 2025</span></span></a></li>
+      <li><a class="" href="manila-up-gala.html"><span class="cx-num">02</span><span><span class="cx-ti">Manila Up — Red Carpet & Feature</span><span class="cx-da">2025</span></span></a></li>
+      <li><a class="" href="hollywood-walk-of-fame-2025.html"><span class="cx-num">03</span><span><span class="cx-ti">Hollywood — Walk of Fame</span><span class="cx-da">2025</span></span></a></li>
+      <li><a class="" href="his-presence-fire-cathedral-2025.html"><span class="cx-num">04</span><span><span class="cx-ti">His Presence Fire — Los Angeles</span><span class="cx-da">November 2025</span></span></a></li>
+      <li><a class="" href="gls-thailand-2025.html"><span class="cx-num">05</span><span><span class="cx-ti">Bangkok — UNPKFC Certificate of Honor</span><span class="cx-da">December 2025</span></span></a></li>
+      <li><a class="" href="dalai-lama-audience-2026.html"><span class="cx-num">06</span><span><span class="cx-ti">Audience with His Holiness the Dalai Lama</span><span class="cx-da">January 2026</span></span></a></li>
+      <li><a class="" href="mumbai-bollywood-2026.html"><span class="cx-num">07</span><span><span class="cx-ti">Mumbai — DMGP Global Diplomacy Awards</span><span class="cx-da">January 2026</span></span></a></li>
+      <li><a class="" href="nagpur-republic-day-2026.html"><span class="cx-num">08</span><span><span class="cx-ti">Nagpur — Buddhist Gala & Feeding the Poor</span><span class="cx-da">January 2026</span></span></a></li>
+      <li><a class="cx-current" href="kolkata-walk-for-peace-2026.html"><span class="cx-num">09</span><span><span class="cx-ti">Kolkata — The Walk for Peace</span><span class="cx-da">February 2026</span></span></a></li>
+      <li><a class="" href="sister-nivedita-university-2026.html"><span class="cx-num">10</span><span><span class="cx-ti">Kolkata — Sister Nivedita University</span><span class="cx-da">February 2026</span></span></a></li>
+      <li><a class="" href="oman-iisa-2026.html"><span class="cx-num">11</span><span><span class="cx-ti">Oman & UAE — IISA 2026</span><span class="cx-da">February 2026</span></span></a></li>
+    </ul>
+    <div class="cx-foot">
+      <a href="index.html#chronicle">View full timeline →</a>
+      <button type="button" onclick="document.getElementById('cxPanel').classList.remove('cx-open')">Close</button>
+    </div>
+  </div>
+</div>
+<script>document.addEventListener("keydown",function(e){if(e.key==="Escape"){var p=document.getElementById("cxPanel");if(p)p.classList.remove("cx-open");}});</script>
+<!-- /cx-nav -->
 </body>
 </html>

@@ -14,6 +14,22 @@
 
 ---
 
+## 🔒 LOCKED CONTENT — DO NOT ALTER, REPHRASE, OR SHORTEN
+
+The following copy is **owner-approved and protected**. Never reword, condense, "improve," or restyle it. Restore it verbatim if found changed.
+
+### Dalai Lama Chronicle card (index.html · `#ev-dalai-lama`)
+- Date: **January 2026**
+- Title: **Honorable Audience with His Holiness the Dalai Lama**
+- Body (three paragraphs, exact):
+  1. *SHEKINAIH SIEW SIN YAP and J AARON K DAVID stand under a divine mandate from the GOD OF THE UNIVERSE, entrusted with a sacred assignment of spiritual authority, blessing, and rulership stewardship.*
+  2. *Their audience with the Dalai Lama is regarded as a significant spiritual encounter, symbolizing the transfer of divine responsibility and the restoration of rulership authority back into the hand of THE GOD OF THE UNIVERSE.*
+  3. *In this mandate, SHEKINAIH SIEW SIN YAP stands as THE MAJOR, and J AARON K DAVID stands as THE MINOR, representing divine order, spiritual governance, and the purposes of THE GOD OF THE UNIVERSE on Earth.*
+
+(Name styling still applies: SHEKINAIH gold, J AARON silver. Only the wording is locked.)
+
+---
+
 ## ⚠️ Mandatory: read BRAND.md first
 
 **Before making ANY visual decision — colours, fonts, spacing, motion, components — read `BRAND.md` in full.**

@@ -10,3 +10,9 @@ Thumbs.db
 
 # Local-only video production scripts — not part of the website
 video-scripts/
+
+# Raw upload dumps — not referenced by the site, exceed GitHub size limits
+images/Sister Nivedita University/
+images/The Walk for Peace/
+images/**/WhatsApp Image *
+images/**/WhatsApp Video *
