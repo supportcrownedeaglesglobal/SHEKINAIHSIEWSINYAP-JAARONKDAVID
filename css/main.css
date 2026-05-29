@@ -399,7 +399,7 @@ body::before {
   align-items: center;
 }
 @media (min-width: 901px) {
-  .hero-grid { grid-template-columns: 1fr 1.15fr; gap: clamp(48px, 6vw, 88px) }
+  .hero-grid { grid-template-columns: 1fr 1.15fr; gap: clamp(48px, 6vw, 88px); align-items: start }
 }
 .hero-text { text-align: center }
 @media (min-width: 901px) { .hero-text { text-align: left } }
@@ -459,7 +459,7 @@ body::before {
   box-shadow: 0 50px 110px rgba(0,0,0,.6), 0 0 0 1px rgba(200,146,58,.22);
   transform: perspective(1200px) rotateY(-2deg);
   transition: transform .55s cubic-bezier(.22,.61,.36,1), box-shadow .55s ease;
-  max-width: 580px; margin: 0 auto;
+  max-width: 680px; margin: 0 auto;
 }
 .hero-img-wrap:hover {
   transform: perspective(1200px) rotateY(0deg) translateY(-6px);
