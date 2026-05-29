@@ -1527,7 +1527,7 @@ body::before {
   margin-bottom: 16px;
   box-shadow: 0 8px 28px rgba(0,0,0,.5);
 }
-.aw-figure-wide img { max-height: 540px; object-fit: contain; background: rgba(0,0,0,.3) }
+.aw-figure-wide img { max-height: 540px; object-fit: contain; background: #0A1A4F }
 .aw-figure figcaption {
   display: flex; flex-direction: column; gap: 8px;
   text-align: center;
@@ -1637,16 +1637,14 @@ body::before {
   overflow: hidden;
   box-shadow:
     0 60px 140px rgba(0,0,0,.75),
-    0 0 0 1px rgba(200,146,58,.3),
-    0 0 80px rgba(232,184,109,.18);
+    0 0 0 1px rgba(200,146,58,.3);
   transition: transform .55s cubic-bezier(.22,.61,.36,1), box-shadow .55s ease;
 }
 .finale-frame:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow:
     0 80px 160px rgba(0,0,0,.8),
-    0 0 0 1px rgba(232,184,109,.55),
-    0 0 120px rgba(232,184,109,.28);
+    0 0 0 1px rgba(232,184,109,.55);
 }
 .finale-frame img {
   width: 100%; height: auto; display: block;
