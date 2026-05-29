@@ -17,7 +17,7 @@ This file is a local handoff note so a later Claude review can understand the cu
 
 ## Personal IP Branding
 
-The visible website identity is now `shekinaihssyap-jaaronkdavid.com` instead of Crowned Eagles Global.
+The visible website identity is now `shekinaih-jaaronkdavid.com` instead of Crowned Eagles Global.
 
 This applies to site-level identity surfaces such as:
 

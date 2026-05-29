@@ -56,6 +56,28 @@ This rule is checked on every commit to every page. If a name appears unstyled o
 
 **Final test for any page:** does it feel credible enough for diplomats, universities, investors and international leaders — like an internationally-received transformational legacy, not a personal promo?
 
+### 🎬 Cinematic experience & UX standard (reference: Apple × Netflix documentary × luxury editorial)
+- **Space = power.** Favour generous whitespace and breathing room over density. Pages should never feel compressed; let sections breathe and scroll slowly.
+- **Typography hierarchy:** large, cinematic headlines; short, readable paragraphs; refined editorial line-spacing and paragraph rhythm; distinct, elegant quote and caption styling.
+- **Documentary pacing:** subtle fade-in/scroll transitions, ambient movement, emotional sequencing — **curiosity → intrigue → respect → connection → reflection → awe**. Pacing, not constant intensity.
+- **Quieter = more elite.** Reduce visual noise, heavy glows, and dramatic wording. Confidence through restraint. Elite branding never argues; it documents.
+- **Museum-grade imagery:** consistent, cinematic aspect ratios; clean framing (no body/face cropping); elegant hover; and **archival captions** ("Moments before the prayer over the institution and its students" — never "X speaking at university").
+- **Film-like hero:** open with restrained significance and an elegant name reveal, never loud self-promotion.
+- **Cinematic video:** treat every video as preserved/historical — clean poster frame, elegant label/overlay, archival caption; sized to fit the viewport (16:9, never overflowing).
+- **Legacy architecture (build with documented evidence, not claims):** International Engagements · Universities & Institutions · Humanitarian Impact (food/blanket distribution, feeding the sangha, community service) · Peace & Diplomacy · Global Legacy Timeline · Global Recognition · Documentary Archives (speeches, prayers, ceremonies, recognitions).
+
+### Permanent directives (apply to every page, always)
+1. Prioritise elegance, restraint, documentary realism, institutional trust, cinematic storytelling.
+2. Never allow self-promotion, over-claiming, sensationalism, or aggressive marketing tone.
+3. Every page must feel archival, historical, emotionally immersive, globally credible.
+4. Use cinematic pacing, editorial storytelling, museum-grade presentation, premium whitespace, emotional sequencing.
+5. SHEKINAIH SIEW SIN YAP = calm, dignified, internationally received, transformational maternal authority (featured first, gold).
+6. J AARON K DAVID = composed, strategic, trusted, leadership counterpart (silver).
+7. Every section must answer: *"Why would institutions, universities, humanitarian organisations and international communities receive them?"*
+8. Build authority through documented moments, environments, ceremonies, humanitarian work, institutional interactions, emotional authenticity.
+9. Avoid fantasy/mystical styling and low-trust marketing language.
+10. The whole site should feel like **a living historical documentary archive.**
+
 ---
 
 # AI Governance & Editing Rules

@@ -1,4 +1,4 @@
-# Review Brief — `shekinaih-aaron.com` (index.html)
+# Review Brief — `shekinaih-jaaronkdavid.com` (index.html)
 
 > **For ChatGPT (or another AI reviewer).** This document gives you the full context, current state, constraints, and the specific areas where the owner wants improvement ideas. Read it top to bottom before responding.
 
@@ -7,7 +7,7 @@
 ## 1. What this site is
 
 - **Site name:** Shekinaih & Aaron — Personal Brand
-- **Domain:** `shekinaih-aaron.com`
+- **Domain:** `shekinaih-jaaronkdavid.com`
 - **Owners:** Shekinaih Siew Sin Yap & J Aaron K David
 - **Organisation:** Crowned Eagles Global, Singapore
 - **Stack:** Static HTML + Tailwind-flavoured custom CSS (no framework). One big `index.html` (~4300 lines) + sub-pages (`events.html`, `manila-up-gala.html`, `hollywood-walk-of-fame-2025.html`, `his-presence-fire-cathedral-2025.html`, `gls-thailand-2025.html`, `nagpur-kolkata-2026.html`, `mumbai-bollywood-2026.html`, `dalai-lama-audience-2026.html`, `us-megasuccess2025.html`, `magazine-article.html`)

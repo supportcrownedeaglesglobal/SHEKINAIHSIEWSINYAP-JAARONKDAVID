@@ -30,7 +30,7 @@ The following have been established in production and must not be reverted, repl
 - Testimonial section editorial archive structure
 - Awards section formal archive card layout with lightbox integration
 - Press interview poster on video card and video modal
-- Personal IP identity: `shekinaihssyap-jaaronkdavid.com` across all identity surfaces
+- Personal IP identity: `shekinaih-jaaronkdavid.com` across all identity surfaces
 - Fade-up scroll-reveal animation system
 - Cinematic hero layout with split photo composition
 - QR card grid with local PNG images
