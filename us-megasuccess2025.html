@@ -14,8 +14,8 @@
 
     /* ─── DESIGN TOKENS ─────────────────────────────── */
     :root {
-      --ink:     #1C2D4C;
-      --ink2:    #1C2D4C;
+      --ink:     #000970;
+      --ink2:    #000970;
       --ink3:    #0D1028;
       --gold:    #C8923A;
       --gold2:   #E8B86D;
@@ -102,7 +102,7 @@
       border-bottom:1px solid transparent;
     }
     #nav.scrolled {
-      background:rgba(28, 45, 76,.94);
+      background:rgba(0, 9, 112,.94);
       backdrop-filter:blur(24px);
       padding:13px clamp(24px,5vw,60px);
       border-bottom:1px solid var(--border);
@@ -144,7 +144,7 @@
       position:absolute; inset:0;
       background:
         radial-gradient(ellipse 80% 60% at 65% 40%, rgba(200,146,58,.06) 0%, transparent 65%),
-        linear-gradient(180deg, rgba(28, 45, 76,0) 0%, rgba(28, 45, 76,.5) 55%, rgba(28, 45, 76,1) 100%);
+        linear-gradient(180deg, rgba(0, 9, 112,0) 0%, rgba(0, 9, 112,.5) 55%, rgba(0, 9, 112,1) 100%);
       background-color:var(--ink2);
     }
     /* ── Replace this div with your hero image ──
@@ -152,7 +152,7 @@
             alt="Mega Success 2025 Los Angeles" loading="eager"/> */
     .hero-img-placeholder {
       position:absolute; inset:0;
-      background:linear-gradient(135deg,#1C2D4C 0%,#1C2D4C 45%,#012A50 100%);
+      background:linear-gradient(135deg,#000970 0%,#000970 45%,#012A50 100%);
     }
     /* decorative grid */
     .hero-grid {
@@ -530,7 +530,7 @@
     .yt-play {
       position:relative; z-index:2;
       width:72px; height:72px; border-radius:50%;
-      background:rgba(28, 45, 76,.72);
+      background:rgba(0, 9, 112,.72);
       border:2px solid rgba(200,146,58,.55);
       display:flex; align-items:center; justify-content:center;
       transition:background .25s, border-color .25s, transform .25s;
@@ -781,7 +781,7 @@
 
     /* ─── SIGNIFICANCE SECTION ───────────────────────── */
     #significance {
-      background:linear-gradient(135deg,#0C1028 0%,#1C2D4C 50%,#0F1226 100%);
+      background:linear-gradient(135deg,#0C1028 0%,#000970 50%,#0F1226 100%);
       padding:120px 0;
       border-top:1px solid var(--border); border-bottom:1px solid var(--border);
     }
@@ -1025,7 +1025,7 @@
       position:absolute; top:18px; right:20px; z-index:4;
       font-family:'Cinzel',serif; font-size:10px; letter-spacing:3px;
       color:rgba(255,255,255,.5);
-      background:rgba(28, 45, 76,.5); backdrop-filter:blur(8px);
+      background:rgba(0, 9, 112,.5); backdrop-filter:blur(8px);
       padding:5px 13px; border-radius:100px;
       border:1px solid rgba(255,255,255,.08);
     }
@@ -1034,7 +1034,7 @@
     .carousel-arrow {
       position:absolute; top:50%; transform:translateY(-50%);
       z-index:5; width:44px; height:44px; border-radius:50%;
-      background:rgba(28, 45, 76,.7); backdrop-filter:blur(12px);
+      background:rgba(0, 9, 112,.7); backdrop-filter:blur(12px);
       border:1px solid var(--gold-border);
       display:flex; align-items:center; justify-content:center;
       cursor:pointer; transition:background .2s, border-color .2s, transform .2s;
@@ -1666,7 +1666,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
         <span class="nar-tag">01 · The Arrival</span>
         <h3 class="nar-heading">Singapore Touches the West Coast</h3>
         <div class="nar-body">
-          <p>Los Angeles in November 2025 marked the beginning of a United States chapter — the first time SHEKINAIH SIEW SIN YAP and J AARON K DAVID stepped onto American soil as internationally recognised leaders representing Singapore, faith leadership, and humanitarian service.</p>
+          <p>Los Angeles in November 2025 marked the beginning of a United States chapter — the first time <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> stepped onto American soil as internationally recognised leaders representing Singapore, faith leadership, and humanitarian service.</p>
           <p>The choice of Mega Success as their first US appearance was deliberate. Hosted by JT Foxx — a figure of significant international business standing — the event provided immediate access to a calibre of network rarely encountered outside the world's major business capitals.</p>
           <blockquote class="pull-quote">"Los Angeles was not a destination. It was a declaration of international direction."</blockquote>
         </div>
@@ -1905,7 +1905,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
     </blockquote>
 
     <div class="ref-attr fade-up d2">
-      <span class="ref-name">SHEKINAIH SIEW SIN YAP &amp; J AARON K DAVID</span>
+      <span class="ref-name"><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span></span>
       <p class="ref-role">Mega Success 2025 · Los Angeles, California · November 2025</p>
     </div>
 
@@ -2057,7 +2057,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
     <span class="nav-dot"></span>
     <span class="nav-brand"><span style="color:#F0C660">SHEKINAIH-</span><span style="color:#DDE3EE">JAARONKDAVID.COM</span></span>
   </div>
-  <p class="footer-copy">© 2025 Mega Success · Los Angeles Event Archive · SHEKINAIH SIEW SIN YAP &amp; J AARON K DAVID</p>
+  <p class="footer-copy">© 2025 Mega Success · Los Angeles Event Archive · <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span></p>
 </footer>
 
 
