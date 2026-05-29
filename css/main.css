@@ -421,6 +421,10 @@ body::before {
   font-weight: 800;
   margin-bottom: 22px;
 }
+/* Index hero magazine credential — enlarged (scoped to .hero-text so other heroes are unaffected) */
+.hero-text .eyebrow {
+  font-size: clamp(18px, 2.4vw, 28px);
+}
 /* Hero keyword band — "International Humanitarian Leadership · Peace · Transformation · Global Impact" */
 .hero .subhead {
   font-family: 'Cinzel', serif;
@@ -1835,6 +1839,7 @@ body::before {
   .section-head .lede { font-size: 16.5px !important }
   .btn { font-size: 13px !important; min-height: 54px !important; min-width: 200px !important; padding: 15px 26px !important }
   .eyebrow, .aw-eyebrow, .mag-eyebrow { font-size: 12.5px !important }
+  .hero-text .eyebrow { font-size: 16px !important; letter-spacing: 2.5px !important }
   .display { font-size: clamp(32px, 9vw, 48px) !important }
   .e-title, .mag-title, .aw-title, .connect-card .channel { font-size: 24px !important }
   .nav-links a { font-size: 12.5px !important }
