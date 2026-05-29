@@ -866,6 +866,15 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 @media (max-width:720px){.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc,.citation-text{font-size:16.5px !important;line-height:1.74 !important}}
 /* Silver metallic name treatment (J AARON K DAVID inline) — stands out from white */
 .name-inline-silver{background:linear-gradient(120deg,#C2CEE2 0%,#F2F6FC 20%,#90A1BE 46%,#6E82A2 68%,#C2CEE2 100%) !important;-webkit-background-clip:text !important;background-clip:text !important;-webkit-text-fill-color:transparent !important;color:transparent !important;text-shadow:0 0 16px rgba(140,165,205,.38) !important}
+/* ── Manila Up Magazine — full-scale readable feature (top of page) ── */
+.manila-mag-feature{max-width:1000px;margin:0 auto;padding:clamp(40px,6vh,72px) clamp(20px,5vw,40px) 0}
+.mmf-head{text-align:center;margin-bottom:34px}
+.mmf-eyebrow{font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);margin-bottom:14px}
+.mmf-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.6vw,44px);font-weight:600;color:#fff;margin:0 0 10px;line-height:1.1}
+.mmf-head p{font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(255,255,255,.5);max-width:540px;margin:0 auto;line-height:1.7}
+.mmf-item{margin:0 0 30px}
+.mmf-item img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid rgba(200,146,58,.22);box-shadow:0 24px 64px rgba(0,0,0,.5)}
+.mmf-item figcaption{margin-top:14px;text-align:center;font-family:'Cinzel',serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.72)}
 </style>
 </head>
 <body>
@@ -902,6 +911,29 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
   </div>
   <div class="hero-divider"></div>
 </header>
+
+<!-- MANILA UP MAGAZINE — FULL-SCALE READABLE FEATURE (top of page) -->
+<section class="manila-mag-feature">
+  <div class="mmf-head fade-up">
+    <p class="mmf-eyebrow">In Print · Manila Up International Magazine</p>
+    <h2>The Manila Up Magazine Feature</h2>
+    <p>Read the full Manila Up International Magazine profiles of SHEKINAIH SIEW SIN YAP and J AARON K DAVID, as published in the 10th Anniversary issue.</p>
+  </div>
+
+  <figure class="mmf-item fade-up">
+    <img src="images/manila-up-2025/shekinaih_manila_up_magazine.jpg"
+         width="1280" height="655" loading="eager"
+         alt="SHEKINAIH SIEW SIN YAP — Manila Up International Magazine profile spread, pages 84–85, 'The Visionary Voice Bridging Heaven and Humanity'">
+    <figcaption><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> · Manila Up Magazine · Pages 84–85</figcaption>
+  </figure>
+
+  <figure class="mmf-item fade-up d1">
+    <img src="images/manila-up-2025/manila-up-2025-aaron-magazine-profile-page-closeup-scan.jpg"
+         width="1236" height="1280" loading="lazy"
+         alt="J AARON K DAVID — Manila Up International Magazine profile feature, 'The Quiet Force Behind a Global Awakening'">
+    <figcaption><span class="name-inline-silver">J AARON K DAVID</span> · Manila Up Magazine · Profile Feature</figcaption>
+  </figure>
+</section>
 
 <!-- OPENING STAGE PHOTO (first photo of the page) -->
 <figure class="hero-stage-feature fade-in">
@@ -1405,19 +1437,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
       <p class="gallery-caption"><span class="name-inline-silver">J AARON K DAVID</span> · Transformational Leadership Award</p>
     </div>
 
-    <div class="gallery-item fade-in d3">
-      <img
-        src="images/manila-up-2025/shekinaih_manila_up_magazine.jpg"
-        alt="SHEKINAIH SIEW SIN YAP holding open Manila Up International Magazine profile spread, pages 84–85" loading="eager"/>
-      <p class="gallery-caption">SHEKINAIH SIEW SIN YAP · Manila Up Magazine · Pages 84–85</p>
-    </div>
-
-    <div class="gallery-item fade-in d4">
-      <img
-        src="images/manila-up-2025/manila-up-2025-aaron-magazine-profile-page-closeup-scan.jpg"
-        alt="J AARON K DAVID — Manila Up International Magazine profile page" loading="lazy"/>
-      <p class="gallery-caption"><span class="name-inline-silver">J AARON K DAVID</span> · Manila Up Magazine · Profile Feature</p>
-    </div>
+    <!-- Magazine profile spreads moved to the full-scale readable feature at the top of the page -->
 
   </div>
 </section>
