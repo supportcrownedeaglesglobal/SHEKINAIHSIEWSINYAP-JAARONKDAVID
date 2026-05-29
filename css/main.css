@@ -2475,3 +2475,10 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 .e-cap{font-size:13px;line-height:1.65;color:rgba(255,255,255,.6);margin:-2px 0 16px}
 .e-cap em{color:var(--gold2);font-style:normal;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;margin-right:4px}
 .e-cap strong{color:rgba(255,255,255,.82)}
+
+/* ── Hero credential chips (replaces plain subhead list) ── */
+.hero-creds{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px;padding:0;max-width:760px}
+.hero-creds li{display:inline-flex;align-items:center;gap:9px;font-family:'Cinzel',serif;font-size:clamp(10.5px,1vw,13px);font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.92);padding:9px 17px;border:1px solid rgba(232,184,109,.30);border-radius:100px;background:rgba(232,184,109,.06);transition:border-color .3s ease,background .3s ease,transform .3s ease}
+.hero-creds li::before{content:"";width:6px;height:6px;border-radius:50%;background:#E8B86D;box-shadow:0 0 10px rgba(232,184,109,.65);flex-shrink:0}
+.hero-creds li:hover{border-color:rgba(232,184,109,.62);background:rgba(232,184,109,.12);transform:translateY(-1px)}
+@media (max-width:720px){.hero-creds{justify-content:center;gap:8px}.hero-creds li{font-size:11px;padding:8px 14px;letter-spacing:1.2px}}
