@@ -14,8 +14,8 @@
 
     /* ─── DESIGN TOKENS ─────────────────────────────── */
     :root {
-      --ink:     #002F5D;
-      --ink2:    #002F5D;
+      --ink:     #1C2D4C;
+      --ink2:    #1C2D4C;
       --ink3:    #0D1028;
       --gold:    #C8923A;
       --gold2:   #E8B86D;
@@ -152,7 +152,7 @@
             alt="Mega Success 2025 Los Angeles" loading="eager"/> */
     .hero-img-placeholder {
       position:absolute; inset:0;
-      background:linear-gradient(135deg,#002F5D 0%,#002F5D 45%,#012A50 100%);
+      background:linear-gradient(135deg,#1C2D4C 0%,#1C2D4C 45%,#012A50 100%);
     }
     /* decorative grid */
     .hero-grid {
@@ -781,7 +781,7 @@
 
     /* ─── SIGNIFICANCE SECTION ───────────────────────── */
     #significance {
-      background:linear-gradient(135deg,#0C1028 0%,#002F5D 50%,#0F1226 100%);
+      background:linear-gradient(135deg,#0C1028 0%,#1C2D4C 50%,#0F1226 100%);
       padding:120px 0;
       border-top:1px solid var(--border); border-bottom:1px solid var(--border);
     }
@@ -1342,21 +1342,6 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 .story-body + .story-body,.section-body + .section-body{margin-top:1.15em}
 /* Mobile reading polish (latest): larger, easier body copy on phones */
 @media (max-width:720px){.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc,.citation-text{font-size:16.5px !important;line-height:1.74 !important}}
-
-/* ── DeJoria landing hero: framed billionaire feature (replaces placeholder) ── */
-#hero{height:auto;min-height:100svh}
-#hero .hero-content{justify-content:center}
-.hero-feature{margin:0 0 34px;max-width:min(660px,92vw)}
-.hero-feature-frame{border-radius:16px;overflow:hidden;border:1px solid rgba(200,146,58,.30);box-shadow:0 44px 120px rgba(0,0,0,.55);background:#0b1a2e}
-.hero-feature-img{display:block;width:100%;height:auto;max-height:54vh;object-fit:contain}
-.hero-feature-cap{margin-top:20px;display:flex;flex-direction:column;gap:6px}
-.hfc-with{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.42)}
-.hfc-name{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.4vw,38px);font-weight:700;color:#fff;line-height:1.06}
-.hfc-role{font-family:'Cinzel',serif;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold2);font-weight:600}
-@media (max-width:720px){
-  .hero-feature{max-width:100%;margin-bottom:28px}
-  .hero-feature-img{max-height:none}
-}
 </style>
 </head>
 <body>
@@ -1380,9 +1365,18 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
      HERO
 ════════════════════════════════════════════════ -->
 <section id="hero">
+  <div class="hero-img-placeholder"></div>
   <div class="hero-visual"></div>
   <div class="hero-grid"></div>
   <div class="hero-accent-line"></div>
+
+  <!--
+    HERO BACKGROUND IMAGE
+    Replace the hero-img-placeholder div above with:
+      <img class="hero-img" src="your-hero-image.jpg"
+           alt="Mega Success 2025 Los Angeles" loading="eager"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;"/>
+  -->
 
   <div class="hero-content">
 
@@ -1391,35 +1385,21 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
       <span class="hero-dateline-text">International Leadership Presence · Mega Success 2025 · Los Angeles</span>
     </div>
 
-    <figure class="hero-feature fade-up d1">
-      <div class="hero-feature-frame">
-        <img class="hero-feature-img"
-             src="images/us-mega-success-2025/mega-success-2025-la-23.jpg"
-             alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with billionaire John Paul DeJoria at Mega Success 2025, Los Angeles"
-             width="1280" height="853" loading="eager" fetchpriority="high"/>
-      </div>
-      <figcaption class="hero-feature-cap">
-        <span class="hfc-with">— with —</span>
-        <span class="hfc-name">John Paul DeJoria</span>
-        <span class="hfc-role">Billionaire Co-Founder &nbsp;·&nbsp; Paul Mitchell &amp; Patrón Spirits</span>
-      </figcaption>
-    </figure>
-
-    <h1 class="hero-names-headline fade-up d2">
+    <h1 class="hero-names-headline fade-up">
       <span class="name-gold">SHEKINAIH SIEW SIN YAP</span>
       <span class="hero-amp">&amp;</span>
       <span class="name-silver">J AARON K DAVID</span>
     </h1>
 
-    <p class="hero-event-subhead fade-up d2">
+    <p class="hero-event-subhead fade-up d1">
       International Leadership Presence at <em>Mega Success 2025</em>
     </p>
 
-    <p class="hero-location-line fade-up d2">
+    <p class="hero-location-line fade-up d1">
       Los Angeles &nbsp;·&nbsp; United States &nbsp;·&nbsp; November 2025
     </p>
 
-    <p class="hero-subline fade-up d3">
+    <p class="hero-subline fade-up d2">
       A milestone moment in their growing international journey spanning humanitarian leadership, diplomacy, global networking, and transformational influence.
     </p>
 
