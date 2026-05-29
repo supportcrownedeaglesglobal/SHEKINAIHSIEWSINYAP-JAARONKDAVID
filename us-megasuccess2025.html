@@ -1344,6 +1344,22 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 @media (max-width:720px){.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc,.citation-text{font-size:16.5px !important;line-height:1.74 !important}}
 /* Silver metallic name treatment (J AARON K DAVID inline) — stands out from white */
 .name-inline-silver{background:linear-gradient(120deg,#E3E9F3 0%,#FFFFFF 20%,#A9B6CB 46%,#8090AE 66%,#C7D1E0 100%) !important;-webkit-background-clip:text !important;background-clip:text !important;-webkit-text-fill-color:transparent !important;color:transparent !important;text-shadow:none !important}
+/* ── JT Foxx-style full-bleed stage hero ── */
+.mega-hero{position:relative;min-height:clamp(580px,94vh,940px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:#08091A}
+.mega-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 36%;z-index:0}
+.mega-hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,9,26,.74) 0%,rgba(8,9,26,.14) 28%,rgba(8,9,26,.10) 52%,rgba(8,9,26,.55) 80%,rgba(8,9,26,.94) 100%)}
+.mega-hero-top{position:relative;z-index:2;text-align:center;padding:clamp(80px,11vh,150px) clamp(20px,5vw,60px) 0}
+.mega-hero-eyebrow{font-family:'Cinzel',serif;font-size:clamp(11px,1.15vw,14px);letter-spacing:4px;text-transform:uppercase;color:var(--gold2);margin-bottom:20px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.mega-hero-title{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(28px,5.4vw,66px);letter-spacing:.5px;text-transform:uppercase;color:#fff;line-height:1.04;text-shadow:0 6px 36px rgba(0,0,0,.7)}
+.mega-hero-bottom{position:relative;z-index:2;text-align:center;padding:0 clamp(20px,5vw,60px) clamp(58px,8vh,96px);max-width:1040px;margin:0 auto}
+.mega-hero-names{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(16px,2.1vw,26px);letter-spacing:1.5px;margin-bottom:16px}
+.mega-amp{color:rgba(255,255,255,.45);margin:0 8px;font-weight:400}
+.mega-hero-tag{font-family:'DM Sans',sans-serif;font-size:clamp(14px,1.35vw,17px);line-height:1.75;color:rgba(255,255,255,.85);max-width:700px;margin:0 auto;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.mega-hero-tag strong{color:var(--gold2);font-weight:700}
+.mega-hero-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none}
+.mega-scroll-text{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.mega-scroll-line{width:1px;height:40px;background:linear-gradient(180deg,var(--gold2),transparent)}
+@media(max-width:600px){.mega-hero{min-height:80vh}.mega-hero-bg{object-position:center 30%}.mega-hero-top{padding-top:90px}}
 </style>
 </head>
 <body>
@@ -1366,70 +1382,30 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 <!-- ═══════════════════════════════════════════════
      HERO
 ════════════════════════════════════════════════ -->
-<section id="hero">
-  <div class="hero-img-placeholder"></div>
-  <div class="hero-visual"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-accent-line"></div>
+<section id="hero" class="mega-hero">
+  <img class="mega-hero-bg" src="images/us-mega-success-2025/mega-success-2025-la-18.jpg"
+       width="1800" height="1201" fetchpriority="high" loading="eager"
+       alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID on the MegaSuccess 2025 main stage in Los Angeles, their names displayed on the giant screen, on the platform of JT Foxx">
+  <div class="mega-hero-scrim" aria-hidden="true"></div>
 
-  <!--
-    HERO BACKGROUND IMAGE
-    Replace the hero-img-placeholder div above with:
-      <img class="hero-img" src="your-hero-image.jpg"
-           alt="Mega Success 2025 Los Angeles" loading="eager"
-           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;"/>
-  -->
+  <div class="mega-hero-top fade-in">
+    <p class="mega-hero-eyebrow">Mega Success 2025 · Los Angeles · United States</p>
+    <h1 class="mega-hero-title">International Leadership Presence</h1>
+  </div>
 
-  <div class="hero-content">
-
-    <div class="hero-dateline fade-in">
-      <div class="hero-dateline-rule"></div>
-      <span class="hero-dateline-text">International Leadership Presence · Mega Success 2025 · Los Angeles</span>
-    </div>
-
-    <h1 class="hero-names-headline fade-up">
+  <div class="mega-hero-bottom fade-up d1">
+    <p class="mega-hero-names">
       <span class="name-gold">SHEKINAIH SIEW SIN YAP</span>
-      <span class="hero-amp">&amp;</span>
+      <span class="mega-amp">&amp;</span>
       <span class="name-silver">J AARON K DAVID</span>
-    </h1>
-
-    <p class="hero-event-subhead fade-up d1">
-      International Leadership Presence at <em>Mega Success 2025</em>
     </p>
-
-    <p class="hero-location-line fade-up d1">
-      Los Angeles &nbsp;·&nbsp; United States &nbsp;·&nbsp; November 2025
-    </p>
-
-    <p class="hero-subline fade-up d2">
-      A milestone moment in their growing international journey spanning humanitarian leadership, diplomacy, global networking, and transformational influence.
-    </p>
-
-    <div class="hero-meta-strip fade-up d3">
-      <div class="hero-meta-cell">
-        <span class="hmc-label">Event</span>
-        <span class="hmc-value">Mega Success 2025</span>
-      </div>
-      <div class="hero-meta-cell">
-        <span class="hmc-label">Location</span>
-        <span class="hmc-value">Los Angeles, USA</span>
-      </div>
-      <div class="hero-meta-cell">
-        <span class="hmc-label">Month</span>
-        <span class="hmc-value">November 2025</span>
-      </div>
-      <div class="hero-meta-cell">
-        <span class="hmc-label">Origin</span>
-        <span class="hmc-value">Singapore</span>
-      </div>
-    </div>
-
+    <p class="mega-hero-tag">Featured on the platform of <strong>JT Foxx</strong> — the World&rsquo;s #1 Business Coach — among global entrepreneurs, Fortune-level founders and cultural icons.</p>
   </div>
 
-  <div class="hero-scroll">
-    <div class="hero-scroll-line"></div>
-    <span class="hero-scroll-text">Read the story</span>
-  </div>
+  <a class="mega-hero-scroll" href="#featured" aria-label="Scroll to the featured video">
+    <span class="mega-scroll-text">Watch the Story</span>
+    <span class="mega-scroll-line" aria-hidden="true"></span>
+  </a>
 </section>
 
 
