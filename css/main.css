@@ -6,7 +6,7 @@
 /* ---------- 0. Tokens ---------- */
 :root {
   --ink:    #08091A;
-  --ink2:   #08091A;
+  --ink2:   #12152B;
   --ink3:   #1A1E3A;
   --gold:   #C8923A;
   --gold2:  #E8B86D;
@@ -528,7 +528,7 @@ body::before {
   .mags { grid-template-columns: 1fr 1fr; gap: 32px }
 }
 .mag-card {
-  background: #08091A;
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 22px;
   overflow: hidden;
@@ -584,7 +584,7 @@ body::before {
 
 /* Typography-led variant — no image, magazine-cover-inspired masthead */
 .mag-card-typo .mag-typo-mast {
-  background: #08091A;
+  background: var(--ink2);
   border-bottom: 1px solid rgba(200,146,58,.2);
   padding: 36px 28px 32px;
   text-align: center;
@@ -640,7 +640,7 @@ body::before {
   .mag-card-responsive .mag-cover-desktop { display: none }
   .mag-card-responsive .mag-typo-mobile {
     display: block;
-    background: #08091A;
+    background: var(--ink2);
     border-bottom: 1px solid rgba(200,146,58,.2);
     padding: 36px 28px 32px;
     text-align: center;
@@ -821,7 +821,7 @@ body::before {
   .founder-grid { grid-template-columns: 1fr 1fr; gap: 32px }
 }
 .founder-card {
-  background: rgba(8, 9, 26,.55);
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 20px;
   padding: 32px 30px;
@@ -871,7 +871,7 @@ body::before {
   max-width: 1080px;
   margin: 0 auto 80px;
   padding: clamp(28px, 4vw, 48px);
-  background: #08091A;
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.22);
   border-radius: 22px;
   position: relative;
@@ -1107,7 +1107,7 @@ body::before {
 }
 .j-card {
   grid-column: 2;
-  background: rgba(8, 9, 26,.6);
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 16px;
   padding: 20px 22px;
@@ -1208,7 +1208,7 @@ body::before {
 }
 .event .e-card {
   grid-column: 2;
-  background: #08091A;
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 16px;
   padding: 20px 22px 22px;
@@ -1367,7 +1367,7 @@ body::before {
 @media (min-width: 980px) { .awards-grid { grid-template-columns: repeat(3, 1fr) } }
 @media (min-width: 1180px) { .awards-grid { grid-template-columns: repeat(5, 1fr) } }
 .award-card-min {
-  background: rgba(8, 9, 26,.55);
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 16px;
   padding: 28px 24px;
@@ -1421,7 +1421,7 @@ body::before {
   display: flex; flex-direction: column; align-items: center;
   text-align: center;
   padding: 22px 14px;
-  background: rgba(8, 9, 26,.45);
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.18);
   border-radius: 14px;
   position: relative;
@@ -1457,7 +1457,7 @@ body::before {
   margin: 0 auto;
 }
 .aw-card {
-  background: #08091A;
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.22);
   border-radius: 22px;
   padding: clamp(28px, 4vw, 48px);
@@ -1519,7 +1519,7 @@ body::before {
 .aw-grid-single { grid-template-columns: 1fr !important }
 .aw-figure {
   display: flex; flex-direction: column;
-  background: rgba(8, 9, 26,.55);
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.18);
   border-radius: 16px;
   padding: 16px;
@@ -1537,7 +1537,7 @@ body::before {
   margin-bottom: 16px;
   box-shadow: 0 8px 28px rgba(0,0,0,.5);
 }
-.aw-figure-wide img { max-height: 540px; object-fit: contain; background: #08091A }
+.aw-figure-wide img { max-height: 540px; object-fit: contain; background: var(--ink2) }
 .aw-figure figcaption {
   display: flex; flex-direction: column; gap: 8px;
   text-align: center;
@@ -1609,7 +1609,7 @@ body::before {
   position: relative;
   padding: clamp(80px, 10vw, 140px) 0 clamp(60px, 8vw, 100px);
   overflow: hidden;
-  background: #08091A;
+  background: var(--ink2);
 }
 .finale-bg {
   position: absolute; inset: 0;
@@ -1924,7 +1924,7 @@ body::before {
 @media (min-width: 720px) { .connect-grid-4 { grid-template-columns: repeat(2, 1fr) } }
 @media (min-width: 1080px) { .connect-grid-4 { grid-template-columns: repeat(4, 1fr) } }
 .connect-card {
-  background: #08091A;
+  background: var(--ink2);
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 18px;
   padding: 30px 28px 28px;
