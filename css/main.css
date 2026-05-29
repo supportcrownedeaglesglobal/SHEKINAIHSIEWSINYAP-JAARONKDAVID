@@ -515,7 +515,7 @@ body::before {
   .mags { grid-template-columns: 1fr 1fr; gap: 32px }
 }
 .mag-card {
-  background: rgba(28, 45, 76,.55);
+  background: #1C2D4C;
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 22px;
   overflow: hidden;
@@ -1195,7 +1195,7 @@ body::before {
 }
 .event .e-card {
   grid-column: 2;
-  background: rgba(28, 45, 76,.6);
+  background: #1C2D4C;
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 16px;
   padding: 20px 22px 22px;
@@ -1915,7 +1915,7 @@ body::before {
 @media (min-width: 720px) { .connect-grid-4 { grid-template-columns: repeat(2, 1fr) } }
 @media (min-width: 1080px) { .connect-grid-4 { grid-template-columns: repeat(4, 1fr) } }
 .connect-card {
-  background: rgba(28, 45, 76,.55);
+  background: #1C2D4C;
   border: 1px solid rgba(200,146,58,.2);
   border-radius: 18px;
   padding: 30px 28px 28px;
