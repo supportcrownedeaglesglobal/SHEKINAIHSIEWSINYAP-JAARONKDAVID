@@ -8,7 +8,7 @@
 - Added local metallic name treatments in the co-founder profile cards: pure gold for Shekinaih Siew Sin Yap and silver metallic for J Aaron K David.
 - Updated Shekinaih Siew Sin Yap's displayed name to full uppercase in the hero and co-founder profile card.
 - Redesigned the awards section with formal archive-style cards and clickable award images through the existing lightbox.
-- Updated site-level personal IP branding to use `shekinaihssyap-jaaronkdavid.com` instead of Crowned Eagles Global on the main identity surfaces.
+- Updated site-level personal IP branding to use `shekinaih-jaaronkdavid.com` instead of Crowned Eagles Global on the main identity surfaces.
 - Updated J Aaron K David's display name to full uppercase and strengthened the gold and silver metallic name treatments across the main and magazine pages.
 - Reinforced the co-founder profile card silver styling so J Aaron K David renders uppercase with a stronger metallic finish.
 - Added a custom press-interview cover image for "Shekinaih & Aaron — An Intimate Evening with the Press" so the video card and modal open with an editorial poster instead of a black frame.

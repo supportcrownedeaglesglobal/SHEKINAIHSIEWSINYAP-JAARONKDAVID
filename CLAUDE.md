@@ -5,12 +5,12 @@
 | Key | Value |
 |---|---|
 | **Site** | Shekinaih & Aaron — personal brand |
-| **Domain** | shekinaih-aaron.com |
+| **Domain** | shekinaih-jaaronkdavid.com |
 | **Owners** | Shekinaih Siew Sin Yap & J Aaron K David |
 | **Organisation** | Crowned Eagles Global, Singapore |
 | **Stack** | Astro · Tailwind CSS · @astrojs/sitemap · @astrojs/vercel |
 | **Deploy** | Vercel (static output) |
-| **Repo slug** | shekinaih-aaron |
+| **Repo slug** | shekinaih-jaaronkdavid |
 
 ---
 
@@ -123,4 +123,4 @@ CLAUDE.md
 - [ ] All four QR card links point to correct destinations
 - [ ] `© 2026 Crowned Eagles Global` in footer
 - [ ] `og:image`, `og:title`, `og:description` meta tags present
-- [ ] Domain `shekinaih-aaron.com` pointed to Vercel via CNAME/A records
+- [ ] Domain `shekinaih-jaaronkdavid.com` pointed to Vercel via CNAME/A records

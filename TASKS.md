@@ -32,7 +32,7 @@ Format: tasks are grouped by status. Move items between sections as work progres
 - Full uppercase display applied to both names in hero, profile cards, and nav-level identity
 
 ### Personal IP Branding
-- Visible identity updated from Crowned Eagles Global to `shekinaihssyap-jaaronkdavid.com`
+- Visible identity updated from Crowned Eagles Global to `shekinaih-jaaronkdavid.com`
 - Applied to: browser title, meta description, nav logo, hero subtitle, about ribbon, footer brand, footer contact, magazine article topbar
 
 ### Video Section
@@ -117,7 +117,7 @@ Not approved for development. Listed for future consideration only.
 
 These are directional goals, not approved tasks. Each requires a separate decision before any work begins.
 
-- Register and configure `shekinaihssyap-jaaronkdavid.com` as the live domain
+- Register and configure `shekinaih-jaaronkdavid.com` as the live domain
 - Vercel custom domain configuration with HTTPS and redirect rules
 - Consider migrating to Astro for component-based structure — requires full separate project planning
 - Contact or inquiry form with a privacy-respecting backend

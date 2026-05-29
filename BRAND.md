@@ -9,7 +9,7 @@
 |---|---|
 | **Site name** | Shekinaih & Aaron |
 | **Full names** | Shekinaih Siew Sin Yap & J Aaron K David |
-| **Domain** | shekinaih-aaron.com |
+| **Domain** | shekinaih-jaaronkdavid.com |
 | **Tagline** | *Faith. Legacy. Impact.* |
 | **Category** | Personal brand — faith leaders, speakers, humanitarian ambassadors |
 | **Origin** | Singapore |

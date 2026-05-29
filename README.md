@@ -2,7 +2,7 @@
 
 Personal brand and humanitarian presence website.
 
-**Live site:** shekinaihssyap-jaaronkdavid.com
+**Live site:** shekinaih-jaaronkdavid.com
 **Repository:** github.com/jjcheng9296/shekinaih-jaaronkdavid
 **Deployment:** Vercel — auto-deploys from `main`
 
