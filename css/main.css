@@ -861,7 +861,7 @@ body::before {
   max-width: 1080px;
   margin: 0 auto 80px;
   padding: clamp(28px, 4vw, 48px);
-  background: linear-gradient(180deg, rgba(1,58,110,.72) 0%, rgba(10, 26, 79,.85) 100%);
+  background: linear-gradient(180deg, rgba(10, 26, 79,.72) 0%, rgba(10, 26, 79,.85) 100%);
   border: 1px solid rgba(200,146,58,.22);
   border-radius: 22px;
   position: relative;
@@ -1447,7 +1447,7 @@ body::before {
   margin: 0 auto;
 }
 .aw-card {
-  background: linear-gradient(180deg, rgba(1,58,110,.7) 0%, rgba(10, 26, 79,.85) 100%);
+  background: linear-gradient(180deg, rgba(10, 26, 79,.7) 0%, rgba(10, 26, 79,.85) 100%);
   border: 1px solid rgba(200,146,58,.22);
   border-radius: 22px;
   padding: clamp(28px, 4vw, 48px);
@@ -2019,7 +2019,7 @@ body::before {
   padding: 11px 18px 11px 14px;
   border: 1px solid rgba(200,146,58,.42);
   border-radius: 100px;
-  background: linear-gradient(135deg, rgba(10, 26, 79,.92), rgba(1,58,110,.92));
+  background: linear-gradient(135deg, rgba(10, 26, 79,.92), rgba(10, 26, 79,.92));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 12px 36px rgba(0,0,0,.5);
@@ -2063,7 +2063,7 @@ body::before {
 .sheet-scrim.is-open { opacity: 1; pointer-events: auto }
 .sheet {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
-  background: linear-gradient(180deg, rgba(1,58,110,.98), rgba(10, 26, 79,.98));
+  background: linear-gradient(180deg, rgba(10, 26, 79,.98), rgba(10, 26, 79,.98));
   border-top: 1px solid rgba(200,146,58,.28);
   border-radius: 24px 24px 0 0;
   box-shadow: 0 -24px 80px rgba(0,0,0,.65);
@@ -2133,7 +2133,7 @@ body::before {
 /* ---------- 17. Mobile menu (hamburger) ---------- */
 .mm {
   display: none; position: fixed; inset: 0; z-index: 9990;
-  background: linear-gradient(180deg, rgba(10, 26, 79,.98), rgba(1,58,110,.99));
+  background: linear-gradient(180deg, rgba(10, 26, 79,.98), rgba(10, 26, 79,.99));
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   flex-direction: column;
   opacity: 0; transition: opacity .35s ease;
