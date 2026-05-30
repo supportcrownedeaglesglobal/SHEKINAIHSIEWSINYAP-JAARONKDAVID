@@ -74,6 +74,11 @@
   }
   function closeMenu() {
     if (!menu) return;
+    // Move focus out of the menu BEFORE hiding it (avoids aria-hidden + focused descendant warning)
+    if (document.activeElement && menu.contains(document.activeElement)) {
+      document.activeElement.blur();
+      if (hamb) hamb.focus({ preventScroll: true });
+    }
     menu.classList.remove('is-open');
     document.body.classList.remove('mm-open');
     menu.setAttribute('aria-hidden', 'true');

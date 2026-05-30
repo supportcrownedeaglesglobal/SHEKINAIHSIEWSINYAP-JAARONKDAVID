@@ -46,12 +46,13 @@
 
     /* ─── METALLIC NAME TREATMENTS ─────────────────── */
     .name-gold {
-      color:#E8B86D;
+      color:#F0C660;
       background:none;
       -webkit-background-clip:unset; -webkit-text-fill-color:unset;
-      background-clip:unset; font-weight:700;
+      background-clip:unset; font-weight:800;
       letter-spacing:.04em; text-transform:uppercase;
-      filter:drop-shadow(0 1px 8px rgba(232,184,109,.45))
+      text-shadow:0 0 1px rgba(255,235,180,.6);
+      filter:drop-shadow(0 1px 10px rgba(232,184,109,.5))
     }
     .name-silver {
       color:#EBF1FB; font-weight:800;
@@ -62,8 +63,8 @@
     /* ─── GLOBAL TYPE ───────────────────────────────── */
     .eyebrow {
       font-family:'Cinzel',serif;
-      font-size:11.5px; font-weight:700;
-      letter-spacing:4px; text-transform:uppercase;
+      font-size:13px; font-weight:700;
+      letter-spacing:3px; text-transform:uppercase;
       color:var(--gold); display:block; margin-bottom:14px;
     }
     .display-title {
@@ -74,8 +75,8 @@
     }
     .display-title em { font-style:italic; }
     .body-copy {
-      font-size:15px; font-weight:300; line-height:2;
-      color:rgba(255,255,255,.55);
+      font-size:17px; font-weight:400; line-height:1.9;
+      color:rgba(255,255,255,.88);
     }
     .body-copy p + p { margin-top:18px; }
     .pull-quote {
@@ -85,6 +86,32 @@
       border-left:2px solid var(--gold); padding-left:22px;
       margin:28px 0;
     }
+    .testimony-quote {
+      font-family:'Playfair Display',serif; font-style:italic;
+      font-size:clamp(18px,2.1vw,27px); line-height:1.58;
+      color:#fff; text-align:center;
+      max-width:840px; margin:38px auto 16px; padding:0 clamp(10px,3vw,30px);
+    }
+    .testimony-attr {
+      font-family:'Cinzel',serif; font-size:13px; font-weight:700;
+      letter-spacing:2px; text-transform:uppercase;
+      color:var(--gold2); text-align:center; margin:0;
+    }
+    .transcript { max-width:760px; margin:36px auto 0; border-top:1px solid rgba(232,184,109,.16); }
+    .transcript summary {
+      cursor:pointer; list-style:none; text-align:center;
+      font-family:'Cinzel',serif; font-size:12px; font-weight:700;
+      letter-spacing:2.5px; text-transform:uppercase; color:var(--gold2);
+      padding:18px 0 16px; transition:color .25s;
+    }
+    .transcript summary:hover { color:#F0C660; }
+    .transcript summary::-webkit-details-marker { display:none; }
+    .transcript summary::after { content:'  +'; color:var(--gold); }
+    .transcript[open] summary::after { content:'  \2013'; }
+    .transcript-body { padding:4px 0 26px; max-width:680px; margin:0 auto; text-align:left; }
+    .transcript-body p { font-size:16px; line-height:1.8; color:rgba(255,255,255,.82); margin:0 0 18px; }
+    .ts-name { display:block; font-family:'Cinzel',serif; font-size:11.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
+    .ts-guest { color:var(--gold2); }
     .section-inner {
       max-width:1200px; margin:0 auto;
       padding:0 clamp(24px,5vw,60px);
@@ -118,11 +145,12 @@
       color:rgba(255,255,255,.6);
     }
     .nav-pill {
-      font-family:'Cinzel',serif; font-size:11.5px;
-      letter-spacing:2px; text-transform:uppercase;
+      font-family:'Cinzel',serif; font-size:11.5px; font-weight:800;
+      letter-spacing:1.6px; text-transform:uppercase;
       color:var(--gold); text-decoration:none;
       border:1px solid var(--gold-border);
-      padding:8px 20px; border-radius:100px;
+      padding:9px 18px; border-radius:100px;
+      white-space:nowrap; display:inline-flex; align-items:center; flex-shrink:0;
       transition:color .2s, border-color .2s, background .2s;
     }
     .nav-pill:hover {
@@ -350,7 +378,7 @@
     .intro-sidebar-num {
       font-family:'Cormorant Garamond',serif;
       font-size:clamp(80px,9vw,120px); font-weight:300; line-height:1;
-      letter-spacing:-5px; color:rgba(255,255,255,.03); user-select:none;
+      letter-spacing:-5px; color:rgba(255,255,255,.10); user-select:none;
     }
     .intro-lead {
       font-family:'Cormorant Garamond',serif;
@@ -447,8 +475,8 @@
     .ch-title em { font-style:italic; }
     .ch-standfirst {
       font-family:'Playfair Display',serif; font-style:italic;
-      font-size:clamp(14px,1.2vw,17px); line-height:1.75;
-      color:rgba(255,255,255,.42); max-width:540px; margin-bottom:56px;
+      font-size:clamp(16px,1.4vw,19px); line-height:1.75;
+      color:rgba(255,255,255,.78); max-width:540px; margin-bottom:56px;
     }
 
     /* ─── PHOTO SLOTS ────────────────────────────────── */
@@ -481,24 +509,26 @@
     .fv-inner {
       max-width:900px; margin:0 auto; padding:0 48px;
     }
-    .fv-header { text-align:center; margin-bottom:52px; }
+    .fv-header { text-align:center; margin-bottom:48px; }
     .fv-eyebrow {
       display:block;
       font-family:'Cinzel',serif;
-      font-size:11.5px; letter-spacing:4px; text-transform:uppercase;
-      color:var(--gold); margin-bottom:16px;
+      font-size:12.5px; letter-spacing:3.5px; text-transform:uppercase;
+      font-weight:700; color:var(--gold2); margin-bottom:18px;
+      text-shadow:0 1px 10px rgba(232,184,109,.3);
     }
     .fv-title {
       font-family:'Cormorant Garamond',serif;
-      font-size:clamp(28px,3.2vw,48px);
-      font-weight:300; letter-spacing:.5px; color:#E8B86D;
-      filter:drop-shadow(0 2px 18px rgba(232,184,109,.22));
-      margin:0 0 12px; line-height:1.2;
+      font-size:clamp(30px,3.6vw,52px);
+      font-weight:600; letter-spacing:.2px; color:#F0C660;
+      filter:drop-shadow(0 2px 22px rgba(232,184,109,.32));
+      text-shadow:0 3px 26px rgba(232,184,109,.16);
+      margin:0 0 14px; line-height:1.18;
     }
     .fv-subtitle {
-      font-family:'DM Sans',sans-serif;
-      font-size:13px; color:rgba(255,255,255,.35);
-      letter-spacing:.6px; margin:0;
+      font-family:'Cinzel',serif;
+      font-size:13.5px; color:rgba(255,255,255,.74);
+      letter-spacing:2.2px; text-transform:uppercase; font-weight:700; margin:0;
     }
     /* Responsive 16:9 YouTube wrapper */
     .yt-wrapper {
@@ -551,15 +581,17 @@
     }
     .fv-body p {
       font-family:'DM Sans',sans-serif;
-      font-size:15px; line-height:1.95;
-      color:rgba(255,255,255,.48);
+      font-size:16.5px; line-height:1.85; font-weight:400;
+      color:rgba(255,255,255,.9);
       margin:0 0 20px;
     }
+    .fv-body p strong { color:#fff; font-weight:700; }
+    .fv-body p em { color:var(--gold2); font-style:italic; }
     .fv-body p:last-child { margin-bottom:0; }
 
     /* ─── FV STAGE PHOTO GRID ───────────────────────── */
     .fv-photos { margin-top:56px; border-top:1px solid rgba(200,146,58,.10); padding-top:48px; }
-    .fv-photo-eyebrow { display:block; font-family:'Cinzel',serif; font-size:11.5px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:32px; text-align:center; }
+    .fv-photo-eyebrow { display:block; font-family:'Cinzel',serif; font-weight:800; font-size:clamp(15px,2vw,20px); letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:32px; text-align:center; }
     .fv-photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
     .fv-photo-grid .photo-slot { border-radius:8px; overflow:hidden; background:#000; }
     .fv-photo-grid .photo-slot img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease; }
@@ -709,8 +741,8 @@
       line-height:1.25; margin-bottom:18px;
     }
     .nar-body {
-      font-size:14.5px; font-weight:300; line-height:2;
-      color:rgba(255,255,255,.52);
+      font-size:17px; font-weight:400; line-height:1.95;
+      color:rgba(255,255,255,.88);
     }
     .nar-body p + p { margin-top:16px; }
 
@@ -800,10 +832,10 @@
       flex-shrink:0; padding-top:2px;
     }
     .sig-point-text {
-      font-size:14.5px; font-weight:300; line-height:1.85;
-      color:rgba(255,255,255,.5);
+      font-size:17px; font-weight:400; line-height:1.85;
+      color:rgba(255,255,255,.86);
     }
-    .sig-point-text strong { color:rgba(255,255,255,.82); font-weight:500; }
+    .sig-point-text strong { color:#fff; font-weight:600; }
     .sig-quote-block {
       background:rgba(255,255,255,.03);
       border:1px solid var(--border); border-radius:20px;
@@ -904,78 +936,79 @@
     .conn-header .eyebrow { margin-bottom:16px; }
     .conn-title {
       font-family:'Cormorant Garamond',serif;
-      font-size:clamp(28px,3.2vw,46px);
-      font-weight:300; letter-spacing:-.2px; color:#E8B86D;
+      font-size:clamp(34px,3.8vw,54px);
+      font-weight:400; letter-spacing:-.2px; color:#E8B86D;
       filter:drop-shadow(0 2px 18px rgba(232,184,109,.22));
-      margin:0 0 12px; line-height:1.15;
+      margin:0 0 14px; line-height:1.12;
     }
     .conn-title em { font-style:italic; }
     .conn-subtitle {
       font-family:'DM Sans',sans-serif;
-      font-size:13px; color:rgba(255,255,255,.3); letter-spacing:.5px;
+      font-size:15.5px; color:rgba(255,255,255,.64); letter-spacing:.6px; font-weight:500;
     }
     .conn-with {
-      margin:22px 0 0; line-height:1.9; text-align:center;
+      margin:28px 0 0; line-height:1.65; text-align:center;
     }
     .cw-hosts {
       display:block;
       font-family:'Cinzel',serif;
-      font-size:clamp(17px,2vw,28px);
-      letter-spacing:5px; text-transform:uppercase;
-      color:#E8B86D;
-      text-shadow:0 0 28px rgba(232,184,109,.45), 0 0 60px rgba(200,146,58,.2);
-      font-weight:600;
+      font-size:clamp(20px,2.2vw,32px);
+      letter-spacing:2.5px; text-transform:uppercase;
+      color:#E8B86D; line-height:1.4;
+      text-shadow:0 0 28px rgba(232,184,109,.4), 0 0 60px rgba(200,146,58,.18);
+      font-weight:700;
     }
     .cw-sep {
-      display:inline-block;
-      font-family:'DM Sans',sans-serif;
-      font-size:10px; letter-spacing:4px; text-transform:uppercase;
-      color:rgba(255,255,255,.22); font-style:italic;
-      margin:2px 0;
+      display:block;
+      font-family:'Cinzel',serif;
+      font-size:12px; letter-spacing:3px; text-transform:uppercase;
+      color:rgba(255,255,255,.5); font-style:normal;
+      margin:10px 0;
     }
     .cw-guest {
       display:block;
-      font-family:'Cinzel',serif;
-      font-size:clamp(10px,.9vw,13px);
-      letter-spacing:4px; text-transform:uppercase;
-      color:rgba(255,255,255,.6); font-weight:700;
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(25px,2.7vw,40px);
+      letter-spacing:.3px; font-style:italic;
+      color:#E8B86D; font-weight:600; margin-top:2px;
+      filter:drop-shadow(0 2px 14px rgba(232,184,109,.25));
     }
 
     /* Carousel wrapper */
     .carousel-wrap { position:relative; max-width:860px; margin:0 auto; }
 
-    /* Main stage */
+    /* Main stage — fixed height; each slide stacks image (top) + caption (below) */
     .carousel-stage {
       position:relative; overflow:hidden;
-      border-radius:12px;
-      box-shadow:0 32px 80px rgba(0,0,0,.55);
-      background:#000;
-      aspect-ratio:3/2;
+      border-radius:14px;
+      box-shadow:0 32px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(200,146,58,.18);
+      background:#05060f;
+      height:clamp(540px,80vh,660px);
     }
     .carousel-slide {
       position:absolute; inset:0;
-      opacity:0; transition:opacity .65s ease;
+      display:flex; flex-direction:column;
+      opacity:0; transition:opacity .6s ease;
       pointer-events:none;
     }
     .carousel-slide.active {
       opacity:1; pointer-events:auto;
     }
+    /* Image area — shows the FULL photo, never cropped, on a dark backdrop */
     .carousel-slide img {
-      width:100%; height:100%;
-      object-fit:cover; object-position:center top;
+      flex:1 1 auto; min-height:0; width:100%;
+      object-fit:contain; object-position:center;
+      background:#05060f;
       display:block;
     }
-    /* Rich bottom gradient for caption readability */
     .carousel-slide::after { display:none; }
-    /* Caption — solid panel, separated from the photo (no longer a faint overlay) */
+    /* Caption — solid panel directly BELOW the photo */
     .carousel-caption {
-      position:absolute; bottom:0; left:0; right:0;
-      padding:clamp(16px,2.5vw,24px) clamp(18px,3vw,28px);
-      z-index:2; color:#fff;
-      background:rgba(0,26,52,.97);
-      border-top:2px solid rgba(200,146,58,.55);
-      border-radius:0 0 12px 12px;
-      box-shadow:0 -18px 40px rgba(0,20,45,.55);
+      flex-shrink:0;
+      padding:22px clamp(20px,3vw,30px) 26px;
+      color:#fff;
+      background:linear-gradient(180deg,#0A1830,#071122);
+      border-top:2px solid rgba(200,146,58,.5);
     }
     .cc-eyebrow {
       font-family:'Cinzel',serif; font-size:11.5px; letter-spacing:3.5px;
@@ -1010,11 +1043,9 @@
       color:#E8B86D; letter-spacing:.3px; line-height:1.4;
     }
     .cc-desc {
-      font-size:14.5px; font-weight:500; margin:9px 0 0;
-      color:rgba(255,255,255,.86); line-height:1.6;
-      max-width:640px;
-      display:-webkit-box; -webkit-line-clamp:3;
-      -webkit-box-orient:vertical; overflow:hidden;
+      font-size:16px; font-weight:500; margin:10px auto 0;
+      color:rgba(255,255,255,.9); line-height:1.7;
+      max-width:680px;
     }
 
     /* Counter badge */
@@ -1027,23 +1058,23 @@
       border:1px solid rgba(255,255,255,.08);
     }
 
-    /* Navigation arrows */
+    /* Navigation arrows — positioned over the photo area, clear of the caption */
     .carousel-arrow {
-      position:absolute; top:50%; transform:translateY(-50%);
-      z-index:5; width:44px; height:44px; border-radius:50%;
-      background:rgba(8, 9, 26,.7); backdrop-filter:blur(12px);
+      position:absolute; top:38%; transform:translateY(-50%);
+      z-index:5; width:46px; height:46px; border-radius:50%;
+      background:rgba(8, 9, 26,.78); backdrop-filter:blur(12px);
       border:1px solid var(--gold-border);
       display:flex; align-items:center; justify-content:center;
       cursor:pointer; transition:background .2s, border-color .2s, transform .2s;
       outline:none;
     }
     .carousel-arrow:hover {
-      background:rgba(200,146,58,.18); border-color:var(--gold);
+      background:rgba(200,146,58,.22); border-color:var(--gold);
       transform:translateY(-50%) scale(1.08);
     }
     .carousel-arrow svg { width:14px; height:14px; stroke:var(--gold2); fill:none; stroke-width:2; }
-    .carousel-prev { left:-22px; }
-    .carousel-next { right:-22px; }
+    .carousel-prev { left:14px; }
+    .carousel-next { right:14px; }
 
     /* Dot indicators */
     .carousel-dots {
@@ -1087,11 +1118,16 @@
     }
     @media(max-width:640px) {
       #connections-gallery { padding:60px 0 70px; }
-      .carousel-stage { aspect-ratio:4/3; }
-      .carousel-arrow { width:36px; height:36px; }
+      .carousel-stage { height:auto; min-height:0; }
+      .carousel-slide { position:relative; opacity:1; }
+      .carousel-slide:not(.active) { display:none; }
+      .carousel-slide img { height:auto; max-height:62vh; }
+      .carousel-arrow { width:38px; height:38px; top:30%; }
       .carousel-prev { left:8px; }
       .carousel-next { right:8px; }
-      .carousel-thumb { width:68px; height:48px; }
+      .cc-name { font-size:22px; }
+      .cc-desc { font-size:14px; }
+      .carousel-thumb { width:64px; height:46px; }
     }
 
     /* ─── FOOTER ─────────────────────────────────────── */
@@ -1327,11 +1363,19 @@ body,p,li{font-weight:500}
 .js-city{font-size:clamp(18px,1.9vw,22px) !important;font-weight:800 !important;color:#fff !important;line-height:1.18 !important}
 .js-event{font-size:14.5px !important;font-weight:600 !important;color:rgba(255,255,255,.8) !important;line-height:1.45 !important}
 .js-award{font-size:12px !important;font-weight:800 !important;color:#E8B86D !important}
-.recog-list li{font-size:16px !important;font-weight:700 !important;color:rgba(255,255,255,.92) !important;line-height:1.75 !important}
+.recog-list{gap:22px !important}
+.recog-list li{display:flex !important;flex-direction:column !important;gap:4px !important;padding-left:24px !important;padding-bottom:18px !important;border-bottom:1px solid rgba(255,255,255,.07) !important}
+.recog-list li:last-child{border-bottom:none !important;padding-bottom:0 !important}
+.recog-list li::before{content:'' !important;width:7px !important;height:7px !important;border-radius:50% !important;background:var(--gold2) !important;box-shadow:0 0 8px rgba(232,184,109,.6) !important;top:8px !important;left:2px !important;font-size:0 !important}
+.recog-name{font-family:'Cinzel',serif !important;font-size:clamp(15px,1.4vw,18px) !important;font-weight:700 !important;letter-spacing:.4px !important;color:#F0C660 !important;text-shadow:0 1px 8px rgba(232,184,109,.25) !important;line-height:1.35 !important}
+.recog-meta{font-family:'DM Sans',sans-serif !important;font-size:14.5px !important;font-weight:500 !important;color:rgba(255,255,255,.72) !important;letter-spacing:.2px !important;line-height:1.55 !important}
+.recog-meta .name-inline-gold{color:#F0C660 !important;font-weight:700 !important}
 #recognitions .recog-wrap h3{font-weight:700 !important;font-size:clamp(24px,2.6vw,32px) !important}
+#recognitions .recog-wrap{max-width:620px !important}
 
 /* EVENTS + MAIN SITE topbar buttons — bold (requested) */
-.nav-pill,.nav-pill--ghost,.topbar-back,.topbar-home{font-weight:800 !important;letter-spacing:2px}
+.nav-pill,.nav-pill--ghost,.topbar-back,.topbar-home{font-weight:800 !important;letter-spacing:1.5px !important;white-space:nowrap !important;flex-shrink:0 !important}
+@media(max-width:600px){.nav-pill{font-size:10px !important;letter-spacing:1px !important;padding:8px 13px !important}}
 /* Bug fix: every video fits the viewport & shows in full (no overflow) */
 video{max-width:100%;max-height:82vh;object-fit:contain}
 /* Cinematic legacy lift (AGENTS.md master standard): space = power */
@@ -1342,25 +1386,47 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 /* Silver metallic name treatment (J AARON K DAVID inline) — stands out from white */
 .name-inline-silver{background:none !important;-webkit-background-clip:border-box !important;background-clip:border-box !important;-webkit-text-fill-color:currentColor !important;color:#EBF1FB !important;font-weight:800 !important;text-shadow:0 0 1px rgba(255,255,255,.55), 0 0 12px rgba(176,198,235,.42) !important}
 /* ── JT Foxx-style full-bleed stage hero ── */
-.mega-hero{position:relative;min-height:clamp(580px,94vh,940px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:#08091A}
-.mega-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;z-index:0}
-.mega-hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,9,26,.66) 0%,rgba(8,9,26,.16) 15%,rgba(8,9,26,0) 36%,rgba(8,9,26,0) 60%,rgba(8,9,26,.40) 80%,rgba(8,9,26,.80) 100%)}
-.mega-hero-top{position:relative;z-index:2;text-align:center;padding:clamp(80px,11vh,150px) clamp(20px,5vw,60px) 0}
-.mega-hero-eyebrow{font-family:'Cinzel',serif;font-size:clamp(11px,1.15vw,14px);letter-spacing:4px;text-transform:uppercase;color:var(--gold2);margin-bottom:20px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
-.mega-hero-title{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(22px,3.4vw,42px);letter-spacing:.5px;text-transform:uppercase;color:#fff;line-height:1.04;text-shadow:0 6px 36px rgba(0,0,0,.7)}
-.mega-hero-bottom{position:relative;z-index:2;text-align:center;padding:0 clamp(20px,5vw,60px) clamp(58px,8vh,96px);max-width:1040px;margin:0 auto}
-.mega-hero-names{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(16px,2.1vw,26px);letter-spacing:1.5px;margin-bottom:16px}
-.mega-amp{color:rgba(255,255,255,.45);margin:0 8px;font-weight:400}
-.mega-hero-tag{font-family:'DM Sans',sans-serif;font-size:clamp(14px,1.35vw,17px);line-height:1.75;color:rgba(255,255,255,.85);max-width:700px;margin:0 auto;text-shadow:0 2px 14px rgba(0,0,0,.6)}
-.mega-hero-tag strong{color:var(--gold2);font-weight:700}
-.mega-hero-scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none}
-.mega-scroll-text{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7)}
-.mega-scroll-line{width:1px;height:40px;background:linear-gradient(180deg,var(--gold2),transparent)}
-@media(max-width:600px){.mega-hero{min-height:80vh}.mega-hero-bg{object-position:center 30%}.mega-hero-top{padding-top:90px}}
-/* Centering fix: override old #hero grid layout (ID specificity) */
-#hero.mega-hero{display:flex;flex-direction:column;justify-content:space-between;height:auto;min-height:clamp(580px,94vh,940px)}
-#hero.mega-hero .mega-hero-top,#hero.mega-hero .mega-hero-bottom{width:100%;margin-left:auto;margin-right:auto}
-#hero.mega-hero .mega-hero-title{width:100%;text-align:center}
+.mega-hero{position:relative;overflow:hidden;background:#05060f;display:flex;justify-content:center}
+.mega-hero-bg{display:block;width:100%;max-width:1600px;height:auto;margin:0 auto;z-index:0}
+.mega-hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,6,15,.74) 0%,rgba(5,6,15,.16) 16%,rgba(5,6,15,0) 40%,rgba(5,6,15,0) 100%)}
+.mega-hero-top{position:absolute;top:0;left:0;right:0;z-index:2;text-align:center;padding:clamp(80px,12vh,112px) clamp(20px,5vw,60px) 0}
+.mega-hero-eyebrow{font-family:'Cinzel',serif;font-size:clamp(13px,1.5vw,17px);letter-spacing:3px;text-transform:uppercase;color:var(--gold2);text-shadow:0 2px 14px rgba(0,0,0,.9);font-weight:700}
+/* Title band — solid dark, sits BELOW the photo for clean, professional readability */
+.mega-hero-titleband{background:#05060f;text-align:center;padding:clamp(40px,6vw,72px) clamp(20px,5vw,60px) clamp(46px,6.5vw,80px);max-width:1040px;margin:0 auto}
+.mega-hero-title{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(27px,4vw,48px);letter-spacing:1px;text-transform:uppercase;color:#fff;line-height:1.12;margin-bottom:22px}
+.mega-hero-names{font-family:'Cinzel',serif;font-weight:800;font-size:clamp(17px,2.2vw,28px);letter-spacing:2px;margin-bottom:24px;line-height:1.55}
+.mega-amp{color:rgba(255,255,255,.4);margin:0 10px;font-weight:400}
+.mega-hero-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,1.7vw,22px);line-height:1.7;color:rgba(255,255,255,.82);max-width:720px;margin:0 auto}
+.mega-hero-tag strong{color:var(--gold2);font-weight:600;font-style:normal}
+@media(max-width:600px){.mega-hero-top{padding-top:74px}.mega-hero-eyebrow{font-size:13px;letter-spacing:2px}}
+
+/* ═══ MOBILE READABILITY LAYER — ELDERLY-FRIENDLY ════════════
+   Phones (Samsung / iPhone / common models): generous, legible
+   type for older readers — large reading prose, solid weight,
+   high-contrast white, comfortable leading. Overrides residual
+   inline greys and any thin labels that carry real content. */
+@media(max-width:600px){
+  /* Reading prose — large and solid */
+  .body-copy, .body-copy p,
+  .nar-body, .nar-body p,
+  .sig-point-text,
+  #cta-back .body-copy, #cta-back .body-copy p{
+    font-size:17.5px !important;
+    line-height:1.85 !important;
+    font-weight:400 !important;
+    color:rgba(255,255,255,.93) !important;
+  }
+  .intro-lead{ font-size:21px !important; line-height:1.55 !important; color:#fff !important; }
+  .ch-standfirst{ font-size:17.5px !important; line-height:1.7 !important; color:rgba(255,255,255,.84) !important; }
+  .fv-body p{ font-size:17.5px !important; line-height:1.82 !important; color:rgba(255,255,255,.93) !important; }
+  .cc-desc{ font-size:16.5px !important; line-height:1.7 !important; color:rgba(255,255,255,.92) !important; }
+  /* Content-bearing labels & subtitles — never tiny */
+  .fv-subtitle{ font-size:13px !important; letter-spacing:1.6px !important; }
+  .cc-role{ font-size:15px !important; }
+  .eyebrow, .cc-eyebrow{ font-size:12.5px !important; letter-spacing:2px !important; }
+  /* breathing room so dense paragraphs are easy to scan on small screens */
+  #intro .section-inner, #cta-back .section-inner{ padding-left:22px; padding-right:22px; }
+}
 </style>
 </head>
 <body>
@@ -1393,78 +1459,17 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
     <p class="mega-hero-eyebrow">Mega Success 2025 · Los Angeles · United States</p>
   </div>
 
-  <div class="mega-hero-bottom fade-up d1">
-    <h1 class="mega-hero-title">International Leadership Presence</h1>
-    <p class="mega-hero-names">
-      <span class="name-gold">SHEKINAIH SIEW SIN YAP</span>
-      <span class="mega-amp">&amp;</span>
-      <span class="name-silver">J AARON K DAVID</span>
-    </p>
-    <p class="mega-hero-tag">On the international stage of the <strong>2025 Mega Success Platform</strong> &mdash; JT Foxx&rsquo;s flagship global business event &mdash; Los Angeles, November 2025.</p>
-  </div>
-
-  <a class="mega-hero-scroll" href="#featured" aria-label="Scroll to the featured video">
-    <span class="mega-scroll-text">Watch the Story</span>
-    <span class="mega-scroll-line" aria-hidden="true"></span>
-  </a>
 </section>
 
-
-<!-- ═══════════════════════════════════════════════
-     CONTEXT BAND — quick facts at a glance
-════════════════════════════════════════════════ -->
-<div id="context-band">
-  <div class="context-band-inner">
-    <div class="context-band-item">
-      <div class="cb-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
-      </div>
-      <div>
-        <p class="cb-text-label">International Event</p>
-        <p class="cb-text-value">Mega Success · JT Foxx</p>
-      </div>
-    </div>
-    <div class="context-band-divider"></div>
-    <div class="context-band-item">
-      <div class="cb-icon">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      </div>
-      <div>
-        <p class="cb-text-label">Venue</p>
-        <p class="cb-text-value">Los Angeles, California</p>
-      </div>
-    </div>
-    <div class="context-band-divider"></div>
-    <div class="context-band-item">
-      <div class="cb-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      </div>
-      <div>
-        <p class="cb-text-label">Date</p>
-        <p class="cb-text-value">November 2025</p>
-      </div>
-    </div>
-    <div class="context-band-divider"></div>
-    <div class="context-band-item">
-      <div class="cb-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div>
-        <p class="cb-text-label">Representing</p>
-        <p class="cb-text-value">Singapore · Global Stage</p>
-      </div>
-    </div>
-    <div class="context-band-divider"></div>
-    <div class="context-band-item">
-      <div class="cb-icon">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      </div>
-      <div>
-        <p class="cb-text-label">Prior Recognition</p>
-        <p class="cb-text-value">UN · GLS 2025 · WBR London</p>
-      </div>
-    </div>
-  </div>
+<!-- Title band — sits BELOW the photo on solid dark for clean, professional readability -->
+<div class="mega-hero-titleband fade-up">
+  <h1 class="mega-hero-title">International Leadership Presence</h1>
+  <p class="mega-hero-names">
+    <span class="name-gold">SHEKINAIH SIEW SIN YAP</span>
+    <span class="mega-amp">&amp;</span>
+    <span class="name-silver">J AARON K DAVID</span>
+  </p>
+  <p class="mega-hero-tag">On the international stage of the <strong>2025 Mega Success Platform</strong> &mdash; JT Foxx&rsquo;s flagship global business event &mdash; Los Angeles, November 2025.</p>
 </div>
 
 
@@ -1475,7 +1480,6 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
   <div class="fv-inner">
 
     <div class="fv-header fade-up">
-      <span class="fv-eyebrow">On Record</span>
       <h2 class="fv-title">Featured Video &ndash; International Leadership Presence</h2>
       <p class="fv-subtitle">Los Angeles, United States &nbsp;&middot;&nbsp; Mega Success 2025</p>
     </div>
@@ -1505,11 +1509,10 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
     </div>
 
     <div class="fv-body fade-up d2">
-      <p>This video captures a key moment during <span class="name-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-silver">J AARON K DAVID</span>'s participation in Mega Success 2025, held in Los Angeles, California.</p>
-      <p>Set within one of the world's most influential global business environments, their presence at this international platform reflects a broader trajectory of cross-border leadership engagement, humanitarian vision, and global networking.</p>
-      <p>The event brought together entrepreneurs, investors, speakers, and leaders from multiple nations — providing a high-level environment for international collaboration, strategic positioning, and knowledge exchange.</p>
-      <p>Their participation represents more than event attendance. It marks a growing international footprint connecting Asia to the United States through leadership, diplomacy, and global influence.</p>
-      <p>This appearance forms part of a continuing journey across global platforms — including Thailand, India, Oman, and the United States — contributing to an expanding presence in international leadership and humanitarian engagement.</p>
+      <p>On the Mega Success 2025 stage, <strong>JT Foxx — the world's #1 wealth coach</strong> — introduced <span class="name-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-silver">J AARON K DAVID</span> not only as faith leaders, but as founders of a global freight enterprise generating <strong>tens of millions of dollars</strong> — who chose to step away from that wealth to carry a far larger message.</p>
+      <p>Foxx had met <span class="name-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-silver">J AARON K DAVID</span> months earlier in <strong>Singapore</strong> — a conversation he called deeply inspiring. He recognised them as <strong>best-selling authors</strong> whose books had already resonated across nations.</p>
+      <p>Their message was clear: to make God real to every person, of every faith. Through their <em>Behold My Messenger</em> series, they spoke of a path to breakthrough in relationships, healing, finances, and destiny — and of prayer answered on the spot, within minutes, not someday.</p>
+      <p>Foxx closed by calling them <em>"a blessing to this world,"</em> urging his audience to lean in with curiosity — an endorsement, from one of the world's most influential business voices, that marked Los Angeles as the moment their work was received in the United States.</p>
     </div>
 
     <div class="fv-photos fade-in d3">
@@ -1544,108 +1547,64 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 
 
 <!-- ═══════════════════════════════════════════════
-     OPENING NARRATIVE
+     TESTIMONY VIDEO — VOICES FROM THE FLOOR
 ════════════════════════════════════════════════ -->
-<section id="intro">
-  <div class="section-inner">
-    <div class="intro-grid">
+<section id="testimony">
+  <div class="fv-inner">
 
-      <div class="intro-sidebar fade-in">
-        <p class="intro-sidebar-tag">The Story</p>
-        <div class="intro-sidebar-num">01</div>
-      </div>
-
-      <div>
-        <p class="intro-lead fade-up">
-          November 2025 marked a defining international milestone for <span class="name-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-silver">J AARON K DAVID</span> as they stepped onto the United States stage at Mega Success 2025 in Los Angeles, California.
-        </p>
-        <div class="body-copy fade-up d1">
-          <p>
-            Positioned among global entrepreneurs, investors, speakers, and international leaders, their presence represented more than attendance — it reflected the emergence of a growing international humanitarian and leadership platform originating from Singapore.
-          </p>
-          <p>
-            This appearance became a foundational chapter in their expanding international journey across leadership, diplomacy, humanitarian engagement, and global recognition.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════
-     WHY LOS ANGELES MATTERED
-════════════════════════════════════════════════ -->
-<section id="why-matters">
-  <div class="section-inner">
-
-    <div class="fade-up" style="margin-bottom:52px;text-align:center">
-      <span class="eyebrow">Strategic Context</span>
-      <h2 class="display-title">Why <em>Los Angeles Mattered</em></h2>
+    <div class="fv-header fade-up">
+      <span class="eyebrow" style="display:block;margin-bottom:8px">From the Floor · Mega Success 2025</span>
+      <h2 class="fv-title">What the Room Felt</h2>
+      <p class="fv-subtitle">An Attendee Responds to the JT Foxx Interview</p>
     </div>
 
-    <div class="why-cards fade-in d1">
-      <div class="why-card">
-        <div class="why-card-num">01</div>
-        <h3 class="why-card-title">USA Global Visibility</h3>
-        <p class="why-card-body">Presence in the United States strengthened international positioning beyond Asia, placing their platform on one of the world's most visible stages.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-card-num">02</div>
-        <h3 class="why-card-title">Access to High-Level Networks</h3>
-        <p class="why-card-body">Mega Success gathered entrepreneurs, investors, and global business figures from multiple nations — the kind of network that shapes industries and opens doors across continents.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-card-num">03</div>
-        <h3 class="why-card-title">International Brand Expansion</h3>
-        <p class="why-card-body">The event marked the expansion of Crowned Eagles Global into wider international visibility, extending their humanitarian and leadership reach beyond Singapore and Southeast Asia.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-card-num">04</div>
-        <h3 class="why-card-title">Strategic International Positioning</h3>
-        <p class="why-card-body">The Los Angeles appearance reinforced a documented cross-border leadership journey spanning Singapore, Bangkok, London, Mumbai, and now the United States.</p>
-      </div>
+    <div class="fv-body fade-up d1" style="text-align:center;max-width:760px;margin:0 auto 30px">
+      <p>Among the entrepreneurs and high-net-worth leaders gathered at Mega Success 2025, one attendee paused to share what <span class="name-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-silver">J AARON K DAVID</span> stirred in him as JT Foxx interviewed them on stage.</p>
     </div>
 
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════
-     ACT I — ARRIVAL IN LOS ANGELES
-     Layout: Large photo left · narrative right
-════════════════════════════════════════════════ -->
-<section id="chapter-01" class="chapter ch-ink">
-  <div class="section-inner">
-
-    <div class="ch-header fade-up">
-      <span class="ch-num">Act I</span>
-      <div class="ch-rule"></div>
+    <div class="fv-player fade-in d2">
+      <video controls playsinline preload="none"
+             poster="images/us-mega-success-2025/us-mega-success-2025-attendee-testimony-cover.jpg"
+             style="width:100%;display:block;border-radius:16px;background:#05060f;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(200,146,58,.18)">
+        <source src="images/us-mega-success-2025/us-mega-success-2025-attendee-testimony-shekinaih-aaron.mp4" type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <h2 class="ch-title fade-up">Arrival in <em>Los Angeles</em></h2>
-    <p class="ch-standfirst fade-up d1">Singapore to California. A deliberate move onto the United States stage.</p>
 
-    <div class="lay-a fade-in d2">
+    <blockquote class="testimony-quote fade-up d3">&ldquo;I am simply so impressed with the heart and the mission of these two lovely people. I wish them nothing but the best of luck with their efforts going forward &mdash; and may God work.&rdquo;</blockquote>
+    <p class="testimony-attr fade-up d3">&mdash; A fellow attendee at Mega Success 2025</p>
 
-      <div class="lay-photo">
-        <div class="photo-slot" style="height:auto">
-          <img src="images/us-mega-success-2025/mega-success-2025-la-14.jpg" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with international contacts · Los Angeles · November 2025" loading="eager" style="height:auto; object-fit:unset"/>
-        </div>
-        <p class="slot-cap">Arrival · Los Angeles · November 2025</p>
-      </div>
+    <div style="max-width:130px;height:1px;background:linear-gradient(90deg,transparent,rgba(232,184,109,.5),transparent);margin:54px auto 46px"></div>
 
-      <div class="lay-text narrative" style="padding-top:16px">
-        <span class="nar-tag">01 · The Arrival</span>
-        <h3 class="nar-heading">Singapore Touches the West Coast</h3>
-        <div class="nar-body">
-          <p>Los Angeles in November 2025 marked the beginning of a United States chapter — the first time <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> stepped onto American soil as internationally recognised leaders representing Singapore, faith leadership, and humanitarian service.</p>
-          <p>The choice of Mega Success as their first US appearance was deliberate. Hosted by JT Foxx — a figure of significant international business standing — the event provided immediate access to a calibre of network rarely encountered outside the world's major business capitals.</p>
-          <blockquote class="pull-quote">"Los Angeles was not a destination. It was a declaration of international direction."</blockquote>
-        </div>
-      </div>
-
+    <div class="fv-header fade-up">
+      <span class="eyebrow" style="display:block;margin-bottom:8px">A Closer Conversation · Mega Success 2025</span>
+      <h2 class="fv-title">Dean Welch Meets the Mission</h2>
+      <p class="fv-subtitle">Dean Welch &nbsp;·&nbsp; Millionaire By Action</p>
     </div>
+
+    <div class="fv-body fade-up d1" style="text-align:center;max-width:760px;margin:0 auto 30px">
+      <p>Moments after <span class="name-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-silver">J AARON K DAVID</span> stepped off the Mega Success stage, entrepreneur <strong>Dean Welch</strong> of <em>Millionaire By Action</em> met them — and they prayed over him. Here, in his own words, is what the encounter meant.</p>
+    </div>
+
+    <div class="fv-player fade-in d2">
+      <video controls playsinline preload="none"
+             poster="images/us-mega-success-2025/us-mega-success-2025-dean-welch-feature-cover.jpg"
+             style="width:100%;display:block;border-radius:16px;background:#05060f;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(200,146,58,.18)">
+        <source src="images/us-mega-success-2025/us-mega-success-2025-dean-welch-feature-shekinaih-aaron.mp4" type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <details class="transcript fade-up d3">
+      <summary>Read the Full Conversation</summary>
+      <div class="transcript-body">
+        <p><span class="ts-name ts-guest">Dean Welch</span>Hi, I&rsquo;m Dean Welch with <em>Millionaire By Action</em>. This year alone I&rsquo;ve launched a new company &mdash; <em>Prime A-to-Z Living</em> &mdash; helping people through every step, A to Z: how to prepare your next friend or family member to transition into elder care, and how to support those living with disabilities, and their homes.</p>
+        <p><span class="ts-name ts-guest">Dean Welch</span>This morning I&rsquo;m at an event that has been absolutely amazing, and I just met these two beautiful people who were up on stage today. They gave us all an inspired moment &mdash; so that we can grow within ourselves and connect the way we need to connect. I&rsquo;ll let them speak. I&rsquo;m Dean Welch, Chief Climate Officer at Millionaire By Action &mdash; and your names?</p>
+        <p><span class="ts-name name-inline-gold">SHEKINAIH SIEW SIN YAP</span>Hi, I&rsquo;m SHEKINAIH, and he is &mdash;</p>
+        <p><span class="ts-name name-inline-silver">J AARON K DAVID</span>&mdash; J AARON K DAVID. And we are from Crowned Eagles Global.</p>
+        <p><span class="ts-name ts-guest">Dean Welch</span>It has been absolutely amazing. I came right after they got off stage and spoke with them a little; they prayed over me, blessed me, and guided me. It has been absolutely beautiful &mdash; and hopefully, going forward, we can keep growing our relationship in many different ways. Thank you again for what you did for us this morning; I appreciate it. This is just the beginning of the iceberg, I heard&hellip; that is a Goshen.</p>
+      </div>
+    </details>
 
   </div>
 </section>
@@ -1659,13 +1618,20 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
   <div class="section-inner">
 
     <div class="ch-header fade-up">
-      <span class="ch-num">Act II</span>
+      <span class="ch-num">Act I</span>
       <div class="ch-rule"></div>
     </div>
     <h2 class="ch-title fade-up">Inside the <em>Global Room</em></h2>
     <p class="ch-standfirst fade-up d1">Positioned among the world's leading entrepreneurs, investors, and innovators.</p>
 
-    <div class="act-ii-photo-row fade-in d2">
+    <div class="lay-photo fade-in d2" style="max-width:980px;margin:0 auto 30px">
+      <div class="photo-slot" style="height:auto">
+        <img src="images/us-mega-success-2025/mega-success-2025-la-14.jpg" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID among international leaders at Mega Success 2025 · Los Angeles · November 2025" loading="lazy" style="height:auto; object-fit:unset"/>
+      </div>
+      <p class="slot-cap" style="text-align:center">Among the Leaders · Mega Success 2025 · Los Angeles</p>
+    </div>
+
+    <div class="act-ii-photo-row fade-in d3">
       <div class="photo-slot h-440">
         <img src="images/us-mega-success-2025/mega-success-2025-la-15.jpg" alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with international leader · Mega Success 2025 · Los Angeles" loading="lazy" style="object-position:center top"/>
       </div>
@@ -1675,17 +1641,13 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
     </div>
 
     <div style="max-width:680px;margin:52px auto 0;text-align:center" class="fade-up d3">
-      <p class="body-copy" style="font-size:15px;color:rgba(255,255,255,.5);line-height:2">
+      <p class="body-copy" style="font-size:16px;color:rgba(255,255,255,.86);line-height:1.9">
         Mega Success 2025 assembled an international cross-section of business leaders, investors, and innovators. For <span class="name-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-silver">J AARON K DAVID</span>, the environment offered meaningful engagement at the intersection of leadership, enterprise, and international influence.
       </p>
     </div>
 
   </div>
 </section>
-
-
-
-
 
 
 <!-- ═══════════════════════════════════════════════
@@ -1713,7 +1675,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 
       <!-- ── Main stage ── -->
       <div class="carousel-stage" id="connCarousel" tabindex="0">
-        <span class="carousel-counter" id="connCounter">1 / 10</span>
+        <span class="carousel-counter" id="connCounter">1 / 7</span>
 
         <!-- 1 · Josh Earp -->
         <div class="carousel-slide active" data-name="Josh Earp">
@@ -1863,118 +1825,6 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 
 
 <!-- ═══════════════════════════════════════════════
-     REFLECTION
-════════════════════════════════════════════════ -->
-<section id="reflection">
-  <div class="ref-inner">
-
-    <div class="fade-up" style="margin-bottom:64px">
-      <span class="eyebrow">Reflection</span>
-      <h2 class="display-title">The International Journey <em>in Perspective</em></h2>
-    </div>
-
-    <blockquote class="ref-quote fade-up d1">
-      Los Angeles marked a deliberate step in an international journey that continues to grow — across humanitarian leadership, cross-border diplomacy, and the quiet authority that comes from consistent, principled service.
-    </blockquote>
-
-    <div class="ref-attr fade-up d2">
-      <span class="ref-name"><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span></span>
-      <p class="ref-role">Mega Success 2025 · Los Angeles, California · November 2025</p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════
-     INTERNATIONAL JOURNEY STRIP
-════════════════════════════════════════════════ -->
-<section id="journey-strip">
-  <div class="section-inner">
-
-    <div class="journey-header fade-up">
-      <span class="eyebrow">International Journey</span>
-      <h2>A World Stage <em>Unfolding</em></h2>
-      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(255,255,255,.3);letter-spacing:.5px;margin:12px 0 0">
-        From Singapore to the global stage &nbsp;·&nbsp; 2025 — 2026
-      </p>
-    </div>
-
-    <div class="journey-grid fade-in d1">
-
-      <!-- 01 · Los Angeles -->
-      <div class="journey-stop journey-stop--active">
-        <div class="js-num">01</div>
-        <span class="js-date">Nov 2025</span>
-        <span class="js-city">Los Angeles<br/>United States</span>
-        <span class="js-event">Mega Success 2025<br/>International Leadership Summit</span>
-        <span class="js-award">★ You are here</span>
-      </div>
-
-      <!-- 02 · Manila -->
-      <div class="journey-stop">
-        <div class="js-num">02</div>
-        <span class="js-date">Nov 2025</span>
-        <span class="js-city">Manila<br/>Philippines</span>
-        <span class="js-event">Manila Up! Magazine<br/>10th Anniversary Gala — A82</span>
-        <span class="js-award">★ Award Recipient</span>
-      </div>
-
-      <!-- 03 · Bangkok -->
-      <div class="journey-stop">
-        <div class="js-num">03</div>
-        <span class="js-date">Dec 2025</span>
-        <span class="js-city">Bangkok<br/>Thailand</span>
-        <span class="js-event">GLS December Summit<br/>Global Leadership Series</span>
-      </div>
-
-      <!-- 04 · Dalai Lama -->
-      <div class="journey-stop">
-        <div class="js-num">04</div>
-        <span class="js-date">Jan 2026</span>
-        <span class="js-city">India</span>
-        <span class="js-event">Audience with<br/>His Holiness the Dalai Lama</span>
-      </div>
-
-      <!-- 05 · Mumbai -->
-      <div class="journey-stop">
-        <div class="js-num">05</div>
-        <span class="js-date">Feb 2026</span>
-        <span class="js-city">Mumbai<br/>India</span>
-        <span class="js-event">Bollywood Leadership Circle<br/>Walking the Red Carpet</span>
-        <span class="js-award">★ Global Divinity Award — Shekinaih</span>
-      </div>
-
-      <!-- 06 · Nagpur -->
-      <div class="journey-stop">
-        <div class="js-num">06</div>
-        <span class="js-date">2026</span>
-        <span class="js-city">Nagpur<br/>India</span>
-        <span class="js-event">International Leadership<br/>Engagement</span>
-      </div>
-
-      <!-- 07 · Galgotias University -->
-      <div class="journey-stop">
-        <div class="js-num">07</div>
-        <span class="js-date">2026</span>
-        <span class="js-city">Greater Noida<br/>India</span>
-        <span class="js-event">Galgotias University<br/>India's Largest Private University</span>
-      </div>
-
-      <!-- 08 · Oman / UAE -->
-      <div class="journey-stop">
-        <div class="js-num">08</div>
-        <span class="js-date">2026</span>
-        <span class="js-city">Oman &amp; UAE<br/>Middle East</span>
-        <span class="js-event">IISA International<br/>Leadership Engagement</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════
      FEATURED RECOGNITIONS
 ════════════════════════════════════════════════ -->
 <section id="recognitions">
@@ -1985,14 +1835,13 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
         A Record of <em style="color:#E8B86D;font-style:italic">International Achievement</em>
       </h3>
       <ul class="recog-list">
-        <li>UNPKFC Certificate of Honour &nbsp;·&nbsp; United Nations Peace Keeping Family Council</li>
-        <li>Global Leadership Achievement Award &nbsp;·&nbsp; GLS 2025, Bangkok, Thailand</li>
-        <li>World Book of Records &nbsp;·&nbsp; London — International Excellence</li>
-        <li>Global Diplomacy Ambassador Award &nbsp;·&nbsp; Mumbai, India</li>
-        <li>Global Divinity Award &nbsp;·&nbsp; Conferred upon <span class="name-s">SHEKINAIH SIEW SIN YAP</span> · Mumbai 2026</li>
-        <li>Manila Up! Magazine Feature &nbsp;·&nbsp; 10th Anniversary Gala, Philippines 2025</li>
-        <li>International Address &nbsp;·&nbsp; Galgotias University, India's Largest Private University</li>
-        <li>IISA International Engagement &nbsp;·&nbsp; Oman &amp; UAE, 2026</li>
+        <li><span class="recog-name">UNPKFC Certificate of Honour</span><span class="recog-meta">United Nations Peace Keeping Family Council</span></li>
+        <li><span class="recog-name">Global Leadership Achievement Award</span><span class="recog-meta">GLS 2025 · Bangkok, Thailand</span></li>
+        <li><span class="recog-name">Global Divinity Ambassador</span><span class="recog-meta">DMGP Global Diplomacy Awards · Mumbai, India</span></li>
+        <li><span class="recog-name">Global Supreme Divinity &amp; Full-Spectrum Transformation Leadership Award</span><span class="recog-meta">Conferred upon <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> · Oman 2026</span></li>
+        <li><span class="recog-name">Manila Up! Magazine Feature</span><span class="recog-meta">10th Anniversary Gala · Philippines 2025</span></li>
+        <li><span class="recog-name">International Address</span><span class="recog-meta">Galgotias University · India's Largest Private University</span></li>
+        <li><span class="recog-name">IISA International Engagement</span><span class="recog-meta">Oman &amp; UAE · 2026</span></li>
       </ul>
     </div>
   </div>
@@ -2007,7 +1856,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 
     <span class="eyebrow fade-up">Continuing the International Journey</span>
 
-    <div class="body-copy fade-up d1" style="margin:28px 0 40px;font-size:15px;color:rgba(255,255,255,.5);line-height:2">
+    <div class="body-copy fade-up d1" style="margin:28px 0 40px;font-size:16px;color:rgba(255,255,255,.86);line-height:1.9">
       <p>Los Angeles was one milestone in a journey that spans continents — from Mega Success 2025 to the Dalai Lama's residence, from Manila's gala stages to India's largest university, from Mumbai's Bollywood circle to the corridors of Oman and the UAE.</p>
       <p style="margin-top:18px"><span class="name-s">SHEKINAIH SIEW SIN YAP</span> <span class="name-amp">&amp;</span> <span class="name-a">J AARON K DAVID</span> carry a platform built not on celebrity, but on consecrated purpose — each invitation a recognition, each stage a responsibility.</p>
     </div>
@@ -2025,12 +1874,11 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 <!-- ═══════════════════════════════════════════════
      FOOTER
 ════════════════════════════════════════════════ -->
-<footer>
-  <div class="footer-logo">
-    <span class="nav-dot"></span>
-    <span class="nav-brand"><span style="color:#F0C660">SHEKINAIH-</span><span style="color:#DDE3EE">JAARONKDAVID.COM</span></span>
-  </div>
-  <p class="footer-copy">© 2025 Mega Success · Los Angeles Event Archive · <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span></p>
+<footer class="site-footer-std">
+  <p class="sf-brand"><span class="sf-dot"></span><span class="sf-gold">SHEKINAIH-</span><span class="sf-silver">JAARONKDAVID.COM</span></p>
+  <p class="sf-tag">Transforming Lives &middot; Connecting Nations &middot; Inspiring Global Impact</p>
+  <p class="sf-copy">&copy; 2026 <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span> &middot; Singapore</p>
+  <a class="sf-back" href="index.html">&larr; Return to Main Page</a>
 </footer>
 
 
@@ -2143,6 +1991,21 @@ body{padding-bottom:96px}
  .cx-panel{align-items:flex-end}
  .cx-sheet{border-radius:20px 20px 0 0;width:100%;max-height:86vh}
 }
+
+/* === Standardized elegant footer === */
+.site-footer-std{background:#050610;border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:56px 24px 44px}
+.site-footer-std *{text-align:center}
+.site-footer-std .sf-brand{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;font-family:'Cinzel',serif;font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase;margin:0 0 20px}
+.site-footer-std .sf-dot{width:7px;height:7px;border-radius:50%;background:#E8B86D;box-shadow:0 0 10px rgba(232,184,109,.6);flex-shrink:0}
+.site-footer-std .sf-gold{color:#F0C660;white-space:nowrap}
+.site-footer-std .sf-silver{color:#DDE3EE;white-space:nowrap}
+.site-footer-std .sf-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:clamp(17px,2.1vw,23px);color:rgba(255,255,255,.94);margin:0 auto 20px;max-width:760px;line-height:1.5}
+.site-footer-std .sf-copy{font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:rgba(255,255,255,.72);margin:0 auto 18px;line-height:1.7;max-width:680px}
+.site-footer-std .sf-copy .name-inline-gold{color:#F0C660;font-weight:800}
+.site-footer-std .sf-copy .name-inline-silver{color:#EBF1FB;font-weight:800;text-shadow:0 0 12px rgba(176,198,235,.4)}
+.site-footer-std .sf-back{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;border:1px solid rgba(232,184,109,.32);border-radius:100px;padding:10px 22px;display:inline-block}
+.site-footer-std .sf-back:hover{color:#E8B86D;border-color:rgba(232,184,109,.6)}
+@media(max-width:600px){.site-footer-std .sf-tag{font-size:16px}.site-footer-std .sf-copy{font-size:14px}.site-footer-std .sf-brand{font-size:11.5px}}
 </style>
 <nav class="cx-bar" aria-label="Chapter navigation">
   <span class="cx-arrow cx-off" aria-hidden="true">‹</span>

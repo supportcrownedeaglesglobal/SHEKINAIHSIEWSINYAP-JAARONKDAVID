@@ -1474,9 +1474,11 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 <!-- ══════════════════════════════════════════
      FOOTER
 ══════════════════════════════════════════ -->
-<footer class="art-footer">
-  <p><span style="color:#F0C660">SHEKINAIH-</span><span style="color:#DDE3EE">JAARONKDAVID.COM</span> · Singapore · Manila Up International Magazine · 10th Anniversary Gala 2025</p>
-  <a href="index.html">← Return to Main Page</a>
+<footer class="site-footer-std">
+  <p class="sf-brand"><span class="sf-dot"></span><span class="sf-gold">SHEKINAIH-</span><span class="sf-silver">JAARONKDAVID.COM</span></p>
+  <p class="sf-tag">Transforming Lives &middot; Connecting Nations &middot; Inspiring Global Impact</p>
+  <p class="sf-copy">&copy; 2026 <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span> &middot; Singapore</p>
+  <a class="sf-back" href="index.html">&larr; Return to Main Page</a>
 </footer>
 
 <script>
@@ -1555,6 +1557,21 @@ body{padding-bottom:96px}
  .cx-panel{align-items:flex-end}
  .cx-sheet{border-radius:20px 20px 0 0;width:100%;max-height:86vh}
 }
+
+/* === Standardized elegant footer === */
+.site-footer-std{background:#050610;border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:56px 24px 44px}
+.site-footer-std *{text-align:center}
+.site-footer-std .sf-brand{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;font-family:'Cinzel',serif;font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase;margin:0 0 20px}
+.site-footer-std .sf-dot{width:7px;height:7px;border-radius:50%;background:#E8B86D;box-shadow:0 0 10px rgba(232,184,109,.6);flex-shrink:0}
+.site-footer-std .sf-gold{color:#F0C660;white-space:nowrap}
+.site-footer-std .sf-silver{color:#DDE3EE;white-space:nowrap}
+.site-footer-std .sf-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:clamp(17px,2.1vw,23px);color:rgba(255,255,255,.94);margin:0 auto 20px;max-width:760px;line-height:1.5}
+.site-footer-std .sf-copy{font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:rgba(255,255,255,.72);margin:0 auto 18px;line-height:1.7;max-width:680px}
+.site-footer-std .sf-copy .name-inline-gold{color:#F0C660;font-weight:800}
+.site-footer-std .sf-copy .name-inline-silver{color:#EBF1FB;font-weight:800;text-shadow:0 0 12px rgba(176,198,235,.4)}
+.site-footer-std .sf-back{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;border:1px solid rgba(232,184,109,.32);border-radius:100px;padding:10px 22px;display:inline-block}
+.site-footer-std .sf-back:hover{color:#E8B86D;border-color:rgba(232,184,109,.6)}
+@media(max-width:600px){.site-footer-std .sf-tag{font-size:16px}.site-footer-std .sf-copy{font-size:14px}.site-footer-std .sf-brand{font-size:11.5px}}
 </style>
 <nav class="cx-bar" aria-label="Chapter navigation">
   <a class="cx-arrow" href="us-megasuccess2025.html" aria-label="Previous chapter">‹</a>

@@ -250,6 +250,47 @@ Motion should feel:
 
 ---
 
+# 📱 Mobile Readability Standard — MANDATORY (read before any visual edit)
+
+**The primary audience reads this site on a phone.** Every page must be effortless to read on common handsets — **Samsung Galaxy (S / A series, ~360–412px CSS width), iPhone (SE 375 · 14/15 390–393 · Pro Max 430), Google Pixel (~412px)**. If text is hard to read on a 375px screen, the page is broken — fix it before shipping.
+
+### The three readability failures — never ship these
+1. **Tiny text.** Body / paragraph text must be **≥ 16px on mobile** (we use 16–16.5px). Never below 16px — iOS auto-zooms and it signals "cheap". Eyebrows/labels may be smaller, but never sentences a visitor actually reads.
+2. **Thin weight.** Paragraph text must be **font-weight 400 minimum**. `font-weight:300` on body copy is banned — light grey thin type is the #1 cause of "I can't read it".
+3. **Low contrast (grey-on-dark).** Reading prose on the dark background must be **`rgba(255,255,255,.86)` or brighter** (`.9+` preferred on phones) — WCAG AA ≥ 4.5:1. Muted greys (`≤ .6` opacity) are permitted **only** for small decorative eyebrows, watermark numerals, and meta-labels — **never for paragraphs**.
+
+### Mobile typography targets
+* Body paragraphs: **16–16.5px**, **line-height 1.7–1.9**, **weight 400**, colour **≥ rgba(255,255,255,.88)**.
+* Lead / standfirst: brighter still (white or `.9+`); keep it short.
+* Line length: aim **35–60 characters** per line on mobile; add side padding (≥ 20–22px) so text never runs edge-to-edge.
+* Tap targets ≥ **44×44px** with ≥ 8px spacing; never disable zoom; **no horizontal scroll** at 360px.
+
+### Canonical mobile readability layer — replicate on every page
+Append a guard at the end of each page's `<style>` (and keep `css/main.css` in sync). It enforces legibility on phones and overrides any residual inline greys:
+
+```css
+@media (max-width:600px){
+  .body-copy, .body-copy p, .nar-body, .nar-body p,
+  .sig-point-text, .lede, .standfirst, .prose p{
+    font-size:16.5px !important;
+    line-height:1.85 !important;
+    font-weight:400 !important;
+    color:rgba(255,255,255,.92) !important;
+  }
+  /* tiny eyebrows/labels stay as accents — do NOT brighten those into body text */
+}
+```
+
+### Pre-flight check — run before declaring any page done
+1. View (or mentally simulate) the page at **375px and 360px** width.
+2. Read every paragraph: is it 16px+, weight 400+, and clearly white-on-dark? If any paragraph is thin grey → fix the class/inline style, don't leave it.
+3. Confirm no paragraph uses `rgba(255,255,255,.5)` / `.55` / thin `300`. Those are reading-text bugs.
+4. Headings stay brand gold (`#E8B86D`); names stay gold/silver per the name rules — readability changes never override those.
+
+> Status: `us-megasuccess2025.html` was brought to this standard (`.body-copy`, `.nar-body`, `.sig-point-text`, `.ch-standfirst`, intro + closing CTA all raised to 16px / weight 400 / `.86`+, plus the mobile layer above). **Roll the same pass across every other event page and `index.html`.**
+
+---
+
 # Media Rules
 
 Large raw media files must NOT be committed into GitHub.
@@ -372,6 +413,18 @@ If any of these files are missing, state that clearly before editing and continu
 - ❌ "J. A. K. David" — forbidden
 - ❌ "Mr David" — forbidden
 - ❌ "J Aaron David" — forbidden (must keep "K" middle initial)
+- ❌ "Aaron J. David" / "Mr. Aaron J. David" — forbidden (never re-order into a Western first-last format; the canonical order is always **J AARON K DAVID**)
+- ❌ Title-case "J Aaron K David" — forbidden in display text; must be FULL CAPS **J AARON K DAVID** (same as SHEKINAIH SIEW SIN YAP)
+
+### Quotes, captions & third-party coverage — names are ALWAYS normalized
+
+Source material (magazine quotes, press coverage, certificates, captions) frequently writes the names loosely — e.g. "Mr. Aaron J. David", "Ms. Yap", "Shekinaih & Aaron". **Never reproduce those forms verbatim.** Normalize every on-page name to the canonical, styled form — **even inside a direct quotation**:
+
+- ✅ Inside a quote: `Ms. <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and Mr. <span class="name-inline-silver">J AARON K DAVID</span>`
+- The honorific (Ms./Mr.) may remain, but the **name itself** must be canonical FULL CAPS + colour: **SHEKINAIH SIEW SIN YAP = gold**, **J AARON K DAVID = silver**.
+- Both names must always be FULL CAPS and identically cased — if one is caps, so is the other.
+- Applies everywhere: pull-quotes, press blocks, image captions, alt text, overlays, nav, footers, and running copy. No exceptions, on any page.
+- Pre-flight before shipping any page: search the page for `Aaron` (mixed case) and `Yap`/`Shekinaih` (mixed case) in visible text — any hit that isn't an internal `<!-- comment -->` is a bug to fix.
 
 ### Full-caps rule — non-negotiable
 
