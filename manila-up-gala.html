@@ -17,8 +17,8 @@
       --silver:#B8C4D8;
       --white:#FFFFFF;
       --border:rgba(255,255,255,0.08);
-      --text-body:rgba(255,255,255,.75);
-      --text-muted:rgba(255,255,255,.45);
+      --text-body:rgba(255,255,255,.92);
+      --text-muted:rgba(255,255,255,.6);
       --col-max:760px;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -76,9 +76,9 @@
       color:var(--gold);margin-bottom:10px;
     }
     .hero-date{
-      font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
-      letter-spacing:3px;text-transform:uppercase;
-      color:rgba(255,255,255,.35);margin-bottom:36px;
+      font-family:'Cinzel',serif;font-size:12.5px;font-weight:700;
+      letter-spacing:2.2px;text-transform:uppercase;
+      color:rgba(255,255,255,.86);margin-bottom:42px;line-height:1.6;
     }
     .hero-title{
       font-family:'Cormorant Garamond',serif;
@@ -92,8 +92,8 @@
     }
     .hero-title .white-line{display:block;color:#E8B86D}
     .hero-desc{
-      font-family:'DM Sans',sans-serif;font-size:clamp(14px,1.2vw,17px);
-      font-weight:300;line-height:1.9;color:var(--text-muted);
+      font-family:'DM Sans',sans-serif;font-size:clamp(15px,1.3vw,18px);
+      font-weight:400;line-height:1.85;color:rgba(255,255,255,.85);
       max-width:560px;margin:0 auto 48px;
     }
     .hero-pills{
@@ -145,8 +145,8 @@
     .gala-prestige-title .white-line{display:block;color:#E8B86D}
     .gala-prestige-body{
       font-family:'DM Sans',sans-serif;
-      font-size:clamp(14px,1.2vw,16px);font-weight:300;
-      line-height:1.9;color:var(--text-body);
+      font-size:clamp(16px,1.4vw,18px);font-weight:400;
+      line-height:1.85;color:rgba(255,255,255,.93);
       max-width:700px;margin:0 auto 20px;
     }
     .gala-facts-row{
@@ -197,8 +197,8 @@
       display:block;font-size:.55em;margin:.2em 0;
     }
     .gala-spotlight-sub{
-      font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;
-      color:var(--text-muted);line-height:1.85;max-width:520px;margin:0 auto;
+      font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;
+      color:rgba(255,255,255,.82);line-height:1.8;max-width:560px;margin:0 auto;
     }
 
     /* ─── SECTION WRAPPER ─────────────────────────────── */
@@ -249,11 +249,10 @@
     }
     .award-card-photo{
       width:100%;overflow:hidden;
-      background:linear-gradient(160deg,rgba(8, 9, 26,1) 0%,rgba(8, 9, 26,1) 100%);
-      height:520px;
+      background:#08091a;
     }
     .award-card-photo img{
-      width:100%;height:100%;object-fit:cover;object-position:top center;display:block;
+      width:100%;height:auto;display:block;
       transition:transform .5s ease;
     }
     .award-card:hover .award-card-photo img{transform:scale(1.03)}
@@ -375,12 +374,11 @@
       padding:0 clamp(20px,5vw,60px);
     }
     .profile-spread{
-      display:grid;grid-template-columns:1fr 1fr;
-      gap:56px;align-items:start;margin-bottom:72px;
+      display:block;max-width:720px;margin:0 auto 80px;
     }
-    .profile-spread.reverse{direction:rtl}
-    .profile-spread.reverse > *{direction:ltr}
+    .profile-spread.reverse{direction:ltr}
     .profile-photo{
+      max-width:420px;margin:0 auto 40px;
       border-radius:16px;overflow:hidden;
       box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(200,146,58,.1);
     }
@@ -479,14 +477,14 @@
       color:#E8B86D;filter:drop-shadow(0 2px 16px rgba(232,184,109,.28));margin-bottom:8px;
     }
     .celeb-card-title{
-      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
-      letter-spacing:2px;text-transform:uppercase;
-      color:var(--gold2);margin-bottom:24px;line-height:1.8;
+      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
+      letter-spacing:1.2px;text-transform:uppercase;
+      color:rgba(255,255,255,.78);margin-bottom:22px;line-height:1.85;
     }
     .celeb-card-bio{
       font-family:'DM Sans',sans-serif;
-      font-size:clamp(14px,1.1vw,16px);font-weight:300;
-      line-height:1.95;color:var(--text-body);
+      font-size:clamp(15px,1.1vw,16.5px);font-weight:400;
+      line-height:1.9;color:var(--text-body);
     }
     .celeb-card-bio + .celeb-card-bio{margin-top:14px}
 
@@ -502,9 +500,9 @@
     .conn-item:hover{transform:translateY(-3px)}
     .conn-item img{width:100%;height:auto;display:block}
     .conn-caption{
-      padding:14px 18px;background:rgba(8, 9, 26,.75);
+      padding:14px 18px;background:rgba(8, 9, 26,.85);
       font-family:'Cinzel',serif;font-size:11.5px;font-weight:700;
-      letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);
+      letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);
     }
 
     /* ─── CELEBRITY VIDEO ────────────────────────────── */
@@ -854,8 +852,8 @@ body,p,li{font-weight:500}
 .hero-stage-caption .hsc-amp{ color:rgba(255,255,255,.32); font-weight:500; margin:0 8px; font-size:.8em; vertical-align:middle; }
 .hero-stage-caption .hsc-meta{
   display:block; margin-top:13px; font-family:'Cinzel',serif;
-  font-size:clamp(11.5px,1.25vw,14px); font-weight:700; letter-spacing:1.8px; text-transform:uppercase;
-  line-height:1.7; color:rgba(240,198,96,.92); max-width:480px; margin-left:auto; margin-right:auto;
+  font-size:clamp(13px,1.4vw,16px); font-weight:700; letter-spacing:1.3px; text-transform:uppercase;
+  line-height:1.65; color:rgba(240,198,96,.95); max-width:520px; margin-left:auto; margin-right:auto;
 }
 /* Bug fix: every video fits the viewport & shows in full (no overflow) */
 video{max-width:100%;max-height:82vh;object-fit:contain}
@@ -863,7 +861,9 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 .section{padding-top:clamp(48px,7.5vw,108px);padding-bottom:clamp(48px,7.5vw,108px)}
 .story-body + .story-body,.section-body + .section-body{margin-top:1.15em}
 /* Mobile reading polish (latest): larger, easier body copy on phones */
-@media (max-width:720px){.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc,.citation-text{font-size:16.5px !important;line-height:1.74 !important}}
+/* Readability: solid (not thin) reading prose across the page; colour comes from the brightened --text vars */
+.gala-prestige-body,.hero-desc,.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc{font-weight:400}
+@media (max-width:720px){.gala-prestige-body,.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc,.citation-text{font-size:16.5px !important;line-height:1.74 !important}}
 /* Silver metallic name treatment (J AARON K DAVID inline) — stands out from white */
 .name-inline-silver{background:none !important;-webkit-background-clip:border-box !important;background-clip:border-box !important;-webkit-text-fill-color:currentColor !important;color:#EBF1FB !important;font-weight:800 !important;text-shadow:0 0 1px rgba(255,255,255,.55), 0 0 12px rgba(176,198,235,.42) !important}
 /* ── Manila Up Magazine — full-scale readable feature (top of page) ── */
@@ -875,6 +875,17 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 .mmf-item{margin:0 0 30px}
 .mmf-item img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid rgba(200,146,58,.22);box-shadow:0 24px 64px rgba(0,0,0,.5)}
 .mmf-item figcaption{margin-top:14px;text-align:center;font-family:'Cinzel',serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.72)}
+
+    /* Accessibility: honour the user's reduced-motion preference */
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+      .fade-up,.fade-in{opacity:1 !important;transform:none !important}
+    }
+
+    /* Accessibility: visible keyboard focus rings (only for keyboard users) */
+    a:focus-visible,button:focus-visible,[role="button"]:focus-visible,[tabindex]:focus-visible,summary:focus-visible{
+      outline:2px solid #E8B86D !important;outline-offset:3px;border-radius:3px;
+    }
 </style>
 </head>
 <body>
@@ -904,11 +915,6 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
     Honoured at the 10th Anniversary Gala of Manila Up International Magazine — a landmark celebration
     of excellence, culture, and leadership held at Hotel Indigo Los Angeles Downtown.
   </p>
-  <div class="hero-pills fade-up d3">
-    <span class="hero-pill">Divine Restoration Ignition Award</span>
-    <span class="hero-pill">Transformational Leadership Award</span>
-    <span class="hero-pill">Los Angeles · California</span>
-  </div>
   <div class="hero-divider"></div>
 </header>
 
@@ -917,7 +923,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
   <div class="mmf-head fade-up">
     <p class="mmf-eyebrow">In Print · Manila Up International Magazine</p>
     <h2>The Manila Up Magazine Feature</h2>
-    <p>Read the full Manila Up International Magazine profiles of SHEKINAIH SIEW SIN YAP and J AARON K DAVID, as published in the 10th Anniversary issue.</p>
+    <p><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span>, profiled in the Manila Up International Magazine 10th Anniversary issue.</p>
   </div>
 
   <figure class="mmf-item fade-up">
@@ -965,31 +971,19 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
     </h2>
 
     <p class="gala-prestige-body fade-up">
-      For a decade, <strong style="color:rgba(255,255,255,.9)">Manila Up International Magazine</strong>
-      has been the defining voice of Filipino and Filipino-American excellence in Los Angeles —
-      championing leaders, artists, diplomats, and visionaries across the global stage.
-      Its 10th Anniversary Gala at Hotel Indigo Los Angeles Downtown was a landmark sold-out evening
-      combining a Grand Awards Ceremony, the launch of the 10th Anniversary coffee table book, and
-      <em>"Woven Legacies"</em> — a haute couture showcase by master designer Renee Salud,
-      supported by Philippine Airlines, San Miguel Corporation, PAGCOR, and the Philippine
-      Department of Tourism.
+      For a decade, <strong style="color:#fff">Manila Up International Magazine</strong> has been the
+      defining voice of Filipino-American excellence in Los Angeles. Its sold-out 10th Anniversary Gala
+      at Hotel Indigo Los Angeles Downtown united a Grand Awards Ceremony, the launch of its anniversary
+      book, and <em>"Woven Legacies"</em> &mdash; master designer Renee Salud's haute couture showcase,
+      backed by Philippine Airlines, San Miguel Corporation, PAGCOR, and the Department of Tourism.
     </p>
 
     <p class="gala-prestige-body fade-up">
-      Formally recognised by the <strong style="color:rgba(255,255,255,.9)">Los Angeles Board of Public Works</strong>,
-      the Manila Up Gala draws U.S. senators, assemblymembers, Philippine government officials,
-      Emmy Award-winning Hollywood producers, Inside Edition anchors, and the most distinguished
-      names in Filipino-American public life. To receive an award at this gala is to be recognised
-      among the highest tier of Filipino excellence — on a stage watched by leaders on two continents.
+      Formally recognised by the <strong style="color:#fff">Los Angeles Board of Public Works</strong>,
+      the gala draws U.S. senators, Philippine officials, Emmy-winning Hollywood producers, and Inside
+      Edition anchors. To be honoured here is to stand among the highest tier of Filipino excellence
+      &mdash; on a stage watched across two continents.
     </p>
-
-    <div class="gala-facts-row fade-up">
-      <span class="gala-fact-pill">10th Anniversary</span>
-      <span class="gala-fact-pill">Sold-Out Gala</span>
-      <span class="gala-fact-pill">Hotel Indigo · Los Angeles</span>
-      <span class="gala-fact-pill">23 November 2025</span>
-      <span class="gala-fact-pill">Recognised by LA Board of Public Works</span>
-    </div>
 
     <div class="gala-divider fade-in"></div>
 
@@ -1001,9 +995,8 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
         <span class="name-silver">J AARON K DAVID</span>
       </p>
       <p class="gala-spotlight-sub">
-        Among the most honoured figures of the evening — two leaders whose extraordinary contributions
-        to faith, transformation, and global service placed them at the very centre of Manila Up's
-        most prestigious night in its ten-year history.
+        Among the most honoured figures of the evening — two leaders whose work in faith,
+        transformation, and global service placed them at the centre of Manila Up's most prestigious night.
       </p>
     </div>
 
@@ -1250,7 +1243,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
     <!-- PULL QUOTE (Aaron) -->
     <div class="pull-quote fade-up">
       <p>"Leadership is not defined by visibility, but by vision fulfilled."</p>
-      <cite>— Manila Up International Magazine on <span class="name-inline-silver">J AARON K DAVID</span></cite>
+      <cite>— Manila Up International Magazine on <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span></cite>
     </div>
 
     <!-- Magazine holding photos row -->
@@ -1325,11 +1318,10 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
         At the Manila Up 10th Anniversary Gala,
         <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
         <span class="name-inline-silver">J AARON K DAVID</span>
-        had the privilege of meeting Lisa Manibog Lew Brennan in person —
+        met Lisa Manibog Lew Brennan in person —
         <strong style="color:rgba(255,255,255,.9)">eight-time Emmy Award winner</strong>,
         <strong style="color:rgba(255,255,255,.9)">Founding Producer of <em>Judge Judy</em></strong>,
-        former Binibining Pilipinas International, and one of Hollywood's most celebrated
-        Filipino-American television producers.
+        and one of Hollywood's most celebrated Filipino-American producers.
       </p>
     </div>
 
@@ -1390,11 +1382,9 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
       <p class="celeb-card-bio">
         <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
         <span class="name-inline-silver">J AARON K DAVID</span>
-        were honoured to share the evening with Jun Parreño —
-        celebrated Filipino entertainer, performing artist, and fellow honouree
-        of the Manila Up International Magazine 10th Anniversary Gala.
-        His name featured on the covers of the 10th Anniversary edition,
-        a testament to his standing as a respected icon within the Filipino-American community.
+        shared the evening with Jun Parreño — celebrated Filipino entertainer and fellow honouree
+        of the Manila Up 10th Anniversary Gala, featured on the covers of the anniversary edition
+        and a respected icon in the Filipino-American community.
       </p>
     </div>
 
@@ -1404,10 +1394,30 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
       <div class="conn-item fade-in d1">
         <img
           src="images/manila-up-2025/manila-up-2025-shekinaih-with-guests-at-gala-event.jpg"
-          alt="SHEKINAIH SIEW SIN YAP with Jun Parreño and distinguished guest at the Manila Up Gala"
+          alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with Jun Parreño at the Manila Up 10th Anniversary Gala, Hotel Indigo Los Angeles"
           loading="eager"
-          style="object-fit:cover;object-position:center center;width:100%"/>
-        <div class="conn-caption">SHEKINAIH SIEW SIN YAP · With Jun Parreño &amp; Distinguished Guest · Manila Up Gala 2025</div>
+          style="width:100%;height:auto;display:block"/>
+        <div class="conn-caption"><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &amp; <span class="name-inline-silver">J AARON K DAVID</span> · With Jun Parreño · Manila Up Gala 2025</div>
+      </div>
+
+      <div class="conn-item fade-in d2">
+        <img
+          src="images/manila-up-2025/manila-up-2025-shekinaih-with-honourees-evening-group.jpg"
+          width="1280" height="1196"
+          alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with friends and honourees during the Manila Up 10th Anniversary Gala evening"
+          loading="lazy"
+          style="width:100%;height:auto;display:block"/>
+        <div class="conn-caption"><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> · With Friends &amp; Honourees of the Evening · Manila Up Gala 2025</div>
+      </div>
+
+      <div class="conn-item fade-in d3">
+        <img
+          src="images/manila-up-2025/manila-up-2025-shekinaih-with-guests-evening-portrait.jpg"
+          width="960" height="1280"
+          alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID with distinguished guests during the Manila Up 10th Anniversary Gala evening"
+          loading="lazy"
+          style="width:100%;height:auto;display:block"/>
+        <div class="conn-caption"><span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and <span class="name-inline-silver">J AARON K DAVID</span> · With Distinguished Guests · Manila Up Gala 2025</div>
       </div>
 
     </div>
@@ -1556,6 +1566,9 @@ body{padding-bottom:96px}
  .cx-center{flex:1;justify-content:center}
  .cx-panel{align-items:flex-end}
  .cx-sheet{border-radius:20px 20px 0 0;width:100%;max-height:86vh}
+ /* keep video caption text off the faces on phones — names are shown above the video */
+ .vp-caption{display:none}
+ .vp-overlay{background:linear-gradient(to top,rgba(0,0,0,.35) 0%,transparent 55%)}
 }
 
 /* === Standardized elegant footer === */

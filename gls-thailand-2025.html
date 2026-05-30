@@ -662,6 +662,17 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 @media (max-width:720px){.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc,.citation-text{font-size:16.5px !important;line-height:1.74 !important}}
 /* Silver metallic name treatment (J AARON K DAVID inline) — stands out from white */
 .name-inline-silver{background:none !important;-webkit-background-clip:border-box !important;background-clip:border-box !important;-webkit-text-fill-color:currentColor !important;color:#EBF1FB !important;font-weight:800 !important;text-shadow:0 0 1px rgba(255,255,255,.55), 0 0 12px rgba(176,198,235,.42) !important}
+
+    /* Accessibility: honour the user's reduced-motion preference */
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+      .fade-up,.fade-in{opacity:1 !important;transform:none !important}
+    }
+
+    /* Accessibility: visible keyboard focus rings (only for keyboard users) */
+    a:focus-visible,button:focus-visible,[role="button"]:focus-visible,[tabindex]:focus-visible,summary:focus-visible{
+      outline:2px solid #E8B86D !important;outline-offset:3px;border-radius:3px;
+    }
 </style>
 </head>
 <body>

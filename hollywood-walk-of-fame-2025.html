@@ -17,8 +17,8 @@
       --silver:#B8C4D8;
       --white:#FFFFFF;
       --border:rgba(255,255,255,0.08);
-      --text-body:rgba(255,255,255,.75);
-      --text-muted:rgba(255,255,255,.45);
+      --text-body:rgba(255,255,255,.92);
+      --text-muted:rgba(255,255,255,.6);
       --col-max:760px;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -321,9 +321,9 @@
       color:#E8B86D;filter:drop-shadow(0 2px 16px rgba(232,184,109,.28));margin-bottom:8px;
     }
     .personality-card-title{
-      font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
-      letter-spacing:2px;text-transform:uppercase;
-      color:var(--gold2);margin-bottom:24px;line-height:1.8;
+      font-family:'Cinzel',serif;font-size:10px;font-weight:600;
+      letter-spacing:1.2px;text-transform:uppercase;
+      color:rgba(255,255,255,.78);margin-bottom:22px;line-height:1.85;
     }
     .personality-card-bio{
       font-family:'DM Sans',sans-serif;
@@ -1143,6 +1143,19 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 @media (max-width:720px){.bio-prose p,.e-desc,.section-body,.section-body p,.lead-p,.story-body,.story-body p,.aw-body,.video-summary p,.founder-card p,.mag-desc,.citation-text{font-size:16.5px !important;line-height:1.74 !important}}
 /* Silver metallic name treatment (J AARON K DAVID inline) — stands out from white */
 .name-inline-silver{background:none !important;-webkit-background-clip:border-box !important;background-clip:border-box !important;-webkit-text-fill-color:currentColor !important;color:#EBF1FB !important;font-weight:800 !important;text-shadow:0 0 1px rgba(255,255,255,.55), 0 0 12px rgba(176,198,235,.42) !important}
+
+    /* Readability: solid (not thin) reading prose; colour comes from the brightened --text vars */
+    .hero-desc,.prestige-body,.prestige-sub,.section-sub,.personality-card-bio,.rc-caption,.story-body,.story-body p{font-weight:400}
+    /* Accessibility: honour the user's reduced-motion preference */
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+      .fade-up,.fade-in{opacity:1 !important;transform:none !important}
+    }
+
+    /* Accessibility: visible keyboard focus rings (only for keyboard users) */
+    a:focus-visible,button:focus-visible,[role="button"]:focus-visible,[tabindex]:focus-visible,summary:focus-visible{
+      outline:2px solid #E8B86D !important;outline-offset:3px;border-radius:3px;
+    }
 </style>
 </head>
 <body>
@@ -1177,45 +1190,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
       <span class="name-inline-silver">J AARON K DAVID</span>
       were present among Hollywood's international circle.
     </p>
-    <div class="hero-pills fade-up d4">
-      <span class="hero-pill">Hollywood Walk of Fame · Posthumous Star</span>
-      <span class="hero-pill">Red Carpet Interview</span>
-      <span class="hero-pill">Authentic TV Global Media</span>
-      <span class="hero-pill">NSI Universal, Inc.</span>
-      <span class="hero-pill">Los Angeles · November 2025</span>
-    </div>
     <div class="hero-divider"></div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     AT A GLANCE — KEY FACTS
-══════════════════════════════════════════ -->
-<section id="at-a-glance" class="at-a-glance">
-  <div class="glance-inner fade-up">
-    <p class="glance-label">At a Glance · Walk of Fame Week 2025</p>
-    <div class="glance-grid">
-      <div class="glance-cell">
-        <p class="glance-cell-label">The Ceremony</p>
-        <p class="glance-cell-value">Posthumous Star</p>
-        <p class="glance-cell-sub">Hollywood Walk of Fame · Motion Pictures</p>
-      </div>
-      <div class="glance-cell">
-        <p class="glance-cell-label">The Honoree</p>
-        <p class="glance-cell-value">Chadwick Boseman</p>
-        <p class="glance-cell-sub">Posthumously honoured · 20 Nov 2025</p>
-      </div>
-      <div class="glance-cell">
-        <p class="glance-cell-label">The Encounter</p>
-        <p class="glance-cell-value">Pastor Derrick L. Boseman</p>
-        <p class="glance-cell-sub">Received in a Los Angeles church service</p>
-      </div>
-      <div class="glance-cell">
-        <p class="glance-cell-label">The Setting</p>
-        <p class="glance-cell-value">Red Carpet · Sanctuary</p>
-        <p class="glance-cell-sub">Los Angeles, California · November 2025</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1425,8 +1400,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
       <h3 class="personality-card-name">Pastor Derrick L. Boseman</h3>
       <p class="personality-card-title">
         Senior Pastor, New Covenant Outreach Ministries &nbsp;·&nbsp;
-        Elder Brother of Chadwick Boseman &nbsp;·&nbsp;
-        Present at the Hollywood Walk of Fame Posthumous Star Ceremony · 20 November 2025
+        Elder Brother of the Late Chadwick Boseman
       </p>
       <p class="personality-card-bio">
         On <strong style="color:rgba(255,255,255,.9)">Thursday, 20 November 2025</strong>,
@@ -1541,109 +1515,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     VIDEO COVERAGE
-══════════════════════════════════════════ -->
-<section id="video-coverage" class="video-section">
-  <div class="video-inner">
-    <div class="chapter-label fade-up">
-      <span class="chapter-num">06</span>
-      <span class="chapter-eyebrow">Red Carpet · Los Angeles · November 2025</span>
-    </div>
-    <h2 class="video-title fade-up d1">
-      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
-      <span style="color:rgba(255,255,255,.2);font-size:.6em;vertical-align:middle;margin:0 10px">&amp;</span>
-      <span class="name-inline-silver">J AARON K DAVID</span>
-      <br/>On Camera in Hollywood
-    </h2>
-    <p class="video-sub fade-up d2">
-      Three video records from the November 2025 Los Angeles visit — professional red carpet
-      coverage and personal documentary footage capturing
-      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> and
-      <span class="name-inline-silver">J AARON K DAVID</span>
-      in the room.
-    </p>
 
-    <div class="video-grid">
-
-      <!-- Video 1 -->
-      <div
-        class="vp-thumb fade-in d1"
-        id="videoThumb1"
-        tabindex="0"
-        role="button"
-        aria-label="Play: SHEKINAIH SIEW SIN YAP and J AARON K DAVID — Red Carpet Los Angeles 2025, Video 1"
-      >
-        <img
-          src="images/la-hollywood-2025/la-red-carpet-2025-shekinaih-aaron-portrait-01.jpg"
-          alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID — Red Carpet Los Angeles 2025 · Video 1"
-          loading="lazy"/>
-        <div class="vp-overlay"></div>
-        <div class="vp-play-btn"><div class="vp-play-ring"></div></div>
-        <div class="vp-caption">
-          <p class="vp-caption-label">Red Carpet · Los Angeles · 2025</p>
-          <p class="vp-caption-names">
-            <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
-            <span style="color:rgba(255,255,255,.25);margin:0 10px">&middot;</span>
-            <span class="name-inline-silver">J AARON K DAVID</span>
-          </p>
-          <p class="vp-caption-hint">Tap to play video</p>
-        </div>
-      </div>
-
-      <!-- Video 2 -->
-      <div
-        class="vp-thumb fade-in d2"
-        id="videoThumb2"
-        tabindex="0"
-        role="button"
-        aria-label="Play: SHEKINAIH SIEW SIN YAP and J AARON K DAVID — Los Angeles Entertainment 2025, Video 2"
-      >
-        <img
-          src="images/la-hollywood-2025/la-red-carpet-2025-shekinaih-aaron-media-interview-01.jpg"
-          alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID — Interview Coverage Los Angeles 2025 · Video 2"
-          loading="lazy"/>
-        <div class="vp-overlay"></div>
-        <div class="vp-play-btn"><div class="vp-play-ring"></div></div>
-        <div class="vp-caption">
-          <p class="vp-caption-label">Media Interview · Los Angeles · 2025</p>
-          <p class="vp-caption-names">
-            <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
-            <span style="color:rgba(255,255,255,.25);margin:0 10px">&middot;</span>
-            <span class="name-inline-silver">J AARON K DAVID</span>
-          </p>
-          <p class="vp-caption-hint">Tap to play video</p>
-        </div>
-      </div>
-
-      <!-- Video 3 -->
-      <div
-        class="vp-thumb fade-in d3"
-        id="videoThumb3"
-        tabindex="0"
-        role="button"
-        aria-label="Play: SHEKINAIH SIEW SIN YAP and J AARON K DAVID — Entertainment Connections Los Angeles 2025, Video 3"
-      >
-        <img
-          src="images/la-hollywood-2025/la-entertainment-2025-shekinaih-aaron-with-derrick-boseman-01.jpg"
-          alt="SHEKINAIH SIEW SIN YAP and J AARON K DAVID — Entertainment Los Angeles 2025 · Video 3"
-          loading="lazy"/>
-        <div class="vp-overlay"></div>
-        <div class="vp-play-btn"><div class="vp-play-ring"></div></div>
-        <div class="vp-caption">
-          <p class="vp-caption-label">In the Room · Los Angeles · 2025</p>
-          <p class="vp-caption-names">
-            <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
-            <span style="color:rgba(255,255,255,.25);margin:0 10px">&middot;</span>
-            <span class="name-inline-silver">J AARON K DAVID</span>
-          </p>
-          <p class="vp-caption-hint">Tap to play video</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ══════════════════════════════════════════
      FULL PHOTO GALLERY
@@ -1817,25 +1689,6 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
 </div>
 
 <!-- ══════════════════════════════════════════
-     SPONSOR / ORGANISATIONS STRIP
-══════════════════════════════════════════ -->
-<section id="organisations" class="sponsor-section">
-  <p class="sponsor-label fade-up">Organisations Present · Los Angeles Red Carpet · November 2025</p>
-  <div class="sponsor-list fade-up d1">
-    <span class="sponsor-name">Authentic TV Global Media</span>
-    <span class="sponsor-name">NSI Universal, Inc.</span>
-    <span class="sponsor-name">The Avantgarde</span>
-    <span class="sponsor-name">Timeless Music</span>
-    <span class="sponsor-name">Reveal Live Entertainment</span>
-    <span class="sponsor-name">Stiger Entertainment</span>
-    <span class="sponsor-name">B&amp;W Film Productions</span>
-    <span class="sponsor-name">Devlux Entertainment Group</span>
-    <span class="sponsor-name">From The Heart Productions</span>
-    <span class="sponsor-name">His Presence Fire Ministries</span>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
      ARTICLE FOOTER
 ══════════════════════════════════════════ -->
 <footer class="site-footer-std">
@@ -1845,69 +1698,7 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
   <a class="sf-back" href="index.html">&larr; Return to Main Page</a>
 </footer>
 
-<!-- ══════════════════════════════════════════
-     VIDEO MODALS (3)
-══════════════════════════════════════════ -->
 
-<!-- Modal 1 -->
-<div class="vp-modal" id="vpModal1" role="dialog" aria-modal="true" aria-label="Video player 1">
-  <div class="vp-modal-inner">
-    <button class="vp-close" id="vpClose1" aria-label="Close video"></button>
-    <div class="vp-modal-frame">
-      <video id="vpVideo1" controls preload="metadata" playsinline
-             poster="images/la-hollywood-2025/la-red-carpet-2025-shekinaih-aaron-portrait-01.jpg">
-        <source src="videos/Shekinaih_Aaron_Mega_Success_2025_LA_03.mp4" type="video/mp4"/>
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
-    <p class="vp-modal-footer" style="color:rgba(255,255,255,.3)">
-      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
-      &nbsp;&middot;&nbsp;
-      <span class="name-inline-silver">J AARON K DAVID</span>
-      &nbsp;&middot;&nbsp; Los Angeles · November 2025
-    </p>
-  </div>
-</div>
-
-<!-- Modal 2 -->
-<div class="vp-modal" id="vpModal2" role="dialog" aria-modal="true" aria-label="Video player 2">
-  <div class="vp-modal-inner">
-    <button class="vp-close" id="vpClose2" aria-label="Close video"></button>
-    <div class="vp-modal-frame">
-      <video id="vpVideo2" controls preload="metadata" playsinline
-             poster="images/la-hollywood-2025/la-red-carpet-2025-shekinaih-aaron-media-interview-01.jpg">
-        <source src="videos/Shekinaih_Aaron_Mega_Success_2025_LA_04.mp4" type="video/mp4"/>
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
-    <p class="vp-modal-footer" style="color:rgba(255,255,255,.3)">
-      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
-      &nbsp;&middot;&nbsp;
-      <span class="name-inline-silver">J AARON K DAVID</span>
-      &nbsp;&middot;&nbsp; Los Angeles · November 2025
-    </p>
-  </div>
-</div>
-
-<!-- Modal 3 -->
-<div class="vp-modal" id="vpModal3" role="dialog" aria-modal="true" aria-label="Video player 3">
-  <div class="vp-modal-inner">
-    <button class="vp-close" id="vpClose3" aria-label="Close video"></button>
-    <div class="vp-modal-frame">
-      <video id="vpVideo3" controls preload="metadata" playsinline
-             poster="images/la-hollywood-2025/la-entertainment-2025-shekinaih-aaron-with-derrick-boseman-01.jpg">
-        <source src="videos/Shekinaih_Aaron_Mega_Success_2025_LA_05.mp4" type="video/mp4"/>
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
-    <p class="vp-modal-footer" style="color:rgba(255,255,255,.3)">
-      <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span>
-      &nbsp;&middot;&nbsp;
-      <span class="name-inline-silver">J AARON K DAVID</span>
-      &nbsp;&middot;&nbsp; Los Angeles · November 2025
-    </p>
-  </div>
-</div>
 
 <script>
 (function(){
@@ -1961,10 +1752,6 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
       modal.addEventListener('click', e => { if(e.target===modal) closeModal(); });
     }
   }
-
-  wireModal('videoThumb1','vpModal1','vpClose1','vpVideo1');
-  wireModal('videoThumb2','vpModal2','vpClose2','vpVideo2');
-  wireModal('videoThumb3','vpModal3','vpClose3','vpVideo3');
 
   // ── Photo lightbox ─────────────────────────────────
   const photoCards = Array.from(document.querySelectorAll('.photo-card'));
