@@ -432,6 +432,8 @@ Source material (magazine quotes, press coverage, certificates, captions) freque
 - ❌ "Shekinaih Siew Sin Yap" (mixed case) — forbidden
 - ❌ "j aaron k david" (lowercase) — forbidden
 - CSS already applies `text-transform: uppercase` via the `.name-gold` / `.name-silver` / `.name-inline-gold` / `.name-inline-silver` classes, but content authors should ALSO type the names in CAPS in source code so they read correctly without CSS (and for SEO).
+- ✅ **The ONLY lowercase exception** is non-display strings: the domain `shekinaihsiewsinyap-jaaronkdavid.com`, all URLs (`href`, `src`, `canonical`, `og:url`, `og:image`, `twitter:image`, JSON-LD `url`), and image/video **filenames** (e.g. `…-shekinaih-aaron-…​.jpg`). These are web addresses, **not** the name — never "correct" them to caps or links/images/SEO break.
+- **Capitalisation audit — run before every deploy:** strip HTML/CSS comments, then scan all pages for `shekinaih`/`aaron` (case-insensitive) that are NOT already all-caps; ignore any whose adjacent character is `- _ / .` (filename token) or that sit inside a URL. Every remaining hit that is not the domain is a violation to capitalise. *(Last full audit found a single visible slip — an Oman duo-caption `Shekinaih · On Stage Speaking` — now fixed to `SHEKINAIH SIEW SIN YAP · On Stage Speaking`.)*
 
 ### Title / role rule
 
