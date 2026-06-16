@@ -361,11 +361,15 @@
       position:relative;width:100%;max-width:1000px;padding:24px 24px 0;
     }
     .vp-modal-frame{
+      width:min(100%, calc(82vh * 232 / 426));
+      aspect-ratio:232 / 426;
+      max-height:82vh;
+      margin:0 auto;
       border-radius:20px;overflow:hidden;
       box-shadow:0 60px 140px rgba(0,0,0,.92),0 0 0 1px rgba(200,146,58,.28);
       background:#000;
     }
-    .vp-modal-frame video{width:100%;height:auto;display:block}
+    .vp-modal-frame iframe{width:100%;height:100%;display:block;border:0}
     .vp-modal-footer{
       margin-top:18px;text-align:center;padding-bottom:24px;
       font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;
@@ -805,11 +809,11 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
   <div class="vp-modal-inner">
     <button class="vp-close" id="vpClose" aria-label="Close video"></button>
     <div class="vp-modal-frame">
-      <video id="vpVideo" controls preload="metadata" playsinline
-             poster="images/his-presence-fire-cathedral-2025/his-presence-fire-2025-shekinaih-aaron-at-the-pulpit.jpg">
-        <source src="images/his-presence-fire-cathedral-2025/preach_in_his_presence_church.mp4" type="video/mp4"/>
-        Your browser does not support embedded video.
-      </video>
+      <iframe id="vpFrame" src=""
+              data-src="https://player.vimeo.com/video/1201961526?app_id=122963&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="At the pulpit — SHEKINAIH SIEW SIN YAP &amp; J AARON K DAVID · His Presence Fire Cathedral · 24 Nov 2025"></iframe>
     </div>
     <p class="vp-modal-footer">
       <span class="name-inline-gold">SHEKINAIH SIEW SIN YAP</span> &nbsp;·&nbsp;
@@ -1020,9 +1024,9 @@ video{max-width:100%;max-height:82vh;object-fit:contain}
   const stage = document.getElementById('videoStage');
   const vpModal = document.getElementById('vpModal');
   const vpClose = document.getElementById('vpClose');
-  const vpVideo = document.getElementById('vpVideo');
-  function openVideo(){ vpModal.classList.add('open'); document.body.style.overflow='hidden'; if(vpVideo) vpVideo.play().catch(()=>{}); }
-  function closeVideo(){ vpModal.classList.remove('open'); document.body.style.overflow=''; if(vpVideo){ vpVideo.pause(); vpVideo.currentTime=0; } }
+  const vpFrame = document.getElementById('vpFrame');
+  function openVideo(){ vpModal.classList.add('open'); document.body.style.overflow='hidden'; if(vpFrame) vpFrame.src = vpFrame.dataset.src; }
+  function closeVideo(){ vpModal.classList.remove('open'); document.body.style.overflow=''; if(vpFrame) vpFrame.src='about:blank'; }
   if(stage){
     stage.addEventListener('click', openVideo);
     stage.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openVideo(); } });
